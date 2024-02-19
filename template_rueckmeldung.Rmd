@@ -1,0 +1,78 @@
+---
+title: "Rückmeldung zur Studie X"
+output: html_document
+---
+
+```{r setup, echo = FALSE, warning = FALSE}
+library(ggplot2)
+load("processed_data/final_data.RData")
+
+# Datensatz für eine Person
+individual_data <- final_data[final_data$pseudonym == "+E;'Cl}-*g",]
+# individual_data <- final_data[final_data$pseudonym == report$pseudonym[i],]
+```
+
+Wir haben Ihre Emotionale Selbstwerteinschätzung über eine Subskala im Fragebogen "Multidimensionale Selbstwertskala" (Schütz, & Rentzsch, 2020) erhoben. 
+
+Personen mit hohen Werten auf dieser Subskala:
+
+* haben eine positive Einstellung zu sich selbst.
+* hohe Selbstakzeptanz und Selbstzufriedenheit 
+* positive Einstellungen sowie Gefühle gegenüber der eigenen Person
+
+Personen mit niedrigen Werten auf dieser Subskala:  
+
+* sind unzufrieden mit sich
+* erleben Selbstzweifel
+* haben eine negative Einstellung zu sich selbst 
+* leiden unter negativen selbstbezogenen Gefühlen.
+
+**Die Rückmeldung:**
+Wir zeigen Ihnen wie die Ausprägung auf dieser Variable in unserer Stichprobe verteilt ist, wobei 68,27% aller Werte zwischen den Werten -1 und 1 liegen (+- 1 Standardabweichung). Diesen Bereich bezeichnen wir als durchschnittlich. 
+
+Wir berichten dann welcher Wert Ihrer Ausprägung auf dieser Variable aufgrund Ihrer Antworten zugeordnet wurde, zusammen mit einem Unsicherheitsbereich (dem sogenannten "Konfidenzintervall"). Dieser Unsicherheitsbereich sollte beachtet werden, da die Messung fehlerbehaftet ist. 
+
+**Die Stichprobe:**
+Ihre Werte basieren auf dem Vergleich mit den anderen Teilnehmer:innen unserer Studie. Bei einer anderen Stichprobe würden Sie wahrscheinlich etwas anders abschneiden. 
+
+```{r, echo=FALSE, warning = F, fig.align='center'}
+# Balkendiagramm
+ggplot(data = final_data, aes(skala_z)) + 
+  theme_classic() + 
+  geom_histogram(fill = "royalblue3", bins = 20) + 
+  xlab("Ausprägungen der Variable in unserer Stichprobe")+
+  ylab("Anzahl an Personen mit diesem Wert")+
+  scale_x_continuous(limits = c(-4, 4), 
+                     labels = c(-4,-3,-2,-1,0,1,2,3,4), 
+                     breaks = c(-4,-3,-2,-1,0,1,2,3,4))
+```
+
+> Ihr z-Wert = `r round(individual_data$skala_z, 2)`, 95% Konfidenzintervall = `r paste0("[", round(individual_data$skala_z - 1.96 *  sqrt(1-0.8),2), " , ", round(individual_data$skala_z + 1.96 * sqrt(1-0.8),2), "]")`
+
+Dies zeigt welcher Wert Ihrer Ausprägung auf der Variable aufgrund Ihrer Antworten zugeordnet wurde und den dazugehörigen Unsicherheitsbereich. Die durchschnittliche Ausprägung liegt bei 0, der Bereich zwischen -1 und 1 wird als durchschnittlich betrachtet. Mit Hilfe der Abbildung können Sie vergleichen, wo Ihr Wert und der Unsicherheitsbereich im Vergleich zu den anderen Personen unserer Stichprobe liegen.
+
+Unter Einbezug des Konfidenzintervalls könnte man Ihren Wert folgendermaßen einordnen ("durchschnittlich" ist hierbei die häufigste Einordnung):
+
+```{r, echo=FALSE, warning = F, fig.align='center'}
+if ((individual_data$skala_z - 1.96 * sqrt(1-0.8)) > 1) cat(paste0("Überdurchschnittliche Ausprägung im Vergleich zur Stichprobe"))
+
+if ((individual_data$skala_z - 1.96 * sqrt(1-0.8)) > 0
+    &
+    (individual_data$skala_z + 1.96 * sqrt(1-0.8)) > 1) cat(paste0("Durchschnittliche bis überdurchschnittliche Ausprägung im Vergleich zur Stichprobe"))
+
+if ((individual_data$skala_z - 1.96 * sqrt(1-0.8)) < 0
+    &
+    (individual_data$skala_z + 1.96 * sqrt(1-0.8)) > 0
+    |
+    (individual_data$skala_z + 1.96 * sqrt(1-0.8)) > 0
+    &
+    (individual_data$skala_z - 1.96 * sqrt(1-0.8)) < 0
+    ) cat(paste0("Durchschnittliche Ausprägung im Vergleich zur Stichprobe"))
+
+if ((individual_data$skala_z + 1.96 * sqrt(1-0.8)) < 0 &
+    (individual_data$skala_z + 1.96 * sqrt(1-0.8)) > -1
+    &
+    (individual_data$skala_z - 1.96 * sqrt(1-0.8)) < -1) cat(paste0("Durchschnittliche bis unterdurchschnittliche Ausprägung im Vergleich zur Stichprobe"))
+
+if ((individual_data$skala_z + 1.96 * sqrt(1-0.8)) < -1) cat(paste0("Unterdurchschnittliche Ausprägung im Vergleich zur Stichprobe"))
+```

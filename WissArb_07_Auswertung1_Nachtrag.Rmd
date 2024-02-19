@@ -1,0 +1,161 @@
+---
+title: "Einheit"
+subtitle: "⚔<br/>with xaringan"
+author: "Dr. Caroline Zygar-Hoffmann"
+institute: "RStudio, PBC"
+date: "2023/11/22 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    css: [xaringan-themer.css, style.css, "hygge"]
+    lib_dir: libs
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+    seal: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+library(tidyverse)
+library(kableExtra)
+library(ggplot2)
+library(plotly)
+library(htmlwidgets)
+library(MASS)
+library(ggpubr)
+library(xaringanthemer)
+library(xaringanExtra)
+
+style_duo_accent(
+  primary_color = "#621C37",
+  secondary_color = "#EE0071",
+  background_image = "blank.png"
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view"))
+
+# use_scribble(
+#   pen_color = "#EE0071",
+#   pen_size = 4
+#   )
+
+knitr::opts_chunk$set(
+  fig.retina = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+name: Title slide
+class: middle, left
+<br><br><br><br><br><br><br>
+# Wissenschaftliches Arbeiten und Forschungsmethoden
+
+### Einheit 7: Auswertung von Studien - Teil 1: Datenvorbereitung
+##### 23.11.2023 | Dr. Caroline Zygar-Hoffmann
+
+
+---
+class: top, left
+### Auswertung von Studien
+
+#### Nachtrag: Datensätze kombinieren: Schritt 3 - Zusammenfügen
+
+* Für das Zusammenfügen der Daten nutzen wir den Befehl `merge()`. Der Befehl muss wissen, welche Spalte er heranziehen soll, um die verschiedenen Datensätze richtig in einen einzelnen Datensatz zusammenzufügen, das ist in unserem Fall die Spalte "session"
+
+* Für weitere Spalten, die es in jedem Survey gibt (z.B. `created` = der Zeitpunkt zu dem das Survey begonnen wurde, oder `ended` = der Zeitpunkt zu dem das Survey abgeschickt wurde), kann man "suffixes" festlegen, das sind Zeichen, die an die Spaltennamen drangehängt werden, um sie eindeutig einem Survey zuzuordnen 
+
+* Für die Suffixes bietet sich der Name der surveys an, wobei der erste survey-Name erst im letzten merge angegeben werden sollte, damit alle Spalten am Ende eindeutig benannt sind:
+
+```{r, eval = FALSE}
+data <- merge(survey1, survey2, by = "session", suffixes = c("", "_survey2"), all = TRUE)
+data <- merge(data, survey3, by = "session", suffixes = c("", "_survey3"), all = TRUE)
+data <- merge(data, survey4, by = "session", suffixes = c("_survey1", "_survey4"), all = TRUE)
+# Geschafft! Alle surveys befinden sich jetzt im Objekt `data`
+```
+
+* das Argument `all = TRUE` legt fest, dass alle Zeilen behalten werden sollen, auch wenn es in zwei Surveys keine zusammenpassenden session-IDs gibt. Das ist vor allem für die Studien relevant, in denen es unterschiedliche Bedingungen gab, aber ist auch sonst relevant (z.B. weil der Fragebogen abgebrochen wurde)
+
+---
+class: top, left
+### Auswertung von Studien
+
+#### Datenvorbereitung: Bedingungsvariable berechnen
+
+* In Studien, in denen es unterschiedliche Bedingungen gab, muss eine neue Variable erstellt werden, die anzeigt in welcher Bedingung eine Versuchsperson war
+
+* Die session-ID und entsprechende Einträge in die "created" oder "ended"-Spalten einer Versuchsperson existieren nur in dem Survey, zu dem sie zugeteilt wurde
+
+* Das bedeutet, nachdem die surveys in einen Datensatz zusammengefügt wurden, ist bekannt in welcher Bedingung eine Versuchsperson war anhand der Tatsache in welcher dieser Spalten eines surveys (siehe suffixes!) Werte drin stehen:
+
+.center[
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/condition_data.png")
+```
+]
+
+---
+class: top, left
+### Auswertung von Studien
+
+#### Datenvorbereitung: Bedingungsvariable berechnen
+
+* Um eine neue Bedingungsvariable zu erstellen, wird erstmal eine leere Variable angelegt, die sprechend benannt wird (z.B. mit dem Variablennamen `condition`):
+
+.pull-left[
+```{r, eval = FALSE}
+data$condition <- NA
+```
+]
+
+.pull-right[
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/condition_empty.png")
+```
+]
+
+---
+class: top, left
+### Auswertung von Studien
+
+#### Datenvorbereitung: Bedingungsvariable berechnen
+
+* Wir überschreiben die leeren Werte dieser Variable nun mit einer `ifelse()`-Funktion, welche 3 Argumente braucht:
+  * erstes Argument der Funktion ist eine Bedingung ("if" also "wenn"), zu der ein Befehl ausgeführt werden soll. In unserem Fall wollen wir einen Wert einfügen, "wenn die entsprechende `ended`-Spalte nicht leer ist", d.h. in R-Code "nicht leer" = `!is.na()`
+  * zweites Argument der Funktion ist der Befehl, der ausgeführt werden soll, wenn die "if"-Bedingung erfüllt ist. In unserem Fall wollen wir eine bestimmte Zahl vergeben, wenn jemand in der entsprechenden Bedingung war, z.B. `1`
+  * drittes Argument der Funktion ist der Befehl, der ausgeführt werden soll, wenn die "if"-Bedingung *nicht* erfüllt ist ("else" also "sonst"). In unserem Fall wollen wir den Wert behalten, der bereits drin stand.
+  
+```{r, eval = FALSE}
+data$condition <- ifelse(!is.na(data$ended_condition1), 1, data$condition)
+data$condition <- ifelse(!is.na(data$ended_condition2), 2, data$condition)
+data$condition <- ifelse(!is.na(data$ended_condition3), 3, data$condition)
+```
+
+* Der Befehl in Worten: "Wenn in einer Zeile des Datensatzes die `ended`-Spalte des Surveys von Bedingung 1 nicht leer ist, dann schreibe bitte in die Variable `condition` den Wert 1 rein, und sonst (wenn sie leer ist) behalte den Wert der vorher drin stand."
+
+
+---
+class: top, left
+### Auswertung von Studien
+
+#### Datenvorbereitung: Bedingungsvariable berechnen
+
+.center[
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/condition_data.png")
+```
+]
+
+.center[
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/condition_filled.png")
+```
+]
+
+<!-- library(renderthis) -->
+<!-- to_pdf("WissArb_07_Auswertung1_Nachtrag.Rmd", complex_slides = TRUE) -->

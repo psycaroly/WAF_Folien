@@ -2,3 +2,17 @@
   margin-top: -85px;
   margin-left: -60px;
 }
+
+div.footer {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    height: 25px;
+    width: 100%;
+}
+div.footer span {
+    font-size: 7pt; /*  */ 
+    position: absolute;
+    left: 60px;
+    bottom: 1px;
+}

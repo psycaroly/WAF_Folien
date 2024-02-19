@@ -1,0 +1,306 @@
+---
+title: "Einheit"
+subtitle: "⚔<br/>with xaringan"
+author: "Dr. Caroline Zygar-Hoffmann"
+institute: "RStudio, PBC"
+date: "2023/11/22 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    css: [xaringan-themer.css, style.css, "hygge"]
+    lib_dir: libs
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+    seal: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+library(tidyverse)
+library(kableExtra)
+library(ggplot2)
+library(plotly)
+library(htmlwidgets)
+library(MASS)
+library(ggpubr)
+library(xaringanthemer)
+library(xaringanExtra)
+
+style_duo_accent(
+  primary_color = "#621C37",
+  secondary_color = "#EE0071",
+  background_image = "blank.png"
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view"))
+
+# use_scribble(
+#   pen_color = "#EE0071",
+#   pen_size = 4
+#   )
+
+knitr::opts_chunk$set(
+  fig.retina = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+name: Title slide
+class: middle, left
+<br><br><br><br><br><br><br>
+# Wissenschaftliches Arbeiten und Forschungsmethoden
+
+### Einheit 8: Auswertung von Studien - Teil 2: Deskriptivstatistik und Ergebnisse
+##### 07.12.2023 | Dr. Caroline Zygar-Hoffmann
+
+---
+class: top, left
+name: content
+
+### Heutige Themen
+
+#### [Stichprobenbeschreibung und Deskriptivstatistik](#deskriptiv)
+
+#### [Hypothesen und Hypothesentests](#inferenz)
+
+Anmerkung: Praxisteil entfällt zu dieser Einheit aus Zeitgründen, Datenerhebung steht im Vordergrund
+
+---
+class: top, left
+### Literaturempfehlung für die heutige Sitzung
+
+.center[
+```{r, echo=FALSE,out.width="30%",fig.cap="Kapitel 12.2 in Döring, N. & Bortz, J. (2016). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften. Pearson.",fig.show='hold',fig.align='center'}
+knitr::include_graphics("bilder/doering.png")
+``` 
+]
+
+---
+class: top, left
+name: deskriptiv
+
+### Stichprobenbeschreibung und Deskriptivstatistik
+
+#### Vorgehen
+
+* Hat man die Vorverarbeitung der Daten durchlaufen, erstellt man üblicherweise zunächst eine Stichprobenbeschreibung und eine Tabelle mit Deskriptivstatistik, bevor man zu den Hypothesentests übergeht
+
+.pull-left[
+* Bei der Stichprobenbeschreibung berichtet man für die gängigen sozialstatistischen bzw. soziodemographischen Merkmale ...
+  - Geschlecht
+  - Alter
+  - Familienstand
+  - Bildungsgrad, Tätigkeit
+  - Einkommen
+  - Wohnort 
+  - ...
+]
+
+.pull-right[
+* Auswertung
+  - **Numerische Merkmale**: empirische Range und M (SD) oder Med (IQR) mit den Befehlen `range()`, `mean()`, `sd()`, `median()`, `IQR()` 
+  - **Kategoriale Merkmale**: N (%) mit den Befehlen `table()` und `prop.table(table())`
+  - In die Klammern der Befehle die relevante(n) Spalte(n) im Datensatz auswählen, z.B. `mean(data$variable1)`
+]
+
+* In Ihrer Datenerhebung werden Sie auf Grund der Anonymitätsanforderung nicht sehr viele soziodemographische Informationen erhoben haben. Dann bleibt es bei der Stichprobengröße (ggf. pro Gruppe) und ggf. Geschlecht, falls Sie dies erhoben haben.
+  
+---
+class: top, left
+### Stichprobenbeschreibung und Deskriptivstatistik
+
+#### Vorgehen
+
+* Neben allgemeinen soziodemografischen Variablen werden im Rahmen der Deskriptivstatistik auch weitere für das Studienthema relevante Merkmale beschrieben 
+
+* Beispiel: Studie über Computerspiele
+  - die Computererfahrungen der Probanden 
+  - durchschnittliche Spielzeit/Woche
+  - ...
+
+* **In der Regel gilt es alle Fragebögen deskriptiv darzustellen, die Sie im Rahmen der Studie erhoben haben**, da Sie diese ja in irgendeiner Form für relevant für das Studienthema erachtet haben (Ausnahme sind große Studien, wo es ggf. den Rahmen sprengen würde alle Fragebögen zu berichten)
+
+---
+class: top, left
+### Stichprobenbeschreibung und Deskriptivstatistik
+
+#### Reliabilität
+
+* Manchmal findet man die Angaben zur Reliabilität ( $\alpha$ oder $\omega$ ) auch in der Tabelle der Deskriptivstatistik (wenn Sie auf den eigenen Daten berechnet wurden), sie können aber auch im Fließtext sein
+
+* Für Ihre schriftliche Arbeit ist es in Ordnung auf die Reliabilität in vorheriger Literatur zu referenzieren, wenn es dort eine Angabe dazu gibt
+
+* Besser: Berechnung der Reliabilität auf eigenen Daten z.B. mit `ci.reliability()` aus dem package `MBESS` (relevantes Ergebnis: "est" = "estimate" = Schätzwert der Reliabilität, am Besten zusammen mit Konfidenzintervall "ci.lower" und "ci.upper")
+
+```{r, eval = FALSE}
+library(MBESS)
+ci.reliability(data = data[, c("item1", "item2", "item3")], type = "omega")
+```
+
+---
+class: top, left
+### Stichprobenbeschreibung und Deskriptivstatistik
+
+#### Bericht
+
+* Die deskriptiven Ergebnisse werden in einer Tabelle zusammengefasst
+
+* Werden im Studiendesgin mehrere Gruppen untersucht sollte es eine Spalte pro Gruppe, sowie eine "Gesamt" Spalte geben
+  - Ggf. können dann auch für jede Stichprobenvariable Signifikanztests berechnet werden, um zu prüfen, ob es Gruppenunterschiede gibt (wären dann Störeinflüsse)
+  - Debatte: Viele Signifikanztests haben hohe $\alpha$-Fehler Kumulierung (deshalb oft nur deskriptive Beschreibung)
+
+* Außerdem ist es üblich die Korrelationen zwischen allen erhobenen Variablen darzustellen (in einer zweiten Tabelle oder zusammen mit der ersten Tabelle); wenn eine Korrelation Teil einer Hypothese ist, wird sie meist trotzdem auch in der Gesamttabelle aufgeführt, aber im Fließtext separat angesprochen
+
+* Manipulationschecks werden meist vor den Hypothesentests im Fließtext berichtet
+ 
+---
+class: top, left
+<div class="footer"><span>Zygar, C., Hagemeyer, B., Pusch, S., & Schönbrodt, F. D. (2018). From motive dispositions to states to outcomes: An intensive experience sampling study on communal motivational dynamics in couples. European Journal of Personality, 32(3), 306-324.</span></div>
+
+### Stichprobenbeschreibung und Deskriptivstatistik
+
+#### Beispiel für eine Deskriptivstatistik-Tabelle
+
+.center[
+```{r eval = TRUE, echo = F, out.width="85%"}
+knitr::include_graphics("bilder/deskriptivstatistik.png")
+```
+]
+
+---
+class: top, left
+
+### Stichprobenbeschreibung und Deskriptivstatistik
+
+#### Bewertungsschema
+
+.center[
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/bewertung_stichprobe.png")
+```
+
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/bewertung_deskriptivstatistik.png")
+```
+]
+
+---
+class: top, left
+name: inferenz
+
+### Hypothesen und Hypothesentests
+
+#### Generell
+
+* Die Auswertung des Untersuchungsmaterials erfolgt nach den Vorgaben des Analyseplans in der Präregistrierung 
+
+* Im Mittelpunkt der Auswertung hypothesenprüfender Untersuchungen stehen statistische Signifikanztests
+
+* Ausgang der Tests ist die Entscheidungsgrundlage dafür, ob die forschungsleitende Hypothese als bestätigt geltend oder abgelehnt werden soll
+
+* Die inhaltliche Interpretation der Ergebnisse nimmt auf die Theorie Bezug, aus der die Hypothese abgeleitet wurde
+
+---
+class: top, left
+### Hypothesen und Hypothesentests
+
+#### Prinzip
+
+.pull-left[
+1) Austellen von Nullhypothese und Alternativhypothese (Hypothesenpaar)
+
+2) Bestimmung einer zugrundeliegenden Verteilung
+
+3) Festlegung des Annahme- und Ablehnungsbereichs der Nullhypothese (kritischer Wert)
+
+$\rightarrow$ Schritte 1-3 haben Sie bereits in der Präregistrierung abgehandelt, durch die Aufstellung einer (Alternativ-)Hypothese und der Wahl der statistischen Analyse und Inferenzkriterien (z.B. Alpha-Niveau) zur Überprüfung dieser Hypothese 
+]
+
+.pull-right[
+4) Berechnung Teststatistik (Beobachtungswert auf Wahrscheinlichkeitsverteilung abbilden): z.B. z-Wert, t-Wert, F-Wert, $\chi^2$-Wert, ...
+
+5) Vergleich kritischer Wert und Teststatistik
+
+6) Entscheidung: Test signifikant oder nicht signifikant
+
+$\rightarrow$ Schritte 4-6 werden durch die Analyse in R und Interpretation des Ergebnisses abgehandelt
+]
+
+$\rightarrow$ Zwischen Schritt 3 und 4 könnte noch die Prüfung der Voraussetzungen für die Berechnung einer Teststatistik mit einer bestimmten statistischen Analyse eingefügt werden (selbst wenn sie nur diskutiert und keine Konsequenz daraus abgeleitet wird)
+
+
+---
+class: top, left
+### Hypothesen und Hypothesentests
+
+#### Prüfung von Voraussetzungen
+
+* Beim t-test z.B. durch `leveneTest()` aus dem package `car`
+
+* Bei der Regression und ANOVA z.B. durch `check_model()` aus dem package `easystats` (oder mit dem R-Code aus der Vorlesung)
+
+Beispiel:
+
+```{r, eval = FALSE}
+library(easystats)
+check_model(lm(y ~ x, data = data))
+```
+
+
+.pull-left[
+```{r eval = TRUE, echo = F, out.width = "90%"}
+knitr::include_graphics("bilder/assumpt_variance_homog.png")
+```
+]
+
+.pull-right[
+```{r eval = TRUE, echo = F, out.width = "90%"}
+knitr::include_graphics("bilder/assumpt_normality_residuals.png")
+```
+]
+
+---
+class: top, left
+### Hypothesen und Hypothesentests
+
+#### Interpretation
+
+* Vorsicht: Immer auch prüfen, ob der Effekt in die richtige Richtung geht, falls die Richtung der Hypothese nicht bereits im Test selbst hinterlegt (Beispiel: Bei Regression muss Richtung überprüft werden, bei t-test wird Richtung im Analysebefehl festgelegt durch das Argument `alternative`)
+
+* Signifikante Ergebnisse (in die richtige Richtung) bestätigen (vorläufig) die Hypothese 
+
+* Nicht-signifikante Ergebnisse schränken ihren Geltungsbereich ein oder können auf geringe statistische Power zurückgeführt werden
+
+* Advanced: Neben dem frequentistischen Nullhypothesentesten, gibt es sogenannte "bayesianische" Analysen mit denen die Evidenz für die Nullhypothese quantifiziert werden kann (durch sogenannte "Bayes Faktoren")
+
+$\rightarrow$ Wir werden uns in Sitzung 9 damit beschäftigen, wie Analyse-Ergebnisse visualisiert werden und in Sitzung 10 wie genau Analyse-Ergebnisse in der schriftlichen Arbeit im Fließtext berichtet werden
+
+---
+class: top, left
+<div class="footer"><span>Stefan, A. M., & Schönbrodt, F. D. (2023). Big little lies: A compendium and simulation of p-hacking strategies. Royal Society Open Science, 10(2), 220346.</span></div>
+
+### Hypothesen und Hypothesentests
+
+#### Konfirmation vs. Exploration
+
+* Die Ergebnisse von Auswertungen, die über die eigentliche Hypothesenprüfung hinausgehen, sind explorativ $\rightarrow$ müssen auch in dieser Weise dargestellt werden (in einem extra Abschnitt im Ergebnisteil)
+
+* Prinzipiell kann in der Exploration jede Analyse gerechnet werden, die einen interessiert
+
+* Vorsicht: Je mehr Analysen man rechnet, desto wahrscheinlicher wird es ein Falsch-Positives Ergebnis zu erwischen $\rightarrow$ p-hacking
+
+* **Illustration p-hacking App**: https://shinyapps.org/apps/p-hacker/ $\rightarrow$ Wenn man genug ausprobiert, schafft man es ein signifikantes Ergebnis zu "generieren", ...
+  - ... welches dann aber erstmal nicht vertrauenswürdig ist und in einer separaten Studie konfirmatorisch repliziert werden sollte
+  - ... man explorativ aber trotzdem berichten kann
+  
+* Man kann und sollte aber auch explorative Analysen berichten, bei denen kein signifikantes Ergebnis rauskam, wenn diese Analysen naheliegend sind (man muss aber auch nicht jede explorative Analyse berichten)
+
+
+<!-- library(renderthis) -->
+<!-- to_pdf("WissArb_08_Auswertung2.Rmd", complex_slides = TRUE) -->
