@@ -1,0 +1,1079 @@
+---
+title: "Zusatzmaterial: Literaturrecherche, Bewertung von Forschungsfragen und Referenzen"
+subtitle: "⚔<br/>with xaringan"
+author: "Dr. Caroline Zygar-Hoffmann"
+institute: "RStudio, PBC"
+date: "2024/04/16 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    css: [xaringan-themer.css, style.css, "hygge"]
+    lib_dir: libs
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+    seal: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+library(tidyverse)
+library(kableExtra)
+library(ggplot2)
+library(plotly)
+library(htmlwidgets)
+library(MASS)
+library(ggpubr)
+library(xaringanthemer)
+library(xaringanExtra)
+
+style_duo_accent(
+  primary_color = "#621C37",
+  secondary_color = "#EE0071",
+  link_color = "#7da5f5",
+  background_image = "blank.png"
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view"))
+
+# use_scribble(
+#   pen_color = "#EE0071",
+#   pen_size = 4
+#   )
+
+knitr::opts_chunk$set(
+  fig.retina = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+name: Title slide
+class: middle, left
+<br><br><br><br><br><br><br>
+# Wissenschaftliches Arbeiten und Forschungsmethoden
+
+### Zusatzmaterial: Literaturrecherche, Bewertung von Forschungsfragen und Referenzen
+##### 17.04.2024 | Dr. Caroline Zygar-Hoffmann
+
+---
+class: top, left
+name: content
+
+### Inhalt
+
+.pull-left[
+#### Literaturrecherche
+* [Recherchesysteme und -methoden](#systeme)
+* [Lesetechniken](#lesen)
+
+#### Bewertung von Forschungsfragen
+* [Wissenschaftliche Kriterien](#wissKrit)
+* [Ethische Kriterien](#ethischeKrit)
+]
+
+.pull-right[
+#### Quellen & Referenzen
+* [Funktion und Zitationssysteme](#zit-start)
+* [Indrekte vs. direkte Zitate](#zitate)
+* [Mehrere Quellen](#mehrere-quellen)
+* [Literaturverzeichnis](#lit-verzeichnis)
+
+#### [Take-Aways und Literaturempfehlung](#take-away)
+]
+
+---
+class: top, left
+name: systeme
+
+### Literaturrecherche
+
+#### Recherchesysteme
+
+Wissenschaftliche Suchmaschinen:
+* sind speziell für den Bedarf in der Wissenschaft gedacht
+* finden speziell Dokumente...
+  * ...die wissenschaftlich aufgebaut sind
+  * ...die bibliographische Angaben enthalten
+  
+.pull-left[
+**Vorteile:**
+* Suche nach brauchbaren Dokumenten für die Fachkommunikation wird vereinfacht
+* Suche wird schneller und einfacher und relevante Dokumente werden mit größerer
+Wahrscheinlichkeit aufgefunden
+]
+
+.pull-right[
+**Nachteile:**
+* Wissenschaftlichkeit wird nur an formalen Dokumenten und Erscheinungsort festgemacht, keine intellektuelle Überprüfung und manche wiss. Literatur wird nicht als solche erkannt 
+* Aktualität und Vollständigkeit nicht gegeben, wie bei anderen Recherchesystemen
+]
+
+Nutzen Sie Fachdatenbanken/wissenschaftliche Suchmaschinen zum Auffinden von geeigneten Artikeln/ Aufsätze! (siehe [nützliche Links](#links))
+
+---
+class: top, left
+### Literaturrecherche
+
+#### Recherchesysteme
+
+**OPAC = „Online Public Access Catalogue“**
+
+* Bestandskatalog in Form einer Datenbank mit - im Idealfall allen - in der Bibliothek verfügbaren Medien
+* Kann online durchsucht werden
+* In OPACs von Bibliotheksverbünden findet man Medien aus allen teilnehmenden Bibliotheken
+
+$\rightarrow$ Damit Sie außerhalb des HS-Netzes Zugriff auf die Volltexte lizenzierter Produkte haben, [müssen Sie in Ihrem Browser einen Proxy aktivieren](https://ilias.hs-fresenius.de/goto_HSF_cat_2399812.html).
+
+**Link zum OPAC für Fresenius:**: [https://library.hs-fresenius.de/discovery/search?vid=49FHF_INST:49FHF&lang=de](https://library.hs-fresenius.de/discovery/search?vid=49FHF_INST:49FHF&lang=de)
+
+---
+class: top, left
+### Literaturrecherche
+
+#### Recherchesysteme
+
+.pull-left[
+**Google Scholar**: https://scholar.google.de/
+
+```{r, echo=FALSE,fig.show='hold',fig.align='center'}
+knitr::include_graphics("bilder/scholar.png")
+``` 
+]
+
+.pull-right[
+**Bei zentralen Artikeln:** Klick auf Zitieren --> BibTex --> rauskopieren (spart Ihnen später Arbeit)
+
+[**Sci-Hub**](https://sci-hub.hkvisa.net/): https://de.wikipedia.org/wiki/Sci-Hub
+
+[**Anna's Archive**](https://annas-archive.org): https://annas-archive.org
+]
+
+---
+class: top, left
+name: links
+
+### Literaturrecherche
+
+#### Nützliche Links zur Literaturrecherche
+
+<small>
+
+[DBIS -Datenbankinfosystem ](https://dbis.ur.de/dbinfo/fachliste.php?bib_id=eff&colors=7&ocolors=40&lett=l)
+Sammlung von frei zugänglichen und lizenzpflichtigen Fachdatenbanken nach Fachgebieten
+
+[EZB - Elektronische Zeitschriftenbibliothek](http://ezb.ur.de/ezeit/index.phtml?bibid=EFF&colors=7&lang=de)
+Umfangreichste Sammlung elektronischer Zeitschriften aller Fachgebiete in Deutschland (als Volltext verfügbar!)
+
+[Bielefeld Academic Search Engine (BASE)](https://www.base-search.net)
+BASE ist eine der weltweit größten Suchmaschinen für wissenschaftliche Open-Access-Dokumente.
+
+[Hogrefe eContent](https://econtent.hogrefe.com)
+Volltextdatenbank der Hogrefe-Verlagsgruppe mit Zeitschriften aus den Bereichen Psychologie, Psychiatrie, Medizin und Pflege
+
+[PsycARTICLES](https://www.apa.org/pubs/databases/psycarticles)
+Zeitschriften-Volltextdatenbank der American Psychological Association (APA) mit Beiträgen aus allen Gebieten der Psychologie 
+
+[PubMed](https://pubmed.ncbi.nlm.nih.gov)
+Bibliografische Datenbank zur Medizin und angrenzender Wissenschaften
+
+[SpringerLink](https://link.springer.com)
+Online-Bibliothek der Springer-Verlagsgruppe
+
+[Thieme eJournals](https://www.thieme-connect.de/products/all/home.html)
+Stellt Inhalte von rund 130 medizinischen und wissenschaftlichen Fachzeitschriften zur Verfügung
+
+[Wiley Online Library](https://onlinelibrary.wiley.com)
+Fächerübergreifendes Verlagsportal, das eine Vielzahl von Primärquellen unter einer Oberfläche anbietet.
+
+[Bayerische Staatsbibliothek](www.bsb-muenchen.de)
+
+</small>
+
+---
+class: top, left
+
+### Literaturrecherche
+
+#### Recherchemethoden
+
+* **Wissenschaftssprache ist Englisch!** $\rightarrow$ Suchen Sie nach englischen Schlagwörtern
+
+* "**Boolean Operators**": schlau suchen = bessere Ergebnisse
+  - Anführungzeichen "SUCHE", z.B. "effects of computer games": Worte werden nur gruppiert gesucht, in der angegeben Reihenfolge
+  - AND oder +, z.B games AND well-being: Jeder Suchbegriff soll vorkommen, nur die Suchergebnisse werden angezeigt, die beide Worte beinhalten.
+  - NOT oder -, z.B. games NOT depression: Der erste Begriff wird gesucht und alles andere ausgeschlossen.
+  - OR, z.B. games OR computer OR media: Sucht nach allen Begriffen gleichzeitig
+
+* Suchmaschinen wie Google suchen oft nach genauer Zeichenfolge
+  - Singular/Plural, Wortzusammensetzungen, synonyme, ähnliche Begriffe berücksichtigen 
+  - Trunkieren
+    + ?: Platzhalter für genau ein Zeichen
+    + \*: Platzhalter für beliebig viele Zeichen
+
+---
+class: top, left
+
+### Literaturrecherche
+
+#### Recherchemethoden
+
+##### Systematische Recherche
+
+* Konkrete Recherche mittels Suchmaschinen, Fachdatenbanken, Portalen etc.
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "600px"}
+knitr::include_graphics("bilder/systematische.png")
+```
+]
+
+---
+class: top, left
+
+### Literaturrecherche
+
+#### Recherchemethoden
+
+##### Schneeballprinzip
+
+* man beginnt mit einer zuverlässigen Quelle
+* im Literaturverzeichnis: Weitere Veröffentlichungen zu diesem Thema 
+* in jeder dieser Veröffentlichungen finden sich weitere Quellen
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "550px"}
+knitr::include_graphics("bilder/schneeball.png")
+```
+]
+
+---
+class: top, left
+
+### Literaturrecherche
+
+#### Recherchemethoden
+
+##### Systematische Recherche vs. Schneeballprinzip
+
+.pull-left[
+**Systematische Recherche**
+* Lohnt sich für Einblick ohne besonderes Vorwissen (wenige bzw. keine weiteren Literaturhinweise)
+* Sehr umfassende Literaturrecherche
+* Wenn es wirklich umfassend gemacht wird
+bedarf es einem hohem Zeitaufwands
+* Zu allgemeine Suchanfrage sehr große Treffermenge
+* Bedarf einiges an Übung um gezielt zu Recherchieren
+]
+
+.pull-right[
+**Schneeballprinzip**
+* Bietet sich an, wenn Sie bereits einen guten Ausgangspunkt für Ihr Thema haben
+* Besonders gut für die Recherche nach Grundlagenliteratur oder nach sehr aktueller Literatur bei sehr konkretem Thema geeignet
+* Hohe Recherchegeschwindigkeit
+* Vorsicht: möglicherweise einseitige Betrachtung
+eines Themas
+* Unvollständige Suche
+]
+
+$\rightarrow$ Kombination beider Methoden!
+
+---
+class: top, left
+
+### Literaturrecherche
+
+#### Literaturverwaltung
+
+.pull-left[
+* Viele verschiedene Softwarelösungen, probieren Sie aus was Sie effektiv unterstützt!
+* Ein mächtiges Tool ist Zotero: https://www.zotero.org/
+* Auch für Zusammenarbeit in Gruppen nützlich (geteilte Literaturordner)
+
+* Vergleiche: 
+  - https://nbn-resolving.org/urn:nbn:de:bsz:14-qucosa2-762961
+  - https://mediatum.ub.tum.de/doc/1316333/1316333.pdf
+]
+
+.pull-right[
+```{r eval = TRUE, echo = F, fig.show='hold',fig.align='center'}
+knitr::include_graphics("bilder/zotero.png")
+```
+]
+
+---
+class: top, left
+name: lesen
+
+### Literaturrecherche
+
+#### Lesetechniken
+
+.center[
+"*Die guten Leutchen wissen nicht, was es einen für Zeit und Mühe kostet, um Lesen zu lernen.  Ich habe achtzig Jahre dazu gebraucht und kann jetzt noch nicht sagen, dass ich am Ziele wäre!*"
+
+(Johann Wolfgang Goethe)
+]
+
+.pull-left[
+**3 Schritte**:
+
+* Vorbereitung
+* Das eigentliche Lesen
+* Gelesenes festhalten
+]
+
+.pull-right[
+```{r eval = TRUE, echo = F, out.width = "50%", fig.show='hold',fig.align='center'}
+knitr::include_graphics("bilder/goethe.jpg")
+```
+]
+
+---
+class: top, left
+
+### Literaturrecherche
+
+#### Lesetechniken
+
+##### Vorbereitung
+
+**1. Leseziel bestimmen**
+
+* Was will ich durch das Lesen der Information erreichen? 
+  * Neue Ideen
+  * Prüfungsvorbereitung
+  * Referat
+  * Forschung
+
+* Muss ich den ganzen Text lesen?
+
+* Nur einen bestimmten Abschnitt und welchen?
+
+* Nur wichtige Details?
+
+$\rightarrow$ Davon hängt die Art des Lesens ab und wie Sie das Gelesene festhalten!
+
+
+---
+class: top, left
+
+### Literaturrecherche
+
+#### Lesetechniken
+
+##### Vorbereitung
+
+**2. Überblick verschaffen**
+
+* Auskunft über den Verfasser
+
+* Publikationsart
+
+* Erscheinungsjahr
+
+* Vorwort, Abstract
+
+* Einführung
+
+* Anhang, Diskussion
+
+---
+class: top, left
+
+### Literaturrecherche
+
+#### Lesetechniken
+
+##### Vorbereitung
+
+**3. Fragen an sich selbst stellen**
+
+* Weiß ich etwas über den Stoff? 
+
+* Was weiß ich noch nicht?
+
+* In welchem Zusammenhang habe ich schon davon gehört?
+
+* Welche Definitionen, Begriffe, Fachausdrücke werden herangezogen?
+
+* Welche Relevanz hat das Thema für mich?
+
+
+---
+class: top, left
+
+### Literaturrecherche
+
+#### Lesetechniken
+
+##### Vorbereitung
+
+**4. Planen**
+
+.pull-left[
+* **Abschätzen des Arbeitsaufwands**
+  * Wie viel Zeit habe ich? 
+  * Schwierigkeit des Texts? 
+  * Wie viel Zeit werde ich benötigen?
+  * Zeitplan erstellen, inklusive Pausen und Wiederholungen
+]
+
+.pull-right[
+* **Abschätzen möglicher Schwierigkeiten bei der Textverarbeitung**
+  * Hindernisse (Lärm, Zeitmangel, Konzentrationsschwierigkeiten, etc.)
+  * Besondere Schwierigkeiten des Textes (Fremdsprache, Fachsprache…)
+  * Geeigneten Rahmen schaffen
+]
+
+* **Lernaktivitäten**
+  * Anzahl der Lesedurchgänge festlegen
+  * Lesepausen
+  * Wiederholung 
+  * Verständnis prüfen
+
+
+---
+class: top, left
+
+### Literaturrecherche
+
+#### Lesetechniken
+
+##### Das eigentliche Lesen
+
+* **Kursorisches Lesen**: 
+  * Überfliegen des Textes zu Überblick und Orientierung
+  * z.B. Ist der Text für mich verständlich geschrieben? 
+  * Ist er für mich interessant und verwendbar?
+
+* **Selektives Lesen**: 
+  * Konzentration auf interessante Aspekte
+  * Fragen vor dem Lesen: Was weiß ich schon? Was suche ich genau?
+  * Fragen während des Lesens: Wovon handelt der Text? Entspricht er den Suchkriterien? Was sagt der Text über das Gesuchte aus? Welche Absicht verfolgt der Text?
+
+* **Studierendes Lesen**: 
+  * systematische und vertiefte Analyse
+  * PQ4R-Methode: **P**review, **Q**uestion, **R**ead, **R**eflect, **R**ecite, **R**eview
+
+
+---
+class: top, left
+
+### Literaturrecherche
+
+#### Lesetechniken
+
+##### Das eigentliche Lesen
+
+**PQR4**
+
+**P**review
+* Überfliegen aller Kapitel, um das allgemeine Thema zu begreifen.
+* Identifizieren der Abschnitte, die als Einheit zu lesen sind.
+* Überschriften für die einzelnen Abschnitte finden.
+
+**Q**uestion
+* Formulieren von Fragen zu den Abschnitten.
+* Oftmals genügt eine Umformulierung der Abschnittsüberschriften, um eine angemessene Frage zu stellen.
+
+**R**ead
+* Sorgfältiges Lesen des Abschnitts, indem man versucht, die Fragen zu beantworten, die man dazu gestellt hat.
+* *Wichtige* Textpassagen markieren und Schlüsselbegriffe festhalten.
+
+---
+class: top, left
+
+### Literaturrecherche
+
+#### Lesetechniken
+
+##### Das eigentliche Lesen
+
+**PQR4**
+
+.pull-left[
+**R**eflect (während des Lesens)
+* Aktiv darüber nachdenken
+* Versuchen, Information zu verinnerlichen
+* Beispiele finden
+* Text in Bezug zum eigenen Vorwissen setzen
+]
+
+.pull-right[
+**R**ecite
+* Nachdem man einen Abschnitt fertig bearbeitet hat, versucht man sich an die darin enthaltenen Informationen zu erinnern.
+* Man versucht, die Fragen zu beantworten, die man zu diesem Abschnitt formuliert hat.
+]
+
+**R**eview
+* Nachdem man den ganzen Text durchgearbeitet hat, geht man ihn nochmals in Gedanken durch und ruft sich die wichtigsten Punkte ins Gedächtnis.
+* Man versucht, die Fragen zu beantworten, die man gestellt hat.
+
+---
+class: top, left
+<div class="footer"><span>Rayner, K., Schotter, E. R., Masson, M. E., Potter, M. C., & Treiman, R. (2016). So much to read, so little time: How do we read, and can speed reading help? Psychological Science in the Public Interest, 17(1), 4-34.</span></div>
+
+### Literaturrecherche
+
+#### Lesetechniken
+
+##### Das eigentliche Lesen
+
+.center[
+```{r, echo=FALSE,out.width="60%",fig.show='hold',fig.align='center'}
+knitr::include_graphics("bilder/rayner2016.PNG")
+``` 
+]
+
+---
+class: top, left
+<div class="footer"><span>http://www.quickmeme.com/meme/3t52vi</span></div>
+
+### Literaturrecherche
+
+#### Lesetechniken
+
+##### Umgang mit dem Text
+
+.pull-left[
+**Zusammenfassung**
+* Aktive Form der Textaneignung
+* Man ist gezwungen „eng“ am Text zu arbeiten
+* Komprimierter Wissensspeicher, auf den man zurückgreifen kann
+
+**Unterstreichen**
+* Wichtige Stichwörter und Textstellen
+* Wenig zeitaufwendig, überall durchführbar
+* Erst beim zweiten Durchgang unterstreichen
+* Verschiedene Farben für Definitionen, Beispiele usw.
+* Immer dasselbe Markierungssystem verwenden
+]
+
+.pull-right[
+```{r, echo=FALSE,fig.show='hold',fig.align='center'}
+knitr::include_graphics("bilder/highlight.jpg")
+``` 
+]
+
+---
+class: top, left
+
+### Literaturrecherche
+
+#### Lesetechniken
+
+##### Umgang mit dem Text
+
+.pull-left[
+**Randbemerkungen und Markierungssymbole**
+* Inhalt des Textes wird mit eigenem Wissen verbunden. Der Leser fügt dem Text etwas hinzu, was nicht explizit drin steht.
+* Elaboration fördert das Behalten von aufgenommenen Informationen
+* Systematische Vorgehensweise
+* Immer das gleiche System verwenden!
+]
+
+.pull-right[
+```{r, echo=FALSE,fig.show='hold',fig.align='center', out.width="70%"}
+knitr::include_graphics("bilder/symbole.png")
+``` 
+]
+
+---
+class: top, left
+
+### Literaturrecherche
+
+#### Lesetechniken
+
+##### Umgang mit dem Text
+
+**Exzerpieren**
+* lat. „excerpere“ = herausnehmen: auszugsweise Wiedergabe des Textes
+* Dinge auf den Punkt bringen und Wesentliches kurz und knapp zusammenschreiben.
+* Zu empfehlen: 
+  * Karteikarten (oder Literaturverwaltungsprogramme!)
+  * Standortstellen und Signatur der Publikation notieren
+  * Knapp formulieren, jedoch so, dass der gedankliche Zusammenhang später nachvollziehbar ist
+  * Breiter Rand für Zusätze und Kommentare
+  * Bilder/Grafische Darstellungen
+* Nicht zu empfehlen
+  * Lesenotizen auf lose Blätter schreiben
+  * Zu knapp
+    
+**Visualisierung (z.B. Mindmaps)**
+
+
+---
+class: top, left
+name: wissKrit
+<div class="footer"><span>Kapitel 2.2 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Bewertung von Forschungsfragen
+
+#### Wissenschaftliche Kriterien
+
+##### Präzision der Problemformulierung
+
+**Wann sind vorläufige Forschungsfragen unbrauchbar:**
+
+* Forschungsgegenstand **zu allgemein** (z.B. nur Nennung eines Begriffs, wie "Motivation")
+
+* Forschungsgegenstand **zu vielschichtig** (diverse Fragestellungen nicht trennbare Fragestellungen ableitbar)
+
+* unklare, mehrdeutige oder schlecht definierte **Begriffe/Konstrukte**
+
+**Kriterien:**
+
+* Begrifflichen Klarheit: Kommunikationsfähigkeit (muss genau an Dritte vermittelt werden können)
+
+* Präzision der Ideenformulierung (Prüfbare Hypothesen ableitbar, operationalisierbare Konstrukte, Eingrenzbare Zielgruppen)
+
+---
+class: top, left
+<div class="footer"><span>Kapitel 2.2 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Bewertung von Forschungsfragen
+
+#### Wissenschaftliche Kriterien
+
+##### Empirische Untersuchbarkeit
+
+**Wann sind vorläufige Forschungsfragen unbrauchbar:**
+
+* Forschungsfragen mit religiösen, metaphysischen oder philosophischen Inhalten (zumindest ohne angemessenen qualitativen Forschungsplan)
+
+* Themen, die sich mit unklaren Begriffen befassen (z. B. Seele, Gemüt, Charakterstärke)
+
+* Unangemessener Arbeitsaufwand (es sei denn explizit geplant oder Zugang organisiert)
+
+  * z.B. Untersuchung seltener Personen (z.B. Williams-Beuren-Syndrom, Prävalenz 1:20.000)
+  * z.B. Untersuchung seltener Situationen (z.B. Massenveranstaltungen)
+  * z.B. sehr zeitaufwendige Untersuchungen (mehrlährige Längsschnittstudien)
+
+---
+class: top, left
+<div class="footer"><span>Kapitel 2.2 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Bewertung von Forschungsfragen
+
+#### Wissenschaftliche Kriterien
+
+##### Wissenschaftliche Tragweite
+
+**Wann sind vorläufige Forschungsfragen unbrauchbar:**
+
+* Untersuchung hat weder praktische Bedeutung noch Wert für die Grundlagenforschung
+
+* "überforschte" Themen - reine Bestätigung sicherer Befunde (Reaktionszeiten verändern sich unter Alkohol)
+
+**WICHTIG:** Umfassende Informationseinholung
+
+$\rightarrow$ Verantwortung der Hochschulangehörigen, sich mit Themen zu beschäftigen, deren Nutzen zumindest prinzipiell erkennbar ist (Steuerfinanzierung)
+
+---
+class: top, left
+name: ethKrit
+<div class="footer"><span>Kapitel 2.2 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Bewertung von Forschungsfragen
+
+#### Ethische Kriterien
+
+* ethische Sensibilität voraussetzen
+
+* Potentiell abzuwegende Untersuchungsgegenstände (Auswahl)
+  * Gewalt
+  * Aggressivität
+  * Liebe
+  * Leistungsstreben
+  * psychische Störungen
+  * ästhetische Präferenzen
+  * Schmerztoleranz 
+  * Angst 
+
+* Schutz durch das Grundgesetz (Würde des Menschen ist unantastbar)
+
+* Berufsethische Verpflichtungen: Ethische Richtlinien herausgegeben durch Deutsche Gesellschaft für Psychologie (DGPs) und den Berufsverband Deutscher Psychologinnen und Psychologen (BDP)
+
+---
+class: top, left
+<div class="footer"><span>Kapitel 2.2 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Bewertung von Forschungsfragen
+
+#### Ethische Kriterien
+
+##### Güterabwägung: Wissenschaftlicher Fortschritt oder Menschenwürde
+
+* Generelle ethische Kriterien: Menschenwürde, Schadensfreiheit, Datenschutz, Freiwilligkeit, Informationspflicht
+
+* Humanwissenschaftliche Forschung benötigt Daten, deren Sammlung teils schwer mit  Menschenwürde vereinbar ist. 
+
+* Wenn nicht vermeidbar $\rightarrow$  muss anderen Personen (z.B. Patienten) zugute kommen
+
+* Prospektive Einschätzung auch für Profis schwer 
+
+* Eigene Abwägung und Verantwortung + Einschätzung/Bewilligung von Ethikkommissionen
+
+---
+class: top, left
+name: ethik
+<div class="footer"><span>https://zwpd.transmit.de/images/zwpd/dienstleistungen/ethikkommission/ethik-richtlinien-2016.pdf</span></div>
+
+### Bewertung von Forschungsfragen
+
+#### Exkurs: Ethikkomission und Ethikantrag
+
+**Berufsethische Richtlinien des BDP und der DGPs, Kapitel 7.3. Grundsätze für Forschung und Publikation**
+
+(1) Forschung mit Menschen
+
+* Psychologische Forschung ist auf die Teilnahme von Menschen als Versuchspersonen angewiesen. 
+
+* Psychologinnen und Psychologen sind sich der Besonderheit der Rollenbeziehung zwischen Versuchsleiterin bzw. Versuchsleiter und Versuchsteilnehmerin bzw. Versuchsteilnehmer und der daraus resultierenden Verantwortung bewusst. 
+
+* Sie stellen sicher, dass durch die Forschung **Würde und Integrität der teilnehmenden Personen** nicht beeinträchtigt werden. 
+
+* Sie treffen alle geeigneten Maßnahmen, um **Sicherheit und Wohl der an der Forschung teilnehmenden Personen** zu gewährleisten, und versuchen, Risiken auszuschließen.
+
+---
+class: top, left
+<div class="footer"><span>https://zwpd.transmit.de/images/zwpd/dienstleistungen/ethikkommission/ethik-richtlinien-2016.pdf</span></div>
+
+### Bewertung von Forschungsfragen
+
+#### Exkurs: Ethikkomission und Ethikantrag
+
+**Berufsethische Richtlinien des BDP und der DGPs, Kapitel 7.3. Grundsätze für Forschung und Publikation**
+
+(2) Förmliche Bewilligungen
+
+* Falls Forschungsprojekte einer förmlichen ethischen Bewilligung unterliegen, liefern Psychologinnen und Psychologen präzise Informationen über ihr Forschungsvorhaben. 
+
+* Sie beginnen erst mit dem Forschungsprojekt, nachdem sie eine Bewilligung erhalten haben. 
+
+* Sie führen ihr Forschungsprojekt in Übereinstimmung mit dem bewilligten Vorgehen durch.
+
+$\rightarrow$ Ethikantrag an eine Ethikkomission
+
+
+---
+class: top, left
+<div class="footer"><span>https://zwpd.transmit.de/images/zwpd/dienstleistungen/ethikkommission/ethik-richtlinien-2016.pdf</span></div>
+
+### Bewertung von Forschungsfragen
+
+#### Exkurs: Ethikkomission und Ethikantrag
+
+**Berufsethische Richtlinien des BDP und der DGPs**
+
+**Ethikkomission der DGPs**: Die Ethikkommission nimmt auf Antrag Stellung zur ethischen Vertretbarkeit der Ziele und Verfahrensweisen eines psychologischen Forschungsvorhabens bevor dieses durchgeführt wird. Sie sieht sich vornehmlich als beratendes Organ, durch dessen Voten die Verfahrensweisen psychologischer Forschungsvorhaben optimiert und professionalisiert werden.
+
+$\rightarrow$ Ethikkomission kann Verfahren befürworten oder nicht (oder auch Änderungen anfordern, um eine Befürwortung auszusprechen)
+
+$\rightarrow$ Positives Ethikvotum z.B. für einige wissenschaftliche Veröffentlichungen nötig
+
+---
+class: top, left
+<div class="footer"><span>https://zwpd.transmit.de/images/zwpd/dienstleistungen/ethikkommission/hinweise_zum_ethikantrag_v13.pdf</span></div>
+
+### Bewertung von Forschungsfragen
+
+#### Exkurs: Ethikkomission und Ethikantrag
+
+**Übliche Bestandteile eines Ethikantrags**
+
+* **Rahmeninformationen**: Beteiligte, Thema, Finanzierung
+
+* **Angaben zum Gegenstand und zum Verfahren des Vorhabens**: Forschungsziele, körperliche und/oder mentale Beanspruchung, Anwendung des Arzneimittelgesetzes?, Preisgebung von persönlichen Erlebnissen und Einstellungen, Täuschung/Debriefing
+
+* **Angaben zu Aufzeichnung, Aufbereitung, Speicherung und Löschung der Daten**: siehe letzte Einheit
+
+* **Gewinnung der Personenstichprobe**: Rekrutierungsplan für Zielgruppe, Ein- und Ausschlusskriterien, Datenschutz, Aufwandsentschädigung
+
+* **Freiwilligkeit der Teilnahme und Rücktritt**: siehe letzte Einheit
+
+* **Umgang mit auffälligen Befunden**: Aufklärung der Teilnehmer und Pflicht der Mitteilung
+
+* **Besonderheiten**: z.B. bei mehrteiligen Studien, Bild- und Tonaufnahmen, internetbasierter Datengewinnung
+
+$\rightarrow$ Viele Dinge, mit denen Sie sich auch in der Präregistrierung auseinandersetzen müssen
+---
+class: top, left
+name: zit-start
+
+### Quellen & Referenzen
+
+#### Zitationssysteme
+
+In unserem Studium ist die in der Psychologie übliche Zitierweise der American Psychological Association (APA) verpflichtend:
+
+.center[
+```{r eval = TRUE, echo = F, out.width="20%"}
+knitr::include_graphics("bilder/apa7.jpg")
+```
+]
+
+[**Link zum vollständigen APA-Style guide**](https://apastyle.apa.org)
+
+[**Link zum kostenfreien Nachlesen vom APA-Style guide der Purdue University**](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/in_text_citations_author_authors.html)
+
+---
+class: top, left
+
+### Quellen & Referenzen
+
+#### Zitationssysteme
+
+* Gekürzte Quellenangaben im Haupttext:
+  * „Direkte Zitate“: Autorenname(n), Erscheinungsjahr, Seitenangabe 
+  * Indirekte Zitate: Autorenname(n), Erscheinungsjahr
+
+* Zitationen können, müssen aber nicht im Fließtext eingebettet werden:
+  * Im Fließtext: 
+      - 2 Autoren: Wie Müller und Huber (2000) zeigen ...
+      - Mehr als 2 Autoren: Wie Müller et al. (2000) zeigen ...
+  * Nicht im Fließtext: 
+      - 2 Autoren: Folgendes konnte gezeigt werden ... (Müller & Huber, 2000).
+      - Mehr als 2 Autoren: Folgendes konnte gezeigt werden ... (Müller et al., 2000).
+  * Man entscheidet sich für eine der beiden Varianten!
+  
+* Ausnahme zur "et al."-Regel: Führt dies zu Mehrdeutigkeit (z.B. zwei Quellen mit dem-/derselben ErstautorIn aus demselben Jahr), werden so viele Namen aufgelistet, wie zur Unterscheidung beider Quellen erforderlich ist.
+
+---
+class: top, left
+name: zitate
+
+### Quellen & Referenzen
+
+#### Indirekte vs. Direkte Zitate
+
+Indirekte Zitate (in Wissenschaft mit Abstand am häufigsten verwendet)
+
+* Gedankengänge anderer Autoren werden sinngemäß übernommen
+
+* Werden regelmäßig eingesetzt
+
+* Stehen ohne Anführungszeichen
+
+* Inhalte bleiben trotz Umformulierung identisch
+
+* Quellenbeleg: Autor und Erscheinungsjahr
+
+---
+class: top, left
+### Quellen & Referenzen
+
+#### Indirekte vs. Direkte Zitate
+
+Indirekte Zitate – Beispiel:
+
+Im Alltag müssen wir oft überprüfen, ob beispielsweise ein bestimmtes Objekt einer bestimmten Gruppe zugeordnet werden kann **(Daschmann, 2001)**. Um dieses Urteil fällen zu können, vergleichen wir das Objekt mit dem Prototyp einer Kategorie, mit welchem es die meiste Ähnlichkeit aufweist. Andere validere Informationen werden dabei vernachlässigt **(Werth & Mayer, 2008)**. Dadurch kann es zu Fehlurteilen kommen. Hierzu gehören, dass die summarische Realitätsbeschreibung ignoriert wird, Stichprobengrößen nicht zur Kenntnis genommen und Zufallsverteilungen falsch eingeschätzt werden **(Daschmann, 2001)**. **Kahneman und Tversky (1973)** konnten diese Phänomene nachweisen.
+
+---
+class: top, left
+### Quellen & Referenzen
+
+#### Indirekte vs. Direkte Zitate
+
+Direkte Zitate
+
+* Wortwörtliche Übernahme
+
+* Sparsame Verwendung (sonst ist es nur abschreiben)
+
+* Stehen (meist) in Anführungszeichen
+
+* Quellenbeleg: Autor, Erscheinungsjahr und Seitenzahl der übernommen Stelle
+
+---
+class: top, left
+### Quellen & Referenzen
+
+#### Indirekte vs. Direkte Zitate
+
+Direkte Zitate - Beispiel 
+
+* Ein Satz
+
+„Ein Experiment beginnt – wie andere wissenschaftliche Untersuchungen auch – im Allgemeinen mit einer Fragestellung“ **(Beck, 2009, S. 81)**.
+
+* Einleitung durch einen Doppelpunkt
+
+**Beck (2009)** meint dazu: „Ein Experiment beginnt – wie andere wissenschaftliche
+Untersuchungen auch – im allgemeinen mit einer Fragestellung“ **(S. 81)**. 
+
+* Syntaktische Verschmelzung mit einem Satz
+
+Bezüglich eines Experiments stellt **Beck (2009)** fest, dass es „(...) im allgemeinen mit einer Fragestellung [beginnt]“ **(S. 81)**.
+
+* Auf englisch "p." (für *page*) statt "S."
+
+---
+class: top, left
+name: mehrere-quellen
+
+### Quellen & Referenzen
+
+#### Mehrere Quellen für die selbe Aussage
+
+Mehrere Quellen werden durch Strichpunkt getrennt (für jede Quelle muss ein Eintrag im Literaturverzeichnis vorhanden sein!)
+
+* Z.B. wenn man zum Ausdruck bringen möchte, dass ein Befund gut belegt ist:
+
+Conscientiousness was also found to be inversely associated with impulsiveness **(Mowen, 2000; Rocas, Sagiv, Schwartz, & Knafo, 2002)**
+
+
+#### Mehrere Quellen des selben Autors
+
+Hat ein Autor mehrere Quellen in einem Jahr veröffentlicht, unterscheidet man die Quellen durch den Zusatz von „a“, „b“, ...bei der Jahresangabe
+
+**(Müller, 2000a, S. 5.; Müller, 2000b, S. 25)**. -> Gilt bei direkten und indirekten Zitaten
+
+* Die Reihenfolge der Nummerierung richten sich alphabetisch nach dem Titel der Quelle.
+
+---
+class: top, left
+name: mehrere-quellen
+
+### Quellen & Referenzen
+
+#### Autoren mit dem gleichen Familiennamen
+
+Der Anfangsbuchstabe des Vornamen wird vorangestellt: z.B. In einigen Studien (J. Müller, 2010; K. Müller, 2009) ...
+
+#### Weitere Besonderheiten (z.B. sehr lange direkte Zitate)
+
+Im Zweifelsfall im APA-Manual nachschauen!
+
+---
+class: top, left
+name: lit-verzeichnis
+
+### Quellen & Referenzen
+
+#### Literaturverzeichnis
+
+Das Literaturverzeichnis....
+* Folgt in der Regel unmittelbar auf den Textteil einer Arbeit
+
+* Alle im Fließtext verwendeten Quellen müssen hier lückenlos dokumentiert werden (und auch nur diese!)
+
+* Reihenfolge: Alphabetisch nach Nachname des (Erst-) Autors, dann nach Jahreszahl (frühere Artikel desselben Autors vor späteren Artikeln, aber "nothing precedes something", d.h. Artikel mit weniger Co-Autoren vor Artikeln mit mehr Co-Autoren)
+
+* Arten von Quellen werden im Literaturverzeichnis *nicht* anhand unterschiedlicher Abschnitte differenziert (also nicht alle Journalartikel aufführen, dann alle Internetquellen, dann alle Fachbücher)
+
+* Akademische Grade und berufliche Titel der Autoren werden nicht angegeben
+
+* Angabe der Auflage: Erst ab 2. Auflage in runden Klammern hinter dem Titel (nicht kursiv)
+
+* "hängend" formatieren (Einrückung in der zweiten Zeile)
+
+---
+class: top, left
+### Quellen & Referenzen
+
+#### Literaturverzeichnis
+
+Allgemeine Inhalte der Quellenangabe im Literaturverzeichnis
+
+* Vorname (Initiale) und Zuname des Autors / der Autoren (i.d.R. werden hier alle angegeben, außer es sind mehr als 20)
+
+* Erscheinungsjahr
+
+* Titel der Quelle
+
+* Ggf. Auflage (erst ab der 2. Auflage)
+
+* Angaben zur eindeutigen Identifikation der Quelle je nach Art der Quelle (Zeitschriftenname / URL / ...) $\rightarrow$ Hier unterscheiden sich die Angaben je nach Literaturgattung (also Paper, Monographien, Sammelbänder, etc.)
+
+---
+class: top, left
+### Quellen & Referenzen
+
+#### Literaturverzeichnis
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "800px"}
+knitr::include_graphics("bilder/lit1.png")
+```
+]
+
+---
+class: top, left
+### Quellen & Referenzen
+
+#### Literaturverzeichnis
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "900px"}
+knitr::include_graphics("bilder/lit2.png")
+```
+]
+
+---
+class: top, left
+### Quellen & Referenzen
+
+#### Literaturverzeichnis
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "900px"}
+knitr::include_graphics("bilder/lit3.png")
+```
+]
+
+---
+class: top, left
+### Quellen & Referenzen
+
+#### Literaturverzeichnis
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "800px"}
+knitr::include_graphics("bilder/lit4.png")
+```
+]
+
+---
+class: top, left
+name: take-away
+
+### Take-Aways
+
+.full-width[.content-box-gray[
+
+* Gute Forschungsfragen müssen **präzise** Problemformulierungen vorweisen
+
+* Gute Forschungsfragen müssen **empirisch untersuchbar** sein
+
+* Gute Forschungsfragen müssen **wissenschaftliche Tragweite** haben
+
+* **Ethische Kriterien** (Menschenwürde, Schadensfreiheit, Datenschutz, Freiwilligkeit, Informationspflicht) müssen bei Forschungsideen mitgedacht werden.
+
+* Konsequentes Zitieren ist essentiell und folgt bestimmten Formatierungsregeln
+
+* Alle im Haupttext genannten Quellen müssen im Literaturverzeichnis vorkommen
+
+]
+]
+
+**[zurück zum Inhalt $\rightarrow$](#content)** 
+
+---
+class: top, left
+### Literaturempfehlung
+
+.center[
+```{r, echo=FALSE,out.width="30%",fig.cap="Kapitel 1.2, 5 und 6 in Döring, N. & Bortz, J. (2016). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften. Pearson.",fig.show='hold',fig.align='center'}
+knitr::include_graphics("bilder/doering.png")
+``` 
+]
+
+<!-- library(renderthis) -->
+<!-- to_pdf("WissArb_Z2_Litrecherche_Bewertung_Referenzen.Rmd", complex_slides = TRUE) -->

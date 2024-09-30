@@ -1,9 +1,9 @@
 ---
-title: "Einheit"
+title: "Einheit 3"
 subtitle: "⚔<br/>with xaringan"
 author: "Dr. Caroline Zygar-Hoffmann"
 institute: "RStudio, PBC"
-date: "2023/10/23 (updated: `r Sys.Date()`)"
+date: "2024/04/17 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -34,6 +34,7 @@ library(xaringanExtra)
 style_duo_accent(
   primary_color = "#621C37",
   secondary_color = "#EE0071",
+  link_color = "#7da5f5",
   background_image = "blank.png"
 )
 
@@ -57,7 +58,24 @@ class: middle, left
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
 ### Einheit 3: Theoriearbeit und Studiendesign
-##### 26.10.2023 | Dr. Caroline Zygar-Hoffmann
+##### 24.04.2024 | Dr. Caroline Zygar-Hoffmann
+
+---
+class: top, left
+
+### Exkurs: Metapsy
+
+.center[
+https://www.metapsy.org/
+
+```{r eval = TRUE, echo = F, out.width="40%"}
+knitr::include_graphics("bilder/metapsy.png")
+```
+]
+
+$\rightarrow$ Website, welche Evaluationsforschung von psychotherapeutischen Interventionen zugänglich macht
+
+$\rightarrow$ https://twitter.com/EikoFried/status/1746873387727659138: "In the video I'll show researchers (part I) and clients (part II) how to run a systematic meta-analysis looking into the effect of CBT on depression in older adults within 1 minute."
 
 ---
 class: top, left
@@ -65,33 +83,24 @@ name: content
 
 ### Heutige Themen
 
-#### [Planung von Studien](#planung)
+#### [Theoriearbeit und Hypothesenformulierung](#hypothesen)
 
-#### [Alltagsvermutungen und wissenschaftliche Hypothesen](#hypothesen)
+#### [Studiendesign](#studiendesign)
 
-#### [Forschungsstrategien](#strategien)
+#### [Material und Praxisaufgaben](#praxis)
 
-#### [Design Plan (Versuchsplan / Studiendesign)](#studiendesign)
-
-#### [Praxis](#praxis)
+#### [Literaturempfehlung](#literatur)
 
 ---
 class: top, left
-### Literaturempfehlung für die heutige Sitzung
+name: hypothesen
 
-.center[
-```{r, echo=FALSE,out.width="30%",fig.cap="Kapitel 6 und 7 in Döring, N. & Bortz, J. (2016). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften. Pearson.",fig.show='hold',fig.align='center'}
-knitr::include_graphics("bilder/doering.png")
-``` 
-]
+### Theoriearbeit und Hypothesenformulierung
 
----
-class: top, left
-name: planung
+#### Hypothesen im Forschungsprozess
 
-### Planung von Studien
-
-####  Was gehört zur Studienplanung?
+.pull-left[
+**Was gehört zur Studienplanung?**
 
 1. Theoriearbeit und Literaturrecherche $\rightarrow$ letzte und heutige Sitzung
 
@@ -99,78 +108,51 @@ name: planung
 
 3. Design Plan $\rightarrow$ heutige Sitzung
 
-4. Statistischer Analyseplan  $\rightarrow$ nächste Sitzung
+4. Variablen (Auswahl Messinstrumente und Variablenrollen)  $\rightarrow$ nächste Sitzung, Einheit 4
 
-5. Sampling Plan (Rekrutierungsplanung) $\rightarrow$ nächste Sitzung
+5. Statistischer Analyseplan  $\rightarrow$ Einheit 5
 
-6. Variablen (Auswahl Messinstrumente und Variablenrollen)  $\rightarrow$ übernächste Sitzung
+6. Sampling plan (Rekrutierungsplan) $\rightarrow$ Einheit 6
 
 $\rightarrow$ Studienplanung in **Präregistrierung** festhalten
-
----
-class: top, left
-<div class="footer"><span>https://www.lornecampbell.org/?p=179</span></div>
-
-### "Open Notebook Science"
-
-.pull-left[
-.center[
-"*...the concept of open notebook also includes sharing the laboratory notebook, something that often contains communications between collaborators, as well as “dear diary” types of entries, that shed light on the decision making process throughout the research process.*" (Lorne Campbell)
-]
-
-**Dokumentieren Sie an einem zentralen Ort** (kann z.B. ein gemeinsames GoogleDoc sein), **welche Ideen Sie verworfen haben und warum, und welche Entscheidungen Sie aus welchem Grund getroffen haben** (müssen Sie nicht mit der Prüfungsleistung angeben, können Sie aber in Ihrer Präregistrierung verlinken, *wenn Sie möchten*; primär soll es Ihnen dienen!)
 ]
 
 .pull-right[
-```{r eval = TRUE, echo = F}
-knitr::include_graphics("bilder/opennotebook.jpg")
+```{r eval = TRUE, echo = F, fig.align='center'}
+knitr::include_graphics("bilder/Forschungsprozess_Prereg.png")
 ```
 ]
 
 ---
 class: top, left
-### Planung von Studien
 
-####  Theoriearbeit und Literaturrecherche
+### Theoriearbeit und Hypothesenformulierung
 
-* Überblick verschaffen über derzeitigen Wissensstand im Feld
+#### Hypothesen in der Präregistrierung
 
-* Informationen über klinische/gesellschaftliche Relevanz der Fragestellung
+* Das klare Benennen der konfirmatorischen Hypothesen ist eine der zentralsten Aufgaben der Präregistrierung
 
-* Relevante Theorien und Modelle recherchieren
+* Hypothese meint die verbale Erklärung der erwarteten Beziehung zwischen den Variablen
 
-* Kernaspekte eigener Fragestellung theoretisch unterfüttern (Warum liegt die Fragestellung nahe?)
+* Meist nur Angabe der Alternativhypothese
 
-Digitale Literaturrecherche:
-  * Google Scholar
-  * Datenbankrecherche: https://dbis.ur.de/dbinfo/dbliste.php?bib_id=eff&colors=7&ocolors=40&lett=f&gebiete=22
-  * ...
+* Bei Interaktionseffekten: erwartete Form der Interaktion (z.B. graphisch veranschaulicht, oder konkrete Vorhersagen für Haupt- und Interaktionseffekte)
+  
+* Auch wenn man nur explorative Analysen vor hat: "Wir haben keine spezifischen a-priori-Hypothesen" $\rightarrow$  verhindert HARKing
 
 ---
 class: top, left
-### Planung von Studien
+### Theoriearbeit und Hypothesenformulierung
 
-#### "The Replication Recipe"
+#### Hypothesenformulierung
 
-.center[
-```{r eval = TRUE, echo = F, out.width = "600px"}
-knitr::include_graphics("bilder/Brandt2014.png")
-```
-]
+* Führen Sie **spezifische, prägnante und überprüfbare** Hypothesen auf
 
----
-class: top, left
-### Planung von Studien
+* Benutzen Sie möglichst **eindeutige Begriffe** (aus der Literatur) für in der Hypothese vorkommende/relevante Variablen
 
-####  Hypothesenformulierung
+* Überlegen Sie, ob es sich um **gerichtete oder ungerichtete** Hypothesen handelt und formulieren Sie Ihre Hypothesen entsprechend 
 
-* Führen Sie spezifische, prägnante und überprüfbare Hypothesen auf
-
-* Benutzen Sie möglichst eindeutige Begriffe (aus der Literatur) für in der Hypothese vorkommende/relevante Variablen
-
-* Überlegen Sie, ob es sich um gerichtete oder ungerichtete Hypothesen handelt und formulieren Sie Ihre Hypothesen entsprechend 
-
-* Hypothesen können in Primär- und Sekundärhypothesen unterteilt werden (z.B. Primärhypothese: "Je mehr Bestätigung ein Kind von seinen Eltern erfährt, desto höher ist der spätere Selbstwert.", Sekundärhypothese: "Dieser Zusammenhang ist besonders stark für Einzelkinder im Vergleich zu Kindern mit einem oder mehr Geschwistern.")
+* Hypothesen können in **Primär- und Sekundärhypothesen** unterteilt werden (z.B. Primärhypothese: "Je mehr Bestätigung ein Kind von seinen Eltern erfährt, desto höher ist der spätere Selbstwert.", Sekundärhypothese: "Dieser Zusammenhang ist besonders stark für Einzelkinder im Vergleich zu Kindern mit einem oder mehr Geschwistern.")
 
 * Konfirmatorische Hypothesen sind von explorativen Fragestellungen zu trennen (d.h. davon, was man sich sonst noch so anschauen möchte, ohne konkrete Annahme oder Spezifikation der konkreten Analyse)
 
@@ -178,216 +160,7 @@ class: top, left
 
 ---
 class: top, left
-name: hypothesen
-
-### Alltagsvermutungen und wissenschaftliche Hypothesen
-
-#### Was sind Hypothesen?
-
-Hypothese (griech.) = Unterstellung, Vermutung
-
-Eine Vermutung/Annahme ist dann als wissenschaftliche Hypothese zu verstehen wenn sie folgende 4 Kriterien erfüllt:
-
-Wenn sie...
-1. ...sich auf reale Sachverhalte bezieht, die empirisch untersuchbar sind (**Empirie**)
-
-2. ...allgemein gültig ist und über den Einzelfall bzw. ein singuläres Ereignis hinausgeht (**All-Satz**)
-
-3. ...zumindest implizit die Form eines Konditionalsatzes hat (**wenn-dann, je-desto**)
-
-4. ...durch Erfahrungen potenziell widerlegbar ist (**Falsifizierbarkeit**)
-
-5. ...(theoretisch begründbar ist)
-
----
-class: top, left
-### Alltagsvermutungen und wissenschaftliche Hypothesen
-
-.pull-left[
-#### Beispiele für Hypothesen:
-
-* Frauen sind kreativer als Männer
-
-* Mit zunehmender Müdigkeit sinkt die Konzentrationsfähigkeit
-
-* Je schöner das Wetter, desto besser die Stimmung
-
-* Jungen und Mädchen lesen unterschiedlich viel in ihrer Freizeit
-
-Behauptungen erfüllen alle genannten Kriterien: sind daher Hypothesen
-]
-
-.pull-right[
-```{r eval = TRUE, echo = F, out.width = "300px"}
-knitr::include_graphics("bilder/obelix.png")
-```
-]
-
----
-class: top, left
-### Alltagsvermutungen und wissenschaftliche Hypothesen
-
-#### Hypothesen: JA oder NEIN?
-
-* Bei starkem Zigarettenkonsum kann es zu Herzinfarkt kommen
-
-* Wenn es regnet, kann die Sonne scheinen.
-
-* Es gibt Kinder, die niemals weinen.
-
-* SchülerInnen aus Gymnasien zeigen gute Leistungen
-
----
-class: top, left
-### Alltagsvermutungen und wissenschaftliche Hypothesen
-
-#### Hypothesen: JA oder NEIN?
-
-* Bei starkem Zigarettenkonsum kann es zu Herzinfarkt kommen.
-
-$\rightarrow$ Kann-Sätze sind nicht falsifizierbar
-
-* Wenn es regnet, kann die Sonne scheinen.
-
-$\rightarrow$ Kann-Sätze sind nicht falsifizierbar
-
-* Es gibt Kinder, die niemals weinen.
-
-$\rightarrow$ kein All-Satz, nicht falsifizierbar (man müsste dafür bei allen Kindern zeigen, dass sie irgendwann mal weinen)
-
-* SchülerInnen aus Gymnasien zeigen gute Leistungen.
-
-$\rightarrow$ Wenn-dann Struktur nicht gegeben (z.B. im Vergleich zu wem? Oder Unter welchen Bedingungen?), daher nicht falsifizierbar (aber trotzdem schätzbar, d.h. anderes Ziel als Hypothesentesten möglich: Wie viele SchülerInnen aus Gymnasien zeigen gute Leistungen?)
-
----
-class: top, left
-### Alltagsvermutungen und wissenschaftliche Hypothesen
-
-#### Hypothesen: JA oder NEIN?
-
-* Die Konzentrationsfähigkeit hängt mit der Blutalkoholkonzentration zusammen.
-
-* Positive Verstärkung durch Lehrer/innen kann zu guten Leistungen bei Schüler/innen führen.
-
-* Positives Feedback beeinflusst die Arbeitsleistung.
-
-* Viele Studierende mögen Methodenlehrveranstaltungen.
-
----
-class: top, left
-### Alltagsvermutungen und wissenschaftliche Hypothesen
-
-#### Hypothesen: JA oder NEIN?
-
-* Die Konzentrationsfähigkeit hängt mit der Blutalkoholkonzentration zusammen.
-
-$\rightarrow$ JA
-
-* Positive Verstärkung durch Lehrer/innen kann zu guten Leistungen bei Schüler/innen führen.
-
-$\rightarrow$ NEIN
-
-* Positives Feedback beeinflusst die Arbeitsleistung.
-
-$\rightarrow$ JA
-
-* Viele Studierende mögen Methodenlehrveranstaltungen.
-
-$\rightarrow$ NEIN (aber trotzdem schätzbar, d.h. anderes Ziel als Hypothesentesten möglich)
-
----
-class: top, left
-### Alltagsvermutungen und wissenschaftliche Hypothesen
-
-#### Richtung von Hypothesen
-
-Je nach Erkenntnisstand kann eine ungerichtete oder eine gerichtete Hypothese formuliert werden.
-
-**ungerichtete Hypothese:**
-
-Die Konzentrationsfähigkeit hängt mit der Blutalkoholkonzentration zusammen.
-
-$\rightarrow$ Eher wenig theoretisches Vorwissen.
-
-**gerichtete Hypothese:**
-
-Je höher die Blutalkoholkonzentration, desto niedriger die Konzentrationsfähigkeit.
-
-$\rightarrow$ Mehr theoretisches Vorwissen notwendig.
-
----
-class: top, left
-### Alltagsvermutungen und wissenschaftliche Hypothesen
-
-#### Verifikation und Falsifikation
-
-##### Verifikation
-
-.pull-left[
-* Wissenschaftliche Hypothesen in der Psychologie können nicht vollständig geprüft (**verifiziert**) werden.
-
-* Es ist in der Regel nicht möglich alle Fälle (**Population**) zu untersuchen, schon gar nicht für alle Zeiten.
-
-**Workaround:**
-
-* Untersuchungen erfolgen anhand **repräsentativer Stichprobe**, von der auf Population geschlossen wird.
-
-
-$\rightarrow$ Wissenschaftliche Hypothesen sind **Wahrscheinlichkeitsaussagen**!
-]
-
-.pull-right[
-```{r eval = TRUE, echo = F, out.width = "500px"}
-knitr::include_graphics("bilder/Population.png")
-```
-]
----
-class: top, left
-### Alltagsvermutungen und wissenschaftliche Hypothesen
-
-#### Verifikation und Falsifikation
-
-##### Falsifikation
-
-* Wissenschaftliche Hypothesen als Wahrscheinlichkeitsaussagen können durch Einzelfälle/Gegenbeispiele, die der Hypothese widersprechen, nicht widerlegt (**falsifiziert**) werden.
-
-* Der auf dem Falsifikationsprinzip basierende Erkenntnisfortschritt besteht dann in der Eliminierung falscher bzw. schlecht bewährter Hypothesen (Theorien) durch statistische Analysen.
-
-* Nicht falsifizierte Hypothesen (Theorien) sind nicht wahr, sondern gelten nur als vorläufig angenommen.
-
-* Konträre Einzelfälle sind explizit zugelassen
-
-.center[
-```{r eval = TRUE, echo = F, out.width = "200px"}
-knitr::include_graphics("bilder/blackswan.jpg")
-```
-]
----
-class: top, left
-### Alltagsvermutungen und wissenschaftliche Hypothesen
-
-#### Theorien und Hypothesen
-
-<br><br>
-
-.center[
-.content-box-gray[**Satzsysteme:** Theorien, Modelle, Gesetze]
-
-$\downarrow$ $\uparrow$
-
-.content-box-gray[**Einzelsätze:** Hypothesen = prüfbare Behauptungen über empirisch beobachtbare Sachverhalte]
-
-$\downarrow$ $\uparrow$
-
-.content-box-gray[**Realität:** Bereich der empirisch beobachtbaren Phänomene]
-]
-
-<br><br>
-Grundkonzeption empirischer Wissenschaften: Empirische Prüfbarkeit ihrer Sätze (Dörner & Selg, 1984)
-
----
-class: top, left
-### Alltagsvermutungen und wissenschaftliche Hypothesen
+### Theoriearbeit und Hypothesenformulierung
 
 #### Bewertungsschema und Präregistrierung
 
@@ -403,7 +176,7 @@ knitr::include_graphics("bilder/bewertung_trennunghypothesen.png")
 
 ---
 class: top, left
-### Alltagsvermutungen und wissenschaftliche Hypothesen
+### Theoriearbeit und Hypothesenformulierung
 
 #### Bewertungsschema und Präregistrierung
 
@@ -412,157 +185,33 @@ class: top, left
 knitr::include_graphics("bilder/prereg_template_hypothesen.png")
 ```
 ]
+
 ---
 class: top, left
-name: forschungsstrategien
+name: studiendesign
 
-### Forschungsstrategien
+### Studiendesign
 
 #### Forschungsstrategien: Wie untersucht man eine Hypothese?
 
 * Qualitative vs. quantitative Herangehensweise
 
-* Laborstudie vs. Feldstudie
-
-* Experimenteller vs. Assoziativer Ansatz 
+* Experimenteller vs. Assoziativer/korrelativer Ansatz 
 
 * Quasi-experimenteller Ansatz
 
-* Längsschnittlicher vs. Querschnittlicher Ansatz
+* Laborstudie vs. Feldstudie (Unterscheidung oft nur bei (quasi-)experimentellen Ansätzen)
 
-* Korrelativer Ansatz
+* Längsschnittlicher vs. Querschnittlicher Ansatz
 
 * Sekundär- und Metaanalysen
 
-$\rightarrow$ **Für unser Praxisprojekt kommen rein qualitative Studien und Sekundär- und Metaanalysen nicht in Frage**
+$\rightarrow$ **Für unser Praxisprojekt kommen rein qualitative Studien und Sekundär- und Metaanalysen nicht in Frage (und Länggschnittstudien nur in sehr begrenztem Umfang, bitte absprechen)**
+
 
 ---
 class: top, left
-### Forschungsstrategien
-
-#### Qualitative vs. quantitative Herangehensweise
-
-.pull-left[
-**Quantitativ:**
-
-* **Vorrangiges Ziel:** soziale Phänomene messbar machen und statistisch auswerten
-* **Voraussetzungen:** Vorliegen von Hypothesen und Theorien, die statistisch/mathematisch überprüft werden können
-* **Methode:** eher standardisiert
-* **Typische Fragestellungen: **
-  * A mehr als B?
-  * Wenn viel X, dann viel/wenig Y?
-* **Typische Verfahren der Datenerhebung: **
-  * standardisierter Fragebogen 
-  * Experiment
-]
-.pull-right[
-**Qualitativ:**
-
-* **Vorrangiges Ziel:**  soziale Phänomene rekonstruieren; Hypothesen und Theorien generieren
-* **Voraussetzungen:** offener, explorativer Zugriff auf das soziale Phänomen
-* **Methode:** keine Standardisierung
-* **Typische Fragestellungen: **
-  * Welche Einstellungen liegen bei ... vor? 
-  * Gibt es Gemeinsamkeiten zwischen..  
-  * Was heißt es, ... zu sein?
-* **Typische Verfahren der Datenerhebung: **
-  * narratives Interview
-  * Gruppendiskussion
-  * Beobachtung
-]
-
----
-class: top, left
-### Forschungsstrategien
-
-#### Labor vs. Feld (Untersuchungs-Setting)
-
-.pull-left[
-**Laborstudie:**
-
-* **Künstliche Situation**
-
-* Bedingungen/Störvariablen gut kontrollierbar
-
-* Bedingungen können gut variiert, repliziert und manipuliert werden.
-
-* gezielten Variation einer einzigen Variable (UV)
-
-* Unterschiede in AV auf diese Veränderungen zurückführbar
-
-**Beispiel:** Lernprozesse am Computer mit Eye-Tracker untersuchen
-]
-.pull-right[
-**Feldstudie:**
-
-* Datenerhebung im **natürlichen Kontext** 
-
-* Bedingungen/ Störvariablen kaum kontrollierbar
-
-* Weniger systematische Variation möglich 
-
-* **externe Validität:** mehr Nähe zum Verhalten in Alltagssituationen
-
-**Beispiel:** Spielverhalten von Kindern am Spielplatz beobachten
-
-]
-
----
-class: top, left
-### Forschungsstrategien
-
-#### Experimenteller vs. Assoziativer Ansatz
-
-* Größter Forschungserfolg: **Kausale Zusammenhänge** identifizieren
-
-* empirischer Zusammenhang ist kein ausreichender Beleg für kausalen Zusammenhang
-
-* z.B. Die Sonne geht nicht auf, weil der Hahn kräht.
-
-* **Korrelation $\neq$ Kausalität**
-
-Voraussetzungen für kausale Schlussfolgerungen:
-
-1. Kovariation von AV und UV 
-2. Zeitliche Vorgeordnetheit der UV 
-3. Ausschluss von Alternativerklärungen (alle Störvariablen müssen kontrolliert sein)
-
----
-class: top, left
-### Forschungsstrategien
-
-#### Experimenteller vs. Assoziativer Ansatz
-
-.pull-left[
-**Experimenteller Ansatz:**
-
-* „Königsweg“, um kausale Zusammenhänge zu prüfen
-
-* Vergleich von Bedingungen (z.B. Experimentalgruppe vs. Kontrollgruppe)
-
-* Kontrollierter Aufbau: 
-
-  * Kovariation von AV und UV systematisch herbeiführen
-
-  * Sicherstellung zeitliche Vorgeordnetheit der UV 
-
-* Randomisierung: Störeinflüsse durch zufälliges Zuteilen zu Gruppen ausschließen
-]
-.pull-right[
-**Assoziativer Ansatz**
-
-* pragmatischer/retrospektiver Weg zu Prüfung von Zusammenhängen
-
-* Prüfen gemeinsamen variierens (Korrelation)
-
-* Störeinflüsse: Hoffen auf Wegmittelung durch Gruppengröße
-
-* Möglichkeit: Matching Verfahren (z.B. Propensity Score Matching)
-]
-
----
-class: top, left
-### Forschungsstrategien
+### Studiendesign
 
 #### Experimenteller vs. Assoziativer Ansatz
 
@@ -586,230 +235,71 @@ Beispiel: Koffein und Intelligenz
 .pull-right[
 **Assoziativer Ansatz**
 
-* Erfragen des täglichen Koffeeinkonsums (UV)
+1. Erfragen des täglichen Koffeeinkonsums (UV)
 
-* Intelligenztest durchführen (AV = Leistung)
+2. Intelligenztest durchführen (AV = Leistung)
 
-* Prüfen gemeinsamen variierens (Korrelation)
-
-* Störeinflüsse: Hoffen auf Wegmittelung durch Gruppengröße
+3. Prüfen gemeinsamen variierens (Korrelation)
 
 * Gefahr von Scheinzusammenhängen
 ]
 
+
 ---
 class: top, left
-### Forschungsstrategien
+### Studiendesign
 
-#### Experimenteller Ansatz
-
-#### Das randomisiert-kontrollierte Trial (RCT)
-
-Standardparadigma der klinischen Wirksamkeitsforschung
+#### Präregistrierung
 
 .center[
-```{r eval = TRUE, echo = F, out.width = "800px"}
-knitr::include_graphics("bilder/RCT.png")
+```{r eval = TRUE, echo = F, out.width = "60%"}
+knitr::include_graphics("bilder/prereg_template_design1.png")
 ```
 ]
 
 ---
 class: top, left
-### Forschungsstrategien
+### Studiendesign
 
-#### Experimenteller Ansatz
+#### Präregistrierung
 
-##### Validität
-
-* **Interne Validität** 
-
-  * eindeutige Schlussfolgerung bezüglich der Wirkbeziehung zwischen AV und UV
-  
-  * alle relevanten Störvariablen ausgeschlossen
-  
-  * (+) Experiment
-  
-* **Externe Validität** 
-
-  * Erkenntnisse können auf Wirklichkeit generalisiert werden
-  
-  * Problem zu starker Kontrollbedingungen
-  
-  * (-) Experiment
-
----
-class: top, left
-### Forschungsstrategien
-
-#### Quasi-Experimenteller Ansatz
-
-* Zentraler Unterschied zum Experiment: keine zufällige Zuteilung zu den Untersuchungsbedingungen
-
-* Auch hier Manipulation der UV und Beobachtung der Folgen für AV
-
-* Zuteilung erfolgt nach anderem Prinzip (z.B. Wunsch der TN, natürliche Gruppen)
-
-* Reduziert die interne Validität einer Untersuchung, ist aber in manchen Forschungskontexten nicht zu ändern
-
-* Wichtige Folge: Maximale Erfassung von möglichen Störvariablen und explizites Berücksichtigen von Alternativerklärungen
-
----
-class: top, left
-### Forschungsstrategien
-
-#### Quasi-Experimenteller Ansatz
-
-##### Beispiel
-
-Evaluation eines zusätzlichen Therapiemoduls in einer Rehaklinik 
-
-* **Hypothese:** Das neue Therapiemodul steigert den Therapieerfolg.
-
-* Man kann nicht zur Therapie gezwungen werden 
-
-* **Selbstselektion** $\rightarrow$ „Verweigerer“ sind Kontrollgruppe
-
-* **Alternativerklärung** für mehr Erfolg in Experimentalgruppe: Therapiemotivation 
-
- Wichtig: Ausgangsunterschiede **statistisch kontrollieren**
-
-* **Problem:** kausale Effekte nicht belegbar
-
----
-class: top, left
-### Forschungsstrategien
-
-#### Quasi-Experimenteller Ansatz
-
-##### Möglichkeiten der Kontrolle von Störvariablen:
-
-* Einbezug eines Vortests – Messwiederholung
-
-* Aggregation über mehrere Beobachtungseinheiten 
-
-* Statistische Kontrolle (Auspartialisieren)
-
-* Parallelisierung/ Matching
-  
----
-class: top, left
-### Forschungsstrategien
-
-#### Längsschnittlicher vs. querschnittlicher Ansatz
-
-.pull-left[
-**Längsschnittstudien**
-
-* aka longitudinal; Messwiederholung
-* Personen werden **mehrfach/zu unterschiedlichen Zeitpunkten** gemessen
-* **Panelstudien** (dieselbe Stichprobe wird über längere Zeit hinweg beobachtet)
-* **Veränderungen** können abgebildet werden
-* **"Pre-Post" Vergleich** nach Intervention (z.B. Therapie) / Ereignis (z.B. Pandemie) möglich 
-* Meist sehr aufwändig (**Nachverfolgung**)
-* Bei Leistungstests: Vorsicht **Trainingseffekte!**
-* Häufiges Problem: **Dropout**
-* **Zeitreihen:** gut bei Variablen mit Schwankungen (z.B. Stimmung)
-]
-
-
-.pull-right[
-**Querschnittstudien:**
-
-* aka cross-sectional
-
-* Eine oder mehrere Stichproben werden **zum gleichen Zeitpunkt** untersucht
-
-* Oft geringere **interne Validität** (z.B.Kohorteneffekte konfundieren u.U. Alterseffekte)
-
-* gut um große Stichproben zu realisieren (z.B. Umfragen)
-]
-
----
-class: top, left
-### Forschungsstrategien
-
-#### Beispiel Längsschnittstudie:
-
-.pull-left[
-
-##### Minnesota Twin Study (Thomas J. Bouchard)
-
-* Untersuchung getrennt aufgewachsener eineiiger Zwillinge (EZ) 
-
-* Nature vs. Nurture Debatte
-
-* unterschiedliche Biographien, oft verblüffende Ähnlichkeiten
-
-  * gleichen Wertvorstellungen
-  * gleicher Beruf
-  * ähnliche Hobbies
-
-* Derzeit in Deutschland: „TwinLife“-Studie (2013 - 2025)
-]
-
-.pull-right[
 .center[
-```{r eval = TRUE, echo = F, out.width = "300px"}
-knitr::include_graphics("bilder/twins.jpg")
+```{r eval = TRUE, echo = F, out.width = "60%"}
+knitr::include_graphics("bilder/prereg_template_design2.png")
 ```
 ]
-]
 
 ---
 class: top, left
-name: studiendesign
+### Studiendesign
 
-### Design Plan (Versuchsplan / Studiendesign)
+#### Bewertungsschema
 
-#### Studienart
-
-1.	Experiment 
-  * Ein Forscher weist den Studienteilnehmern nach dem Zufallsprinzip Bedingungen zu.
-  * Dazu gehören Feld- oder Laborexperimente. 
-  * Dies wird auch als Interventionsexperiment bezeichnet und umfasst randomisierte kontrollierte Studien.
-  
-2.	Beobachtungsstudie 
-  * Es werden Daten von Versuchspersonen gesammelt, die nicht zufällig einer Behandlung zugewiesen werden. 
-  * Dazu gehören Umfragen, natürliche Experimente (Quasiexperimente) und Regressionsdiskontinuitätsstudien.
-
-3.	Meta-Analyse 
-  * Eine systematische Zusammenfassung von bereits veröffentlichten Studien.
-
-4.	Andere 
+.center[
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/bewertung_prozedur.png")
+```
+]
 
 ---
 class: top, left
 <div class="footer"><span>Icons designed by Freepik: https://de.freepik.com/icon/haekchen_5290058 and https://de.freepik.com/icon/stornieren_5290141</span></div>
 
-### Design Plan (Versuchsplan / Studiendesign)
+### Studiendesign
 
 #### Übersicht über verschiedene Möglichkeiten
 
 .center[
-```{r eval = TRUE, echo = F, out.width = "790px"}
+```{r eval = TRUE, echo = F, out.width = "780px"}
 knitr::include_graphics("bilder/Behandlungsplaene_ext.png")
 ```
 ]
 
-.pull-left[
-```{r eval = TRUE, echo = F, out.width = "5%"}
-knitr::include_graphics("bilder/check.png")
-```
-= haben Sie bereits gelernt / lernen Sie gerade / angemessen komplex für unser Praxisprojekt
-]
-
-.pull-right[
-```{r eval = TRUE, echo = F, out.width = "5%"}
-knitr::include_graphics("bilder/cross.png")
-```
-= haben Sie noch nicht gelernt / zu komplex für unser Praxisprojekt
-]
-
-**Was fehlt hier (unter anderem)?** reine Korrelations- und Regressionsanalysen ohne Gruppenzuteilung (auch in Ordnung für unser Praxisprojekt!)
+**In der Übersicht fehlen reine Korrelations- und Regressionsanalysen ohne Gruppenzuteilung, welche auch in Ordnung für das eigene Thema sind!**
 
 ---
 class: top, left
-### Design Plan (Versuchsplan / Studiendesign)
+### Studiendesign
 
 #### Übersicht über verschiedene Möglichkeiten
 
@@ -829,6 +319,19 @@ Verbalisierte Beispiele: Koffeinkonsum und Wachheit
 
 ---
 class: top, left
+### Studiendesign
+
+#### "The Replication Recipe"
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "600px"}
+knitr::include_graphics("bilder/Brandt2014.png")
+```
+]
+
+$\rightarrow$ Für diejenigen spannende Literatur, die eine direkte Replikation planen
+---
+class: top, left
 
 ### Praxis: Idee & Studiendesign entwickeln
 
@@ -842,9 +345,7 @@ class: top, left
 
 * t-test für abhängige Stichproben für Mittelwertsunterschiede auf einer Variable in einem Pre-Post-Design
 
-* 2-faktorielle ANOVA ~~für ein Pre-Post-Design~~ mit Experimental- und Kontrollgruppe (generell bei UV: nicht zuviele Stufen!) für eine numerische abhängige Variable
-
-(Korrektur bei der ANOVA, weil Sie die Analyse inklusive Messwiederholung für ein Pre-Post-Design noch nicht kennen)
+* 1- oder 2-faktorielle ANOVA (generell bei UV: nicht zuviele Stufen!) für eine numerische abhängige Variable
 
 ---
 class: top, left
@@ -852,18 +353,62 @@ name: praxis
 
 ### Praxis: Idee & Studiendesign entwickeln
 
+**Schritt 0 (falls noch nicht geschehen): Einigen Sie sich auf ein Thema und geben Sie Ihrer Gruppe einen Namen**
+  * Bewerten Sie dafür Ihre Ideen hinsichtlich der gefundenen Literatur und nach den Anforderungen aus Einheit 1 und einigen Sie sich auf ein Thema.
+  * Idealerweise hat Ihr Gruppenname etwas mit Ihrem Thema zu tun
+  * Teilen Sie mir Ihren Gruppennamen und Ihr Thema **bis spätestens (!) 26.04.** über die [Umfrage im studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=26551) mit (eine Umfrage pro Gruppenmitglied). 
+
 **Schritt 1: Erweiterte Literaturrecherche, Hypothesenformulierung und Schärfung der Forschungsfrage**
 * Was sind Ihre Hypothesen? (**maximal 2 Primärhypothesen mit maximal einer Sekundärhypothese!** Explorieren können Sie immer.)
   * Sagen Sie eine numerische Variable vorher (keine dichotome ja/nein-Variable und keine kategoriale Variable)?
   * Können Sie diese Hypothese mit den vorgegebenen statistischen Analysen untersuchen?
 * Wie sieht ein Studiendesign aus, das sich gut eignet um Ihre Hypothesen zu prüfen?
-  * Hinweis: Bleiben Sie im Rahmen dieses Praxisprojekts bei einfachen Designs; siehe z.B. auch Seminar bei Birgit Probst für ausgefallenere/kreativere Designs!
+  * Hinweis: Bleiben Sie im Rahmen Ihres Projekts bei einfachen Designs
 * Konkretisieren Sie Ihre Forschungsfrage, falls nötig
 
-**Schritt 2: Dokumentieren Sie Ihre Entscheidungen**
-* Beginnen Sie ein "Open Lab Notebook" in Ihrer Gruppe
-* Holen Sie Feedback zu Ihrer Forschungsfrage und Hypothese bei mir ein
-* Erweitern Sie das [Präregistrierungstemplate auf studynet](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_22808_download.html) mit Ihrer neuen Literatur/geschärften Forschungsfrage/den Hypothesen (Abschnitte I1 bis I4)
+---
+class: top, left
+
+### Praxis: Idee & Studiendesign entwickeln
+
+**Schritt 2: Dokumentation und ggf. Feedback zu Ihren Entscheidungen**
+* Dokumentieren Sie Entscheidungen in Ihrem Open-Notebook-GoogleDoc
+* Erweitern Sie das [Präregistrierungstemplate auf studynet](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_27541_download.html) mit Ihrer neuen Literatur/geschärften Forschungsfrage/den Hypothesen (Abschnitte I1 bis I4) und dem Studiendesign (Abschnitte M6, M10, M11, M14)
+* Bereiten Sie ggf. offene Fragen für die nächste bzw. übernächste Sitzung vor ([siehe PDF auf studynet zur Zuordnung welche Gruppe an welchem Termin Feedback bekommt](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_28341_download.html))
+
+---
+class: top, left
+name: material
+
+### Material
+
+* **Bewertungsschema**: [https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=27027](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=27027)
+
+*	**Strategien Themensuche**: [https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26582](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26582)
+
+*	**Checkliste Ethik**: [https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26580](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26580)
+
+* **Umfrage zur Einreichung Gruppenname und Thema**: [https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=26551](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=26551)
+
+* **Zusatzmaterial Z2 Literaturrecherche, Bewertung von Forschungsfragen & Referenzen**: [https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=27540](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=27540)
+
+* **Template Präregistrierung**: [https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_27541_download.html](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_27541_download.html)
+
+*	**Fragenforum**: [https://cfh-waf.forumieren.de/](https://cfh-waf.forumieren.de/)
+
+* **Zuordnung Gruppe zu Ansprechpartner und Feedbacktermin**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_28341_download.html
+
+
+---
+class: top, left
+name: literatur
+### Literaturempfehlung für die heutige Sitzung
+
+.center[
+```{r, echo=FALSE,out.width="30%",fig.cap="Kapitel 6 und 7 in Döring, N. & Bortz, J. (2016). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften. Pearson.",fig.show='hold',fig.align='center'}
+knitr::include_graphics("bilder/doering.png")
+``` 
+]
 
 <!-- library(renderthis) -->
 <!-- to_pdf("WissArb_03_Theoriearbeit_Studiendesign.Rmd", complex_slides = TRUE) -->

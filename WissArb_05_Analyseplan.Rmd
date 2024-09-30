@@ -1,0 +1,491 @@
+---
+title: "Einheit 5"
+subtitle: "⚔<br/>with xaringan"
+author: "Dr. Caroline Zygar-Hoffmann"
+institute: "RStudio, PBC"
+date: "2024/05/09 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    css: [xaringan-themer.css, style.css, "hygge"]
+    lib_dir: libs
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+    seal: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+library(tidyverse)
+library(kableExtra)
+library(ggplot2)
+library(plotly)
+library(htmlwidgets)
+library(MASS)
+library(ggpubr)
+library(xaringanthemer)
+library(xaringanExtra)
+
+style_duo_accent(
+  primary_color = "#621C37",
+  link_color = "#7da5f5",
+  secondary_color = "#EE0071",
+  background_image = "blank.png"
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view"))
+
+# use_scribble(
+#   pen_color = "#EE0071",
+#   pen_size = 4
+#   )
+
+knitr::opts_chunk$set(
+  fig.retina = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+name: Title slide
+class: middle, left
+<br><br><br><br><br><br><br>
+# Wissenschaftliches Arbeiten und Forschungsmethoden
+
+### Einheit 5: Analyseplan
+##### 15.05.2024 | Dr. Caroline Zygar-Hoffmann
+
+
+---
+class: top, left
+name: content
+
+### Heutige Themen
+
+#### [formr Demo und zusätzlicher Login](#formr)
+
+#### [Zwischenstand: Was sollte da sein?](#fortschritt)
+
+#### [Analyseplan](#analyse)
+
+#### [Praxisaufgabe](#praxis)
+
+#### [Material](#material)
+
+
+---
+class: top, left
+name: formr
+
+### formr
+
+**Zusätzlicher Login bei der formr Testumgebung:**
+
+* https://workshops.formr.org/
+
+* Email: cfhwaf2@gmail.com
+
+* PW: eX9Sh6nt!
+
+(d.h. gleicher Link, gleiches Passwort, aber Emailadresse hat eine 2 vor dem @)
+
+$\rightarrow$ entscheiden Sie sich für einen der beiden Logins!
+
+---
+class: top, left
+name: fortschritt
+
+### Zwischenstand: Was sollte da sein?
+
+Folgende Aspekte sollten **abgeschlossen** sein, damit Sie gut in der Zeit sind:
+
+**1) Forschungsfrage** formuliert und in **Feld I2** der Präregistrierung eingetragen
+
+**2) Hypothese(n)** formuliert und in **Feld I3** eingetragen
+
+**3) erste Literatur** gefunden, die sich dazu eignen Forschungsfrage und Hypothese herzuleiten (kann mehr oder weniger ausführlich in **Feld I1** eingetragen sein $\rightarrow$ Literatur kann später auch noch ergänzt werden, weitere Literaturrecherche immer gut)
+
+<br>
+
+**4a) Grundlegendes Studiendesign** (korrelativ, quasi-experimentell, experimentell) festgelegt, ggf. spezifiziert (z.B. was für ein experimentelles Design?) und in **Feld M10** eingetragen
+
+**4b) Falls experimentelles Design, Art der Randomisierung** festgelegt (z.B. über formr) und in **Feld M11** eingetragen (falls kein experimentelles Design -> "-" in das Feld eintragen)
+
+**5) Festgelegt ob VP über bestimmte Aspekte in Unkenntnis gelassen werden** und in **Feld M6** eingetragen
+
+**6) Groben Ablauf** der Studie festgelegt und in **Feld M14** eingetragen
+
+---
+class: top, left
+
+### Zwischenstand: Was sollte da sein?
+
+Folgende Aspekte sollten **zumindest angefangen** sein, damit Sie gut in der Zeit sind:
+
+**7a) Operationalisierung** für benötigte Variablen festgelegt (z.B. konkrete Fragebögen) und in **Feld M12** eingetragen
+
+**7b) ggf. benötigte Umkodierungen von Items und Art der Skalenbildung** in **Feld AP2** eingetragen
+
+**7c) ggf. Berechnung der Reliabilität** im **Feld AP3** von der Vorlage übersetzt, falls restliche Präregistrierung auf Deutsch
+
+**8) Material** (z.B. Quellen für Fragebögen, Instruktionen, Videos, Lieder) festgelegt und in **Feld M13** eingetragen
+
+<br>
+
+**9a) formr** Vorlage angeschaut, umbenannt, hochgeladen, getestet, einem run hinzugefügt
+
+**9b) formr** Vorlage bearbeitet (z.B. mal versucht ein Item hinzuzufügen), wieder neu hochgeladen und getestet
+
+---
+class: top, left
+name: analyse
+
+### Analyseplan
+
+#### Analyseplan im Forschungsprozess
+
+.pull-left[
+**Was gehört zur Studienplanung?**
+
+1. Theoriearbeit und Literaturrecherche $\rightarrow$ Einheit 2 und 3
+
+2. Hypothesenformulierung $\rightarrow$ vorletzte Sitzung
+
+3. Design Plan $\rightarrow$ vorletzte Sitzung
+
+4. Variablen (Auswahl Messinstrumente und Variablenrollen)  $\rightarrow$ letzte Sitzung
+
+5. Statistischer Analyseplan  $\rightarrow$ heutige Sitzung
+
+6. Sampling plan (Rekrutierungsplan) $\rightarrow$ nächste Sitzung
+
+$\rightarrow$ Studienplanung in **Präregistrierung** festhalten
+]
+
+.pull-right[
+```{r eval = TRUE, echo = F, fig.align='center'}
+knitr::include_graphics("bilder/Forschungsprozess_Prereg.png")
+```
+]
+
+---
+class: top, left
+
+<div class="footer"><span>Van't Veer, A. E., & Giner-Sorolla, R. (2016). Pre-registration in social psychology—A discussion and suggested template. Journal of experimental social psychology, 67, 2-12.</span></div>
+
+### Analyseplan
+
+#### Wichtige Elemente
+
+* **Weitere Datenvorverarbeitung** (z.B. *z*-Standardisierung, ggf. nötige Bildung von Differenzen zwischen Messungen, bei Manipulationen Umgang mit Manipulationschecks, Umgang mit Ausreißern oder fehlenden Daten): In welcher Weise sollen die Daten verarbeitet und bereinigt werden, bevor sie in die Analyse eingehen?
+
+* Für jede Hypothese (konfirmatorisch):
+  - **Geplantes statistisches Verfahren** (z.B. t-Test für unabhängige/abhängige Stichproben, Regressionsanalyse, Varianzanalyse)
+  - **Rolle der Variablen** für dieses konkrete Verfahren (Unabhängige Variable, Abhängige Variable, Drittvariable (Kovariate), Moderator/Mediator? $\rightarrow$ siehe [Zusatzmaterial Z3](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=28944) zur Erklärung der unterschiedlichen Variablenrollen)
+  - falls zutreffend: **Rationale jeder Kovariate**
+  - **Inferenzkriterien** (z.B. Alpha-Niveau und Vorzeichen eines bestimmten Koeffizienten)
+  - Festlegung von zu berechnenden **Effektstärken**
+
+* **Korrekturmethoden bei multiplen Tests** (um alpha-Fehler Kumulierung zu vermeiden), z.B. Bonferroni-Korrektur des Alpha-Niveaus wenn selbe Hypothese für verschiedene AVs getestet wird
+
+---
+class: top, left
+
+### Analyseplan
+
+#### Optionale Elemente
+
+* ggf. Pläne für alternative Analysen, z.B. wenn Modellannahmen abgelehnt werden
+
+* ggf. Statistiksoftware
+  - Welche Software ist für die geplanten Analysen geeignet und zugänglich (R ist für viele Analysen ausreichend, aber für tlws. komplexe Analysen (siehe Master) weitere Software nötig, z.B. MPlus)
+  
+  - Mit welchen Programmbefehlen/-paketen können die gewünschten Analysen ausgeführt werden, welche Zusatzoptionen sind wichtig (nur grob darstellen)?
+
+---
+class: top, left
+
+### Analyseplan
+
+#### Weitere Datenvorverarbeitung
+
+* **z-Standardisierung**: Transformation des Mittelwerts auf 0 und Standardabweichung auf 1 $\rightarrow$ macht oft bei Regressionen Sinn, wenn Originaleinheit der Variablen nicht eingängig (z.B. oft bei Summenwerten)
+
+* **ggf. nötige Bildung von Differenzen zwischen Messungen**: z.B. für Interventionsthema Differenzbildung zwischen Post- und Prä-Messung, um Veränderung abzubilden
+
+* **bei Manipulationen Umgang mit Manipulationschecks**: z.B. wenn beim Interventionsthema Versuchspersonen das Lied nicht angehört haben / anhören konnten, gehen Sie dann trotzdem in die Analyse ein?
+
+* **Umgang mit Ausreißern**: unüberlegter Ausschluss von Ausreißern wird in der Literatur kritisch diskutiert, da auch Extremwerte Teil einer Normalverteilung sind; zumindest Einfluss auf die Ergebnisse sollte diskutiert werden
+
+---
+class: top, left
+
+### Analyseplan
+
+####  Missing-Data (unvollständige Datensätze)
+<small>
+
+**Umgang mit fehlenden Werten:**
+
+1. Ignorieren
+  * Manche statistischen Tests können gut mit fehlenden Werten umgehen (z.B. einige Regressionsmodelle)
+  * Sollte immer berichtet und bei der Interpretation berücksichtigt werden
+
+2. Complete-Case Analyse
+  * Nur auf Basis vollständiger Datensätze rechnen
+  * ok, wenn man ausreichend große Stichprobe hat
+  * Vorsicht: wenn UV zu Dropout führt können Verzerrungen resultieren
+
+3. Imputation
+  * Schätzung und Ersetzen der fehlenden Werte anhand eines statistischen Modells
+  * gut unter bestimmten Annahmen
+  * Unterschiedliche Komplexität der Schätzer
+    * leicht: gruppenspezifischer Mittelwert oder Median
+    * komplex: z.B. Random Forest Imputation
+  * State of the Art: Multiple Imputation (mehrfaches Ersetzen und Hypothesentest auf Durchschnitt der Ersetzungen berechnen)
+
+* Einen ausführlichen Überblick von Missing-Data-Techniken findet man bei Schafer und Graham (2002) bzw. West (2001)
+
+</small>
+
+
+---
+class: top, left
+### Analyseplan
+
+#### Präregistrierung
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "60%"}
+knitr::include_graphics("bilder/prereg_template_analyse1b.png")
+```
+]
+
+
+---
+class: top, left
+### Analyseplan
+
+#### Präregistrierung
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "60%"}
+knitr::include_graphics("bilder/prereg_template_analyse2.png")
+```
+]
+
+---
+class: top, left
+name: beispiel
+
+### Analyseplan
+
+#### Beispielhafte Überlegungen für das Interventionsthema
+
+* Wir haben erheben dieselben Variablen vor dem Anhören von verschiedenen Liedern und danach und bilden daraus für jede Variable eine Differenz (Post-Prä)
+
+* Diese Differenz sagen wir vorher (als abhängige Variable) = Veränderung einer bestimmten Variable X
+
+* Unabhängige Variable ist die Experimentalbedingung (welches Lied wurde angehört)
+
+* Frage, die wir damit z.B. beantworten können: Ist die Veränderung in einer Bedingung anders/stärker/schwächer als in der anderen?
+
+* Beispielhypothese: Das bewusste Hören von Lied A verstärkt Variable X stärker als das bewusste Hören von Lied B
+
+.pull-left[
+$\rightarrow$ **Weitere Datenvorverarbeitung:** Post-Prä-Differenz der Variable X bilden
+
+$\rightarrow$ **statistische Analyse:** t-test für unabhängige Stichproben mit AV = Post-Prä-Differenz der Variable X und UV = Bedingung (Lied A vs. Lied B)
+]
+
+.pull-right[
+
+$\rightarrow$ **Inferenzkriterium:** MW Lied A > MW Lied B, p < alpha = 0.05
+
+$\rightarrow$ **Effektstärke:** Cohen's d
+
+$\rightarrow$ **falls keine Varianzhomogenität: Welch Test**
+]
+
+---
+class: top, left
+
+### Analyseplan
+
+#### Beispielhafte Überlegungen für das Interventionsthema
+
+... wenn man sich nun weitere Einflüsse auf die Stärke des Effekts (d.h. des Unterschieds zwischen den Bedingungen in der Veränderung der Variable) anschauen möchte, muss man Moderationsanalysen in einem Regressionsmodell rechnen:
+
+* Man sagt dann immernoch die Post-Prä-Differenz = die Veränderung der Variable als Outcome vorher
+
+* Prädiktoren sind dann:
+  - eine 0/1-Variable, die die Bedingung kodiert (= eine sogenannte Dummy-Variable)
+  
+  - eine weitere Variable von der man den Einfluss annimmt (= Moderator), z.B. ängstlicher Bindungsstil
+  
+  - eine Interaktion zwischen der Bedingungsvariable und dem Moderator (= diese Interaktion sagt uns, ob der Moderator den Effekt verändert oder nicht)
+  
+$Differenz$ ~ $Bedingung + Moderator + Bedingung*Moderator$
+
+---
+class: top, left
+
+### Analyseplan
+
+#### Beispielhafte Überlegungen für das Interventionsthema
+
+... wenn man sich nun weitere Einflüsse auf die Stärke des Effekts (d.h. des Unterschieds zwischen den Bedingungen in der Veränderung der Variable) anschauen möchte, muss man Moderationsanalysen in einem Regressionsmodell rechnen:
+
+$\rightarrow$ **statistische Analyse:** Lineare Regression mit AV = Post-Prä-Differenz der Variable X und UVs = Haupteffekt Bedingung (Lied A vs. Lied B, dummykodiert), Haupteffekt ängstlicher Bindungsstil, Interaktionseffekt Bedingung x ängstlicher Bindungsstil
+
+$\rightarrow$ **Inferenzkriterium:** Koeffizient des Interaktionseffekts positiv, $p_{einseitig}$ < $\alpha$ = 0.05 (wenn man eine gerichtete Hypothese hat)
+
+Hinweis: einen einseitigen p-Wert bekommen Sie für eine Regression, wenn Sie in dem Output der Regressionsanalyse beim p-Wert vom relevanten Koeffizienten $p/2$ rechnen falls der Effekt in die erwartete Richtung geht und $1-(p/2)$ falls der Effekt in die falsche Richtung geht
+
+$\rightarrow$ **Effektstärke:** standardisiertes $\beta$
+
+$\rightarrow$ **Voraussetzungen der linearen Regression werden geprüft, aber bei Verletzung nur diskutiert** (keine alternative Berechnung)
+
+---
+class: top, left
+### Analyseplan
+
+#### Präregistrierung
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "60%"}
+knitr::include_graphics("bilder/prereg_template_analyse3a.png")
+```
+]
+
+---
+class: top, left
+### Analyseplan
+
+#### Präregistrierung
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "60%"}
+knitr::include_graphics("bilder/prereg_template_analyse3b.png")
+```
+]
+
+
+---
+class: top, left
+### Analyseplan
+
+#### Präregistrierung
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "60%"}
+knitr::include_graphics("bilder/prereg_template_analyse3c.png")
+```
+]
+---
+class: top, left
+### Analyseplan
+
+#### Bewertungsschema
+
+.center[
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/bewertung_methoden.png")
+```
+]
+
+<!-- --- -->
+<!-- class: top, left -->
+<!-- <div class="footer"><span>Lin, W., & Green, D. P. (2016). Standard Operating Procedures: A Safety Net for Pre-Analysis Plans. PS: Political Science & Politics, 49(03), 495–500. http://doi.org/10.1017/S1049096516000810.</span></div> -->
+
+<!-- ### Analyseplan -->
+
+<!-- #### Ausblick: Standard Operating Procedures / Standard Lab Practices -->
+
+---
+class: top, left
+name: praxis
+
+### Praxis: Analyseplan entwickeln
+
+**Schritt 1:** Wie sieht Ihr Analyseplan für Ihre Hypothese(n) aus?
+  * **Welche weitere Datenvorverarbeitung ist nötig**, ist z.B. eine z-Standardisierung geplant oder ein Manipulationscheck geplant und wenn ja, wie wird er ausgewertet?
+  * **Welches Testverfahren nutzen Sie?** Welche Rolle spielt die Überprüfung von Annahmen für dieses Testverfahren (*hier z.B. aufnehmen, was Sie in Quantitative Methoden 1/2 für dieses Verfahren gelernt haben*)?
+  * Was ist/sind Ihr/e **UV(s)/Prädiktor(en)**? 
+    * Auf welche dieser Variablen bezieht sich die Hypothese? 
+    * Sind es spezielle Prädiktoren (z.B. Moderatoren? Kontrollvariablen?)
+    * Falls zutreffend: Was ist die Begründung für die Aufnahme von Kontrollvariablen?
+  * Was ist Ihre **AV**/Ihr **Outcome**?
+  * Testen Sie **einseitig oder zweiseitig** (gerichtete vs. ungerichtete Hypothese)?
+  * **Auf Basis welches Ergebnisses würden Sie die H0 verwerfen und die H1 annehmen** (z.B. welcher Posthoc-Test, welcher Prädiktor muss mit welchem Vorzeichen auf welchem $\alpha$-Niveau signifikant sein)?
+  * **Abgleich mit der Hypothese:** Prüft das statistische Verfahren die aufgestellte Hypothese? Muss ggf. noch etwas präzisiert werden (z.B. Form der Interaktion, ggf. (auch händische) Visualisierung der Interaktion)? 
+  * Welche **Effekstärke** ist für Ihre geplante Analyse interessant?
+  * Müssen Sie für **multiples Testen** korrigieren, z.B. weil Sie die gleiche Hypothese für verschiedene Outcomes überprüfen?
+
+---
+class: top, left
+
+### Praxis: Analyseplan entwickeln
+
+**Schritt 2:** Erweitern Sie das [Präregistrierungstemplate auf studynet](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_27541_download.html) 
+
+* siehe Vorlage für M7-M8, AP1-AP2 $\rightarrow$ ggf. Übersetzen
+
+* AP6-AP8 (AP8 optional, nur wenn Sie was exploratives unter I4 angegeben haben)
+
+* ergänzen Sie bei AP3, wenn Sie z.B. eine z-Standardisierung für eine bestimmte Variable, eine Differenzbildung oder einen Manipulationscheck planen
+
+**Schritte 3a und 3b zu formr von letzter Einheit weitermachen** (d.h. weiter an der Implementierung der Studie in formr arbeiten)
+
+---
+class: top, left
+name: material
+
+### Material
+
+* **Bewertungsschema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=27027
+
+*	**Checkliste Ethik**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26580
+
+* **Template Präregistrierung**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_27541_download.html
+
+* **Template formr eigenes Thema**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_28654_download.html
+
+* **Template formr Interventionsthema**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_28655_download.html
+
+* **Link zu formr**: https://workshops.formr.org/
+
+* **Folie mit formr-Ressourcen**: Folie 32 in Einheit 4
+
+*	**Fragenforum**: https://cfh-waf.forumieren.de/
+
+* **Zusatzmaterial Z3 Variablen:** https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=28944
+
+---
+class: top, left
+
+### Feedback-Zeit
+
+**Folgende Gruppen mit Interventionsthema gehen nun in Raum P3 110 mit Nensy Le**
+- Sure Thing (Jebisha Uthayanan, Gajane Simonyan, Aileen Müller, Alina Bußjäger, Marie Atzwanger)
+- Herzschmerz	(Mathilda Schultz, Isabelle Bergmaier, Emilia Heinze, Lille Meyer-Horn, Hannah Obermaier)
+- Interventionsgruppe 24	(Claudia Schreiner, Sonja Krauss, Ayano Shevlin)
+
+**Folgende Gruppen mit eigenem Thema gehen nun in Raum P3 107 mit Caroline Zygar-Hoffmann**
+- Umfragenchecker	(Leila Bahadori, Fee Rassat-Beck, Greta Güntner, Liliann Lenz, Martin Gehring)
+- Geschlechterspezifische Bindungsstile	(Jana Mittnacht, Leah Reber, Roxana Danco, Lucia Vogl
+Natalie Rogner)
+- Haustiere	(Lisa Ertl, Claudia Fritsch, Roberta-Maria Krapp, Emilia Misera, Leon Mayer)
+- Fünf Fragezeichen	(Emil Pärssinen, Roman Politz, Pauline Walz, Manuel Hartmann, Peter Pflaum)
+- CFH Stimmungs-Scouts (Jon Avella, Lukas Dheur, Cosmo Saul, Elliot Etzersdorfer, Niklas Müller-Leonnies)
+- Friends and Relationships	(Julia Grimmeisen, Julia Fernandes Maia, Victoria Di Bacco. Katharina Strunk, Gioia Riedel)
+
+**Alle anderen können im Audimax bleiben und sich mit den Praxisaufgaben beschäftigen (dringend empfohlen!)**
+
+<!-- library(renderthis) -->
+<!-- to_pdf("WissArb_05_Analyseplan.Rmd", complex_slides = TRUE) -->

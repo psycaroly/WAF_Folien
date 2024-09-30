@@ -1,0 +1,209 @@
+---
+title: "Einheit 12"
+subtitle: "⚔<br/>with xaringan"
+author: "Dr. Caroline Zygar-Hoffmann"
+institute: "RStudio, PBC"
+date: "2024/07/16 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    css: [xaringan-themer.css, style.css, "hygge"]
+    lib_dir: libs
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+    seal: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+library(tidyverse)
+library(kableExtra)
+library(ggplot2)
+library(plotly)
+library(htmlwidgets)
+library(MASS)
+library(ggpubr)
+library(xaringanthemer)
+library(xaringanExtra)
+
+style_duo_accent(
+  primary_color = "#621C37",
+    link_color = "#7da5f5",
+  secondary_color = "#EE0071",
+  background_image = "blank.png"
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view"))
+
+# use_scribble(
+#   pen_color = "#EE0071",
+#   pen_size = 4
+#   )
+
+knitr::opts_chunk$set(
+  fig.retina = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+name: Title slide
+class: middle, left
+<br><br><br><br><br><br><br>
+# Wissenschaftliches Arbeiten und Forschungsmethoden
+
+### Einheit 13: Freie Spitze und Fragen
+##### 17.07.2024 | Dr. Caroline Zygar-Hoffmann
+
+---
+class: top, left
+name: content
+
+### Heutige Themen
+
+#### [Lehrevaluation](#eval)
+
+#### [Bericht: Letzte Hinweise](#reminder)
+
+#### [Feedback](#feedback)
+
+#### [Fragen](#fragen)
+
+---
+class: top, left
+name: eval
+
+### Lehrevaluation
+
+.big[
+.center[
+**Die Studierenden finden die jeweils individuell freigeschalteten Evaluationen im studynet https://hsf.click/Eval-CFH**
+]
+]
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "80%"}
+knitr::include_graphics("bilder/eval.png")
+```
+]
+
+
+---
+class: top, left
+name: reminder
+
+### Bericht: Letzte Hinweise
+
+* **APA-Zitationsregeln** (Einheit 2, Zusatzmaterial) beachten - sind alle Behauptungen formgerecht belegt? **Literaturverzeichnis manuell durchgehen** und ggf. bibtex anpassen, wo Informationen fehlen!
+
+* **Gruppen mit Interventionsthema**: Nicht vergessen herzuleiten, warum (z.B. durch welchen Mechanismus) anzunehmen ist, dass das gewählte Lied die AV verändert!
+
+* **Präregistrierung nochmal durchgehen** -- alles so gemacht wie beschrieben bzw. Abweichungen gekennzeichnet? Gerade bei übernommenen Textvorlagen von mir bzw. so Themen wie Umgang mit fehlenden Werten, Voraussetzungen, Skalenbildung, Alpha-Niveau;
+Aber: **Präregistrierung ist kein Gefängnis! Sie macht Änderungen nur transparent. Ihnen müssen also Änderungen bewusst sein, und Sie müssen diese als Fußnote kommentieren.**
+
+* **Sind alle Variablen, die in irgendeine Analyse eingehen im Methodenteil vollständig beschrieben und (wo passend) in den Deskriptivstatistiken aufgeführt?**
+
+* Sind alle **Tabellen und Abbildungen** beschriftet und im Text referenziert?
+
+* Gibt es im Diskussion **Empfehlungen für zukünftige Forschung**, die über die Beseitigung der Limitationen hinaus gehen? (z.B. weiterführende Forschungsideen)
+
+* **Kausale Sprache** im gesamten Bericht nur dann nutzen, wenn ein experimentelles Design vorliegt (vgl. Einheit 10, Folie 21)
+
+---
+class: top, left
+
+### Bericht: Letzte Hinweise
+
+* Zur Erinnerug: Sie müssen im Bericht zwei **Poweranalysen** berichten und gegenüberstellen:
+
+1) Die in der Präregistrierung berichtete Poweranalyse (bei eigenem Thema: Sensitvititäspoweranalyse mit theoretisch erreichbarer Stichprobengröße, Ergebnis: Power; bei Interventionsthema: Poweranalyse zur Stichprobenplanung mit vorgegebener Power, benötigte Ergebnis: Stichprobengröße)
+
+2) Eine Sensitivitätspoweranalyse für tatsächlich erreichte Stichprobengröße für die **in der Präregistrierung angenommene Effektstärke,** ***nicht*** **für die Effektstärke der eigenen Ergebnisse**
+
+* **OSF Projekt** checken:
+  - Ansprechpartner hinzugefügt?
+  - Präregistrierung als PDF enthalten?
+  - Anonymisierte Daten enthalten?
+  - Formr Excel-Datei enthalten?
+  - Analyse-Skripte enthalten (ggf. pro Person ein Ordner mit eigenen Skripten, falls nicht gemeinsames Skript für alle)?
+  - optional für Gruppen mit eigenem Thema: Projekt auf public stellen (Button oben rechts)
+
+* **Inhaltliche und technische Nachvollziehbarkeit der R-Skripte sicherstellen**: Verstehe ich was ich von vorne bis hinten machen muss, um die Ergebnisse zu reproduzieren und wirft R auf dem Weg dorthin keine Fehler?
+
+---
+class: top, left
+
+### Bericht: Letzte Hinweise
+
+* **Bewertungsschema vornehmen** und Punkt für Punkt durchgehen
+
+* **Lesen Sie sich die Folien durch!**
+
+* **Rückmeldungen** nicht vergessen! (Einheit 9)
+
+---
+class: top, left
+
+### Bericht: Letzte Hinweise
+
+**Abgabe auf studynet (Inhalt -> Mission/Challenges)**
+
+* Abgabetermin ist der **16.08.2024** (23:55)
+
+* Abgabe von:
+- Bericht als Word-Dokument mit Link zum OSF-Projekt für anonymisierte Daten und formr-Codebook, Präregistrierung, R-Skripte,
+- Rohdaten (nicht-anonymisiert)
+
+* Auf der letzten Seite Ihrer Arbeit:
+  - Kennzeichnung, welches Gruppennmitglied welchen Teil der Gruppenarbeit (d.h. von Einleitung und/oder Methode) hauptsächlich übernommen hat.
+  - Bestätigung (mit Unterschrift), dass alle Gruppenmitglieder mit dem finalen Ergebnis der Gruppenarbeit einverstanden sind.
+
+---
+class: top, left
+
+### Feedback
+
+#### Vermittelte Inhalte
+*	Methoden und wissenschaftliche Konzepte für die Erforschung menschlichen Verhaltens und Erlebens
+*	Planung und Durchführung wissenschaftlicher Studien 
+*	Gütekriterien zur Bewertung von Forschungsdesigns
+*	Sicherstellung guter wissenschaftlicher Praxis und Open Science
+*	Datenerhebung und Datenanalyse unter Nutzung digitaler Technologien
+
+#### Vermittelte Kompetenzen
+*	Anwendung von Begriffen, Methoden und Ergebnissen der qualitativen und quantitativen Forschung in der psychologischen Grundlagen- und Anwendungsforschung
+*	Beurteilung von Auswirkungen von Forschungsmethoden auf Untersuchungspopulationen und Anwendung deskriptiver und inferenzstatistischer Methoden sowie weitere statistischer Verfahren zur Auswertung von Ergebnissen
+* Planung, Durchführung und Auswertung wissenschaftlicher Untersuchungen
+* Einfluss von Projekterfahrungen in die Planung und Durchführung von wissenschaftlichen Studien sowie in die Auswertung und Darstellung von eigenen Forschungsergebnissen
+
+---
+class: top, left
+name: feedback
+
+### Feedback
+
+* Etwas gerne früher gewusst?
+
+* Deadline Präregistrierung
+
+*	Zusammenspiel mit Seminar
+
+* Zusammenarbeit in Gruppen
+
+* Bewertung Gruppenleistung/Einzelleistung
+
+---
+class: top, left
+name: fragen
+
+### Fragen
+
+Wie kann ich noch helfen? :)
+
+<!-- library(renderthis) -->
+<!-- to_pdf("WissArb_12_FreieSpitze.Rmd", complex_slides = TRUE) -->

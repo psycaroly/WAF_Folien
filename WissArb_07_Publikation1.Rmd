@@ -1,0 +1,699 @@
+---
+title: "Einheit 7"
+subtitle: "⚔<br/>with xaringan"
+author: "Dr. Caroline Zygar-Hoffmann"
+institute: "RStudio, PBC"
+date: "2024/05/20 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    css: [xaringan-themer.css, style.css, "hygge"]
+    lib_dir: libs
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+    seal: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+library(tidyverse)
+library(kableExtra)
+library(ggplot2)
+library(plotly)
+library(htmlwidgets)
+library(MASS)
+library(ggpubr)
+library(xaringanthemer)
+library(xaringanExtra)
+
+style_duo_accent(
+  primary_color = "#621C37",
+  link_color = "#7da5f5",
+  secondary_color = "#EE0071",
+  background_image = "blank.png"
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view"))
+
+# use_scribble(
+#   pen_color = "#EE0071",
+#   pen_size = 4
+#   )
+
+knitr::opts_chunk$set(
+  fig.retina = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+name: Title slide
+class: middle, left
+<br><br><br><br><br><br><br>
+# Wissenschaftliches Arbeiten und Forschungsmethoden
+
+### Einheit 7: Publikation von Studien mit Fokus auf Einleitung und Methode
+##### 05.06.2024 | Dr. Caroline Zygar-Hoffmann
+
+---
+class: top, left
+name: content
+
+### Heutige Themen
+
+#### [Datenerhebung](#datenerhebung)
+
+#### [Allgemeine Aspekte](#allgemeines)
+
+#### [Was gehört in die Einleitung?](#einleitung)
+
+#### [Was gehört in den Methodenteil?](#methoden)
+
+#### [Praxisaufgabe](#praxis)
+
+---
+class: top, left
+
+###  Allgemeiner Hinweis
+
+* Wenn Sie mit mir etwas individuell abgesprochen haben, ich aber nicht Ihr Ansprechpartner außerhalb der Vorlesung bin, dann würde ich empfehlen dies in Ihren GoogleDocs-Open-Lab-Books explizit zu notieren/erwähnen
+
+* Das gilt ins Besondere für Absprachen die die Bewertung betreffen $\rightarrow$ Ihr Ansprechpartner wird Ihre Arbeit bewerten!
+
+---
+class: top, left
+name: datenerhebung
+
+###  Hinweise zur Datenerhebung
+
+**2 kleine Änderungen an der Einverständniserklärung (um die ich mich kümmere)**:
+* public use file statt scientific use file
+* Lehrzwecke ergänzt
+
+**Wie viele Personen von der Interventionsgruppen rekrutiert werden sollen**: Da ich noch nicht alle Präregistrierungen dazu gesehen habe, verschiebe ich das Thema nochmal.
+
+---
+class: top, left
+
+###  Hinweise zur Datenerhebung
+
+Zur Teilnahme an den Studien:
+
+* Die Teilnahme an den Studien Ihrer Kommiliton:innen ist freiwillig
+
+* Lesen Sie sich die Einverständniserklärung durch (insbesondere das Thema der Studie) und entscheiden dann, ob Sie teilnehmen möchten
+
+* Im Sinne der Umsetzbarkeit des Vorlesungskonzepts bitte und ermuntere ich Sie dazu an den Studien Ihrer Kommiliton:innen teilzunehmen, damit für jede Studie genügend Daten zum Analysieren zusammenkommen
+
+* Gut wäre, wenn jeder an mindestens(!) 10 Studien teilnimmt (jede Studie sollte in wenigen Minuten erledigt sein)
+
+* Falls Sie sich aus zeitlichen Gründen für eine Studie aus mehreren entscheiden müssen: Vorrang haben die Studien mit eigenem Thema, da für diese nur innerhalb der Kohorte rekrutiert wird
+
+---
+class: top, left
+name: allgemeines
+
+###  Allgemeine Aspekte
+
+#### Abgabe
+
+* Upload auf studynet, kein Ausdruck erforderlich
+
+* Konkrete Hinweise folgen zum Semesterende
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Plagiat
+
+Ein Hinweis aus Ihrem Prüfungsamt:
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "80%"}
+knitr::include_graphics("bilder/plagiat1.png")
+```
+]
+
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Plagiat
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "80%"}
+knitr::include_graphics("bilder/plagiat2.png")
+```
+]
+
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Plagiat
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "80%"}
+knitr::include_graphics("bilder/plagiat3.png")
+```
+]
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Format
+
+**Schriftart:**
+
+* Text: Serif typeface (am besten: Times New Roman, 12-pt)
+* Beschriftungen in Abbildungen: Sans serif typeface (z.B. Arial, 8 – 14pt, bitte einheitlich!)
+
+**Seiten- und Text-Formatierung:**
+
+* Doppelter Zeilenabstand durch den gesamten Artikel
+* Jeden Absatz um 1/2" einrücken
+* Den ganzen Text linksbündig ausrichten
+
+$\rightarrow$ **Das übernimmt die RMarkdown-Vorlage für Sie!**
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Format
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "40%"}
+knitr::include_graphics("bilder/Ueberschriften.png")
+```
+]
+
+$\rightarrow$ **Das übernimmt die RMarkdown-Vorlage für Sie!**
+
+Wie soll es am Ende aussehen? Siehe hier: https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/apa_sample_paper.html
+
+$\rightarrow$ **Keine separate nummerierte Gliederung!**
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Wissenschaftliches Schreiben
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "50%"}
+knitr::include_graphics("bilder/academic_writing.png")
+```
+]
+
+Die Akademische Konversation (durch wissenschaftliches Schreiben) …
+* … beschäftigt sich detailliert mit anderen (wissenschaftlichen) Perspektiven
+* … beteiligt sich am wissenschaftlichen Diskurs (kontext-abhängig, kein Vakuum)
+* … ist ein unendlicher Prozess
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Wissenschaftliches Schreiben
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "50%"}
+knitr::include_graphics("bilder/Schreiben.png")
+```
+]
+
+Ein wissenschaftlicher Artikel ist die Kulmination von
+* Forschung
+* Kritischem Denken
+* Kreativem Schreiben
+
+Der Artikel ist wie ein Lebewesen: Je mehr Information man bekommt (z.B. durch Lesen, Analysen), umso mehr wächst er.
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Wissenschaftliches Schreiben
+
+**Argumentation und Sprache** 
+
+* Der wissenschaftliche Artikel ist kein Roman (gilt auch für Seminar-, Haus- u. Abschlussarbeiten): Berichten Sie Ihre Inhalte klar und direkt!
+
+* Trotzdem oder vor allem deshalb wichtig: Lassen Sie einen **"roten Faden"** Ihrer "Forschungsgeschichte" erkennen.
+
+* Zielgruppe: Eine interessierte, intelligente Person…
+  - die etwas über Psychologie weiß,
+  - aber mit Ihrem speziellen Fachgebiet nicht unbedingt vertraut ist
+  - die sehr skeptisch ist $\rightarrow$ Alle Aussagen mit Daten und Fakten belegen
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Wissenschaftliches Schreiben
+
+**4 Leitprinzipien:**
+
+1. **Verständlichkeit**: Nachvollziehbarkeit, gute Lesbarkeit
+2. **Unmissverständlichkeit**: Vermeidung von mehrdeutigen/missverständlichen Formulierungen
+3. **Neutralität**: Unparteiisches/nicht emotionales Argumentieren
+4. **Überprüfbarkeit**: Nachprüfbarkeit aller Aussagen
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Wissenschaftliches Schreiben
+
+**Verständlichkeit**
+
+* Grundlage: Rechtschreibung, Grammatik, Zeichensetzung
+* Struktur/Gliederung (roter Faden)
+* Sinnvolle Untergliederung in Absätze (pro Gedanke, Aspekt)
+* Logische Folgerichtigkeit
+* Klarer Satzbau, Schachtelsätze vermeiden
+* Ideale Satzlänge: 12 bis 17 Wörter
+* Verben: Aktiv statt passiv
+* Präzise und konkret
+* Einfache Sprache
+
+$\rightarrow$ Wir können nur verständlich formulieren, was wir selbst verstanden haben
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Wissenschaftliches Schreiben
+
+**Unmissverständlichkeit**
+
+* Mehrdeutigkeiten: z.B. nicht eindeutige Bezüge („Vergleicht man Männer mit Frauen, haben diese ein besser ausgeprägtes räumliches Denken.“)
+
+* Falsche Begriffe/unpräzise Formulierung: Fachbegriffe verwenden
+
+* Quantitative Genauigkeit (vage Aussagen wie "großer Effekt" mit Zahlen belegen)
+
+$\rightarrow$ Alles, was missverstanden werden kann, wird missverstanden werden
+
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Wissenschaftliches Schreiben
+
+**Neutralität**
+
+* Fokus auf objektive Erkenntnisse, nicht auf persönliche Meinungen und Präferenzen (z.B. “Kinder sollten frühzeitig Disziplin lernen.”)
+
+* Unvoreingenommen – sachlich und neutral – relevante Informationen berichten (z.B. “zum Glück”, “leider” vermeiden)
+
+* Neutrale Wortwahl: Frei von Werturteilen (z.B. “In der faszinierenden Einzelfallstudie von Schmidt wird das bedauernswerte Beispiel von H. P. dargestellt.”)
+
+* Verwenden Sie nicht das Wort „beweist“, da statistische Tests nur Wahrscheinlichkeitsaussagen unterstützen
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Wissenschaftliches Schreiben
+
+**Überprüfbarkeit**
+
+* Fremde Gedanken kennzeichnen (Quellenangabe)
+
+* Stellen Sie keine Behauptungen auf, die Sie nicht belegen ("Die Social Media Nutzung nimmt immer mehr zu." $\rightarrow$ Klingt plausibel, aber in dem Satz fehlt die Quelle, die das untersucht hat und belegt)
+
+* Genaue Beschreibung von Methodik und Auswertung (Replizierbarkeit)
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Wissenschaftliches Schreiben
+
+* Die Theorie, die Methode und der Ergebnisteil werden im Präteritum oder Perfekt geschrieben, die Diskussion hingegen im Präsens. Wenn man eine zeitliche Reihenfolge darstellen möchte, kann es davon Ausnahmen geben.
+
+* Abschnittsweise schreiben, mit Stichpunkten anfangen
+
+* Überleitungen à la "wir werden jetzt im folgenden XX anschauen" sind unüblich und sollten vermieden werden (kostbarer Platz!)
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Wissenschaftliches Schreiben
+
+* Einfach mal anfangen ("shitty first draft"), dann Text gründlich überarbeiten und Feedback einholen, darauf basierend wieder überarbeiten ("rewriting is the real work of writing")
+  - Neue Einsichten während des Schreibens
+  - Mut zur Veränderung, Klärung, Restrukturierung
+  - Den Mehraufwand nicht scheuen: Denn meist wird ein Text erst durch das „Umschreiben“ richtig gut
+  - Daher beim ersten Entwurf keine Perfektion anstreben und nicht zu viel Mühe auf sprachlich-stilistische Aspekte verwenden
+  - Üblich: 2-3 Überarbeitungsschleifen
+
+* Für Perfektionisten: 
+  - Finden Sie ein Ende, auch wenn Sie noch nicht zu 100% zufrieden sind
+  - Ziel sollte ein angemessenes Maß an Sorgfalt sein, aber: Perfektion ist nicht erreichbar!
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Wissenschaftliches Schreiben
+
+.pull-left[
+Bei Schreibblockade / Prokrastination: 
+* Dort Anfangen, wo es am leichtesten fällt
+* An einer anderen Stelle des Textes weiterschreiben
+* Andere Aufgabe erledigen (z.B. Grafik erstellen statt Diskussion schreiben)
+* Einfach drauflos schreiben, ohne es zu lesen (z.B. Monitor ausschalten), das mindert den Erwartungsdruck
+* Mit dem Schreiben aufhören, wenn es noch Spaß macht (Schreiben = angenehm)
+* Tagespensum realistisch planen (Demotivation vorbeugen) und an einer Stelle an der man gut weitermachen kann, aufhören
+* Zu geplanten Zeiten schreiben, nicht auf inspirierte Momente warten
+]
+
+.pull-right[
+```{r eval = TRUE, echo = F, out.width = "60%"}
+knitr::include_graphics("bilder/writing.png")
+```
+]
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Aufbau eines wissenschaftlichen Artikels
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "80%"}
+knitr::include_graphics("bilder/Sanduhr1.png")
+```
+]
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Aufbau eines wissenschaftlichen Artikels
+
+.pull-left[
+```{r eval = TRUE, echo = F, out.width = "85%"}
+knitr::include_graphics("bilder/Sanduhr2.png")
+```
+]
+
+.pull-right[
+```{r eval = TRUE, echo = F, fig.cap="S. 17 in Sedlmeier, P. & Renkewitz, F. (2018). Forschungsmethoden und Statistik für Psychologen und Sozialwissenschaftler (3.Auflage). Pearson.", out.width = "75%"}
+knitr::include_graphics("bilder/Sanduhr3.png")
+```
+]
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Wie sieht die Titelseite aus?
+
+.small[
+.pull-left[
+* Titel: nach dem ersten Drittel der Seite platzieren 
+  - nicht länger als 12 Wörter
+  - keine Füllwörter bzw. Abkürzungen
+  - Titel soll Interesse wecken, selbsterklärend und alleinstehend nachvollziehbar sein
+
+* Namen und Institutszugehörigkeit der Autoren, alles zentriert und mit doppeltem Zeilenabstand
+
+* Kurztitel der Arbeit = "Running head" (der auch auf den folgenden Seiten erscheint) in Großbuchstaben
+  - Entweder mit dem Titel identisch oder ein verkürzt Form
+  - wird im R-Markdown-File unter dem Titel festgelegt
+
+* Seitennummer (die auch auf den folgenden Seiten angezeigt wird) auf jeder Seite rechtsbündig und oben
+
+$\rightarrow$ **Formatierung übernimmt die RMarkdown-Vorlage für Sie!**
+
+]
+]
+
+.pull-right[
+```{r eval = TRUE, echo = F, out.width = "80%"}
+knitr::include_graphics("bilder/title.png")
+```
+]
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Anhang
+
+* Enthält Informationen, die die Arbeit unterstützen, aber „langatmig“ sind
+
+* Bsp.: Erweiterte Tabellen oder Diagramme, die die Forschung illustrieren
+
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Bewertungsschema
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "70%"}
+knitr::include_graphics("bilder/bewertung_form.png")
+```
+]
+
+---
+class: top, left
+###  Allgemeine Aspekte
+
+#### Bewertungsschema
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "70%"}
+knitr::include_graphics("bilder/bewertung_form2.png")
+```
+]
+
+---
+class: top, left
+name: einleitung
+
+###  Was gehört in die Einleitung?
+
+#### Inhalte
+
+* Einleitung beginnt mit Titel des Manuskripts (fett, zentriert) - d.h. keine extra Überschrift "Einleitung"
+
+* Allgemein: Unterüberschriften erlaubt und üblich
+
+* **Kurze Einführung** in das Thema der Arbeit: 
+  - Zentrale Frage: Warum ist das Forschungsthema relevant?
+  - Den Leser nicht plötzlich ins kalte Wasser der Theorie werfen!
+  - Faustregel: Auf der ersten Seite sollte das (grobe) Ziel der Studie das erste Mal deutlich benannt werden ("The goal of the current study is an examination of ...") 
+
+* Ausführliche, verständliche und stringente Erläuterung **zentraler Theorien und Konzepte**
+  - Angemessene Beispiele ausdenken, um die Theorie zu veranschaulichen
+  - Je abstrakter die Theorie, desto wichtiger sind gute Beispiele
+
+---
+class: top, left
+###  Was gehört in die Einleitung?
+
+#### Inhalte
+
+* Definition **zentraler Variablen**; das gilt vor allem für die Variablen, die Teil Ihrer Hypothese(n) sind $\rightarrow$ die Publikationen zu den Messinstrumenten die Sie genutzt haben sollten in der Regel Definitionen enthalten und beschreiben was genau Sie gemessen haben
+
+* Verwendung konsistenter Variablennamen
+  - D.h. nicht verschiedene Labels nutzen, wenn damit das Gleiche gemeint ist (am besten auch: auf die gleiche oder zumindest sehr ähnliche Art gemessen wurde)
+  - D.h. verschiedene Labels gezielt dann nutzen, wenn damit nicht das Gleiche gemeint ist (z.B. wenn man Literatur zu verwandten/relevanten anderen Variablen heranzieht)
+  - z.B. "Körperbild", "Körperselbstwert", "Körperzufriedenheit" $\rightarrow$ alles dasselbe, oder verschiedene Variablen?
+  
+
+---
+class: top, left
+###  Was gehört in die Einleitung?
+
+#### Inhalte
+
+* Darstellung **relevanter Forschungsergebnisse** aus wissenschaftlich hochwertiger, möglichst aktueller Literatur zu den zentralen Variablen, Theorien, Konzepten (vereinzelt ist auch ältere Literatur in Ordnung, gerade auch bei Theorien) 
+  
+  - Besonders hilfreich: Reviews, Meta-Analysen
+  
+  - Die Literatur sollte alle relevanten Themen abdecken, d.h. auch ausreichend umfangreich sein (eine Einzelstudie als Quelle ist nicht ausreichend! Ein Review oder eine Meta-Analyse ist aber "soviel wert" wie mehrere Einzelstudien; deckt aber meist nur ein Thema ab)
+  
+  - auch Kritikpunkte an diesen Studien können angesprochen werden (Achtung: Kritisieren Sie die Studie, nicht die Autoren selbst!)
+
+
+---
+class: top, left
+###  Was gehört in die Einleitung?
+
+#### Inhalte
+
+* **Logische Herleitung der Forschungsfrage** aus bisherigen Forschungsergebnissen: Welchen Mehrwert hat es diese Forschungsfrage zu untersuchen? 
+  - Schließt sie eine Forschungslücke? 
+  - Geht es um eine Replikation? 
+  - Leistet sie eine Erweiterung bisheriger Forschung in einem anderen Kontext? Oder mit einer anderen Methode?
+
+* Bei der Formulierung der Forschungsfrage macht es manchmal Sinn die Vorgehensweise kurz zu skizzieren (z.B. in einem Satz in welcher Art von Design sie untersucht wird)
+
+* **Logische Herleitung der (eindeutig formulierten) Hypothesen** aus bisherigen Forschungsergebnissen: Warum wird der Effekt so erwartet wie in der Hypothese beschrieben?
+  - Wichtig: Hypothese sollte so formuliert werden wie in der Präregistrierung beschrieben. 
+  - Ausnahme: Sie stellen fest, dass die Hypothese in der Präregistrierung nicht optimal formuliert war (z.B. nicht eindeutig), um das Abzubilden was Sie untersuchen wollten? Dann nehmen Sie die bessere Formulierung und erklären in einer Fußnote wie die Originalformulierung war, und warum Sie davon abweichen.
+
+---
+class: top, left
+###  Was gehört in die Einleitung?
+
+#### Bewertungsschema
+
+.center[
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/bewertung_theorie.png")
+```
+]
+
+---
+class: top, left
+name: methode
+
+###  Was gehört in den Methodenteil?
+
+* Allgemein: Unterüberschriften erlaubt und üblich
+
+* **Erklärung über die Zugänglichkeit von Daten/Analyseskripten**: "Anonymisierte Daten, ein Codebuch, reproduzierbare Skripte sowie weitere ergänzende Materialien finden Sie unter [Link zum OSF-Projekt]."
+
+* **Stichprobenbeschreibung als Text**
+  - Größe der Stichprobe (N = ...)
+  - Rekrutierung der Versuchspersonen (z.B. in Vorlesungen angesprochen, etc.)
+  - i.d.R. (falls erhoben) Geschlechterverteilung (n und %), Alter (Range, MW, SD), Bildungsniveau
+  - andere relevante Aspekte in Bezug auf die Fragestellung
+
+* **Poweranalyse** 
+  - Angabe für welche statistische Analyse die Poweranalyse durchgeführt wurde
+  - Angabe von $\alpha$, $\beta$ bzw. Power, erwartete Effektstärke **inkl. Begründung**, Stichprobenumfang
+  - Für Effektstärke: Genau erklären, wo man den Effekt in der Literatur nachlesen kann (z.B. auch Tabelle X), falls nicht direkt offensichtlich; falls Transformationen oder Korrekturen vorgenommen wurden oder keine Literatur sondern anderweitige Argumentation $\rightarrow$ erklären!!
+  - **Wichtig:** Erklären wie sich die errechnete Power ändert, falls sich der erreichte Stichprobenumfang im Vgl. zur Präregistrierung geändert hat
+
+---
+class: top, left
+###  Was gehört in den Methodenteil?
+
+* **Versuchsdurchführung**
+  - Die Untersuchung soll so geschildert werden, dass alle wichtigen Aspekte nachvollziehbar sind und die Methode reproduzierbar ist
+  - Das schließt das Studiendesign (z.B. Bedingungen), den Ablauf, verwendete Materialien, Instruktionen etc. ein
+  - Es kann auch auf den Anhang verwiesen werden, wenn bestimmte Elemente zu umfangreich sind (d.h. Elemente, die nicht in 1-2 Sätzen beschrieben werden können, z.B. längere Instruktionen)
+
+* **Messinstrumente**
+  - Beschreibung der für die Fragestellung und Analysen (!) relevanten verwendeten Fragebögen (Länge des Fragebogens, was er misst, ob er Subskalen hat, ob Anpassungen vorgenommen wurden, etc.)
+  - Angabe der Antwortskala (inkl. numerischer/verbaler Anker)
+  - Angabe der Reliabilität für die Skalen (z.B. McDonald's Omega, Cronbach's Alpha)
+  - ggf. Angabe eines Beispielitems, insbesondere bei Anpassungen/Eigenentwicklungen, aber auch sonst hilfreich
+
+
+---
+class: top, left
+<div class="footer"><span>Zygar-Hoffmann, C., Pusch, S., Hagemeyer, B., & Schönbrodt, F. D. (2020). Motivated behavior in intimate relationships: Comparing the predictive value of motivational variables. Social Psychological Bulletin, 15(2), 1-37.</span></div>
+
+###  Was gehört in den Methodenteil?
+
+Beispiel Beschreibung eines Messinstruments:
+
+.center[
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/beschreibung_material.png")
+```
+]
+
+---
+class: top, left
+###  Was gehört in den Methodenteil?
+
+* **Beschreibung der statistischen Analyse**
+
+  - Generell: Beschreibung der verwendeten Verfahren, nicht jedoch der Ergebnisse 
+  
+  - Angabe der verwendeten Analysesoftware, inkl. Versionsangabe (+ ggf. packages)
+  
+  - Relevante Vorverarbeitung, wie Transformationen der Daten (Rekodierung, Aggregation, Zentrierung (z.B. Standardisierung),...), Umgang mit fehlenden Werten
+    
+  - Analyse: Verwendetes Signifikanzniveau, Einordnung: einseitie vs. zweiseitige Tests, Nennung und Beschreibung der Hypothesentests (in Spezialfällen auch des Auswahlrationals), ggf. angewandte Korrektur für multiples Testen
+  
+$\rightarrow$ siehe Präregistrierung zur Analyse
+  
+---
+class: top, left
+###  Was gehört in den Methodenteil?
+
+**Detailgrad:**
+
+* Generell wenden wir uns bei der Abfassung eines Forschungsberichtes an einen methodisch und fachlich vorinformierten Leserkreis, d.h. es reicht kurz zu skizzieren wie die erhobenen Daten ausgewertet wurden
+
+* Eine genaue Beschreibung der Methoden wie z.B. die Wiedergabe von Formeln ist hierbei nicht erforderlich
+
+**Bei gängigen Methoden:**
+* Im Zweifelsfall genügen für Einzelverfahren Verweise auf einschlägige Statistikbücher/Paper
+* Aber: Erläuterung wesentlicher Parameter:
+  * Welche Variable hat welche Rolle eingenommen
+  * Welche Optionen/Varianten des Verfahrens wurde warum gewählt (z.B. Pearson vs. Spearman Korrelation)
+
+**Bei Eigenentwicklungen oder neuen, wenig bekannten Methoden:**
+* nachvollziehbar darstellen
+* Genaue Funktionsweise dokumentieren
+
+
+---
+class: top, left
+###  Was gehört in den Methodenteil?
+
+#### Bewertungsschema
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "80%"}
+knitr::include_graphics("bilder/bewertung_methode.png")
+```
+]
+
+
+---
+class: top, left
+###  Literaturhinweis
+
+Ecarnot, F., Seronde, M. F., Chopard, R., Schiele, F., & Meneveau, N. J. E. G. M. (2015). Writing a scientific article: A step-by-step guide for beginners. <i>European Geriatric Medicine, 6</i>(6), 573-579.
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "80%"}
+knitr::include_graphics("bilder/Ecarnot.png")
+```
+]
+
+
+---
+class: top, left
+name: praxis
+
+### Praxisaufgabe
+
+**Schritt 0: Datenerhebung vorantreiben**
+
+**Schritt 1: Einleitung und Methodenteil untereinander aufteilen**
+* Wer kümmert sich primär um welchen Teil?
+* Bei 5 Leuten empfehle ich die folgende Aufteilung:
+  - 3 Personen Einleitung
+  - 2 Person Methodenteil (inkl. OSF-Projekt zur Bereitstellung von Material/Code/Daten)
+
+**Schritt 2: Auf Bezeichnungen von zentralen Variablen einigen**
+* im besten Fall kohärent zur Präregistrierung, wenn abweichend dann sollte das erwähnt werden
+
+<!-- library(renderthis) -->
+<!-- to_pdf("WissArb_07_Publikation1.Rmd", complex_slides = TRUE) -->

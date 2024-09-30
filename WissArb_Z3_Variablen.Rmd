@@ -1,0 +1,173 @@
+---
+title: "Zusatzmaterial: Variablen"
+subtitle: "⚔<br/>with xaringan"
+author: "Dr. Caroline Zygar-Hoffmann"
+institute: "RStudio, PBC"
+date: "2024/05/09 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    css: [xaringan-themer.css, style.css, "hygge"]
+    lib_dir: libs
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+    seal: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+library(tidyverse)
+library(kableExtra)
+library(ggplot2)
+library(plotly)
+library(htmlwidgets)
+library(MASS)
+library(ggpubr)
+library(xaringanthemer)
+library(xaringanExtra)
+
+style_duo_accent(
+  primary_color = "#621C37",
+  secondary_color = "#EE0071",
+  link_color = "#7da5f5",
+  background_image = "blank.png"
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view"))
+
+# use_scribble(
+#   pen_color = "#EE0071",
+#   pen_size = 4
+#   )
+
+knitr::opts_chunk$set(
+  fig.retina = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+name: Title slide
+class: middle, left
+<br><br><br><br><br><br><br>
+# Wissenschaftliches Arbeiten und Forschungsmethoden
+
+### Zusatzmaterial: Variablen
+##### 15.05.2024 | Dr. Caroline Zygar-Hoffmann
+
+---
+class: top, left
+### Variablen
+
+#### Abhängige & unabhängige Variable (AV & UV)
+
+Die Veränderung einer AV soll durch den Einfluss der UV erklärt werden.
+
+**Beispiel:**
+
+.center[
+
+Dosis des Schlafmittel (**UV**) $\rightarrow$ Schlafdauer (**AV**) 
+
+$\downarrow$
+
+**UV** gehört zum „Wenn-Teil“ bzw. dem „Je-Teil“ einer Hypothese
+
+**AV** gehört zum „Dann-Teil“ bzw. „Desto-Teil“
+
+$\downarrow$
+
+Wenn man mehr Schlafmittel nimmt, schläft man länger.
+]
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "500px"}
+knitr::include_graphics("bilder/UVAV.png")
+```
+]
+
+---
+class: top, left
+### Variablen
+
+#### Störvariable
+
+* alle Einflussgrößen auf die AV, die in einer Untersuchung nicht erfasst werden 
+
+* egal ob nicht bekannt oder vergessen
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "500px"}
+knitr::include_graphics("bilder/Stoervariable.png")
+```
+]
+---
+class: top, left
+### Variablen
+
+#### Kontrollvariable / Kovariate
+
+* Störvariable deren Ausprägungen erhoben (gemessen) wurde 
+
+* Einfluss kann kontrolliert wird (z.B. mittels statistischer Methoden) 
+
+* Inhaltliche Begründung (Literatur!) zur Aufnahme einer Kovariate
+
+* Im Regressionsmodell mit inhaltlichem Prädiktor X1 und Kontrollvariable X2: Schätzung des Effekts von X1 auf Y bei Konstanthaltung des Effekts von X2 ("Kontrolle für den Einfluss von X2")
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "500px"}
+knitr::include_graphics("bilder/Kontrollvariable.png")
+```
+]
+---
+class: top, left
+### Variablen
+
+#### Moderatorvariable
+
+* **Moderator** verändert den Einfluss der UV auf die AV
+
+* Moderationsanalyse prüft Interaktionen
+
+* Frage: Variiert der Effekt von UV auf AV in Abhängigkeit einer weiteren Variable
+
+**Beispiel:**
+
+Schlafmitteldosis (**UV**) erhöht die Schlafdauer (**AV**); Straßenlärm (**Moderator**) verringert den Effekt der Dosis auf die **AV**
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "500px"}
+knitr::include_graphics("bilder/Moderation.png")
+```
+]
+---
+class: top, left
+### Variablen
+
+#### Mediatorvariable
+
+* **Mediator** vermittelt (**mediiert**) den Einfluss der **UV** auf die **AV**
+* **Indirekter Effekt:**  **UV ** beeinflusst  **Mediator**, dies führt zur einem Effekt des  **Mediators ** auf **AV **
+* **Direkter Effekt:** Effekt von **UV** auf **AV** (in Anwesenheit des Mediators)
+* **Keine Mediation:** indirekter Effekt nicht signifikant
+* **Partielle Mediation:** indirekter Effekt signifikant und direkter Effekt auch signifikant
+* **Totale Mediation:** indirekter Effekt signifikant und direkter Effekt nicht mehr signifikant.
+
+**Beispiel:**
+
+Schulnote (**UV**) beeinflusst Selbstwertgefühl (**Mediator**); Selbstwertgefühl (**Mediator**) beeinflusst Lebenszufriedenheit **AV**
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "500px"}
+knitr::include_graphics("bilder/Mediation.png")
+```
+]
+
+<!-- library(renderthis) -->
+<!-- to_pdf("WissArb_Z3_Variablen.Rmd", complex_slides = TRUE) -->

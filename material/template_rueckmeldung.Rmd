@@ -8,7 +8,8 @@ library(ggplot2)
 load("processed_data/final_data.RData")
 
 # Datensatz für eine Person
-individual_data <- final_data[final_data$pseudonym == "+E;'Cl}-*g",]
+individual_data <- final_data[!is.na(final_data$pseudonym),]
+individual_data <- individual_data[individual_data$pseudonym == "+E;'Cl}-*g",]
 # individual_data <- final_data[final_data$pseudonym == report$pseudonym[i],]
 ```
 
@@ -56,8 +57,7 @@ Unter Einbezug des Konfidenzintervalls könnte man Ihren Wert folgendermaßen ei
 ```{r, echo=FALSE, warning = F, fig.align='center'}
 if ((individual_data$skala_z - 1.96 * sqrt(1-0.8)) > 1) cat(paste0("Überdurchschnittliche Ausprägung im Vergleich zur Stichprobe"))
 
-if ((individual_data$skala_z - 1.96 * sqrt(1-0.8)) > 0
-    &
+if ((individual_data$skala_z - 1.96 * sqrt(1-0.8)) > 0 & (individual_data$extraversion_z - 1.96 * sqrt(1-0.8)) < 1 &
     (individual_data$skala_z + 1.96 * sqrt(1-0.8)) > 1) cat(paste0("Durchschnittliche bis überdurchschnittliche Ausprägung im Vergleich zur Stichprobe"))
 
 if ((individual_data$skala_z - 1.96 * sqrt(1-0.8)) < 0

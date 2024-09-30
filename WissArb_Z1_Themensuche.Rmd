@@ -1,0 +1,567 @@
+---
+title: "Zusatzmaterial: Themensuche"
+subtitle: "⚔<br/>with xaringan"
+author: "Dr. Caroline Zygar-Hoffmann"
+institute: "Charlotte Fresenius Hochschule München"
+date: "2024/02/20 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    css: [xaringan-themer.css, style.css, "hygge"]
+    lib_dir: libs
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+    seal: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+library(tidyverse)
+library(kableExtra)
+library(ggplot2)
+library(plotly)
+library(htmlwidgets)
+library(MASS)
+library(ggpubr)
+library(xaringanthemer)
+library(xaringanExtra)
+
+style_duo_accent(
+  primary_color = "#621C37",
+  secondary_color = "#EE0071",
+  link_color = "#7da5f5",
+  background_image = "blank.png"
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view"))
+
+knitr::opts_chunk$set(
+  fig.retina = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+name: Title slide
+class: middle, left
+<br><br><br><br><br><br><br>
+# Wissenschaftliches Arbeiten und Forschungsmethoden
+
+### Zusatzmaterial: Themensuche
+##### 10.04.2024 | Dr. Caroline Zygar-Hoffmann
+
+---
+class: top, left
+name: content
+### Inhalt
+
+#### Themensuche
+* [Generelle Hinweise](#themensuche-hinweise)
+* [Strategien](#themensuche-strategien)
+* [Hinweise zum Projekt im Rahmen der Vorlesung](#projekt)
+
+#### [Take-Aways](#take-away)
+
+---
+class: top, left
+name: themensuche-hinweise
+<div class="footer"><span>Kapitel 2.1 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Themensuche
+
+#### Was beachten bei der Themensuche?
+
+* **Kernkriterium für Qualität einer empirischen Untersuchung**: Muss den Bestand an gesichertem Wissen im jeweiligen Untersuchungsbereich **erweitern**.
+
+* **Schwierigkeiten für Wissenschaftler:innen und Student:innen**: explosionsartige Entwicklung der Anzahl wissenschaftlicher Publikationen
+
+**Zu klärende Fragen:**
+
+* Interessant erscheinende Untersuchungsidee tatsächlich **originell**? 
+
+* Ist das gleiche Thema nicht schon bearbeitet worden (**Wiederholung**)? 
+
+* Verspricht Idee tatsächlich **neue Erkenntnisse** oder sind diese eigentlich trivial?
+
+---
+class: top, left
+<div class="footer"><span>Kapitel 2.1 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Themensuche
+
+#### Hürden bei Themenwahl durch die Art der Vermittlung von Forschungsmethoden (McGuire, 1967)
+
+Großteil des Unterrichts in der Ausbildung in den Sozialwissenschaften: 
+
+* Vermittlung präziser **Techniken** zur Prüfung von Hypothesen (**hypothesenprüfender Teil**)
+
+* Augenmerk auf das "wie" $\rightarrow$ Operationalisierung, Auswertung und Interpretation
+
+* wenig Zeit verfällt auf Strategien, **schöpferische Forschungsideen** zu finden (**hypothesenkreierender Teil**)
+
+**Problem:** perfektes Instrumentarium letztlich zur Überprüfung von Banalitäten
+
+---
+class: top, left
+<div class="footer"><span>Kapitel 2.1 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Themensuche
+
+#### Motivationale Aspekte bei der Themenwahl
+
+.center[
+*"Die Geschichte der Wissenschaften ist voller Belege dafür, wie Wissenschaftler durch bestechende Argumente und phantasiereiche Interpretationen ihre Vorurteile zu bestätigen trachten."*
+
+Shields (1975)
+]
+
+$\rightarrow$ Forderung nach einer **wertfreien**, von **neutralen** Personen getragenen Wissenschaft
+
+**ABER:** Vorteile der Themenwahl nach eigenem Interesse/Einstellungen
+
+* Höheres Engagement (empirische Arbeiten sind meistens zeitaufwendig und arbeitsintensiv)
+
+* frühzeitiger Abbruch der Arbeit kann verhindert werden 
+
+$\rightarrow$ Kreative und bahnbrechende Forschung besser möglich, wenn Forschende das Recht haben, sich engagiert für den empirischen Beleg ihrer Ideen einzusetzen
+
+---
+class: top, left
+name: themensuche-strategien
+<div class="footer"><span>Kapitel 2.1 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Themensuche
+
+#### Anlegen einer Ideensammlung
+
+**Ziel:**
+
+* spontan interessant erscheinende Einfälle nicht in Vergessenheit geraten lassen
+
+**Mögliche Quellen:**
+
+* Lehrveranstaltungen
+* Literatur
+* Teilnahme an Untersuchungen als »Versuchsperson«
+* Gespräche
+* eigene Beobachtungen
+
+**Tipps:**
+* Datum vermerken $\rightarrow$ Ideengeschichte kann abgebildet werden
+* Quelle notieren $\rightarrow$ Vorteil für weiterführende Literaturrecherchen
+
+---
+class: top, left
+<div class="footer"><span>Kapitel 2.1 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Themensuche
+
+#### Replikation von Untersuchungen
+
+* Rekonstruktion oder Wiederholung einer bereits durchgeführten Untersuchung
+
+* scheinbar weniger attraktive Alternative 
+
+**ABER:** 
+
+* Zur Festigung und Erweiterung des Kenntnisbestandes einer Wissenschaft sind Replikationen unerlässlich
+
+* Siehe **"Replikationskrise"** der Psychologie
+  
+* Viele publizierte Studien enthalten im **Diskussionsteil** Anregungen für Anschlussstudien
+  
+---
+class: top, left
+<div class="footer"><span>Clarke, B., Lee, P. Y., Schiavone, S. R., Rhemtulla, M., & Vazire, S. (2023, December 16). The Prevalence of Direct Replication Articles in Top-Ranking Psychology Journals. https://doi.org/10.31234/osf.io/sa6rc </span></div>
+
+### Themensuche
+
+#### Replikation von Untersuchungen
+
+Replikationen nehmen tendentiell zu:
+
+.center[
+```{r eval = TRUE, echo = F, fig.align='center', out.width = "70%"}
+knitr::include_graphics("bilder/Clarke2024.png")
+```
+]
+
+---
+class: top, left
+<div class="footer"><span>Kapitel 2.1 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Themensuche
+
+#### Mitarbeit an Forschungsprojekten
+
+**Erhebliche Erleichterung der Themensuche:**
+
+* Mitwirkung an Forschungsprojekten ihres Institutes oder anderer Institutionen
+
+* Häufige Teilfragestellungen für eigenständige Qualifikationsarbeiten (z.B. Bachelorarbeit)
+
+**Vorteile:**
+
+* Einblick in einen komplexeren Forschungsbereich
+
+* Einblick in einschlägige Literatur
+
+* Vorteile der Teamarbeit (z.B. finanzielle Unterstützung und Förderung bei der Anfertigung von Publikationen)
+
+**Tipp:**
+* Durchgehen der Forschungsprojekte/Paper der Lehrstühle und Professor:innen am Institut
+
+
+---
+class: top, left
+<div class="footer"><span>Kapitel 2.1 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Themensuche
+
+#### Anregungen zur gezielten Themensuche
+
+**Offensichtliche Strategien:**
+
+* Literaturrecherche (siehe kommende Einheit für ausführlichere Behandlung)
+
+  * insbesondere Review-Artikel (Zusammenfassungen) geben guten Überblick über Thema
+  
+  * Scoping-Artikel identifizieren "zu erfoschende" blinde Flecken eines Themas (Desiderate)
+  
+  * Kommentare sind Stellungnahmen von Wissenschaftler zu einem Thema 
+
+**Leitfragen bei der Literaturrecherche:**
+
+* Welche Antworten gibt es zu diesem Thema bereits?
+* Welche Fragen sind noch ungeklärt?
+* Und wie kann ich Antworten auf diese Fragen finden?
+
+---
+class: top, left
+<div class="footer"><span>Kapitel 2.1 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Themensuche
+
+#### Anregungen zur gezielten Themensuche
+
+**Kreative Strategien**
+
+1. Intensive Fallstudien
+
+2. Introspektion
+
+3. Funktionale Analogien
+
+4. Paradoxe Phänomene
+
+5. Analyse von Faustregeln
+
+6. Veränderungen von Alltagsgewohnheiten
+
+7. Gesellschaftliche Probleme
+
+8. Widersprüchliche Theorien
+
+9. ChatGPT
+
+---
+class: top, left
+<div class="footer"><span>Kapitel 2.1 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Themensuche
+
+#### Anregungen zur gezielten Themensuche
+
+**Kreative Strategien**
+
+##### Intensive Fallstudien:
+
+* Viele berühmte Studien gehen auf die genaue Beobachtung einzelner Individuen zurück
+
+* Beobachtete Fälle müssen nicht zwangsläufig speziell oder herausragend sein
+
+* Erlaubt genauere Beobachtungen als Großgruppenstudien
+
+* Gibt sogar ein eigenes Forschungsdesign (N-of-1 Trial), in welchem explizit nur 1 Person beobachtet wird (z.B. Astronaut Scott Kelly)
+
+---
+class: top, left
+<div class="footer"><span>Kapitel 2.1 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Themensuche
+
+#### Anregungen zur gezielten Themensuche
+
+**Kreative Strategien**
+
+##### Introspektion:
+
+* Introspektion = systematische Selbstbeobachtung
+
+* beinahe unerschöpfliche Quelle für Untersuchungsideen
+
+* kritische Betrachtung von Ungereimtheiten und Widersprüchlichem
+
+* Identifikation "sensibler Bereiche" $\rightarrow$ Verallgemeinerung auf andere per Analogieschluss
+
+---
+class: top, left
+<div class="footer"><span>Kapitel 2.1 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Themensuche
+
+#### Anregungen zur gezielten Themensuche
+
+**Kreative Strategien**
+
+##### Funktionale Analogien:
+
+* Übertragung bzw. analoge Anwendung bekannter Prinzipien oder Mechanismen (bzw. Methoden) auf neue Probleme
+
+* muss nicht auf Psychologie begrenzt sein
+
+* interdisziplinäre Forschungsansätze 
+
+* z.B. Inokkulationstheorie - Beeinflussbarkeit von Personen z.B. durch Vorwarnungen (persuasive Kommunikation) $\rightarrow$ Übertragung von Forschung über Impfwirkung (Medizin)
+
+* z.B. gegenseitige Inspiration von Neurowissenschaften und künstlicher Intelligenz
+
+---
+class: top, left
+<div class="footer"><span>Kapitel 2.1 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Themensuche
+
+#### Anregungen zur gezielten Themensuche
+
+**Kreative Strategien**
+
+##### Paradoxe Phänomene:
+
+* Beobachtung von unerklärlichen bzw. widersinnigen Phänomenen
+
+* interessante Basis für empirische Untersuchungen
+
+* z.B. Adrenalinschock: Keine Schmerzen in Situationen mit starker Erregung
+
+* z.B. Unfähigkeit zum Schlaf trotz totaler Ermüdung
+
+---
+class: top, left
+<div class="footer"><span>Kapitel 2.1 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Themensuche
+
+#### Anregungen zur gezielten Themensuche
+
+**Kreative Strategien**
+
+##### Veränderungen von Alltagsgewohnheiten:
+
+* Beobachtung von Veränderung der gesellschaftlichen Norm
+
+* Erst nach Veränderungen, nehmen wir eigene Einbindung wahr
+
+* z.B. Aufkommen neuer Moden, veränderte Freizeitgewohnheiten, Veränderungen gesellschaftlicher Umgangsformen
+
+* Insbesondere vielversprechend für sozialpsychologische Untersuchungen
+
+---
+class: top, left
+<div class="footer"><span>Kapitel 2.1 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Themensuche
+
+#### Anregungen zur gezielten Themensuche
+
+**Kreative Strategien**
+
+##### Gesellschaftliche Themen:
+
+* Themen aus Politik und Zeitgeschehen (Fernsehen, Nachrichten, o.ä.)
+
+* öffentliche Diskussion brisanter Ereignisse, wie Naturkatastrophen, Unfälle, Verbrechen, Skandale
+
+* Teilweise neuer psychologischer Themenbereich durch gesellschaftliche Gegebenheiten
+
+* z.B. Flüchlingswelle 2015:
+  * Kultursensitive Psychotherapie
+  * Klinische Versorgung mit Dolmetscher
+
+* z.B. Corona Pandemie
+  * digitales Psychotherapieformat
+  * Fragen zu Einsamkeit bzw. sozialer Isolation
+
+---
+class: top, left
+<div class="footer"><span>Kapitel 2.1 in Bortz, J. & Döring, N. (2006). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften (4.Auflage). Pearson. </span></div>
+
+### Themensuche
+
+#### Anregungen zur gezielten Themensuche
+
+**Kreative Strategien**
+
+##### Widersprüchliche Theorien:
+
+* eigenständige Prüfmöglichkeiten widersprüchlicher Theorien entwerfen
+
+* allgemeineren theoretischen Ansatz zu entwickeln (Widerspruch auf höherer Ebene auflösen)
+
+* Auflösung durch Verfeinerung des "Wenn-Dann" Gefüges
+
+* Synthese durch "Durchschnittsmodell" zweier entgegengerichteter Theorien
+
+
+---
+class: top, left
+
+### Themensuche
+
+#### Anregungen zur gezielten Themensuche
+
+**Kreative Strategien**
+
+##### ChatGPT:
+
+* https://chat.openai.com/auth/login
+
+* Account benötigt
+
+* Versteht deutsch und englische "Prompts"
+
+* Kann sehr breit und spezifisch befragt werden, z.B. "Welches Thema eignet sich für eine erste kleine Datenerhebung im ersten Semester des Psychologiestudiums?"
+
+* **Vorsicht**: ChatGPT kann ***nicht*** für die Literaturrecherche oder zuverlässige Quellenangaben verwendet werden! 
+
+---
+class: top, left
+
+### Themensuche
+
+#### Anregungen zur gezielten Themensuche
+
+**Impact-Strategien**
+
+##### Brainstorming
+
+* Gut geeignet wenn viele Ideen benötigt werden
+* Alleine oder mit mehreren Teilnehmern möglich
+* Visualisierung
+* Quantität geht vor Qualität
+* Keine Kritik, keine Bewertung
+* Aufgreifen und Weiterentwickeln der Ideen ist erlaubt und Ziel
+
+##### Mindmaps
+
+* „Gedankenlandkarte“
+* Beginn mit der Zentralidee in der Mitte des Blattes
+* Jeder neue Gedanke eine neue Linie, die vom Zentrum ausgeht oder eine Linie fortführt
+* Nur Stichworte, Schlüsselworte – keine Sätze
+
+---
+class: top, left
+
+### Themensuche
+
+#### Anregungen zur gezielten Themensuche
+
+**Beispiel Mindmap:**
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "650px"}
+knitr::include_graphics("bilder/mindmap.png")
+```
+]
+
+---
+class: top, left
+name: projekt 
+### Themensuche
+
+#### Rahmenbedingungen für das Projekt im Rahmen dieser Vorlesung
+
+**1. Wir untersuchen uns gegenseitig (auf freiwilliger Basis)**
+
+$\rightarrow$ Anonymität während der Erhebung wahren (auch durch Auswahl der Forschungsfragen)!
+
+$\rightarrow$ Stichprobengröße ist begrenzt, wenn Effekt nicht riesig, dann vmtl. nicht signifikant (was ok ist! Man kann sich trotzdem die Richtung des geschätzten Effekts ansehen)
+
+**2. Wir üben**
+
+$\rightarrow$ Auswahl simpler Fragestellung, simpler Hypothesen, simples Design auf Basis einer Fragebogenstudie, simple Analysen
+
+$\rightarrow$ Für komplexere Fragestellungen, Designs und Analysen haben Sie im Forschungspraktikum und Ihrer Abschlussarbeit Gelegenheit
+
+---
+class: top, left
+
+### Themensuche
+
+#### Vorgaben
+
+Auswahl von Thema, die mit folgenden Variablen/Variablenkategorien untersuchbar sind:
+
+* **Stimmung, Wohlbefinden, Lebenszufriedenheit, Beziehungszufriedenheit** (zis.gesis.org -> Individuum & Persönlichkeit -> Stimmung & Emotionen)
+* **Persönlichkeit**, z.B. Big 5, Neugier, Leistungsmotivation, Risikobereitschaft, Selbstwirksamkeit, Selbstbewusstsein (zis.gesis.org -> Individuum & Persönlichkeit -> Bedürfnisse, Motive & Interessen / Kontrollüberzeugungen / Persönlichkeitsinventare / Selbstwahrnehmen & -erleben)
+* **Werte** (zis.gesis.org -> Individuum & Persönlichkeit -> Werte & Ziele)
+* **Prokrastination** (zis.gesis.org -> Bildung -> Erleben & Verhalten)
+* **Ungerechtigkeitssensibilität** (zis.gesis.org -> Gesellschaft & Soziales -> Soziale Gerechtigkeit)
+* **Freizeitinteresse** (zis.gesis.org -> Gesellschaft & Soziales -> Wohnen & Leben)
+* **Umweltbewusstsein/verhalten** (zis.gesis.org -> Umwelt)
+* **Gesundes Essverhalten**
+* **Bindungsstile**
+* **Social Media Nutzung**
+
+---
+class: top, left
+
+### Themensuche
+
+#### Beispiele für das Projekt im Rahmen dieser Vorlesung
+
+.pull-left[
+**Gut untersuchbare Themen**: 
+* Unterschiede zwischen Münchnern und Nicht-Münchnern hinsichtlich Musikpräferenzen
+* Zusammenhang zwischen Interessen für Themen und Persönlichkeitseigenschaften
+* Effekt der Darbietung einer Information auf Einstellungen oder Zufriedenheit in einem bestimmten Bereich
+
+**Ungünstige Themen**:
+* Abfrage sensibler Inhalte nötig, z.B. zur Krankheitsgeschichte, Sexualität, Intelligenz, Untreue,...
+* Untersuchung seltener Merkmale, z.B. besondere Lebenserfahrungen oder -umstände
+]
+
+.pull-right[
+**Angemessen komplexe Analysen**:
+* t-test für unabhängige Stichproben für einen Mittelwertsvergleich zwischen zwei Gruppen
+* Korrelationsanalyse für den Zusammenhang zwischen zwei Variablen
+* Lineare Regression ausschließlich mit Haupteffekten oder maximal einem Interaktionseffekt für die Vorhersage einer numerischen Variable
+* t-test für abhängige Stichproben für Mittelwertsunterschiede auf einer Variable in einem Pre-Post-Design
+* 2-faktorielle ANOVA für ein Pre-Post-Design mit Experimental- und Kontrollgruppe (generell bei UV: nicht zuviele Stufen!) für eine numerische abhängige Variable
+]
+
+---
+class: top, left
+name: take-away
+
+### Take-Aways
+
+.full-width[.content-box-gray[
+
+* Wahl eines **geeigneten Themas** für eine empirische (Qualifikations-)Arbeit wesentlich für Gesamtergebnis
+
+* **Replikation** von Untersuchungen ist explizit erlaubt unerlässlich für Festigung des Kenntnisstandes
+
+* **Themensuche an Universitäten:** Mitarbeit an Forschungsprojekten + systematische Literaturrecherche
+]
+]
+
+**[zurück zum Inhalt $\rightarrow$](#content)** 
+
+<!-- library(renderthis)  -->
+<!-- to_pdf("WissArb_Z1_Themensuche.Rmd", complex_slides = TRUE) -->
