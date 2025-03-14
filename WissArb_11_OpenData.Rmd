@@ -1,9 +1,9 @@
 ---
 title: "Einheit 11"
 subtitle: "⚔<br/>with xaringan"
-author: "Dr. Caroline Zygar-Hoffmann"
+author: "Prof. Dr. Caroline Zygar-Hoffmann"
 institute: "RStudio, PBC"
-date: "2024/07/09 (updated: `r Sys.Date()`)"
+date: "2025/01/17 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -57,8 +57,8 @@ class: middle, left
 <br><br><br><br><br><br><br>
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
-### Einheit 11: Publikation wissenschaftlicher Daten + das Wissenschaftssystem
-##### 10.07.2024 | Dr. Caroline Zygar-Hoffmann
+### Einheit 11: Publikation wissenschaftlicher Daten
+##### 21.01.2025 | Dr. Caroline Zygar-Hoffmann
 
 ---
 class: top, left
@@ -66,42 +66,52 @@ name: content
 
 ### Heutige Themen
 
+#### [Hinweise](#hinweise)
+
 #### [Gute wissenschaftliche Praxis](#wissprax)
 
-#### [Open Data](#opendata)
+#### [Open Data und Open Code](#opendata)
 
-#### [Übung: Wie einfach ist Deanonymisierung](#deanonymisierung)
+#### [Übung: Wann sind die Daten anonymisiert / Wie einfach ist Deanonymisierung](#deanonymisierung)
 
 #### [Anonymisierungs-Möglichkeiten](#anonymisierung)
 
-#### [Praxis Teil 1](#praxis1)
-
-#### [Das Wissenschaftssystem](#wisssys)
-
-#### [Praxis Teil 2](#praxis2)
+#### [Praxis](#praxis)
 
 ---
 class: top, left
 
 ### Hinweise
 
-* Auf studynet ist jetzt auch die RMarkdown-Datei zu dem hochgeladenen Beispielbericht aus dem letzten Semester zu finden.
+#### Bitte noch an Studien teilnehmen
 
-* An Lehrevaluation teilnehmen: [hsf.click/Eval-CFH](https://hsf.click/Eval-CFH)
+* Folgende Studien brauche noch dringend Teilnehmer:
 
-* Folgende Studien laufen noch:
+https://surveys.osc.lmu.de/siblings
 
-https://tellmi.psy.lmu.de/formr/Umfragenchecker
+https://surveys.osc.lmu.de/bindungsforscher
 
-https://tellmi.psy.lmu.de/formr/ErkenneDeinenWert
+* Folgende Studien sind noch offen:
 
-https://tellmi.psy.lmu.de/formr/BindungsstilSelbstwert
+https://surveys.osc.lmu.de/empowerment
 
-https://tellmi.psy.lmu.de/formr/FriendsAndRelationships
+https://surveys.osc.lmu.de/jagoda
 
-https://tellmi.psy.lmu.de/formr/FuenfFragezeichenRunFinal
+https://surveys.osc.lmu.de/forever
 
-https://tellmi.psy.lmu.de/formr/IntThema
+https://surveys.osc.lmu.de/song
+
+---
+class: top, left
+
+### Hinweise
+
+#### Lehrevaluation ist gestartet!
+
+Ich freue mich über Ihr Feedback, besonders in den offenen Antworten:
+
+hsf.click/Eval-CFH
+
 
 ---
 class: top, left
@@ -186,6 +196,7 @@ class: top, left
 knitr::include_graphics("bilder/sequentielle_designs.png")
 ```
 ]
+
 ---
 class: top, left
 name: opendata
@@ -205,6 +216,56 @@ name: opendata
 * Deutsche Forschungsgemeinschaft (DFG): "Sofern die Daten in Projekten erarbeitet wurden, die aus öffentlich rechtlichen Mitteln finanziert wurden, stehen sie im Grundsatz der Öffentlichkeit frei zur Verfügung" $\rightarrow$ Wissenschaftler werden von der Gesellschaft finanziert!
 
 * in gewissem Sinne auch: Backup der Daten
+
+---
+class: top, left
+<div class="footer"><span>https://fivethirtyeight.com/features/even-psychologists-respond-to-meaningless-rewards/ <br> Kidwell, M. C., Lazarević, L. B., Baranski, E., Hardwicke, T. E., Piechowski, S., Falkenberg, L. S., ... & Nosek, B. A. (2016). Badges to acknowledge open practices: A simple, low-cost, effective method for increasing transparency. PLoS Biology, 14(5), e1002456.</span></div>
+
+### Open Data
+
+#### "Badges" (= Abzeichen) als Hinweis darauf, dass ein Artikel Open Data bereitstellt
+
+.pull-left[
+```{r eval = TRUE, echo = F, out.width = "90%"}
+knitr::include_graphics("bilder/badges1.png")
+knitr::include_graphics("bilder/badges2.png")
+```
+]
+
+.pull-right[
+```{r eval = TRUE, echo = F, out.width = "90%"}
+knitr::include_graphics("bilder/badges3.png")
+```
+]
+
+---
+class: top, left
+<div class="footer"><span>https://osf.io/gevkf</span></div>
+
+### Open Data
+
+#### "Badges" (= Abzeichen) als Hinweis darauf, dass ein Artikel Open Data bereitstellt
+
+Anzahl der vergebenen Badges im Journal *Psychological Science* 2014-2018:
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "90%"}
+knitr::include_graphics("bilder/badges4.png")
+```
+]
+
+---
+class: top, left
+### Open Data
+
+#### FAIR Prinzipien (Wilkison et al., 2016)
+
+Veröffentlichte Daten sollten folgende Kriterien erfüllen:
+* **F**indable: Die Daten sollten für Menschen und Computer leicht zu finden sein (z.B. in entsprechenden Archiven).
+*	**A**ccessible: Die Daten müssen offen und frei zugänglich sein.
+*	**I**nteroperable: Die Daten müssen technisch nachnutzbar sein (z.B. ein nicht-propritäres Dateiformat aufweisen).
+*	**R**eusable: Die Daten müssen so dokumentiert sein, dass sie sinnvoll genutzt werden können.
+
 
 ---
 class: top, left
@@ -273,28 +334,12 @@ $\rightarrow$ Die formr-Exceldateien decken viel vom Codebook ab (auch wenn Sie 
 $\rightarrow$ **Für Ihre Studien im Rahmen der Vorlesung reichen die formr-Exceldateien als Codebook**; eine bessere Alternative für zukünftige Projekte ist die formr Datei aufzubereiten und zu ergänzen (z.B. mit dieser Vorlage: https://osf.io/xhaey)
 ]
 
-
 ---
 class: top, left
 
 ### Open Data
 
-#### Datendokumentation
-
-**Bewertungsschema**
-
-.center[
-```{r eval = TRUE, echo = F}
-knitr::include_graphics("bilder/bewertung_opendata.png")
-```
-]
-
----
-class: top, left
-
-### Open Data
-
-#### Grenzen: Personenbezogene Daten
+#### Grenzen von Open Data: Personenbezogene Daten
 
 .pull-left[
 ** Was sind "personenbezogene Daten"?**
@@ -326,7 +371,7 @@ class: top, left
 
 ### Open Data
 
-#### Grenzen: Personenbezogene Daten
+#### Grenzen von Open Data: Personenbezogene Daten
 
 **Do's and Don'ts (Meyer, 2018)**
 
@@ -349,7 +394,7 @@ class: top, left
 
 ### Open Data
 
-#### Grenzen: Personenbezogene Daten
+#### Grenzen von Open Data: Personenbezogene Daten
 
 **Anonymisierung**
 
@@ -364,7 +409,7 @@ class: top, left
 
 ### Open Data
 
-#### Grenzen: Personenbezogene Daten
+#### Grenzen von Open Data: Personenbezogene Daten
 
 **Risikoeinschätzung**
 
@@ -373,6 +418,8 @@ class: top, left
 * Vielleicht ist der CIA-Hacker mit dem Supercomputer nicht der wahrscheinlichste Angreifer und wir sollten uns viel mehr um die studentische Hilfskraft sorgen, welche vollen Zugriff auf die Daten hat und die Kommilitonen leicht identifizieren kann 
 
 * Besondere Vorsicht ist bei dyadischen Daten geboten: Romantische Partner haben zum Beispiel viele zusätzliche Informationen (z. B. Metadaten wie "Wann hat mein Partner die Fragebögen ausgefüllt?"), und wahrscheinlich ein gewisses Motiv
+
+* Daten auf keinen Fall bei ChatGPT hochladen!
 
 ---
 class: top, left
@@ -388,17 +435,54 @@ knitr::include_graphics("bilder/data_sharing.png")
 
 ---
 class: top, left
+
+### Open Code
+
+#### Open Code = Reproduzierbarer Code
+
+* Zusammen mit den Daten ist es sinnvoll, den R-Code und/oder das RMarkdown-Dokument zu veröffentlichen: Je nachdem was nötig ist um nachzuvollziehen welche Datenvorbereitung und Datenanalyse auf Code-Ebene durchgeführt wurde
+
+* Jemand Anderes sollte den Code (von oben nach unten) auf den Daten durchführen können, ohne auf Errors zu stoßen $\rightarrow$ Reproduzierbarkeit!
+
+* Auch hier ist wichtig für die Nachnutzbarkeit, dass der Code verständlich ist, was man vor allem durch Kommentare erreicht (z.B. # Skalenbildung, # Z-Standardisierung, # Voraussetzungsprüfung Analyse Hypothese 1, # Analyse Hypothese 1)
+
+* Für Ihren Bericht soll der Code zusammen mit den anonymisierten (!) Daten auf dem OSF hochgeladen werden (in dasselbe Projekt wo auch die Präregistrierung hochgeladen wurde) 
+
+* Falls Sie die Analysen individuell gemacht haben, dann am Besten pro Gruppenmitglied einen neuen Unterordner mit dem eigenen Namen im Projekt anlegen und dort die eigenen Code-Dateien ablegen
+
+
+---
+class: top, left
+
+### Open Data und Open Code
+
+**Bewertungsschema**
+
+.center[
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/bewertung_opendata.png")
+```
+]
+
+---
+class: top, left
 name: deanonymisierung
 
-### Übung: Wie einfach ist eine Deanonymisierung?
+### Übung: Wann ist mein Datensatz anonymisiert / Wie einfach ist eine Deanonymisierung?
 
-**Bitte Umfrage ausfüllen: https://tellmi.psy.lmu.de/formr/anonymity**
+**Bitte Umfrage ausfüllen: https://surveys.osc.lmu.de/anonymity**
 
 **Bitte hier eintragen falls Umfrage ausgefüllt: https://docs.google.com/document/d/10A_6uA2F2FBJF-hG7AqEFhgj9ma0xt9yS_wc6hZmxE4/edit**
 
-.center[
-```{r eval = TRUE, echo = F, out.width = "50%"}
-knitr::include_graphics("bilder/anonymity_survey.png")
+.pull-left[
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/anonymity_survey1.png")
+```
+]
+
+.pull-right[
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/anonymity_survey2.png")
 ```
 ]
 
@@ -473,9 +557,11 @@ write.csv(data, file = "raw_anonym/data_anonymized.csv", row.names = FALSE)
 
 ---
 class: top, left
-name: praxis1
+name: praxis
 
-### Praxis Teil 1
+### Praxis
+
+**Schritt 0: An Lehrevaluation teilnehmen: hsf.click/Eval-CFH**
 
 **Schritt 1: Überlegen und prüfen, ob es Variablen gibt, die einzigartige Kombinationen bilden könnten und damit die Anonymität Ihrer Teilnehmer gefährden**
 
@@ -489,182 +575,8 @@ name: praxis1
 - Anonymen Datensatz im OSF-Projekt hochladen (wo auch die Präregistrierung liegt)
 - formr Exceldateien im OSF-Projekt hochladen (wo auch die Präregistrierung liegt)
 
-
----
-class: top, left
-name: wisssys
-
-### Das Wissenschaftssystem
-
-**Der Weg zur Publikation** 
-
-.pull-left[
-1) **Auswahl eines Journals** nach thematischer Passung, Länge des Artikels, Qualität des Journals (auch: Unterstützung von Open Science), Augen offen halten für "Call for Papers" zu spezifischem Themen ( $\rightarrow$ "Special Issues" der Journals zu bestimmtem Thema)
-
-2) **Sichtung und Umsetzung der "Author Guidelines"**: Hinweise zu Artikelformaten, geforderten Elementen, Formatierung, Länge, ggf. Verblindung gegenüber Reviewern (d.h. dass im Manuskript nicht kenntlich ist, wer der/die Autor:innen des Artikels sind)
-
-3) **Aufsetzen des "Cover Letters"**: Anschreiben an den Editor mit kurzer Vorstellung des Manuskripts und ggf. ergänzenden Hinweisen
-]
-
-.pull-right[
-4) **Einreichung im Journal Submission Portal**: Eingabe von Informationen zu Autor:innen, Bestätigung guter wissenschaftlicher Praxis, Hochladen von Dateien, ggf. Vorschlag von Reviewern
-
-5) **Auf die Entscheidung warten (kann sehr unterschiedlich lange dauern)**: 
-  * "desk-reject" (direkte Ablehnung durch den Editor, meist innerhalb weniger Tage) oder 
-  * "under (peer-)review" (Anzahl an Reviewern unterschiedlich, häufig 2, + meist separates Review durch den Editor, meist innerhalb von mehreren Wochen bis Monaten) 
-  * Nach Einreichung / während man auf eine Entscheidung wartet, darf das Manuskript bei keinem anderen Journal zur Begutachtung vorliegen
-]
-
----
-class: top, left
-
-### Das Wissenschaftssystem
-
-**Peer-Review**
-
-* Beim peer-review begutachten Wissenschaftler mit Expertise zu der Forschungsarbeit (inhaltlich oder methodisch) das Manuskript
-
-* Entscheidungen nach dem Peer-Review: 
-  - Rejection
-  - Revise and resubmit: Major revision
-  - Revise and resubmit: Minor revision
-  - Acceptance pending minor revisions
-  - Acceptance
-
----
-class: top, left
-
-### Das Wissenschaftssystem
-
-**Peer-Review**
-
-* Wenn es keine Rejection ist: 
-  - Innerhalb einer bestimmten Frist Überarbeitung des Manuskripts $\rightarrow$ Verlängerung der Frist kann beim Editor beantragt werden
-  - Darlegung wie auf die Reviews eingegangen wurde im "response letter" (Reviewer-Kommentare Punkt-für-Punkt aufführen und beantworten, d.h. Änderungen darlegen und nachvollziehbar im Manuskript kennzeichnen) 
-  - Nach resubmission wird es ggf. nochmal an (meist dieselben) Reviewer geschickt, manchmal entscheidet auch der Editor direkt (eher nur bei minor revisions)
-
-* Bei Annahme des Artikels, ist der Artikel "in press" (d.h. wird für die Veröffentlichung vorbereitet) $\rightarrow$ Korrespondenz mit den "copy editors" des Journals (welche das Manuskript layouten und ggf. sprachlich checken) zur Abstimmung der "Druck"freigabe
-
-
----
-class: top, left
-<div class="footer"><span>Brembs, B., Button, K., & Munafò, M. (2013). Deep impact: unintended consequences of journal rank. Frontiers in human Neuroscience, 291. <br>Fraley, R. C., & Vazire, S. (2014). The N-pact factor: Evaluating the quality of empirical journals with respect to sample size and statistical power. PloS one, 9(10), e109019. <br>Lariviere, V., Kiermer, V., MacCallum, C. J., McNutt, M., Patterson, M., Pulverer, B., Swaminathan, S., u.a. (2016). A simple proposal for the publication of journal citation distributions. bioRxiv, 062109. doi:10.1101/062109 <br>Szucs, D., & Ioannidis, J. P. (2017). Empirical assessment of published effect sizes and power in the recent cognitive neuroscience and psychology literature. PLoS biology, 15(3), e2000797.
-</span></div>
-
-### Das Wissenschaftssystem
-
-**Impact Factor und seine Probleme**
-
-.pull-left[
-* Impact Factor = jährliche mittlere Anzahl der Zitationen von Aritkeln, die in den letzten 2 Jahren in einem Journal publiziert wurden
-
-* Fraley & Vazire (2014); Szucs & Ioannidis (2017): Höherer JIF hängt mit geringerer statistischer Power/Stichprobengröße der dort publizierten Studien zusammen
-
-* Brembs, Button, & Munafò (2013): Höherer JIF hängt mit einer höheren Rate an Retractions (Zurückziehen eines Artikels) zusammen
-]
-
-.pull-right[
-```{r eval = TRUE, echo = F}
-knitr::include_graphics("bilder/JIF.png")
-```
-]
-
-
----
-class: top, left
-
-### Das Wissenschaftssystem
-
-**Konferenzen in der Psychologie**
-
-* Vernetzung unter Kolleg:innen und Austausch zu wissenschaftlichen Ergebnissen
-
-* Häufig mehrere parallele "Sessions", d.h. mehrere parallele Vorträge in unterschiedlichen Räumen
-
-* Häufige Beitragsformen:
-  - **Einzel-Vorträge** (meist ca. 10-20 Minuten), d.h. ein alleinstehender Vortrag zu einem Forschungsthema
-  - **Beitrag in einem Symposium** (meist ca. 10-20 Minuten), d.h. ein Vortrag der inhaltlich zu anderen Vorträgen passt mit ggf. abschließendem Diskussion der Vorträge durch einen Diskutanten
-  - **Keynote-Vortrag** (meist ca. 60 Minuten), d.h. ein zentraler Vortrag während der Konferenz während dem keine anderen Vorträge stattfinden; hierfür wird man angefragt/eingeladen
-  - **Poster-Präsentation** (meist ca. 30-60 Minuten), d.h. Ausdruck eines Posters auf DinA0 oder DinA1 auf dem Forschungsergebnisse visualisiert und beschrieben sind, während einem extra Zeitslot während der Konferenz unterhält man sich darüber mit einzelnen Konferenzteilnehmer:innen (die das Poster aufgesucht haben)
-  
-* Beitragseinreichung in Form eines Abstracts (in anderen Disziplinen sind tlws. ganze Manuskripte üblich)
-
-* Zu inhaltlichen Hinweisen zur Vorbereitung auf eine Konferenz vgl. Kapitel 13.2 in Döring & Bortz (2016)
-
----
-class: top, left
-name: wisssys
-<div class="footer"><span>https://www.uni-due.de/gcplus/de/doc_karrierewege.php</span></div>
-
-### Das Wissenschaftssystem
-
-**Karrierepfade**
-
-.center[
-```{r eval = TRUE, echo = F, out.width="80%"}
-knitr::include_graphics("bilder/karrierewege.jpg")
-```
-]
-
----
-class: top, left
-<div class="footer"><span>https://www.bmbf.de/bmbf/de/forschung/wissenschaftlicher-nachwuchs/das-tenure-track-programm/das-tenure-track-programm.html</span></div>
-
-### Das Wissenschaftssystem
-
-**Karrierepfade**
-
-.center[
-```{r eval = TRUE, echo = F, out.width="75%"}
-knitr::include_graphics("bilder/tenure-track.jpg")
-```
-]
-
----
-class: top, left
-name: praxis2
-
-### Praxis Teil 2
-
-Sie sollen sich ähnlich dem Peer-Review innerhalb Ihrer Kleingruppe gegenseitig Feedback zu Ihren Texten geben (zumindest zu der Gruppenarbeit).
-
-**Formal**: Korrekte Rechtschreibung, Grammatik, Zeichensetzung? Korrekt zitiert? Statistische Darstellung korrekt? Literaturverzeichnis korrekt?
-
-**Sprachlich-stilistisch**: Ist der Satzbau verständlich? Ist die Formulierung präzise? Ist die Zeitform korrekt? Gibt es unnötige Füllwörter?
-
-**Inhaltlich - unspezifisch**: Ist der rote Faden zu erkennen? Gibt es Überflüssiges? Ist die Darstellung sachlich neutral? Werden Begriffe korrekt eingeführt und erläutert? Ist die Argumentation logisch und nachvollziehbar? Werden Behauptungen belegt? Kann auf Links zum OSF zugegriffen werden? Ist dort alles Geforderte vorhanden? **Verstehen Sie, was Ihr:e Kommilitone:in Ihnen sagen möchte?**
-
-**Inhaltlich - spezifisch**: Nehmen Sie sich den Bewertungsbogen vor: Sind die bewerteten Elemente entsprechend der Beschreibung im Bewertungsbogen vorhanden? 
-
----
-class: top, left
-
-### Praxis Teil 2
-
-Wie geben Sie das Feedback:
-
-* Sie können das RMarkdown als Word-Dokument "knitten", und dann darin Feedback geben $\rightarrow$ **manueller Übertrag ins RMarkdown nötig** (eine alternative technische Lösung wäre das package *trackdown*: https://cran.r-project.org/web/packages/trackdown/vignettes/trackdown-workflow.html)
-
-* **Geben Sie Ihr Feedback konkret auf einen Absatz/Satz bezogen, mit einem konstruktiven (Alternativ-)Vorschlag**
-* **Erklären Sie** warum Sie denken, dass eine Alternative besser wäre / etwas fehlt (z.B. an welcher Stelle Sie als Leser verwirrt wurden, oder Fragen offen blieben, oder warum es missverständlich sein könnte, o.ä.)
-* **Bleiben Sie im Ton wertschätzend!** Selbst wenn Ihnen der Text nicht gefällt, steckt Arbeit dahinter. Helfen Sie dabei, wie es Ihr:e Kommilitone:in Ihrer Ansicht nach besser machen kann.
-
-* **Arbeiten Sie vorwiegend mit der Kommentar-Funktion**, und nutzen Sie die Überarbeiten-Funktion von Word direkt im Text z.B. nur für formale Fehler $\rightarrow$ Es ist nicht Ihr Text, sondern der Ihres:r Kommilitonen:in! 
-
-* Wenn Sie als Autor:in des Textes den Vorschlag eines:r Kommilitonen:in nicht annehmen möchten, sprechen Sie das an. **Finden Sie gemeinsam eine Lösung, mit der alle einverstanden sind.**
-
-* Wenn es zu einem Konflikt kommen sollte, melden Sie sich bei mir, und ich helfe.
-
----
-class: top, left
-
-### Studierende als Testleitungen für die PISA-Studie und andere Erhebungen gesucht
-
-Für den Herbst/Winter 2024 und darüber hinaus suchen wir wieder zuverlässige Studierende, die als Testleitung (m/w/d) in Schulen für uns Erhebungen durchführen. Konkret geht es zunächst um die Studie NEPS (Nationales Bildungspanel), einen groß angelegten Längsschnitt des Leibniz-Instituts für Bildungsverläufe (LifBi), sowie im kommenden Frühjahr um die PISA-Haupterhebung 2025. 
-
-Wir möchten Sie sehr herzlich bitten, vor Beginn der vorlesungsfreien Zeit in Ihren Lehrveranstaltungen und/oder in Ihrem Fachbereich auf die Möglichkeit zur aktiven Teilnahme an der Durchführung unserer Studien aufmerksam zu machen. Auch wenn die ersten Testsitzungen erst im Oktober starten, wählen wir über den Sommer die Bewerberinnen und Bewerber aus, bieten erste Informationsveranstaltungen und Schulungen an und beginnen mit der Einsatzplanung und Terminvergabe. Daher sollten sich Interessierte schnellstmöglich, spätestens jedoch bis Ende Juli 2024 mit einer Kurzbewerbung bei uns melden.
-
-Aufgrund der flexiblen Einsatztage ist die Tätigkeit für Studierende besonders gut geeignet. Die Materialien für die Einsätze erhalten die Testleitungen nach Hause und reisen von dort zu den Testsitzungen, die wir nach Möglichkeit wohnortnah vergeben. Weitere Informationen enthält die Stellenausschreibung: https://www.iea.nl/Testleiter_24
+**Schritt 4: Code veröffentlichen**
+- Entweder als Gruppe, oder individuell (in nach Name benannten Unterordnern)
   
 <!-- library(renderthis) -->
-<!-- to_pdf("WissArb_11_OpenData_Wissenschaftssystem.Rmd", complex_slides = TRUE) -->
+<!-- to_pdf("WissArb_11_OpenData.Rmd", complex_slides = TRUE) -->

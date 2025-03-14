@@ -3,7 +3,7 @@ title: "Einheit 1"
 subtitle: "⚔<br/>with xaringan"
 author: "Dr. Caroline Zygar-Hoffmann"
 institute: "Charlotte Fresenius Hochschule München"
-date: "2024/02/20 (updated: `r Sys.Date()`)"
+date: "2024/10/12 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -53,7 +53,7 @@ class: middle, left
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
 ### Einheit 1: Forschungsthemen & Präregistrierung im Forschungsprozess
-##### 10.04.2024 | Dr. Caroline Zygar-Hoffmann
+##### 15.10.2024 | Dr. Caroline Zygar-Hoffmann
 
 ---
 class: top, left
@@ -106,26 +106,25 @@ name: content
 * [Präregistrierung: Vorgehen](#prereg-vorgehen)
 * [Take-Aways und Literaturempfehlung](#take-away)
 
-#### [Material, Wiederholung Praxisaufgaben und Stellenanzeige](#material)
+#### [Material, Wiederholung Praxisaufgaben und Veranstaltungshinweise](#material)
 
 ---
 class: top, left
 name: orga
 ### Übersicht Lehrveranstaltung 
 
-**Termine**: 13 Termine mittwochs 14:45 - 16:15 (Raum: Audimax)
+**Termine**: 14 Termine, dienstags 14:45 - 16:15 (Raum: P5 105)
 
-**Begleitendes Seminar**: Übung zur Computergestützten Datenanalyse im Block bei Stephan Goerigk ([stephan.goerigk@charlotte-fresenius-uni.de](mailto:stephan.goerigk@charlotte-fresenius-uni.de)) und Janika Saretzki ([janika.saretzki@charlotte-fresenius-uni.de](mailto:janika.saretzki@charlotte-fresenius-uni.de))
+**Begleitendes Seminar**: Übung zur Computergestützten Datenanalyse mittwochs bei Stephan Goerigk ([stephan.goerigk@charlotte-fresenius-uni.de](mailto:stephan.goerigk@charlotte-fresenius-uni.de)) 
 
-**Materialien**: werden auf [studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmdNode=zx:pa:mr&cmdClass=ilNewsStreamGUI&ref_id=26218) bereitgestellt
+**Materialien**: werden auf [studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmdNode=zx:pa&cmdClass=ilObjGroupGUI&cmd=view&ref_id=31913) bereitgestellt
 * Übersicht der Materialsammlung am Ende jeder Einheit $\rightarrow$ **wichtig dieses Material auf dem Schirm zu haben, anzuschauen, und zu nutzen! Auch die Vorlesungsfolien!**
 * Vielen Dank an Prof. Dr. Stephan Goerigk, Prof. Dr. Mario Gollwitzer, Prof. Dr. Felix Schönbrodt, M.Sc. Nina-Alisa Maria Kollakowski et al. und das LMU Open Science Center für Bereitstellung der Grundlage für die Materialien
-* Fragenforum: https://cfh-waf.forumieren.de/ $\rightarrow$ hier können Sie sich auch gegenseitig Fragen beantworten!
 
 **Prüfungsleistung**:
 * Projektbericht (Präregistrierung + empirischer Forschungsbericht) in Englisch oder Deutsch als Gruppenarbeit (5 Studierende)
 * Umfang: ab 7 Seiten pro Person (nähere Informationen dazu auf kommenden Folien)
-* Anmeldezeitraum: 22.04.24 - 13.05.24; Abgabe: 16.08.2024
+* **Anmeldezeitraum: 28.10.24 - 18.11.24 (!); Abgabe: 10.03.25**
 
 ---
 class: top, left
@@ -164,7 +163,7 @@ knitr::include_graphics("bilder/errors.png")
 ```
 ]
 
-Ihre Note hängt am Ende nicht davon ab, wie komplex Ihre Ideen und/oder Analysen waren, oder wie viele Fehler Sie *auf dem Weg* gemacht haben, sondern von der transparenten und nachvollziehbaren Beschreibung Ihres Forschungsprozesses in der Präregistrierung und im empirischen Bericht, sowie der wissenschaftlichen Argumentation darin $\rightarrow$ [siehe Bewertungsschema auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=27027)
+Ihre Note hängt am Ende nicht davon ab, wie komplex Ihre Ideen und/oder Analysen waren, oder wie viele Fehler Sie *auf dem Weg* gemacht haben, sondern von der transparenten und nachvollziehbaren Beschreibung Ihres Forschungsprozesses in der Präregistrierung und im empirischen Bericht, sowie der wissenschaftlichen Argumentation darin $\rightarrow$ [siehe Bewertungsschema auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=32988)
 
 ---
 class: top, left
@@ -172,7 +171,7 @@ class: top, left
 
 #### Bewertung
 
-* Projektbericht (Präregistrierung + empirischer Forschungsbericht) in Englisch oder Deutsch als Gruppenarbeit (5 Studierende) $\rightarrow$ Beispiele vom letzten Semester werden noch auf studynet bereitgestellt
+* Projektbericht (Präregistrierung + empirischer Forschungsbericht) in Englisch oder Deutsch als Gruppenarbeit (5 Studierende) $\rightarrow$ Beispiele von vorherigen Semestern werden noch auf studynet bereitgestellt
 
 .pull-left[
 * **Präregistrierung**
@@ -188,7 +187,7 @@ class: top, left
   - **Einzelanteil**: Formulierung von Ergebnisteil, Diskussion, und Abstract + R-Skripte $\rightarrow$ jedes Gruppenmitglied ab 5 Seiten (wobei mehr für die Diskussion nötig sein wird)
 ]
 
-* Note setzt sich zusammen aus der Bewertung des Gruppenanteils (einfach gewichtet) und Bewertung des Einzelanteils (doppelt gewichtet) $\rightarrow$ [siehe Bewertungsschema auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=27027)
+* Note setzt sich zusammen aus der Bewertung des Gruppenanteils (einfach gewichtet) und Bewertung des Einzelanteils (Inhalt doppelt gewichtet) $\rightarrow$ [siehe Bewertungsschema auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=32988)
 
 
 ---
@@ -197,13 +196,13 @@ class: top, left
 
 ```{r echo = F}
 df = readxl::read_xlsx("WAF_Termine.xlsx", sheet = "Tabelle1")[, 1:4]
-df$Datum = format(as.Date(df$Datum), "%d.%m.%Y")
 df %>%
   kbl() %>%
-    kable_styling(font_size = 18) %>%
+    kable_styling(font_size = 16) %>%
   kable_classic(full_width = T, position = "left") %>%
    column_spec(column = 3, width = "12cm") %>% 
-    row_spec(c(4,8), background = "lightgrey")
+    row_spec(c(8,11), background = "lightgrey") %>% 
+  row_spec(4, background = "yellow") 
 ```
 
 ---
@@ -217,23 +216,11 @@ class: top, left
 
 #### Wichtige Zwischentermine
 
-* **Spätestens (!) bis zum 26.04.** (Ende der Woche der 3. Einheit): Abgabe Gruppenname & Thema auf [studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=26551)!
+* **Spätestens (!) bis zum 31.10.**: Abgabe Gruppenname & Thema auf [studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=32593)!
 
-* 08.05., 15.05. oder (spätestens) 22.05.: Möglichkeit für kurzes persönliches Feedback von mir/meiner Doktorandin während der Sitzung
+* 06.11., 12.11. oder (spätestens) 19.11.: Möglichkeit für kurzes persönliches Feedback von mir/meiner Doktorandin während der Sitzung
 
-* **Bis zum 24.05.** (Ende der Woche der 6. Einheit): Finalisierung Präregistrierung
-
----
-class: top, left
-
-### Forschungsthemen
-
-.center[
-```{r eval = TRUE, echo = F, out.width = "70%"}
-knitr::include_graphics("bilder/edsheeran.png")
-```
-<iframe src="ShapeOfYou.mp3" sandbox="" height = "55" width = "760" frameborder="0"</iframe>
-]
+* **Bis zum 25.11.**: Finalisierung Präregistrierung
 
 ---
 class: top, left
@@ -245,10 +232,10 @@ name: thema1
 
 .pull-left[
 **Vorgaben:** 
-* **Thema:** Auswirkungen von bewusstem Anhören von Liedern auf psychologische Variablen im Partnerschaftskontext
+* **Thema:** Auswirkungen von Reflexion und Kommunikationsaufforderung auf psychologische Variablen im Partnerschaftskontext
 * **Studiendesign:** Experiment mit Interventions- vs. Kontrollgruppe (between-person Vergleich), ein paar Outcomes (AVs) festgelegt
 * **Eigene Forschungsfrage anknüpfen:**
-  - zusätzliche Interventionsbedingung (z.B. anderer Song oder Variation (z.B. Ausführlichkeit der Instruktion, nur Text-Lyrics, gar keine Lyrics))
+  - zusätzliche Outcomes
   - Interaktion mit Personenvariablen (z.B. Beziehungsdauer, Persönlichkeit, Bindungsstil)
   - eigene Ideen (im Rahmen) möglich
 ]
@@ -258,7 +245,7 @@ name: thema1
 * weniger Aufwand bei Studienimplementierung in Umfragesoftware durch spezifischeres Template
 * Synergien mit anderen Interventions-Gruppen (z.B. in der Studientestung/Datenerhebung)
 * ggf. etwas komplexere Analysen (?)
-* Datenerhebung auch außerhalb der Kohorte gefordert (Rekrutierung von 5 Versuchspersonen pro Gruppenmitglied), höhere Power möglich
+* Datenerhebung auch außerhalb der Kohorte gefordert (Rekrutierung von 5 Versuchspersonen pro Gruppenmitglied), höhere statistische Power möglich
 * sogenannte "Pilotstudie" (= Versuchsdurchlauf) für ein tatsächliches Forschungsprojekt
 ]
 
@@ -283,7 +270,7 @@ name: thema2
 * potentiell einfacheres Studiendesign & Analysen wählbar
 * mehr Aufwand bei Studienimplementierung in Umfragesoftware
 * mehr Aufwand für Recherche zu eigenen Entscheidungen
-* Datenerhebung nur innerhalb der Kohorte, geringere Power
+* Datenerhebung nur innerhalb der Kohorte, geringere statistische Power
 ]
 
 ---
@@ -324,7 +311,7 @@ class: top, left
 
 $\rightarrow$ **Es darf kein Ethikantrag nötig sein!**
 
-$\rightarrow$ **siehe Zusatzmaterial ["Ethik Checkliste" auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26580).**
+$\rightarrow$ **siehe Zusatzmaterial ["Ethik Checkliste" auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=32594).**
 
 ---
 class: top, left
@@ -344,7 +331,7 @@ name: weiteres
 
 * t-test für abhängige Stichproben für Mittelwertsunterschiede auf einer Variable in einem Pre-Post-Design
 
-* 2-faktorielle ANOVA für ein Pre-Post-Design mit Experimental- und Kontrollgruppe (generell bei UV: nicht zuviele Stufen!) für eine stetige/numerischen abhängige Variable
+* 2-faktorielle ANOVA für ein Pre-Post-Design mit Experimental- und Kontrollgruppe (generell bei UV: nicht zuviele Stufen!) für eine stetige/numerische abhängige Variable
 
 $\rightarrow$ auch für Gruppen relevant, die sich für das Interventionsthema entscheiden, da die selbst gewählte angeknüpfte Forschungsfrage mit einer bestimmten Analyse einhergeht (aber es gibt eine eingeschränktere Auswahl basierend auf dem vorgegebenen Studiendesign)
 
@@ -380,15 +367,16 @@ class: top, left
 
 #### Betreuung der Optionen
 
-* **Beiden Optionen wird in der Vorlesung Zeit eingeräumt**, aber in den Sitzungen am 15.05. und 28.05. gibt es folgende Aufteilung:
+* **Beiden Optionen wird in der Vorlesung Zeit eingeräumt**, aber in den Sitzungen am 06.11. und 12.11. gibt es folgende Aufteilung:
   - Gruppen mit eigenem Thema kriegen kurzes Feedback von mir
   - Gruppen mit Interventionsthema kriegen kurzes Feedback von meiner Doktorandin
   
 * **Außerhalb der Vorlesung** (d.h. für spezifischere/aufwändigere Fragen, Finalisierung der Präregistrierung, großer Blick auf alles, Formulierung/Passung Hypothesen und Analysen) gilt:
-  - Gruppen mit eigenem Thema haben primär ihre Ansprechpersonen in ihren jeweiligen Übungsleitern (Stephan Goerigk und Janika Saretzki)
+  - Gruppen mit eigenem Thema kriegen eine Ansprechperson (Stephan oder mich) in einer der kommenden Sitzungen zugewiesen
   - Interventionsgruppen haben primär ihre Ansprechperson in mir
-  - Das Fragenforum wird für alle offen sein $\rightarrow$ hier können (und sollen, falls möglich) Sie sich auch gegenseitig Fragen beantworten! $\rightarrow$ viele Fragen sind für alle relevant!
-  
+
+$\rightarrow$ Ihre Ansprechperson bewertet Ihre Arbeit am Ende! Daher sollten Sie möglichst alle wichtigen Entscheidungen mit Ihrer Ansprechperson abklären!
+
 * **Pro Kleingruppe ein GoogleDoc als "Open Notebook"** dient zur Dokumentation von Besprechungen/Entscheidungen (auch über Dozierende hinweg) $\rightarrow$ für die Pflege ist jede Kleingruppe selbst zuständig!
 
 ---
@@ -421,15 +409,15 @@ name: praxis
 **Schritt 1: Themenwahl**
   * Überlegen Sie sich welche Option (Interventionsthema/eigenes Thema) Sie anspricht.
   * Falls eigenes Thema:
-    - Lesen Sie sich das [Zusatzmaterial "Themensuche" auf dem studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26582) durch.
+    - Lesen Sie sich das [Zusatzmaterial "Themensuche" auf dem studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=32595) durch.
     - Gehen Sie die Variablen auf Folie 13 durch, und folgen Sie den Links für weitere mögliche untersuchbare Variablen.
     - Sammeln Sie Ideen und Themenvorschläge mit dem Bezug zur Psychologie, die Sie interessieren.
 
-**Schritt 2: Finden Sie Gruppenmitglieder**
-  * Zunächst innerhalb Ihrer Semestergruppen (A/B/C)
-  * **Nutzen Sie dafür bitte folgendes Google Doc, damit ich eine erste Übersicht über die Verteilung bekomme**: https://docs.google.com/document/d/1XFIOSoInrrcjd92raPK3sA4vSVKepVvznOqkWKRKG9k/edit
+**Schritt 2: Finden Sie Gruppenmitglieder** (zunächst innerhalb Ihrer Semestergruppen (A/B))
+  * **Nutzen Sie dafür bitte folgendes Google Doc, damit ich eine erste Übersicht über die Verteilung bekomme:** https://docs.google.com/document/d/1XFIOSoInrrcjd92raPK3sA4vSVKepVvznOqkWKRKG9k/edit
   * Bitte von mir an die Semestersprecher die Kommiliton:innen bei der Gruppenfindung zu unterstützen. Im Zweifelsfall möglichst gleichmäßige Aufteilung auf die beiden Optionen (eigenes Thema / Interventionsthema).
   * Weniger als 5 Personen sind nur möglich, wenn es am Ende nicht aufgeht. Das heißt: Ihre Gruppe ist zunächst nicht vollständig, wenn Sie nicht zu 5. sind.
+  * Wer niemanden in der Kohorte kennt kann heute gerne nach der Vorlesung kurz im Raum bleiben, so dass sich die "Nachzügler" besser finden.
 
 ---
 class: top, left
@@ -438,13 +426,13 @@ class: top, left
 
 #### Aufgabe: Mit welchem Thema möchte ich mich (mit welchen Gruppenmitgliedern) beschäftigen? 
 
-**Schritt 3: Legen Sie sich ein neues Google Doc als Open Lab Book an**
+**Schritt 3: Legen Sie sich ein neues Google Doc als Open Notebook an**
   * Geben Sie es für alle Gruppenmitglieder als Bearbeiter frei
   * Stellen Sie ein, dass diejenigen die über den Link verfügen das Dokument betrachten können
   
 **Schritt 4: Einigen Sie sich nach der nächsten Vorlesung auf ein Thema und geben Sie Ihrer Gruppe einen Namen**
   * Idealerweise hat Ihr Gruppenname etwas mit Ihrem Thema zu tun
-  * Teilen Sie mir Ihren Gruppennamen und Ihr Thema **bis spätestens (!) 26.04.** über die [Umfrage im studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=26551) mit (es reicht wenn ein Gruppenmitglied die Umfrage ausfüllt).
+  * Teilen Sie mir Ihren Gruppennamen und Ihr Thema **bis spätestens (!) 31.10.** über die [Umfrage im studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=32593) mit (es reicht wenn ein Gruppenmitglied die Umfrage ausfüllt).
   
 ---
 class: top, left
@@ -967,7 +955,7 @@ class: top, left
 
 #### Präregistrierung: Wirkung
 
-**Im Idealfall sorgt eine Präregistrierung dafür, dass eine Studie unabhängig von den Ergebnissen publiziert wird**:
+**Im Idealfall sorgt eine Präregistrierung dafür, dass eine Studie so durchgeführt und analyisert wird wie geplant, und dann unabhängig von den Ergebnissen publiziert wird**:
 * Anreiz für Replikationsversuche
 * Lösung des "File Drawer" Problems
 
@@ -1029,21 +1017,6 @@ $\rightarrow$ während publizierte Studien auf einen Priming Effekt von Geld hin
 
 ---
 class: top, left
-<div class="footer"><span>Protzko, J., Krosnick, J., Nelson, L., Nosek, B. A., Axt, J., Berent, M., ... & Schooler, J. W. (2024). High replicability of newly discovered social-behavioural findings is achievable. <i>Nature Human Behaviour</i>, 1-9. https://doi.org/10.1038/s41562-023-01749-9</span></div>
-
-### Präregistierung im empirischen Forschungsprozess
-
-#### Präregistrierung: Wirkung
-
-.center[
-```{r eval = TRUE, echo = F, fig.align='center', out.width = "35%", fig.cap = "https://twitter.com/JProtzko/status/1722648749196165193"}
-knitr::include_graphics("bilder/Protzko2023.png")
-```
-]
-
-
----
-class: top, left
 <div class="footer"><span>Herrmann, S. (2018) Süddeutsche Zeitung, 01./02.12.2018, S.35.</span></div>
 
 ### Präregistierung im empirischen Forschungsprozess
@@ -1068,6 +1041,24 @@ knitr::include_graphics("bilder/sz.png")
 .center[
 Herrmann (2018)
 ]
+
+---
+class: top, left
+
+### Metapsy
+
+.center[
+https://www.metapsy.org/
+
+```{r eval = TRUE, echo = F, out.width="40%"}
+knitr::include_graphics("bilder/metapsy.png")
+```
+]
+
+$\rightarrow$ Website, welche Evaluationsforschung von psychotherapeutischen Interventionen zugänglich macht
+
+$\rightarrow$ https://twitter.com/EikoFried/status/1746873387727659138: "In the video I'll show researchers (part I) and clients (part II) how to run a systematic meta-analysis looking into the effect of CBT on depression in older adults within 1 minute."
+
 ---
 class: top, left
 name: prereg-vorgehen
@@ -1252,18 +1243,15 @@ name: material
 
 ### Material
 
-* **Bewertungsschema**: [https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=27027](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=27027)
+* **Bewertungsschema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=32988
 
-*	**Strategien Themensuche**: [https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26582](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26582)
+*	**Strategien Themensuche**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26582
 
-*	**Checkliste Ethik**: [https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26580](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26580)
+*	**Checkliste Ethik**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26580
 
-*	**Google Doc Gruppenfindung**: [https://docs.google.com/document/d/1XFIOSoInrrcjd92raPK3sA4vSVKepVvznOqkWKRKG9k/edit](https://docs.google.com/document/d/1XFIOSoInrrcjd92raPK3sA4vSVKepVvznOqkWKRKG9k/edit)
+*	**Google Doc Gruppenfindung**: https://docs.google.com/document/d/1XFIOSoInrrcjd92raPK3sA4vSVKepVvznOqkWKRKG9k/edit
 
-* **Umfrage zur Einreichung Gruppenname und Thema**: [https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=26551](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=26551)
-
-*	**Fragenforum**: [https://cfh-waf.forumieren.de/](https://cfh-waf.forumieren.de/)
-
+* **Umfrage zur Einreichung Gruppenname und Thema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=32593
 
 ---
 class: top, left
@@ -1279,11 +1267,11 @@ class: top, left
     - Gehen Sie die Variablen auf Folie 13 durch, und folgen Sie den Links für weitere mögliche untersuchbare Variablen.
     - Sammeln Sie Ideen und Themenvorschläge mit dem Bezug zur Psychologie, die Sie interessieren.
 
-**Schritt 2: Finden Sie Gruppenmitglieder**
-  * Zunächst innerhalb Ihrer Semestergruppen (A/B/C)
+**Schritt 2: Finden Sie Gruppenmitglieder** (zunächst innerhalb Ihrer Semestergruppen (A/B))
   * **Nutzen Sie dafür bitte folgendes Google Doc, damit ich eine erste Übersicht über die Verteilung bekomme:** https://docs.google.com/document/d/1XFIOSoInrrcjd92raPK3sA4vSVKepVvznOqkWKRKG9k/edit
   * Bitte von mir an die Semestersprecher die Kommiliton:innen bei der Gruppenfindung zu unterstützen. Im Zweifelsfall möglichst gleichmäßige Aufteilung auf die beiden Optionen (eigenes Thema / Interventionsthema).
   * Weniger als 5 Personen sind nur möglich, wenn es am Ende nicht aufgeht. Das heißt: Ihre Gruppe ist zunächst nicht vollständig, wenn Sie nicht zu 5. sind.
+  * Wer niemanden in der Kohorte kennt kann heute gerne nach der Vorlesung kurz im Raum bleiben, so dass sich die "Nachzügler" besser finden.
 
 ---
 class: top, left
@@ -1298,20 +1286,70 @@ class: top, left
   
 **Schritt 4: Einigen Sie sich nach der nächsten Vorlesung auf ein Thema und geben Sie Ihrer Gruppe einen Namen**
   * Idealerweise hat Ihr Gruppenname etwas mit Ihrem Thema zu tun
-  * Teilen Sie mir Ihren Gruppennamen und Ihr Thema **bis spätestens (!) 26.04.** über die [Umfrage im studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=26551) mit (eine Umfrage pro Gruppenmitglied).
+  * Teilen Sie mir Ihren Gruppennamen und Ihr Thema **bis spätestens (!) 31.10.** über die [Umfrage im studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=32593) mit (eine Umfrage pro Gruppenmitglied).
   
+
+---
+class: top, left
+
+### Einladung zur Podiumsdiskussion: „Entwicklung und Lernen von Kindern und Jugendlichen im digitalen Wandel“, 05.11.24, 16:30 – 18:00 Uhr
+
+Wie verändert der digitale Wandel das Aufwachsen und das Lernen unserer Kinder? Welche Chancen und Herausforderungen bringt die zunehmende Digitalisierung mit sich?
+Expert*innen aus dem Raum Zürich, werden die Auswirkungen der digitalen Medien auf die kognitive und soziale Entwicklung von Kindern und Jugendlichen beleuchten und darüber diskutieren, wie Bildungseinrichtungen und Eltern diesen Veränderungen begegnen können. 
+
+*Podiumsteilnehmende* (alphabetisch): 
+* [Prof. Dr. Ingo Bosse](https://www.hfh.ch/person/ingo-bosse) (Institut für Lernen unter erschwerten Bedingungen, HfH)
+* [Prof. Dr. Silvia Brem](https://www.med.uzh.ch/de/UeberdieFakultaet/fakultaetsmitglieder/bremsilvia.html) (UFSP Plastische Hirnnetzwerke für Entwicklung und Lernen und Klinik für Kinder- und Jugendpsychiatrie und Psychotherapie, UZH)
+* [Prof. Dr. Fabio Sticca](https://www.hfh.ch/person/fabio-sticca) (Institut für Verhalten, sozio-emotionale und psychomotorische Entwicklungsförderung, HfH)
+* [Prof. Dr. Daniel Süss](https://www.zhaw.ch/de/ueber-uns/person/suss/) (Psychologisches Institut, ZHAW)
+
+*Moderation*: [Prof. Dr. Alexandra Freund](https://www.psychologie.uzh.ch/de/bereiche/dev/lifespan/team/freund.html) (Psychologisches Institut, UZH), *Kontakt*: Letizia Ventre (info@dsn.uzh.ch)
+
+*Link zur kostenlosen Anmeldung*: https://uzh.zoom.us/webinar/register/WN_4SW_5ZiCToaufIraKxz_dw#/registration 
+
+*Mehr Information*: https://www.developmentalscience.uzh.ch/de/aktivit%C3%A4ten/Podiumsdiskussion.html
+
+
+---
+class: top, left
+
+### Einladung zur Lesung und Diskussionsrunde: „Rätsel des Unbewussten", 08.11.24, 14-15.30 Uhr
+
+Wir laden Sie herzlich zur Lesung und Diskussionsrunde „Rätsel des Unbewussten“ einladen, die am Freitag, den 8. November 2024, von 14:00 bis 15:30 Uhr im Hörsaal 2U01, Leopoldstr. 13, 80802 München stattfinden wird.
+
+Dr. Cécile Loetz und Dr. Jakob Müller, die Köpfe hinter dem Podcast „Rätsel des Unbewussten – Podcast zur Psychoanalyse und Psychotherapie“, werden aus ihrem aktuellen Buch „Mein größtes Rätsel bin ich selbst – Die Geheimnisse der Psyche verstehen“ lesen. Das Buch erzählt aus Perspektive der Therapeut:innen Fallgeschichten aus der Welt der psychodynamischen Verfahren und macht sichtbar, wie psychische Veränderungsprozesse in Therapien möglich werden. Begleitet von Dr. Larissa Vierl (Klinische Psychologie und Psychotherapie, LMU) und Dr. Christian Woll-Weber (Klinische Psychologie des Kindes- und Jugendalters & Beratungspsychologie, LMU) als Moderator:innen möchten wir gemeinsam mit Ihnen – Studierende der Psychologie, Teilnehmer:innen der Aus- und Weiterbildung sowie alle Interessierte – ausgewählte Passagen diskutieren. So bekommen Sie einen spannenden und lebendigen Einblick in die
+Prozesse der tiefenpsychologisch fundierten und analytischen Psychotherapie.
+
+Die Veranstaltung findet in Kooperation zwischen den beiden genannten Lehreinheiten der LMU und dem Psychoanalytischen Forum München (PFM), einem Verbund der Münchener Aus- und Weiterbildungsinstitute mit tiefenpsychologisch fundierter und analytischer
+Psychotherapieausrichtung, statt. Ziel ist es, einen offenen Raum für den Austausch über die vielfältigen Rätsel der Psyche, der Psychoanalyse und der Aus- und Weiterbildung zu schaffen. Die Teilnahme ist kostenlos und erfordert keine Anmeldung.
   
 ---
 class: top, left
-name: stelle
 
-### Stellenanzeige: Testleitung
+### Einladung zur Onlineveranstaltung Karriereperspektiven
 
-```{r, echo=FALSE, fig.show='hold',fig.align='center', out.width = "36%"}
-knitr::include_graphics("bilder/Testleitung.png")
-``` 
-  
+Zielgruppe: Die Onlineveranstaltung richtet sich an Studierende im Bachelor sowie Master. Aufgrund der Tätigkeitsbereiche der Speaker*innen sind die Einblicke insbesondere für Studierende aus den Studiengängen Psychologie; BWL;  sowie Management, Economics and Social Sciences interessant.
+
+Programm mit mehr Informationen: https://cd.wiso.uni-koeln.de/de/team/juniorprofessur-fuer-organizational-behavior/j-prof-dr-annabelle-hofer/onlineveranstaltung-karriereperspektiven
+
+Zeit: Jeweils von 14:15-15:45 Uhr
+28.10.2024; 30.10.2024; 04.11.2024; 06.11.2024; 11.11.2024; 13.11.2024; 14.11.2024
+
+Zoom: https://fernuni-hagen.zoom-x.de/j/65955566890?pwd=bTZLSChMrGPd5MWAQwDK1b18UAXH4t.1
+
+Meeting‐ID: 659 5556 6890
+Kenncode: 64094237
+
+Moderation: Dr. Verena Eichel (FernUniversität in Hagen)
+
+Sprache: Deutsch
+
+Die SpeakerInnen verfügen alle über ein abgeschlossenes Studium in Psychologie. Sie sind in Bereichen wie beispielsweise Consulting, Data Analytics, Gesundheitsmanagement, und Personalmanagement tätig.
+
+Ansprechpartner: Merlin Trümpener (Universität zu Köln), E-Mail: fosteryourcareer@wiso.uni-koeln.de
+
 <!-- library(renderthis)  -->
 <!-- library(jquerylib) -->
 <!-- Vorsicht: html sollte nicht parallel offen sein -->
 <!-- to_pdf("WissArb_01_Themen_Präreg_Forschungsprozess.Rmd", complex_slides = TRUE) -->
+

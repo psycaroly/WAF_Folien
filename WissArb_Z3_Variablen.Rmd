@@ -3,7 +3,7 @@ title: "Zusatzmaterial: Variablen"
 subtitle: "⚔<br/>with xaringan"
 author: "Dr. Caroline Zygar-Hoffmann"
 institute: "RStudio, PBC"
-date: "2024/05/09 (updated: `r Sys.Date()`)"
+date: "2024/11/11 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -58,7 +58,7 @@ class: middle, left
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
 ### Zusatzmaterial: Variablen
-##### 15.05.2024 | Dr. Caroline Zygar-Hoffmann
+##### Dr. Caroline Zygar-Hoffmann
 
 ---
 class: top, left
@@ -100,6 +100,8 @@ class: top, left
 * alle Einflussgrößen auf die AV, die in einer Untersuchung nicht erfasst werden 
 
 * egal ob nicht bekannt oder vergessen
+
+* in der Präregistrierung werden nur die Störvariablen aufgeführt, für die man statistisch kontrollieren möchte ("Kontrollvariable / Kovariate", siehe nächste Folie)
 
 .center[
 ```{r eval = TRUE, echo = F, out.width = "500px"}

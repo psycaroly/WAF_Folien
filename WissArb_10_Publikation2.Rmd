@@ -1,9 +1,9 @@
 ---
 title: "Einheit 10"
 subtitle: "⚔<br/>with xaringan"
-author: "Dr. Caroline Zygar-Hoffmann"
+author: "Prof. Dr. Caroline Zygar-Hoffmann"
 institute: "RStudio, PBC"
-date: "2024/07/02 (updated: `r Sys.Date()`)"
+date: "2024/01/08 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -58,7 +58,7 @@ class: middle, left
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
 ### Einheit 10: Publikation von Studien mit Fokus auf Ergebnisteil und Diskussion
-##### 03.07.2024 | Dr. Caroline Zygar-Hoffmann
+##### 14.01.2025 | Prof. Dr. Caroline Zygar-Hoffmann
 
 ---
 class: top, left
@@ -127,9 +127,11 @@ name: ergebnis
 
 ### Was gehört in den Ergebnisteil?
 
+#### Struktur 
+
 * Allgemein: Unterüberschriften erlaubt und üblich
 
-* Deskriptivstatistik und Befunde zu den einzelnen Fragestellungen und Hypothesen berichten. 
+* Deskriptivstatistik und Befunde zu den einzelnen Fragestellungen und Hypothesen berichten 
 
 * **Konsistenz**: Strukturierung aus dem Theorieteil übernehmen und die einzelnen Fragestellungen in derselben Reihenfolge abarbeiten. 
 
@@ -146,6 +148,8 @@ class: top, left
 
 ### Was gehört in den Ergebnisteil?
 
+#### Struktur 
+
 * Nach Hypothesen gegliedert: Mit zentralen Ergebnissen anfangen, danach vertiefen (beschreiben Sie zuerst den Wald, dann die Bäume)
 
 * Hypothese nochmal kurz erwähnen
@@ -153,6 +157,8 @@ class: top, left
 * Ggf. Voraussetzungsprüfungen für die statistischen Verfahren präsentieren
 
 * Ergebnisse nur beschreiben, noch nicht interpretieren
+
+* Erst sagen, dann belegen: Ergebnis zuerst ankündigen, dann mit Statistiken begründen ("As predicted, the results show that the groups differ significantly, with group X having higher values on variable A ( $M = 1.2$, $SD = 0.2$) than group Y ( $M = 0.2$, $SD = 0.2$), $t(48) = 2.3$, $p = .026$.
 
 * Die Annahme/Ablehnung der Hypothese unmittelbar berichten (Bottom line / Fazit! Klar und deutlich – Ergebnisse im Einklang mit der Hypothese oder nicht)
 
@@ -175,9 +181,13 @@ class: top, left
 
 ### Was gehört in den Ergebnisteil?
 
+#### Zu explorativen Analysen
+
 * Wenn Sie explorative Analysen berichten, müssen Sie diese **begründen**:
-  - entweder im Ergebnisteil vor dem Bericht der explorativen Analyse: Macht Sinn wenn die explorative Analyse sich direkter aus den konfirmatorischen Analysen ergibt (z.B. gleiche Analyse ohne Ausreißer)
-  - oder am Ende der Einleitung: Macht Sinn wenn man es stärker mit Literatur untermauert wird, und weniger aus den konfirmatorischen Analysen hervorgeht $\rightarrow$ in diesem Fall ist es auch in Ordnung, wenn sich die Einleitung zwischen den Gruppenmitgliedern unterscheidet, im Sinne einer **Ergänzung in Hinsicht auf die explorative Analyse** (ansonsten muss die Einleitung aber gleich bleiben!)
+  
+  * entweder im Ergebnisteil vor dem Bericht der explorativen Analyse: Macht Sinn wenn die explorative Analyse sich direkter aus den konfirmatorischen Analysen ergibt (z.B. gleiche Analyse ohne Ausreißer)
+  
+  * oder am Ende der Einleitung: Macht Sinn wenn man es stärker mit Literatur untermauert wird, und weniger aus den konfirmatorischen Analysen hervorgeht $\rightarrow$ in diesem Fall ist es auch in Ordnung, wenn sich die Einleitung zwischen den Gruppenmitgliedern unterscheidet, im Sinne einer **Ergänzung in Hinsicht auf die explorative Analyse** (ansonsten muss die Einleitung aber gleich bleiben!)
 
 * Explorative Analysen müssen zum Verständnis des untersuchten Phänomens beitragen
 
@@ -185,18 +195,20 @@ class: top, left
 class: top, left
 ### Was gehört in den Ergebnisteil?
 
-* Erst sagen, dann belegen: Ergebnis zuerst ankündigen, dann mit Statistiken begründen ("As predicted, the results show that the groups differ significantly, with group X having higher values on variable A ( $M = 1.2$, $SD = 0.2$) than group Y ( $M = 0.2$, $SD = 0.2$), $t(48) = 2.3$, $p = .026$.
+#### Elemente des Ergebnisberichts
 
 * Angabe der relevanten Kennzahlen: z.B. Mittelwerte bei Gruppenvergleichen, Korrelation bei Zusammenhangshypothesen, etc.
-* Angabe der statistischen Kennwerte (z.B. t-Werte: t(df)=...; $\chi^2$(df)=...; etc.)
-  * Freiheitsgrade in Klammern
+
+* Angabe der statistischen Kennwerte mit Freiheitsgraden in Klammern (z.B. t-Werte: t(df)=...; $\chi^2$(df)=...; etc. 
+  
 * Angabe der statistischen Signifikanz: z.B. $p = .021$
   * genauen p-Wert angeben (d.h. auf 3 Nachkommastellen)
   * wenn p-Wert den Wert .001 unterschreitet, dann $p < .001$ (die Wahrscheinlichkeit kann nicht 0 betragen!) 
-  * Angabe von Effektstärken (z.B. Cohens d)
-* Allgemein: Angabe von Ergebnissen (Zahlen) und Variablen:
-  * lateinische Variablenbezeichnungen werden kursiv gesetzt 
-  * griechische Variablenbezeichnungen jedoch nicht
+
+* Angabe von Effektstärken (z.B. Cohens d)
+  
+* Formalia zur Angabe von Ergebnissen (Zahlen) und Variablen:
+  * lateinische Variablenbezeichnungen werden kursiv gesetzt, griechische jedoch nicht
   * Zahlen nicht kursiv
   * Komma ist ein Punkt, kein Beistrich
   * Bei Zahlen, die nicht größer als 1 werden können, wird die führende Null weggelassen (z.B. $p = .032$; $r = .73$; aber: $t(84) = 0.23$)
@@ -206,32 +218,30 @@ class: top, left
 class: top, left
 ### Was gehört in den Ergebnisteil?
 
-**Ergebnisse von Hypothesentests**
+#### Formalia
 
 <small>
 
 Es gibt für die gängingen statistischen Tests APA Richtlinien, welche Kennwerte in Fließtext oder Tabellen enthalten sein sollten: 
 
-* Korrelation
-
-  * $r$ = 0.13, 95% CI [-0.13, 0.38], $p$ = 0.312, $R^2$ = 0.02
+* Korrelation: $r = .13$, $95\%$ CI $[-0.13, 0.38]$, $p = .312$, $R^2 = .02$
 
 * t-Test
 
-  * $\Delta_{M}$ = -51.46, 95% CI [-104.87, 1.95], $t(49.09)$ = -1.94, $p$ = 0.059; Cohen's d = -0.55, 95% CI [-1.12, 0.02]
+  * entweder $\Delta_{M} = -51.46$, $95\%$ CI $[-104.87, 1.95]$, $t(49.09) = -1.94$, $p = .059$; Cohen's $d = -0.55$, $95\%$ CI $[-1.12, 0.02]$
+  * oder group X ( $M = 1.2$, $SD = 0.2$) compared to group Y ( $M = 0.2$, $SD = 0.2$), $t(48) = 2.3$, $p = .026$; Cohen's $d = -0.55$, $95\%$ CI $[-1.12, 0.02]$
 
 * Regressionsparameter
 
-  * $\beta$ = 0.64, 95% CI [-0.62, 1.89], $t(57)$ = 1.02, $p$ = 0.312
+  * standardisiert: $\beta = 0.64$, $95\%$ CI $[-0.62, 1.89]$, $t(57) = 1.02$, $p = .312$
+  * unstandardisiert: $b = 0.64$, $95\%$ CI $[-0.62, 1.89]$, $t(57) = 1.02$, $p = .312$
 
 * F-Tests (z.B. ANOVAs)
 
-  * Regressionsmodell: $R^2$ = 0.02, F(1, 57) = 1.04, $p$ = 0.312
-  * ANOVA: $F(3, 54)$ = 683.77, $p$ < .001, $\eta^2=0.97$, 95% CI [0.96, 1.00]
+  * Regressionsmodell: $R^2 = .02$, $F(1, 57) = 1.04$, $p = .312$
+  * ANOVA: $F(3, 54) = 683.77$, $p < .001$, $\eta^2=0.97$, $95\%$ CI $[0.96, 1.00]$
 
-* $\chi^2$-Test
-
-  * $r_{G1}=41\%$, $r_{G2}=70\%$, $\chi^2_{79}<.001$
+* $\chi^2$-Test: $r_{G1}=41\%$, $r_{G2}=70\%$, $\chi^2_{79}<.001$
 </small>
 
 
@@ -239,19 +249,23 @@ Es gibt für die gängingen statistischen Tests APA Richtlinien, welche Kennwert
 class: top, left
 ### Was gehört in den Ergebnisteil?
 
-**Zusammenfassung: Must-haves**
+#### Zusammenfassung: Must-haves
 
 * zentrale Deskriptivstatistiken (z.B. Mittelwerte beim Mittelwertsvergleich)
+
 * Größe des in der Untersuchung ermittelten Effekts (auch als standardisierte Effektstärken (r, Cohens d, $R^2$, $\eta^2$)
+
 * Konfidenzintervall für diesen Effekt
-* p-Werte
+
 * Teststatistiken (ggf. mit Freiheitsgraden)
+
+* p-Werte
 
 ---
 class: top, left
 ### Was gehört in den Ergebnisteil?
 
-**Lesbarkeit**
+#### Lesbarkeit
 
 * umfassende Tabellen, die für das Verständnis des Fließtextes nicht zwingend erforderlich sind, in den Anhang auslagern
 
@@ -266,7 +280,7 @@ class: top, left
 class: top, left
 ### Was gehört in den Ergebnisteil?
 
-**Allgemeine Verwendung von Abbildungen und Tabellen**
+#### Allgemeine Verwendung von Abbildungen und Tabellen
 
 * Veranschaulichung schriftlicher Inhalte
 
@@ -287,7 +301,7 @@ ersichtlich wird...“; „Die Daten zur Fernsehnutzung in Tabelle 3 verdeutlich
 class: top, left
 ### Was gehört in den Ergebnisteil?
 
-**Allgemeine Verwendung von Abbildungen und Tabellen**
+#### Allgemeine Verwendung von Abbildungen und Tabellen
 
 * Jede Tabelle/Abbildung muss alleinstehend verständlich sein.
   - Eigener Titel
@@ -302,7 +316,7 @@ class: top, left
 class: top, left
 ### Was gehört in den Ergebnisteil?
 
-**Formatierung von Tabellen**
+#### Formatierung von Tabellen
 
 * Jede Tabelle hat einen Titel
   - Der Titel muss kurz aber deutlich sein. $\rightarrow$  Muss muss den Inhalt der Tabelle aus dem Titel erschließen können
@@ -319,7 +333,7 @@ class: top, left
 class: top, left
 ### Was gehört in den Ergebnisteil?
 
-**Formatierung von Tabellen**
+#### Formatierung von Tabellen
 
 * Leere Zellen
   - Wenn Sie in einer Zelle keine Daten haben $\rightarrow$ leer lassen
@@ -332,9 +346,23 @@ class: top, left
 
 ---
 class: top, left
+<div class="footer"><span>Based on https://apastyle.apa.org/style-grammar-guidelines/tables-figures/sample-tables#regression</span></div>
+
 ### Was gehört in den Ergebnisteil?
 
-**Checkliste Tabellen**
+#### Beispiel für eine Regressionstabelle
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "60%"}
+knitr::include_graphics("bilder/regtable.png")
+```
+]
+
+---
+class: top, left
+### Was gehört in den Ergebnisteil?
+
+#### Checkliste Tabellen
 
 * Ist diese Tabelle notwendig? Trägt Sie zum übersichtlicheren Verständnis bei?
 * Muss diese Tabelle in den Paper-Körper oder reicht der Anhang? 
@@ -344,7 +372,7 @@ class: top, left
 * Sind alle Abkürzungen und Sonder-Formatierungen (kursiv, fett, Symbole) erklärt? 
 * Sind alle vertikalen Linien gelöscht? 
 * Werden die Daten in angemessener Präzision angegeben (nicht zu wenige/viele Dezimalstellen)? 
-* Werden die Konfidenz-Intervalle für die wichtigsten Punktschätzungen angegeben? 
+* Werden die Konfidenzintervalle für die wichtigsten Punktschätzungen angegeben? 
 * Sind diese immer gleich groß (z.B. 95%)? 
 * Bei Signifikanz-Tests: Ist das Signifikanz-Niveau immer angegeben? 
 * Sind alle Tabellen sequentiell durchnummeriert? 
@@ -380,6 +408,7 @@ name: diskussion
 
 ---
 class: top, left
+<div class="footer"><span>Murphy, S. L., Merz, R., Reimann, L., & Fernández, A. (2024, November 13). Nonsignificance Misinterpreted as an Effect’s Absence in Psychology: Prevalence and Temporal Analyses. https://doi.org/10.31234/osf.io/hm2tu</span></div>
 
 ### Was gehört in den Diskussionsteil?
 
@@ -389,7 +418,9 @@ class: top, left
 
   + Egal ob signifikant oder nicht, die gefundene Effektstärke sollte eingeordnet werden: Richtung des Effekts konsistent mit der Hypothese? Geschätzter Effekt größer/kleiner als erwartet? ggf. Übersetzung in "common language effect sizes" (siehe https://pubmed.ncbi.nlm.nih.gov/34881941/ und R package `compute.es`: https://cran.r-project.org/web/packages/compute.es/compute.es.pdf)
   
-  + Achtung: Kausale Sprache nur bei experimentellen Designs angemessen und auch dort ist eine kritische Diskussion über Einschränkungen der Kausalität notwendig! Beispiele für kausale Interpretationen: "X beeinflusst Y", "X verursacht Y", "X verhindert Y", "X wirkt auf Y", "X verbessert/verschlechtert Y", "X erklärt Y" (im Vgl. zu nicht kausaler Interpretation, "X hängt zusammen mit Y", "X ist assoziiert mit Y", "X korreliert mit Y", "X geht mit mehr/weniger Y einher", "X sagt Y vorher")
+  + Achtung: Kausale Sprache nur bei experimentellen Designs angemessen und auch dort ist eine kritische Diskussion über Einschränkungen der Kausalität notwendig!
+  
+  + Beispiele für kausale Interpretationen: "X beeinflusst Y", "X verursacht Y", "X verhindert Y", "X wirkt auf Y", "X verbessert/verschlechtert Y", "X erklärt Y" (im Vgl. zu nicht kausaler Interpretation, "X hängt zusammen mit Y", "X ist assoziiert mit Y", "X korreliert mit Y", "X geht mit mehr/weniger Y einher", "X sagt Y vorher")
 
 
 ---
@@ -512,23 +543,23 @@ name: praxis
 
 Auswahl aus:
 
-**1) Personen mit Interventionsthema: Zeit für Rekrutierung nutzen**
-
-**2) An Studien teilnehmen:**
+**1) An Studien teilnehmen:**
 Folgende Studien brauchen noch dringend TeilnehmerInnen:
 
-https://tellmi.psy.lmu.de/formr/ErkenneDeinenWert
-https://tellmi.psy.lmu.de/formr/Umfragenchecker
-https://tellmi.psy.lmu.de/formr/GeschlechtBindungsstile
-https://tellmi.psy.lmu.de/formr/Grashuepfer
-https://tellmi.psy.lmu.de/formr/falscherOptimismus
-https://tellmi.psy.lmu.de/formr/IntThema
+https://surveys.osc.lmu.de/siblings
 
-**3) Feedback geben**
-Haben Sie sich bei irgendeiner Teilnahme gedacht: Moment, diesen Aspekt am Studiendesign/der Frage fand ich seltsam? Ich glaube das führt in die Irre? Das wurde nicht berücksichtigt? Das könnte eine relevante Störvariable sein? Schreiben Sie der entsprechenden Gruppe (persönlich, z.B. per Email) Ihr Feedback.
+https://surveys.osc.lmu.de/bindungsforscher
 
-**4) An Lehrevaluation teilnehmen**
-hsf.click/Eval-CFH
+https://surveys.osc.lmu.de/empowerment
+
+https://surveys.osc.lmu.de/jagoda
+
+https://surveys.osc.lmu.de/forever
+
+https://surveys.osc.lmu.de/song
+
+**2) Feedback geben**
+Haben Sie sich bei irgendeiner Teilnahme gedacht: Moment, diesen Aspekt am Studiendesign/der Frage fand ich seltsam? Ich glaube das führt in die Irre? Das wurde nicht berücksichtigt? Das könnte eine relevante Störvariable sein? Schreiben Sie der entsprechenden Gruppe (persönlich, z.B. per Email) Ihr Feedback (für das Interventionsthema gerne an mich, ich sammle die Nachrichten und leite sie an alle weiter).
 
 <!-- * Die meisten von Ihnen haben (hoffentlich) an den Studien Ihrer Kommiliton:innen teilgenommen -->
 

@@ -3,7 +3,7 @@ title: "Einheit 7"
 subtitle: "⚔<br/>with xaringan"
 author: "Dr. Caroline Zygar-Hoffmann"
 institute: "RStudio, PBC"
-date: "2024/05/20 (updated: `r Sys.Date()`)"
+date: "2024/11/25 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -58,7 +58,7 @@ class: middle, left
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
 ### Einheit 7: Publikation von Studien mit Fokus auf Einleitung und Methode
-##### 05.06.2024 | Dr. Caroline Zygar-Hoffmann
+##### 26.11.2024 | Dr. Caroline Zygar-Hoffmann
 
 ---
 class: top, left
@@ -66,7 +66,7 @@ name: content
 
 ### Heutige Themen
 
-#### [Datenerhebung](#datenerhebung)
+#### [Hinweise](#hinweise)
 
 #### [Allgemeine Aspekte](#allgemeines)
 
@@ -78,24 +78,17 @@ name: content
 
 ---
 class: top, left
+name: hinweise
 
-###  Allgemeiner Hinweis
+###  Allgemeine Hinweise
 
 * Wenn Sie mit mir etwas individuell abgesprochen haben, ich aber nicht Ihr Ansprechpartner außerhalb der Vorlesung bin, dann würde ich empfehlen dies in Ihren GoogleDocs-Open-Lab-Books explizit zu notieren/erwähnen
 
 * Das gilt ins Besondere für Absprachen die die Bewertung betreffen $\rightarrow$ Ihr Ansprechpartner wird Ihre Arbeit bewerten!
 
----
-class: top, left
-name: datenerhebung
+* **Wie viele Personen von der Interventionsgruppen rekrutiert werden sollen**: Da ich noch nicht alle Präregistrierungen dazu gesehen habe, verschiebe ich das Thema nochmal (und melde mich dazu per Email). Aber seien Sie versichert: Ich werde von Ihnen nicht verlangen Stichprobengrößen im Rahmen von hunderten pro Gruppe zu rekrutieren, selbst wenn das in der Poweranalyse rauskam!
 
-###  Hinweise zur Datenerhebung
-
-**2 kleine Änderungen an der Einverständniserklärung (um die ich mich kümmere)**:
-* public use file statt scientific use file
-* Lehrzwecke ergänzt
-
-**Wie viele Personen von der Interventionsgruppen rekrutiert werden sollen**: Da ich noch nicht alle Präregistrierungen dazu gesehen habe, verschiebe ich das Thema nochmal.
+* Zur Abgabe der Prüfungsleistung: Upload auf studynet, kein Ausdruck erforderlich; konkrete Hinweise folgen zum Semesterende
 
 ---
 class: top, left
@@ -110,29 +103,14 @@ Zur Teilnahme an den Studien:
 
 * Im Sinne der Umsetzbarkeit des Vorlesungskonzepts bitte und ermuntere ich Sie dazu an den Studien Ihrer Kommiliton:innen teilzunehmen, damit für jede Studie genügend Daten zum Analysieren zusammenkommen
 
-* Gut wäre, wenn jeder an mindestens(!) 10 Studien teilnimmt (jede Studie sollte in wenigen Minuten erledigt sein)
+* Gut wäre, wenn jeder an mindestens(!) 5 Studien teilnimmt (jede Studie sollte in wenigen Minuten erledigt sein)
 
 * Falls Sie sich aus zeitlichen Gründen für eine Studie aus mehreren entscheiden müssen: Vorrang haben die Studien mit eigenem Thema, da für diese nur innerhalb der Kohorte rekrutiert wird
 
 ---
 class: top, left
-name: allgemeines
 
-###  Allgemeine Aspekte
-
-#### Abgabe
-
-* Upload auf studynet, kein Ausdruck erforderlich
-
-* Konkrete Hinweise folgen zum Semesterende
-
----
-class: top, left
-###  Allgemeine Aspekte
-
-#### Plagiat
-
-Ein Hinweis aus Ihrem Prüfungsamt:
+###  Hinweis aus Ihrem Prüfungsamt
 
 .center[
 ```{r eval = TRUE, echo = F, out.width = "80%"}
@@ -143,9 +121,7 @@ knitr::include_graphics("bilder/plagiat1.png")
 
 ---
 class: top, left
-###  Allgemeine Aspekte
-
-#### Plagiat
+###  Hinweis aus Ihrem Prüfungsamt
 
 .center[
 ```{r eval = TRUE, echo = F, out.width = "80%"}
@@ -156,9 +132,7 @@ knitr::include_graphics("bilder/plagiat2.png")
 
 ---
 class: top, left
-###  Allgemeine Aspekte
-
-#### Plagiat
+###  Hinweis aus Ihrem Prüfungsamt
 
 .center[
 ```{r eval = TRUE, echo = F, out.width = "80%"}
@@ -168,6 +142,8 @@ knitr::include_graphics("bilder/plagiat3.png")
 
 ---
 class: top, left
+name: allgemeines
+
 ###  Allgemeine Aspekte
 
 #### Format
@@ -565,7 +541,7 @@ knitr::include_graphics("bilder/bewertung_theorie.png")
 
 ---
 class: top, left
-name: methode
+name: methoden
 
 ###  Was gehört in den Methodenteil?
 
@@ -578,6 +554,13 @@ name: methode
   - Rekrutierung der Versuchspersonen (z.B. in Vorlesungen angesprochen, etc.)
   - i.d.R. (falls erhoben) Geschlechterverteilung (n und %), Alter (Range, MW, SD), Bildungsniveau
   - andere relevante Aspekte in Bezug auf die Fragestellung
+  - Sie müssen die Stichprobe nur hinsichlich der Aspekte beschreiben, die Sie auch erhoben haben! Wenn Sie z.B. kein Alter erhoben haben, müssen Sie es logischerweise auch nicht berichten.
+  - deskriptive Statistik zur Stichprobe findet man gelegentlich auch im Ergebnisteil - ist ok, solange sie irgendwo auftauchen
+
+---
+class: top, left
+
+###  Was gehört in den Methodenteil?
 
 * **Poweranalyse** 
   - Angabe für welche statistische Analyse die Poweranalyse durchgeführt wurde
@@ -585,32 +568,27 @@ name: methode
   - Für Effektstärke: Genau erklären, wo man den Effekt in der Literatur nachlesen kann (z.B. auch Tabelle X), falls nicht direkt offensichtlich; falls Transformationen oder Korrekturen vorgenommen wurden oder keine Literatur sondern anderweitige Argumentation $\rightarrow$ erklären!!
   - **Wichtig:** Erklären wie sich die errechnete Power ändert, falls sich der erreichte Stichprobenumfang im Vgl. zur Präregistrierung geändert hat
 
----
-class: top, left
-###  Was gehört in den Methodenteil?
-
 * **Versuchsdurchführung**
   - Die Untersuchung soll so geschildert werden, dass alle wichtigen Aspekte nachvollziehbar sind und die Methode reproduzierbar ist
-  - Das schließt das Studiendesign (z.B. Bedingungen), den Ablauf, verwendete Materialien, Instruktionen etc. ein
+  - Das schließt das Studiendesign (z.B. Bedingungen), den Ablauf (inklusive z.B. der Reihenfolge von Fragebögen!), verwendete Materialien, Instruktionen etc. ein
   - Es kann auch auf den Anhang verwiesen werden, wenn bestimmte Elemente zu umfangreich sind (d.h. Elemente, die nicht in 1-2 Sätzen beschrieben werden können, z.B. längere Instruktionen)
+  
+---
+class: top, left
+<div class="footer"><span>Pusch, S., Schönbrodt, F. D., Zygar-Hoffmann, C., & Hagemeyer, B. (2021). Perception of communal motives in couples: accuracy, bias, and their associations with relationship length. <i>Journal of Research in Personality</i>, 91, 104060.</span></div>
+
+###  Was gehört in den Methodenteil?
 
 * **Messinstrumente**
   - Beschreibung der für die Fragestellung und Analysen (!) relevanten verwendeten Fragebögen (Länge des Fragebogens, was er misst, ob er Subskalen hat, ob Anpassungen vorgenommen wurden, etc.)
-  - Angabe der Antwortskala (inkl. numerischer/verbaler Anker)
-  - Angabe der Reliabilität für die Skalen (z.B. McDonald's Omega, Cronbach's Alpha)
+  - Angabe der Antwortskala (inkl. numerischer/verbaler Anker - verbale Anker werden kursiv formatiert - hier macht APA konkrete Vorgaben!)
+  - Angabe der Reliabilität für die Skalen (z.B. McDonald's Omega, Cronbach's Alpha); aber: falls Sie eine Variable mit nur einem 1 Item gemessen haben (d.h. 1 Frage), dann können und müssen Sie keine Reliabilität angeben
   - ggf. Angabe eines Beispielitems, insbesondere bei Anpassungen/Eigenentwicklungen, aber auch sonst hilfreich
 
-
----
-class: top, left
-<div class="footer"><span>Zygar-Hoffmann, C., Pusch, S., Hagemeyer, B., & Schönbrodt, F. D. (2020). Motivated behavior in intimate relationships: Comparing the predictive value of motivational variables. Social Psychological Bulletin, 15(2), 1-37.</span></div>
-
-###  Was gehört in den Methodenteil?
-
+.center[
 Beispiel Beschreibung eines Messinstruments:
 
-.center[
-```{r eval = TRUE, echo = F}
+```{r eval = TRUE, echo = F, out.width = "35%"}
 knitr::include_graphics("bilder/beschreibung_material.png")
 ```
 ]
@@ -659,7 +637,7 @@ class: top, left
 #### Bewertungsschema
 
 .center[
-```{r eval = TRUE, echo = F, out.width = "80%"}
+```{r eval = TRUE, echo = F, out.width = "75%"}
 knitr::include_graphics("bilder/bewertung_methode.png")
 ```
 ]
@@ -685,12 +663,14 @@ name: praxis
 ### Praxisaufgabe
 
 **Schritt 0: Datenerhebung vorantreiben**
+* Konkret werden die Interventionsgruppen von mir einen Link zum Testen zugeschickt bekommen - pro Gruppe möchte ich eine Rückmeldung, ob beim Testen alles geklappt hat!
+* Danach schicke ich den finalen Link für die Erhebung rum inkl. finale Excel-Dateien zum Nachvollziehen
 
 **Schritt 1: Einleitung und Methodenteil untereinander aufteilen**
 * Wer kümmert sich primär um welchen Teil?
 * Bei 5 Leuten empfehle ich die folgende Aufteilung:
   - 3 Personen Einleitung
-  - 2 Person Methodenteil (inkl. OSF-Projekt zur Bereitstellung von Material/Code/Daten)
+  - 2 Person Methodenteil (inkl. OSF-Projekt zur Bereitstellung von Material/Code/Daten, Erklärung folgt in Einheit 12)
 
 **Schritt 2: Auf Bezeichnungen von zentralen Variablen einigen**
 * im besten Fall kohärent zur Präregistrierung, wenn abweichend dann sollte das erwähnt werden

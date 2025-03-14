@@ -3,7 +3,7 @@ title: "Einheit 8"
 subtitle: "⚔<br/>with xaringan"
 author: "Dr. Caroline Zygar-Hoffmann"
 institute: "RStudio, PBC"
-date: "2024/06/18 (updated: `r Sys.Date()`)"
+date: "2024/12/16 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -58,7 +58,7 @@ class: middle, left
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
 ### Einheit 8: Auswertung von Studien - Teil 1: Datenvorbereitung, Stichprobenbeschreibung und Deskriptiv-Statistik
-##### 19.06.2024 | Dr. Caroline Zygar-Hoffmann
+##### 16.12.2024 | Prof. Dr. Caroline Zygar-Hoffmann
 
 ---
 class: top, left
@@ -66,12 +66,12 @@ class: top, left
 
 ```{r echo = F}
 df = readxl::read_xlsx("WAF_Termine_neu.xlsx", sheet = "Tabelle1")[, 1:4]
-df$Datum = format(as.Date(df$Datum), "%d.%m.%Y")
 df %>%
   kbl() %>%
-    kable_styling(font_size = 18) %>%
+    kable_styling(font_size = 16) %>%
   kable_classic(full_width = T, position = "left") %>%
-   column_spec(column = 3, width = "12cm")
+   column_spec(column = 3, width = "12cm") %>% 
+    row_spec(c(8,11), background = "lightgrey") 
 ```
 
 
@@ -80,36 +80,13 @@ class: top, left
 
 ### Laufende Studien
 
-.small[
 Hier die Links zu den aktuell schon angelaufenen Datenerhebungen Ihrer Kommiliton:innen. Ich ermuntere alle zur Teilnahme!
 
-.pull-left[
-https://tellmi.psy.lmu.de/formr/Grashuepfer
+https://surveys.osc.lmu.de/forever
 
-https://tellmi.psy.lmu.de/formr/falscherOptimismus
+https://surveys.osc.lmu.de/song (nicht wundern: Erhebung von NachholerInnen aus dem letzten Semester; es dürfen auch die Personen vom Interventionsthema teilnehmen)
 
-https://tellmi.psy.lmu.de/formr/ErkenneDeinenWert
-
-https://tellmi.psy.lmu.de/formr/GeschlechtBindungsstile
-
-https://tellmi.psy.lmu.de/formr/FuenfFragezeichenRunFinal
-
-https://tellmi.psy.lmu.de/formr/BindungsstilSelbstwert
-]
-
-.pull-right[
-https://tellmi.psy.lmu.de/formr/Haustiere-Finalrun
-
-https://tellmi.psy.lmu.de/formr/DieMenstruierendenForscherinnen
-
-https://tellmi.psy.lmu.de/formr/FriendsAndRelationships
-
-https://tellmi.psy.lmu.de/formr/IntThema
-
-https://tellmi.psy.lmu.de/formr/Extraversion
-
-https://tellmi.psy.lmu.de/formr/StimmungsScouts
-]
+https://surveys.osc.lmu.de/reflection (Interventionsthema; d.h. Personen vom Interventionsthema dürfen nicht teilnehmen)
 
 ---
 class: top, left
@@ -117,13 +94,14 @@ name: content
 
 ### Heutige Themen
 
-#### Auswertung von Studien: Datenvorbereitung
+#### Datenvorbereitung
 * [Ordnerstruktur](#ordner)
 * [Datensätze kombinieren](#merge)
-* [Bedingungsvariable berechnen](#condition)
+* [Bedingungsvariable als Dummy-Variable (0/1) einfügen](#condition)
 * [Daten bereinigen und Variablen berechnen](#clean)
+* [Code-Review](#review)
 
-#### [Auswertung von Studien: Stichprobenbeschreibung und Deskriptivstatistik](#deskriptiv)
+#### [Stichprobenbeschreibung und Deskriptivstatistik](#deskriptiv)
 
 #### [Praxisaufgabe](#praxis)
 
@@ -131,7 +109,7 @@ name: content
 class: top, left
 name: ordner
 
-### Auswertung von Studien
+### Datenvorbereitung
 
 ####  Ordnerstruktur
 
@@ -153,7 +131,7 @@ knitr::include_graphics("bilder/ordnerstruktur.png")
 
 ---
 class: top, left
-### Auswertung von Studien
+### Datenvorbereitung
 
 ####  Ordnerstruktur
 
@@ -179,7 +157,7 @@ Für beide Ordner ggf. weitere thematische Unterordner sinnvoll, je nach Menge d
 
 ---
 class: top, left
-### Auswertung von Studien
+### Datenvorbereitung
 
 ####  Ordnerstruktur
 
@@ -199,7 +177,7 @@ class: top, left
 
 ---
 class: top, left
-### Auswertung von Studien
+### Datenvorbereitung
 
 ####  Ordnerstruktur
 
@@ -212,12 +190,12 @@ class: top, left
 * Die resultierende(n) vorverarbeitete(n) Datendatei(en) können mit dem Befehl `save()` im Ordner "processed_data" abgespeichert werden, z.B. 
 
 ```{r, eval = FALSE}
-save(processed_data, file = "../processed_data/final_data.RData")
+save(data, file = "../processed_data/final_data.RData")
 ```
 
 ---
 class: top, left
-### Auswertung von Studien
+### Datenvorbereitung
 
 ####  Ordnerstruktur
 
@@ -241,7 +219,7 @@ source(file = "../analyses/Descriptives.R")
 
 ---
 class: top, left
-### Auswertung von Studien
+### Datenvorbereitung
 
 ####  Ordnerstruktur
 
@@ -265,7 +243,7 @@ $\rightarrow$ Probieren Sie es mal! Es tut nicht weh und hat Vorteile. Das Proje
 class: top, left
 name: merge
 
-### Auswertung von Studien
+### Datenvorbereitung
 
 ####  Datensätze kombinieren: Schritt 1 - Daten einlesen
 
@@ -281,13 +259,13 @@ usw.
 
 ---
 class: top, left
-### Auswertung von Studien
+### Datenvorbereitung
 
-####  Datensätze kombinieren: Schritt 2 - Leere sessions löschen
+####  Datensätze kombinieren: Schritt 2a - Leere sessions löschen
 
-* In jedem formr Survey gibt es die Spalte "session" die eindeutig eine Zeile im Datensatz einer Durchführung des Fragebogen-Runs zuordnet
+* In jedem formr Survey gibt es die Spalte "session" die eindeutig eine Zeile im Datensatz einer Durchführung des Fragebogen-Runs zuordnet (d.h. einer bestimmten Versuchsperson)
 
-* Da jede Zeile eindeutig eine Person sein soll, können wir mit dieser Spalte also die Datensätze richtig zusammenfügen
+* Da jede Zeile am Ende eindeutig eine Person sein soll, können wir mit dieser Spalte also die Datensätze richtig zusammenfügen
 
 * Zunächst müssen wir dafür aber alle Zeilen entfernen, in denen in "session" nichts drin steht (das ist i.d.R. der Fall, wenn der Fragebogensurvey nur geladen wurde, aber sonst nichts auf der Seite gemacht wurde):
   
@@ -301,20 +279,94 @@ usw.
 
 ---
 class: top, left
-### Auswertung von Studien
+### Datenvorbereitung
 
-#### Datensätze kombinieren: Schritt 3 - Zusammenfügen
+####  Datensätze kombinieren: Schritt 2b - Leere sessions löschen
 
-* Für das Zusammenfügen der Daten nutzen wir den Befehl `merge()`. Der Befehl muss wissen, welche Spalte er heranziehen soll, um die verschiedenen Datensätze richtig in einen einzelnen Datensatz zusammenzufügen, das ist in unserem Fall die Spalte "session"
+* Auch können wir Zeilen löschen, bei denen in "modified" nichts drin steht. Das sind nicht bearbeitete Fragebögen:
+
+```{r, eval = FALSE}
+survey1 <- survey1[survey1$modified != "",]
+survey2 <- survey2[survey2$modified != "",]
+```
+
+* Wenn Sie präregistriert haben nur vollständige Daten zu nutzen, können Sie nach demselben Prinzip auch Daten ausschließen die keinen Eintrag in der "ended"-Spalte haben:
+
+```{r, eval = FALSE}
+survey1 <- survey1[survey1$ended != "",]
+survey2 <- survey2[survey2$ended != "",]
+```
+
+---
+class: top, left
+### Datenvorbereitung
+
+#### Datensätze kombinieren: Schritt 3 - Zusammenfügen - Variante: Datensätze verschiedener Personen
+
+* Die nun beschriebene Variante zum Zusammenfügen von Datensätzen ist für Sie relevant, wenn Ihre Studie so aufgebaut ist, dass die Personen entweder survey1 oder survey2 bearbeitet haben
+
+* Das ist z.B. beim Interventionsthema einmal für die 3 verschiedenen Bedingungen der ersten Teils nötig, und einmal für die 3 verschiedenen Bedingungen der zweiten Teils (denn eine Versuchsperson hat jeweils nur eine der drei Bedingungen durchgeführt)
+
+* Das ist auch bei den Gruppen mit eigenem Thema der Fall wenn Sie zwei Surveys hatten, und jede Person am Anfang randomisiert zu einem der beiden Surveys zugewiesen wurde
+
+* Dann sollten Sie zunächst pro survey eine neue Variable anlegen, die die Bedingung kodiert:
+
+```{r, eval = FALSE}
+survey1$condition <- "Gemeinsamkeiten"
+survey2$condition <- "Unterschiede"
+```
+
+---
+class: top, left
+### Datenvorbereitung
+
+#### Datensätze kombinieren: Schritt 3 - Zusammenfügen - Variante: Datensätze verschiedener Personen
+
+* Außerdem müssen Sie sicherstellen, dass beide Datensätze die gleichen Spalten haben. Dafür müssen Sie ggf. in dem Datensatz in dem eine Spalte fehlt, diese noch anlegen.
+
+* Welche Spalten in survey2 fehlen, welche es in survey1 aber gibt, können Sie über folgenden Befehl herausfinden:
+
+```{r, eval = FALSE}
+colnames(survey1)[!colnames(survey1) %in% colnames(survey2)]
+```
+
+* z.B. existiert die Variable "known" im Interventionsthema nur in den Bedingungen "Gemeinsamkeiten" und "Unterschiede", aber nicht in "Selbst". So fügen wir diese Variable (ohne Einträge, also mit `NA`s) zum dritten survey hinzu:
+
+```{r, eval = FALSE}
+survey3$known <- NA
+```
+
+* Nun können Sie die Datensätze mit dem Befehl `rbind()` (das steht für "row bind") untereinander zusammenfügen:
+
+```{r, eval = FALSE}
+survey <- rbind(survey1, survey2)
+```
+
+---
+class: top, left
+### Datenvorbereitung
+
+#### Datensätze kombinieren: Schritt 3 - Zusammenfügen - Variante: Datensätze einer Person
+
+* Die nun beschriebene Variante zum Zusammenfügen von Datensätzen ist für Sie relevant, wenn Ihre Studie so aufgebaut ist, dass die gleiche Person mehrere Surveys bearbeitet hat
+
+* Das ist auch beim Interventionsthema der Fall, da Personen erst eine Bedingung des ersten Teils der Studie gemacht haben und dann eine Bedingung des zweiten Teils der Studie; diese beiden Teile möchten wir zusammenführen
+
+---
+class: top, left
+### Datenvorbereitung
+
+#### Datensätze kombinieren: Schritt 3 - Zusammenfügen - Variante: Datensätze einer Person
+
+* Für das Zusammenfügen der Daten einer Person nutzen wir den Befehl `merge()`. Der Befehl muss wissen, welche Spalte er heranziehen soll, um die verschiedenen Datensätze richtig in einen einzelnen Datensatz zusammenzufügen, das ist in unserem Fall die Spalte "session"
 
 * Für weitere Spalten, die es in jedem Survey gibt (z.B. `created` = der Zeitpunkt zu dem das Survey begonnen wurde, oder `ended` = der Zeitpunkt zu dem das Survey abgeschickt wurde), kann man "suffixes" festlegen, das sind Zeichen, die an die Spaltennamen drangehängt werden, um sie eindeutig einem Survey zuzuordnen 
 
 * Für die Suffixes bietet sich der Name der surveys an, wobei der erste survey-Name erst im letzten merge angegeben werden sollte, damit alle Spalten am Ende eindeutig benannt sind:
 
 ```{r, eval = FALSE}
-data <- merge(survey1, survey2, by = "session", suffixes = c("", "_survey2"), all = TRUE)
-data <- merge(data, survey3, by = "session", suffixes = c("", "_survey3"), all = TRUE)
-data <- merge(data, survey4, by = "session", suffixes = c("_survey1", "_survey4"), all = TRUE)
+data <- merge(surveyA, surveyB, by = "session", suffixes = c("", "_surveyB"), all = TRUE)
+data <- merge(data, surveyC, by = "session", suffixes = c("_surveyA", "_surveyC"), all = TRUE)
 # Geschafft! Alle surveys befinden sich jetzt im Objekt `data`
 ```
 
@@ -323,73 +375,38 @@ data <- merge(data, survey4, by = "session", suffixes = c("_survey1", "_survey4"
 ---
 class: top, left
 name: condition
-### Auswertung von Studien
+### Datenvorbereitung
 
-#### Bedingungsvariable berechnen
+#### Bedingungsvariable als Dummy-Variable (0/1) einfügen
 
-* In Studien, in denen es unterschiedliche Bedingungen gab, muss eine neue Variable erstellt werden, die anzeigt in welcher Bedingung eine Versuchsperson war
+* Anhand der `condition`-Variable die wir vorher schon angelegt haben, können wir nun ganz einfach eine 0/1-Dummy-Variable daraus machen
 
-* Die session-ID und entsprechende Einträge in die "created" oder "ended"-Spalten einer Versuchsperson existieren nur in dem Survey, zu dem sie zugeteilt wurde
-
-* Das bedeutet, nachdem die surveys in einen Datensatz zusammengefügt wurden, ist bekannt in welcher Bedingung eine Versuchsperson war anhand der Tatsache in welcher dieser Spalten eines surveys (siehe suffixes!) Werte drin stehen:
-
-.center[
-```{r eval = TRUE, echo = F}
-knitr::include_graphics("bilder/condition_data.png")
-```
-]
-
----
-class: top, left
-### Auswertung von Studien
-
-#### Bedingungsvariable berechnen
-
-* Um eine neue Bedingungsvariable zu erstellen, wird erstmal eine leere Variable angelegt, die sprechend benannt wird (z.B. mit dem Variablennamen `condition`):
-
-.pull-left[
-```{r, eval = FALSE}
-data$condition <- NA
-```
-]
-
-.pull-right[
-```{r eval = TRUE, echo = F}
-knitr::include_graphics("bilder/condition_empty.png")
-```
-]
-
----
-class: top, left
-### Auswertung von Studien
-
-#### Bedingungsvariable berechnen
-
-* Wir überschreiben die leeren Werte dieser Variable nun mit einer `ifelse()`-Funktion, welche 3 Argumente braucht:
-  * erstes Argument der Funktion ist eine Bedingung ("if" also "wenn"), zu der ein Befehl ausgeführt werden soll. In unserem Fall wollen wir einen Wert einfügen, "wenn die entsprechende `ended`-Spalte nicht leer ist", d.h. in R-Code "nicht leer" = `!is.na()`
+* Wir legen dafür eine leere Variable an, und überschreiben die leeren Werte dieser Variable dann mit einer `ifelse()`-Funktion, welche 3 Argumente braucht:
+  * erstes Argument der Funktion ist eine Bedingung ("if" also "wenn"), zu der ein Befehl ausgeführt werden soll. In unserem Fall wollen wir einen Wert einfügen, wenn in der "condition_A" Spalte eine bestimmte Bedingung drinsteht
   * zweites Argument der Funktion ist der Befehl, der ausgeführt werden soll, wenn die "if"-Bedingung erfüllt ist. In unserem Fall wollen wir eine bestimmte Zahl vergeben, wenn jemand in der entsprechenden Bedingung war, z.B. `1`
   * drittes Argument der Funktion ist der Befehl, der ausgeführt werden soll, wenn die "if"-Bedingung *nicht* erfüllt ist ("else" also "sonst"). In unserem Fall wollen wir den Wert behalten, der bereits drin stand.
   
+---
+class: top, left
+### Datenvorbereitung
+
+#### Bedingungsvariable als Dummy-Variable (0/1) einfügen
+
+* Wenn Sie zum Beispiel in Ihrer H1 "Gemeinsamkeiten" mit "Unterschiede" vergleichen, könnte der Befehl lauten:
+
 ```{r, eval = FALSE}
-data$condition <- ifelse(!is.na(data$ended_condition1), 1, data$condition)
-data$condition <- ifelse(!is.na(data$ended_condition2), 2, data$condition)
-data$condition <- ifelse(!is.na(data$ended_condition3), 3, data$condition)
+data$condition_H1 <- NA
+data$condition_H1 <- ifelse(data$condition_A == "Gemeinsamkeiten", 1, data$condition_H1)
+data$condition_H1 <- ifelse(data$condition_A == "Unterschiede", 0, data$condition_H1)
 ```
 
-* Der Befehl in Worten: "Wenn in einer Zeile des Datensatzes die `ended`-Spalte des Surveys von Bedingung 1 nicht leer ist, dann schreibe bitte in die Variable `condition` den Wert 1 rein, und sonst (wenn sie leer ist) behalte den Wert der vorher drin stand."
-
+* Der erste ifelse()-Befehl in Worten: "Wenn in einer Zeile des Datensatzes in der `condition_A`-Spalte "Gemeinsamkeiten" drinsteht, dann schreibe bitte in die Variable `condition_H1` den Wert 1 rein, und sonst behalte den Wert der vorher drin stand."
 
 ---
 class: top, left
-### Auswertung von Studien
+### Datenvorbereitung
 
-#### Bedingungsvariable berechnen
-
-.center[
-```{r eval = TRUE, echo = F}
-knitr::include_graphics("bilder/condition_data.png")
-```
-]
+#### Bedingungsvariable als Dummy-Variable (0/1) einfügen
 
 .center[
 ```{r eval = TRUE, echo = F}
@@ -401,7 +418,7 @@ knitr::include_graphics("bilder/condition_filled.png")
 class: top, left
 name: clean
 
-### Auswertung von Studien
+### Datenvorbereitung
 
 #### Daten bereinigen: Eingabefehler korrigieren
 
@@ -423,7 +440,7 @@ Eingabefehler:
 
 ---
 class: top, left
-### Auswertung von Studien
+### Datenvorbereitung
 
 #### Daten bereinigen: Eingabefehler korrigieren
 
@@ -448,7 +465,7 @@ data[which(data$Geschlecht == 9),]
 
 ---
 class: top, left
-### Auswertung von Studien
+### Datenvorbereitung
 
 #### Daten bereinigen: Missing-Data (unvollständige Datensätze)
 
@@ -471,26 +488,25 @@ data_H1 <- data[!is.na(data$skala1),]
 ---
 class: top, left
 
-### Auswertung von Studien
+### Datenvorbereitung
 
 #### Daten bereinigen: ggf. nur für eigene Studie relevante Bedingungen auswählen
 
-* Die Gruppen mit dem Interventionsthema vergleichen immer nur 2 Bedingungen (zumindest konfirmatorisch), d.h. es macht Sinn den Datensatz auf die Bedingungen zu kürzen, die für die eigene Forschungsfrage relevant sind
+* Die Gruppen mit dem Interventionsthema vergleichen i.d.R. nur 2 Bedingungen (zumindest konfirmatorisch), d.h. es macht Sinn den Datensatz auf die Bedingungen zu kürzen, die für die eigene Forschungsfrage relevant sind
 
 * Hinweis: Auch als Stichprobe sollten primär die Personen beschrieben werden, die an den Bedingungen teilgenommen haben, die für die eigene Forschungsfrage relevant sind
 
-* Wenn man mit 1 und 2 die Bedingungen benannt hat, die für die eigene Forschungsfrage relevant sind, dann kann man den Datensatz mit folgendem Befehl kürzen:
-
 ```{r, eval = FALSE}
-data <- data[!is.na(data$condition) & data$condition == 1 | !is.na(data$condition) & data$condition == 2,]
+data <- data[!is.na(data$condition_A) & data$condition_A == "Gemeinsamkeiten" |
+               !is.na(data$condition_A) & data$condition_A == "Unterschiede",]
 ```
 
-Der Befehl in Worten: Überschreibe das Objekt "data" mit den Zeilen vom Objekt "data" in denen die Spalte "condition" nicht leer ist und entweder 1 oder 2 steht, und behalte alle Spalten)
+Der Befehl in Worten: Überschreibe das Objekt "data" mit den Zeilen vom Objekt "data" in denen die Spalte "condition" nicht leer ist und wo entweder "Gemeinsamkeiten" oder "Unterschiede" drinsteht, und behalte alle Spalten)
 
 
 ---
 class: top, left
-### Auswertung von Studien
+### Datenvorbereitung
 
 #### Daten bereinigen: Ausschlusskriterien
 
@@ -512,7 +528,7 @@ data_mc_passed <- data[data$mc == "Ja, ich habe die Instruktionen befolgt",]
 
 ---
 class: top, left
-### Auswertung von Studien
+### Datenvorbereitung
 
 #### Variablen berechnen: Variablen umkodieren und Skalen berechnen
 
@@ -535,7 +551,7 @@ data$skala2 <- rowMeans(data[,c("skala2_item1", "skala2_item2", "skala2_item3")]
 
 ---
 class: top, left
-### Auswertung von Studien
+### Datenvorbereitung
 
 #### Variablen berechnen: Variablen umkodieren und Skalen berechnen
 
@@ -552,7 +568,7 @@ describe(data$skala1)
 
 ---
 class: top, left
-### Auswertung von Studien
+### Datenvorbereitung
 
 #### Variablen berechnen: z-Standardisierung
 
@@ -570,7 +586,7 @@ data$skala1_z <- (data$skala1 - mean(data$skala1, na.rm = TRUE))/sd(data$skala1,
 
 ---
 class: top, left
-### Auswertung von Studien
+### Datenvorbereitung
 
 #### Variablen berechnen: Prä-Post-Differenz bilden
 
@@ -581,11 +597,14 @@ Beispiel:
 ```{r, eval = FALSE}
 data$RS1_diff <- data$RS1_post - data$RS1_pre
 ```
+
+* Interventionsgruppen: Achten Sie darauf, dass Sie die richtige Differenz bilden! Die erste Messung hat den Suffix _pre, die zweite Messung den Suffix _post und die dritte Messung den Suffix _post1
+
 ---
 class: top, left
-### Auswertung von Studien
+### Datenvorbereitung
 
-#### Datenvorbereitung
+#### Sonstiges
 
 * ggf. sind noch weitere Schritte in der Datenvorbereitung nötig, z.B. Faktorvariablen als solche zu kodieren und ihnen sinnvolle Labels (= Gruppenbezeichnungen) zu vergeben
 
@@ -599,9 +618,9 @@ class: top, left
 <div class="footer"><span>Krämer, M. D., Roos, Y., Schoedel, R., Wrzus, C., & Richter, D. (2024). Social dynamics and affect: Investigating within-person associations in daily life using experience sampling and mobile sensing. <i>Emotion</i>, 24(3), 878–893. https://doi.org/10.1037/emo0001309
 </span></div>
 
-### Auswertung von Studien
+### Datenvorbereitung
 
-#### Datenvorbereitung
+#### Abweichungen zur Präregistrierung
 
 * Sie stellen bei der Datenvorbereitung fest, dass es total sinnvoll ist, bestimmte Angaben oder Personen auszuschließen, obwohl Sie das nicht präregistriert haben? Kein Problem! Erklären Sie, warum das so ist. 
 
@@ -617,7 +636,9 @@ knitr::include_graphics("bilder/abweichung_prereg.png")
 
 ---
 class: top, left
-### Auswertung von Studien
+name: review
+
+### Datenvorbereitung
 
 #### Code-Review
 
@@ -637,7 +658,7 @@ data$skala1 <- rowSums(data[,c("skala1_item1", "skala1_item2", "skala1_item3")],
 
 ---
 class: top, left
-### Auswertung von Studien
+### Datenvorbereitung
 
 #### Ergebnis-Abgleich
 
@@ -738,7 +759,7 @@ class: top, left
 
 #### Beispiel für eine Deskriptivstatistik-Tabelle
 
-* Hier wurden Mittelwert, Standardabweichungen, Range und Korrelationen gemeinsam dargestellt
+* Hier wurden Mittelwert, Standardabweichungen, Range, Reliabilität und Korrelationen gemeinsam dargestellt
 
 .center[
 ```{r eval = TRUE, echo = F, out.width="85%"}
@@ -753,17 +774,18 @@ class: top, left
 
 #### Bewertungsschema
 
-.center[
 Methodenteil:
+
 ```{r eval = TRUE, echo = F}
 knitr::include_graphics("bilder/bewertung_stichprobe.png")
 ```
 
 Ergebnisteil:
+
 ```{r eval = TRUE, echo = F}
 knitr::include_graphics("bilder/bewertung_deskriptivstatistik.png")
 ```
-]
+
 ---
 class: top, left
 name: praxis
@@ -773,31 +795,14 @@ name: praxis
 **Schritt 1: Ordnerstruktur nutzen**
 * Bereits vorhandene Dateien einsortieren
 
-**Schritt 2: Code-Review besprechen**
-* 4-Augen-Prinzip, oder jeder separat und dann vergleichen?
+**Schritt 2: Preprocessing der Daten beginnen**
+* Wenn Sie mit der Datenerhebung schon begonnen haben, können Sie jetzt schonmal einen Auszug der Daten von mir anfordern, um mit dem Preprocessing beginnen zu können
+* Den Zeitpunkt dafür, wann Sie den finalen vollständigen Datensatz bekommen möchten, können Sie selbst entscheiden
+* Teilen Sie mir daher mit, ob Sie erstmal nur einen Auszug wollen, oder schon den finalen Datensatz (bei letzterem schließe ich die Umfrage danach)
+
+**Schritt 3: Code-Review besprechen**
+* Wollen Sie ein 4-Augen-Prinzip, oder soll es jeder separat machen und dann vergleichen Sie die Ergebnisse?
 * Bei 4-Augen-Prinzip: Wer macht welchen Teil, und wer reviewt welchen Teil? 
-
----
-class: top, left
-
-### CFH Exkursion Wien 
-
-.center[
-```{r eval = TRUE, echo = F, out.width = "40%"}
-knitr::include_graphics("bilder/wien-exkursion.png")
-```
-]
-
-Start: 24.10. gegen Mittag; Ende: 26.10. am späteren Nachmittag; Übrigens können selbstverständlich alle Teilnehmenden eigenständig auch früher anreisen und/ oder länger vor Ort bleiben. 
-
-Folgende Programmpunkte sind geplant (und die Eintrittspreise/ Leistungen im Teilnahmepreis inbegriffen):
-* Besuch & Workshop an der Charlotte Fresenius Privat Universität Wien (Freitag)
-* Gemeinsames Abendessen (Freitag)
-* Stadtführung
-* Besuch Freud Museum
-* Besuch Viktor Frankl-Museum
-* Besuch Naschmarkt
-
 
 <!-- library(renderthis) -->
 <!-- to_pdf("WissArb_08_Auswertung1.Rmd", complex_slides = TRUE) -->

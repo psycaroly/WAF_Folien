@@ -1,9 +1,9 @@
 ---
 title: "Einheit 9"
 subtitle: "⚔<br/>with xaringan"
-author: "Dr. Caroline Zygar-Hoffmann"
+author: "Prof. Dr. Caroline Zygar-Hoffmann"
 institute: "RStudio, PBC"
-date: "2024/06/25 (updated: `r Sys.Date()`)"
+date: "2024/12/20 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -58,7 +58,7 @@ class: middle, left
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
 ### Einheit 9: Auswertung von Studien - Teil 2: Ergebnisse, Datenvisualisierung und Rückmeldung
-##### 27.06.2024 | Dr. Caroline Zygar-Hoffmann
+##### 07.01.2025 | Prof. Dr. Caroline Zygar-Hoffmann
 
 ---
 class: top, left
@@ -561,7 +561,7 @@ Bei uns gibt es zwei Möglichkeiten:
 
 2) Oder Sie nutzen die Stichprobe der Studie als Normstichprobe, vergleichen also eine Versuchsperson mit den restlichen Versuchspersonen (aus Pragmatismus, empfehle ich Ihnen diese Variante) $\rightarrow$ Dann können Sie einfach den in der Stichprobe berechneten z-Wert zur Interpretation heranziehen (siehe Vorlesungeinheit Auswertung1)
 
-**In der Regel sollte die Normstichprobe in der Rückmeldung detailliert beschrieben werden.** Dies ist bei Variante 2 nur eingeschränkt möglich, da wir aus Anonymitätsgründen wenige Informationen über die Stichprobe erhoben haben.
+**In der Regel sollte die Normstichprobe in der Rückmeldung detailliert beschrieben werden.** Dies ist bei Variante 2 nur eingeschränkt möglich, da zumindest die eigenen Themen aus Anonymitätsgründen nur wenige Informationen über die Stichprobe erhoben haben.
 
 ---
 class: top, left
@@ -639,16 +639,17 @@ name: praxis
 ### Praxis
 
 **Schritt 1: Rückmeldung vorbereiten**
-* Rmarkdown Vorlage zur Rückmeldung  "[template_rueckmeldung.Rmd](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_30593_download.html)" von studynet herunterladen
+* Rmarkdown Vorlage zur Rückmeldung  "[template_rueckmeldung.Rmd](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_37358_download.html)" von studynet herunterladen
+* ggf. packages installieren, die im R-Skript geladen werden
 * Ganz oben bei "title" den Titel Ihrer Studie einfügen
 * Angabe des Messinstruments und Beschreibung des Maßes anpassen
 * R-Code anpassen: 
-  - Zeile 7, 10 und 39: Wie heißt Ihr vorverarbeiteter Datensatz, den Sie für die Analysen einlesen werden (im Template ist es `final_data`)?
+  - Zeile 8,9, 12 und 42: Wie heißt Ihr vorverarbeiteter Datensatz, den Sie für die Analysen einlesen werden (im Template ist es `final_data`)?
   - Bei dem Code zum Balkendiagramm, bei den z-Werten, und bei den Konfidenzintervallen: Wie heißt die Spalte mit der z-standardisierten Skala, zu der Sie eine Rückmeldung geben möchten (im Template ist es `skala_z`)?
   - Überall wo `sqrt(1-0.8)` steht (Teil der Bildung des Konfidenzintervalls): Wie ist die Reliabilität Ihrer Skala (im Template ist es 0.8)?
 
 **Schritt 2: Rückmeldung testen**
-* In Zeile 10 ein Pseudonym einfügen, das auch wirklich in Ihren Daten existiert
+* In Zeile 13 ein Pseudonym einfügen, das auch wirklich in Ihren Daten existiert
 * Rmarkdown knitten, entstandenes html prüfen
 
 ---
@@ -657,14 +658,14 @@ class: top, left
 ### Praxis
 
 **Schritt 3: Für alle Versuchspersonen eine Rückmeldung erstellen**
-* Entweder manuell in Zeile 10 immer wieder: 1) das Pseudonym austauschen 2) neu knitten 3) erhaltene Datei umbenennen (sonst wird sie überschrieben -> umbenennen in das Pseudonym, z.B. `X1235ufk.html`)
-* Oder das R-Skript auf studynet "[template_rueckmeldung_automate.R](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_30594_download.html)" ausprobieren (da bei großen Stichproben das manuelle Vorgehen ewig dauern würde)
+* Entweder manuell in Zeile 13 immer wieder: 1) das Pseudonym austauschen 2) neu knitten 3) erhaltene Datei umbenennen (sonst wird sie überschrieben -> umbenennen in das Pseudonym, z.B. `ZvGEUeAkly.html`)
+* Oder das R-Skript auf studynet "[template_rueckmeldung_automate.R](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_37359_download.html)" ausprobieren (da bei großen Stichproben das manuelle Vorgehen ewig dauern würde)
   - im R-Skript `template_rueckmeldung_automate.R` muss auch der Name für Ihren vorverarbeiteten Datensatz angepasst werden (`final_data`)
-  - im Rmarkdown-Skript `template_rueckmeldung.Rmd` muss dann Zeile 10 auskommentiert werden (mit einem `#`), dafür Zeile 11 nicht mehr (das `#` löschen)
+  - im Rmarkdown-Skript `template_rueckmeldung.Rmd` muss dann Zeile 13 auskommentiert werden (mit einem `#`), dafür Zeile 14 nicht mehr (das `#` löschen)
   - Beide Skripte müssen im selben Ordner liegen
   
 **Schritt 4: Rückmeldungen auf studynet hochladen und Kommiliton:innen informieren**
-* Im studynet Ordner "Rückmeldungen" einen Unterordner mit dem Titel der eigenen Studie anlegen und dort die HTML Dateien hochladen
+* Im studynet Ordner "Rückmeldungen" im Unterordner mit dem Titel der eigenen Studie die HTML Dateien hochladen
 * Komiliton:innen informieren, dass sie sich dort Ihre Rückmeldungsdatei herunterladen können (Identifizierung anhand des Dateinamens = das Pseudonym)
 
 ---

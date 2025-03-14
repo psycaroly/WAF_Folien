@@ -3,7 +3,7 @@ title: "Einheit 3"
 subtitle: "⚔<br/>with xaringan"
 author: "Dr. Caroline Zygar-Hoffmann"
 institute: "RStudio, PBC"
-date: "2024/04/17 (updated: `r Sys.Date()`)"
+date: "2024/10/28 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -58,24 +58,7 @@ class: middle, left
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
 ### Einheit 3: Theoriearbeit und Studiendesign
-##### 24.04.2024 | Dr. Caroline Zygar-Hoffmann
-
----
-class: top, left
-
-### Exkurs: Metapsy
-
-.center[
-https://www.metapsy.org/
-
-```{r eval = TRUE, echo = F, out.width="40%"}
-knitr::include_graphics("bilder/metapsy.png")
-```
-]
-
-$\rightarrow$ Website, welche Evaluationsforschung von psychotherapeutischen Interventionen zugänglich macht
-
-$\rightarrow$ https://twitter.com/EikoFried/status/1746873387727659138: "In the video I'll show researchers (part I) and clients (part II) how to run a systematic meta-analysis looking into the effect of CBT on depression in older adults within 1 minute."
+##### 29.10.2024 | Dr. Caroline Zygar-Hoffmann
 
 ---
 class: top, left
@@ -102,19 +85,17 @@ name: hypothesen
 .pull-left[
 **Was gehört zur Studienplanung?**
 
-1. Theoriearbeit und Literaturrecherche $\rightarrow$ letzte und heutige Sitzung
+1. Theoriearbeit und Literaturrecherche $\rightarrow$ letzte und heutige Sitzung, I1 & I2 in Präregistrierung
 
-2. Hypothesenformulierung $\rightarrow$ heutige Sitzung
+2. Hypothesen $\rightarrow$ heutige Sitzung, I3 & I4
 
-3. Design Plan $\rightarrow$ heutige Sitzung
+3. Design Plan (Studiendesign) $\rightarrow$ heutige Sitzung, M6, M10, M11, M14 & M15 
 
-4. Variablen (Auswahl Messinstrumente und Variablenrollen)  $\rightarrow$ nächste Sitzung, Einheit 4
+4. Operationalisierung (Auswahl Messinstrumente)  $\rightarrow$ nächste Sitzung, M12, M13, AP3 & AP4
 
-5. Statistischer Analyseplan  $\rightarrow$ Einheit 5
+5. Statistischer Analyseplan  $\rightarrow$ Einheit 5, AP1-AP3, AP5-AP9, M7 & M8
 
-6. Sampling plan (Rekrutierungsplan) $\rightarrow$ Einheit 6
-
-$\rightarrow$ Studienplanung in **Präregistrierung** festhalten
+6. Samplingplan (Rekrutierungsplan, Poweranalyse), Infos & Sonstiges $\rightarrow$ Einheit 6, M1-M5, M9, T1-T12
 ]
 
 .pull-right[
@@ -134,9 +115,10 @@ class: top, left
 
 * Hypothese meint die verbale Erklärung der erwarteten Beziehung zwischen den Variablen
 
-* Meist nur Angabe der Alternativhypothese
+* Angabe der Alternativhypothese (also der Erwartung), die Nullhypothese schreibt man i.d.R. nicht extra auf
 
-* Bei Interaktionseffekten: erwartete Form der Interaktion (z.B. graphisch veranschaulicht, oder konkrete Vorhersagen für Haupt- und Interaktionseffekte)
+
+* Bei Interaktionseffekten macht es Sinn, die erwartete Form der Interaktion zu spezifizieren (z.B. graphisch veranschaulicht, oder konkrete Vorhersagen für Haupt- und Interaktionseffekte)
   
 * Auch wenn man nur explorative Analysen vor hat: "Wir haben keine spezifischen a-priori-Hypothesen" $\rightarrow$  verhindert HARKing
 
@@ -206,8 +188,7 @@ name: studiendesign
 
 * Sekundär- und Metaanalysen
 
-$\rightarrow$ **Für unser Praxisprojekt kommen rein qualitative Studien und Sekundär- und Metaanalysen nicht in Frage (und Länggschnittstudien nur in sehr begrenztem Umfang, bitte absprechen)**
-
+$\rightarrow$ **Für Ihr Projekt kommen rein qualitative Studien und Sekundär- und Metaanalysen nicht in Frage (und Länggschnittstudien nur in sehr begrenztem Umfang, bitte absprechen)**
 
 ---
 class: top, left
@@ -219,21 +200,23 @@ Beispiel: Koffein und Intelligenz
 
 .pull-left[
 **Experimenteller Ansatz:**
+Ein Forscher weist den Studienteilnehmern nach dem Zufallsprinzip Bedingungen zu.
 
-1. Intelligenzmessung (AV = Leistung)
+1. Intelligenzmessung (Baseline)
 
-2. Zufällige Gruppenzuweisung
+2. Zufällige Gruppenzuweisung (verschiedene Möglichkeiten; bei Ihnen i.d.R. durch formr eine normale Randomisierung)
 
 3. Intervention (UV = Gruppe)
 
   * Experimentalgruppe: Kaffee 
   * Kontrollgruppe: Placebo koffeinfreier Kaffee 
 
-4. Intelligenzmessung
+4. Intelligenzmessung (AV = Veränderung in der Leistung im Vergleich zur Baseline)
 
 ]
 .pull-right[
-**Assoziativer Ansatz**
+**Assoziativer Ansatz:**
+Es werden Daten von Versuchspersonen gesammelt, die nicht zufällig einer Behandlung zugewiesen werden (z.B. Umfrage). 
 
 1. Erfragen des täglichen Koffeeinkonsums (UV)
 
@@ -244,7 +227,19 @@ Beispiel: Koffein und Intelligenz
 * Gefahr von Scheinzusammenhängen
 ]
 
+---
+class: top, left
+### Studiendesign
 
+#### Täuschung / Masking
+
+* Bei allen Studiendesigns kann man sich die Frage stellen, wie sehr die Versuchspersonen über die Studie informiert werden (vgl. Reaktivität aus Vorlesung letztes Semester). 
+
+* Reine Täuschung kommt bei uns nicht in Frage, aber man muss auch nicht im Detail über die Hypothesen aufklären, sofern genügend Information da ist, um Zweck & Ablauf der Studie zu verstehen. 
+
+* Wir werden nächste Woche die Einverständniserklärung dazu besprechen, aber Sie können diese Woche im Rahmen des Studiendesigns schon überlegen, inwiefern "masking" bei Ihrer Studie relevant ist.
+
+* Wenn man im Labor erhebt macht es auch Sinn (sofern möglich) die Testleiter in Unkenntnis darüber zu lassen, welcher Bedingung eine Versuchsperson zugewiesen wurde (für Ihre Studie nicht relevant, da wir nicht im Labor erheben).
 ---
 class: top, left
 ### Studiendesign
@@ -311,7 +306,7 @@ Verbalisierte Beispiele: Koffeinkonsum und Wachheit
 
 **Prä-Post Vergleich: **Wie hoch ist der Unterschied in der Wachheit bevor und nach dem Konsum von Kaffee?
 
-**Nicht-äquivalenter Kontrollgruppenplan (Quasi-Experiment):** Wie hoch ist der Unterschied in der Prä-Post Messung von Leuten die morgens Kaffee trinken im Vergleich zu denen, die morgens entkaffenierten Kaffee trinken.
+**Nicht-äquivalenter Kontrollgruppenplan (Quasi-Experiment):** Wie hoch ist der Unterschied in der Prä-Post Messung von Leuten die morgens Kaffee trinken (wenn man sie Kaffee trinken lässt) im Vergleich zu denen, die morgens entkaffenierten Kaffee trinken (wenn man sie entkaffenierten Kaffe trinken lässt).
 
 **Kontrollgruppenplan ohne Vortest: **Wie hoch ist der Unterschied in der Wachheit zwischen denen die zufällig einer Kaffee Bedingung zugeteilt wurden vs. denen die zufällig einer entkaffenierten Kaffee Bedingung zugeteilt wurden.
 
@@ -324,7 +319,7 @@ class: top, left
 #### "The Replication Recipe"
 
 .center[
-```{r eval = TRUE, echo = F, out.width = "600px"}
+```{r eval = TRUE, echo = F, out.width = "500px"}
 knitr::include_graphics("bilder/Brandt2014.png")
 ```
 ]
@@ -341,11 +336,108 @@ class: top, left
 
 * Korrelationsanalyse für den Zusammenhang zwischen zwei Variablen
 
-* Lineare Regression ausschließlich mit Haupteffekten oder maximal einem Interaktionseffekt für die Vorhersage einer numerischen Variable
+* Lineare Regression ausschließlich mit Haupteffekten oder maximal einem Interaktionseffekt für die Vorhersage einer metrischen abhängigen Variable (z.B. Skala aus Likert-Items)
 
 * t-test für abhängige Stichproben für Mittelwertsunterschiede auf einer Variable in einem Pre-Post-Design
 
-* 1- oder 2-faktorielle ANOVA (generell bei UV: nicht zuviele Stufen!) für eine numerische abhängige Variable
+* 2-faktorielle ANOVA für ein Pre-Post-Design mit Experimental- und Kontrollgruppe (generell bei UV: nicht zuviele Stufen!) für eine metrischen abhängige Variable
+
+---
+class: top, left
+name: formr 
+
+### formr als Umfragetool
+
+#### Überblick
+
+* Warum benutzen wir es? Mächtig, flexibel und kostenlos
+
+* Grundidee: Studie ist ein "Run", der aus verschiedenen Teilen, z.B. "Surveys" (=Fragebögenteilen) besteht
+
+* Beispiel für einen Run:
+  * Survey 1: Einleitende Fragen
+  * Survey 2: Pro Bedingung ein anderes Video
+  * Survey 3: Abschließende Fragebögen
+
+$\rightarrow$ **Es ist ok, wenn der Run auch nur aus einem Survey besteht! Je nach Komplexität Ihrer Studie völlig ausreichend. Es braucht aber immer einen Run.**
+
+* Anlegen von Surveys in Excel-Dokumenten mit zwei "Mappen":
+  * Fragen ("Survey Spreadsheet")
+  * Antwortskalen ("Choices Spreadsheet")
+$\rightarrow$ Darauf gehen wir heute nicht weiter ein, aber das wird noch Thema werden.
+
+* Vorlage für ein Survey auf Studynet (inkl. Einwilligungserklärung)
+
+---
+class: top, left
+
+### formr als Umfragetool
+
+#### Spalten im "Survey Spreadsheet" des Surveys
+
+* Spalte *note*: für eigene Notizen, wird nicht ausgewertet
+
+* Spalte *class*: zum Formatieren des Items, damit es schön aussieht $\rightarrow$ siehe  https://formr.org/documentation#sample_survey_sheet "Optional classes for visual styling"
+
+* Spalte *type*: legt fest was angezeigt werden soll, z.B. *note* (einfach nur Text), *mc* (Multiple-Choice-Frage), *submit* ("Weiter"-Button -> trennt zwei Umfrageseiten) $\rightarrow$ siehe Dokumentation der Itemtypen unter https://formr.org/documentation#available_items
+
+* Spalte *optional*: Legt fest, ob Frage beantwortet werden muss (mit einem "!") oder nicht (mit einem "*")
+
+* Spalte *name*: eindeutige Variablennamen vergeben (so heißen Ihre Variablen später im Datensatz!) $\rightarrow$ **wichtig!**
+
+* Spalte *showif*: nur relevant falls etwas nur dann angezeigt werden soll, wenn bei einer vorherigen Frage etwas bestimmtes angegeben wurde
+
+* Spalte *label*: Text der angezeigt werden soll, in markdown-Syntax (oder mit html) formatiert
+
+* Spalte *choice1*/*choice2*/*choice3* usw.: schnelle Möglichkeit Antwortmöglichkeiten einzugeben $\rightarrow$ teilweise eine Alternative zum "Choices Spreadsheet"
+
+---
+class: top, left
+
+### formr als Umfragetool
+
+#### Sich mit formr vertraut machen
+
+Wir fangen an die Umfrage zu bearbeiten.
+
+Aufgabe/Frage                                                                           | Antwort
+--------------------------------------------------------------------------------------- | -------- 
+Wie logge ich mich bei der formr Testumgebung ein?                                      | Folgenden Link im Browser aufrufen: https://workshops.formr.org/  <br> **Logindaten**: Email: cfhwaf2@gmail.com PW: 7g6z5mRq! <br><br> Falls ein Fehler kommt: <br> 1) Prüfen, ob man wirklich auf *workshops*.formr.org ist (und nicht etwa auf formr.org) <br> 2) Prüfen, ob man sich bei den Logindaten nicht vertippt hat <br> 3) Mit dem Browser in den Inkognito-Modus gehen: z.B. bei Chrome "Neues Inkognito-Fenster", bei Safari "Neues privates Fenster"
+Wie ändere ich den Namen einer Frage/Variable?                                          | Excel-Datei öffnen und die Zeile mit der Frage suchen, deren Namen man ändern möchte. In der Spalte "name" in der entsprechenden Zeile den neuen Namen eintragen (keine Leerzeichen, keine Sonderzeichen).
+
+---
+class: top, left
+
+### formr als Umfragetool
+
+#### Sich mit formr vertraut machen
+
+Wir fangen an die Umfrage zu bearbeiten.
+
+Aufgabe/Frage                                                                           | Antwort
+--------------------------------------------------------------------------------------- | -------- 
+Was ist eine integrierte Antwortskala?                                                  | Die Antwortmöglichkeiten werden direkt im "survey spreadsheet" festgelegt (in den "choices" Spalten), dafür aber nur links und rechts von der Antwortskala angezeigt.
+```{r, echo=FALSE}
+knitr::include_graphics("bilder/integrierteAntwortskala.png")
+```
+
+Aufgabe/Frage                                                                           | Antwort
+--------------------------------------------------------------------------------------- | -------- 
+Wie verändere ich die Anzahl der Antwortmöglichkeiten einer integrierten Antwortskala?  | Excel-Datei öffnen und die Zeile mit der Frage suchen, deren Antwortskala man ändern möchte. In der Spalte "type" `rating_button 1,X,1` eintragen wobei `X` durch die Anzahl der Antwortmöglichkeiten ersetzt werden muss.
+
+---
+class: top, left
+
+### formr als Umfragetool
+
+#### Sich mit formr vertraut machen
+
+Wir fangen an die Umfrage zu bearbeiten.
+
+Aufgabe/Frage                                                                           | Antwort
+--------------------------------------------------------------------------------------- | -------- 
+Wie füge ich einen Seitenwechsel hinzu?                                                 | Indem man einen "Weiter"-Button erstellt: Excel-Datei öffnen und eine neue Zeile nach der Frage einfügen, nach der der Seitenwechsel kommen soll. In der neuen Zeile in der Spalte "type" `submit` reinschreiben, in der Spalte "name" einen Namen vergeben, den es noch nicht gibt (z.B. `submit3x`, keine Leerzeichen, keine Sonderzeichen), und in der Spalte "label" den Text eingeben, der auf dem Button stehen soll (z.B. `Weiter`).
+Wie aktualisiere ich ein Survey?                                                        | In formr einloggen -> Surveys -> View all -> eigenes Survey auswählen -> Import Items -> Choose File -> Aktualisierte Excel-Datei auswählen (muss denselben Namen haben, wie vorher! d.h. überspeichert worden sein) -> Upload New Items -> Test Survey um zu sehen, ob es geklappt hat
 
 ---
 class: top, left
@@ -356,11 +448,11 @@ name: praxis
 **Schritt 0 (falls noch nicht geschehen): Einigen Sie sich auf ein Thema und geben Sie Ihrer Gruppe einen Namen**
   * Bewerten Sie dafür Ihre Ideen hinsichtlich der gefundenen Literatur und nach den Anforderungen aus Einheit 1 und einigen Sie sich auf ein Thema.
   * Idealerweise hat Ihr Gruppenname etwas mit Ihrem Thema zu tun
-  * Teilen Sie mir Ihren Gruppennamen und Ihr Thema **bis spätestens (!) 26.04.** über die [Umfrage im studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=26551) mit (eine Umfrage pro Gruppenmitglied). 
+  * Teilen Sie mir Ihren Gruppennamen und Ihr Thema **bis spätestens (!) 31.10.** über die [Umfrage im studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=32593) mit (eine Umfrage pro Gruppenmitglied).
 
 **Schritt 1: Erweiterte Literaturrecherche, Hypothesenformulierung und Schärfung der Forschungsfrage**
 * Was sind Ihre Hypothesen? (**maximal 2 Primärhypothesen mit maximal einer Sekundärhypothese!** Explorieren können Sie immer.)
-  * Sagen Sie eine numerische Variable vorher (keine dichotome ja/nein-Variable und keine kategoriale Variable)?
+  * Sagen Sie eine metrische Variable vorher (keine dichotome ja/nein-Variable und keine kategoriale Variable)?
   * Können Sie diese Hypothese mit den vorgegebenen statistischen Analysen untersuchen?
 * Wie sieht ein Studiendesign aus, das sich gut eignet um Ihre Hypothesen zu prüfen?
   * Hinweis: Bleiben Sie im Rahmen Ihres Projekts bei einfachen Designs
@@ -372,9 +464,15 @@ class: top, left
 ### Praxis: Idee & Studiendesign entwickeln
 
 **Schritt 2: Dokumentation und ggf. Feedback zu Ihren Entscheidungen**
-* Dokumentieren Sie Entscheidungen in Ihrem Open-Notebook-GoogleDoc
+* Dokumentieren Sie Entscheidungen in Ihrem Open Notebook (GoogleDoc)
 * Erweitern Sie das [Präregistrierungstemplate auf studynet](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_27541_download.html) mit Ihrer neuen Literatur/geschärften Forschungsfrage/den Hypothesen (Abschnitte I1 bis I4) und dem Studiendesign (Abschnitte M6, M10, M11, M14)
-* Bereiten Sie ggf. offene Fragen für die nächste bzw. übernächste Sitzung vor ([siehe PDF auf studynet zur Zuordnung welche Gruppe an welchem Termin Feedback bekommt](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_28341_download.html))
+* Bereiten Sie ggf. offene Fragen für die nächste bzw. übernächste Sitzung vor ([siehe PDF auf studynet zur Zuordnung welche Gruppe an welchem Termin Feedback bekommt](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=34159))
+
+**Schritt 3: Sich weiter mit formr vertraut machen**
+* Ändern Sie in der Datei von der Übung letzter Woche (die Sie nach Ihrem Namen benannt haben) den Namen von der Frage "item1_BeispielSkala" zu "StatistikZufriedenheit"
+* Ändern Sie die Anzahl der Antwortoptionen von dieser Frage von 5 zu 4
+* Fügen Sie einen Seitenwechsel zwischen Frage `item1_AutonomieSkala` und `item2_AutonomieSkala` ein
+* Aktualisieren Sie Ihr Survey auf der formr Testumgebung, schauen Sie ob kein Fehler gemeldet wird (Warnungen sind ok), und prüfen Sie ob alle Änderungen so wie erwartet passiert sind
 
 ---
 class: top, left
@@ -382,21 +480,19 @@ name: material
 
 ### Material
 
-* **Bewertungsschema**: [https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=27027](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=27027)
+* **Bewertungsschema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=32988
 
-*	**Strategien Themensuche**: [https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26582](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26582)
+*	**Strategien Themensuche**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26582
 
-*	**Checkliste Ethik**: [https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26580](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26580)
+*	**Checkliste Ethik**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26580
 
-* **Umfrage zur Einreichung Gruppenname und Thema**: [https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=26551](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=26551)
+* **Umfrage zur Einreichung Gruppenname und Thema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=26551
 
-* **Zusatzmaterial Z2 Literaturrecherche, Bewertung von Forschungsfragen & Referenzen**: [https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=27540](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=27540)
+* **Zusatzmaterial Z2 Literaturrecherche, Bewertung von Forschungsfragen & Referenzen**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=33551
 
-* **Template Präregistrierung**: [https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_27541_download.html](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_27541_download.html)
+* **Template Präregistrierung**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_33416_download.html
 
-*	**Fragenforum**: [https://cfh-waf.forumieren.de/](https://cfh-waf.forumieren.de/)
-
-* **Zuordnung Gruppe zu Ansprechpartner und Feedbacktermin**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_28341_download.html
+* **Zuordnung Gruppe zu Ansprechpartner und Feedbacktermin**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=34159
 
 
 ---

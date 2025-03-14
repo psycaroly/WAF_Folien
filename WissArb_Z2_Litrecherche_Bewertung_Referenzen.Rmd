@@ -3,7 +3,7 @@ title: "Zusatzmaterial: Literaturrecherche, Bewertung von Forschungsfragen und R
 subtitle: "⚔<br/>with xaringan"
 author: "Dr. Caroline Zygar-Hoffmann"
 institute: "RStudio, PBC"
-date: "2024/04/16 (updated: `r Sys.Date()`)"
+date: "2024/10/17 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -58,7 +58,7 @@ class: middle, left
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
 ### Zusatzmaterial: Literaturrecherche, Bewertung von Forschungsfragen und Referenzen
-##### 17.04.2024 | Dr. Caroline Zygar-Hoffmann
+##### Dr. Caroline Zygar-Hoffmann
 
 ---
 class: top, left
@@ -127,7 +127,7 @@ class: top, left
 * Kann online durchsucht werden
 * In OPACs von Bibliotheksverbünden findet man Medien aus allen teilnehmenden Bibliotheken
 
-$\rightarrow$ Damit Sie außerhalb des HS-Netzes Zugriff auf die Volltexte lizenzierter Produkte haben, [müssen Sie in Ihrem Browser einen Proxy aktivieren](https://ilias.hs-fresenius.de/goto_HSF_cat_2399812.html).
+$\rightarrow$ Damit Sie außerhalb des HS-Netzes Zugriff auf die Volltexte lizenzierter Produkte haben, müssen Sie in Ihrem Browser einen Proxy aktivieren, Anleitung: https://service.crf-education.com/external/knowledge-base/article/49.
 
 **Link zum OPAC für Fresenius:**: [https://library.hs-fresenius.de/discovery/search?vid=49FHF_INST:49FHF&lang=de](https://library.hs-fresenius.de/discovery/search?vid=49FHF_INST:49FHF&lang=de)
 
@@ -291,12 +291,14 @@ class: top, left
 
 .pull-left[
 * Viele verschiedene Softwarelösungen, probieren Sie aus was Sie effektiv unterstützt!
+
 * Ein mächtiges Tool ist Zotero: https://www.zotero.org/
+
 * Auch für Zusammenarbeit in Gruppen nützlich (geteilte Literaturordner)
 
 * Vergleiche: 
   - https://nbn-resolving.org/urn:nbn:de:bsz:14-qucosa2-762961
-  - https://mediatum.ub.tum.de/doc/1316333/1316333.pdf
+  - .small[https://mediatum.ub.tum.de/doc/1316333/1316333.pdf]
 ]
 
 .pull-right[
@@ -811,17 +813,17 @@ name: zit-start
 
 #### Zitationssysteme
 
-In unserem Studium ist die in der Psychologie übliche Zitierweise der American Psychological Association (APA) verpflichtend:
+In Ihrem Studium ist die in der Psychologie übliche Zitierweise der Deutschen Gesellschaft für Psychologie (DGPs) und der American Psychological Association (APA) verpflichtend:
 
 .center[
-```{r eval = TRUE, echo = F, out.width="20%"}
+```{r eval = TRUE, echo = F, out.width = "18%"}
 knitr::include_graphics("bilder/apa7.jpg")
 ```
 ]
 
-[**Link zum vollständigen APA-Style guide**](https://apastyle.apa.org)
+Zum vollständigen APA-Style guide: https://apastyle.apa.org
 
-[**Link zum kostenfreien Nachlesen vom APA-Style guide der Purdue University**](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/in_text_citations_author_authors.html)
+Zum kostenfreien Nachlesen vom APA-Style guide der Purdue University: .small[https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/in_text_citations_author_authors.html]
 
 ---
 class: top, left
@@ -873,7 +875,7 @@ class: top, left
 
 Indirekte Zitate – Beispiel:
 
-Im Alltag müssen wir oft überprüfen, ob beispielsweise ein bestimmtes Objekt einer bestimmten Gruppe zugeordnet werden kann **(Daschmann, 2001)**. Um dieses Urteil fällen zu können, vergleichen wir das Objekt mit dem Prototyp einer Kategorie, mit welchem es die meiste Ähnlichkeit aufweist. Andere validere Informationen werden dabei vernachlässigt **(Werth & Mayer, 2008)**. Dadurch kann es zu Fehlurteilen kommen. Hierzu gehören, dass die summarische Realitätsbeschreibung ignoriert wird, Stichprobengrößen nicht zur Kenntnis genommen und Zufallsverteilungen falsch eingeschätzt werden **(Daschmann, 2001)**. **Kahneman und Tversky (1973)** konnten diese Phänomene nachweisen.
+Im Alltag müssen wir oft überprüfen, ob beispielsweise ein bestimmtes Objekt einer bestimmten Gruppe zugeordnet werden kann **(Daschmann, 2001)**. Um dieses Urteil fällen zu können, vergleichen wir das Objekt mit dem Prototyp einer Kategorie, mit welchem es die meiste Ähnlichkeit aufweist. Andere validere Informationen werden dabei vernachlässigt **(Werth & Mayer, 2008)**. Dadurch kann es zu Fehlurteilen kommen. Hierzu gehören, dass die summarische Realitätsbeschreibung ignoriert wird, Stichprobengrößen nicht zur Kenntnis genommen und Zufallsverteilungen falsch eingeschätzt werden **(Daschmann, 2001)**. **Kahneman und Tversky (1973)** konnten diese Phänomene nachweisen, während die Studie von **Müller et al. (1980)** gegenteilige Ergebnisse zeigte.
 
 ---
 class: top, left

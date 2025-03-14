@@ -3,7 +3,7 @@ title: "Einheit 4"
 subtitle: "⚔<br/>with xaringan"
 author: "Dr. Caroline Zygar-Hoffmann"
 institute: "RStudio, PBC"
-date: "2024/05/03 (updated: `r Sys.Date()`)"
+date: "2024/11/04 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -58,20 +58,14 @@ class: middle, left
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
 ### Einheit 4: Operationalisierung
-##### 08.05.2024 | Dr. Caroline Zygar-Hoffmann
+##### 06.11.2024 | Dr. Caroline Zygar-Hoffmann
 
 ---
 class: top, left
 
-### Hinweise
+### Hinweis
 
-* ein Beispielbericht aus dem letzten Semester ist nun [auf studynet zu finden](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&ref_id=28354)
-
-* von der Bibliothek erreichte mich folgender Hinweis, welcher ggf. für Ihre weitere Literaturrecherche relevant ist:
-
-" *Zugriff auf lizenzierte eRessourcen erfolgt künftig ausschließlich über die Bibliothekssuche des Opera Browsers auf dem Terminalserver bzw. RDS/Remote Desktop. Andere Browser sind nicht für den Zugriff auf die eRessourcen freigeschaltet.
-Die Nutzung des Proxy wird in den nächsten Tagen eingestellt. Bitte installieren Sie deshalb rechtzeitig den Remote Desktop/RDS. Die Anleitung befindet sich in der Wissensdatenbank unter folgendem Link*:
-https://service.crf-education.com/external/knowledge-base/article/49 "
+zwei Beispielberichte inkl. RMarkdown aus dem vorletzten Semester sind nun [auf studynet zu finden](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_fold_34584.html)
 
 ---
 class: top, left
@@ -101,20 +95,19 @@ class: top, left
 .pull-left[
 **Was gehört zur Studienplanung?**
 
-1. Theoriearbeit und Literaturrecherche $\rightarrow$ vorletzte und letzte Sitzung
+1. Theoriearbeit und Literaturrecherche $\rightarrow$ Einheit 1 und 2, I1 & I2 in Präregistrierung
 
-2. Hypothesenformulierung $\rightarrow$ letzte Sitzung
+2. Hypothesen $\rightarrow$ letzte Sitzung, I3 & I4
 
-3. Design Plan $\rightarrow$ letzte Sitzung
+3. Design Plan (Studiendesign) $\rightarrow$ letzte Sitzung, M6, M10, M11, M14 & M15 
 
-4. Variablen (Auswahl Messinstrumente und Variablenrollen)  $\rightarrow$ heutige Sitzung
+4. Operationalisierung (Auswahl Messinstrumente)  $\rightarrow$ heute Sitzung, M12, M13, AP3 & AP4
 
-5. Statistischer Analyseplan  $\rightarrow$ nächste Sitzung
+5. Statistischer Analyseplan  $\rightarrow$ nächste Sitzung, AP1-AP3, AP5-AP9, M7 & M8
 
-6. Sampling plan (Rekrutierungsplan) $\rightarrow$ Einheit 6
-
-$\rightarrow$ Studienplanung in **Präregistrierung** festhalten
+6. Samplingplan (Rekrutierungsplan, Poweranalyse), Infos & Sonstiges $\rightarrow$ Einheit 6, M1-M5, M9, T1-T12
 ]
+
 
 .pull-right[
 ```{r eval = TRUE, echo = F, fig.align='center'}
@@ -139,6 +132,7 @@ name: quellen
 * **Weitere systematische Sammlungen von Messinstrumenten:**
  - https://www.testarchiv.eu/
  - https://www.fdz-bildung.de/zugang-instrumente
+ - https://www.psychometrikon.de/suche/themen.php (hier aber z.T. viel klinisches, was nicht für Ihre Studien in Frage kommt)
 
 * **Auch bestehende Literatur prüfen:** Welche Fragebögen haben andere Studien verwendet? (z.B. bei Replikationen besonders relevant, aber auch abgesehen davon wertvolle Informationsquelle)       
 
@@ -150,9 +144,11 @@ name: quellen
 
 #### Quellen und Beurteilung
 
-* Zur Beurteilung welches Messinstrument Sie wählen: Gütekriterien beachten! Halten Sie z.b. Ausschau nach Angaben zur **Reliabilität** und nach Hinweisen zur **Validität**, und lesen Sie sich auf jeden Fall auch selbst einmal alle Items durch (die Reliabilität müssen Sie dann später für den Bericht auch auf Ihren eigenen Daten ausrechnen)
+* Zur Beurteilung welches Messinstrument Sie wählen: Gütekriterien beachten! Halten Sie z.b. Ausschau nach Angaben zur **Reliabilität** und nach Hinweisen zur **Validität**, und lesen Sie sich auf jeden Fall auch selbst einmal alle Items durch (die Reliabilität können Sie dann später für den Bericht auch auf Ihren eigenen Daten ausrechnen)
 
 * **Übersetzungen sind möglich, aber bitte zuerst recherchieren, ob es nicht schon eine Übersezung gibt und darauf hinweisen, falls Sie selbst eine Übersetzung anfertigen!** Im Bericht sowohl das Original als auch die Übersetzung (falls es eine gibt) zitieren.
+
+* Bitte übernehmen Sie von bestehenden Messinstrumenten nicht nur die **Fragen (Items) und Antwortmöglichkeiten inkl. Ankern**, sondern auch die **Instruktionen**!
 
 * Für die Vorlesung: Kein Geld für Messinstrumente ausgeben (z.B. kommerzielle Tests)
 
@@ -166,9 +162,45 @@ class: top, left
 
 Eigene Entwicklungen und Adaptationen nur falls unbedingt nötig:
 
+.center[
 ```{r eval = TRUE, echo = F, out.width = "50%"}
 knitr::include_graphics("bilder/elson2024.png")
 ```
+]
+
+---
+class: top, left
+
+### Operationalisierung
+
+#### Material für (Experimental-)bedingungen (= Study materials)
+
+* je nach Studiendesign müssen Sie sich ggf. auch die genaue Umsetzung von Bedingungen (z.B. Instruktionen) oder Gestaltung von Stimulusmaterial (z.B. Videos) überlegen
+
+* **Zum Beispiel beim Interventionsthema**: Instruktionen für Reflexions- und Kommunikationsaufgabe (von mir festgelegt)
+
+---
+class: top, left
+
+### Operationalisierung
+
+#### Präregistrierung
+
+.pull-left[
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/prereg_template_methoden2.png")
+```
+]
+
+.pull-right[
+**M12:** z.B."ängstlicher Bindungsstil = UV = Subskala X des ECR-R Fragebogens" 
+
+oder "Studienbedingung = UV = entweder Instruktion X oder Instruktion Y"
+
+**M13:** z.B. "Quelle ECR-R: Sibley, C. G., Fischer, R., & Liu, J. H. (2005). Reliability and validity of the revised experiences in close relationships (ECR-R) self-report measure of adult romantic attachment. <i>Personality and Social Psychology Bulletin, 31</i>(11), 1524-1536. https://doi.org/10.1177/0146167205276865"
+
+oder "Instruktion X: 'Wir bitten Sie nun um folgende Aufgabe: ...' "
+]
 
 ---
 class: top, left
@@ -256,21 +288,6 @@ class: top, left
 
 ### Operationalisierung
 
-#### Material für (Experimental-)bedingungen (= Study materials)
-
-* je nach Studiendesign müssen Sie sich ggf. auch die genaue Umsetzung von Bedingungen (z.B. Instruktionen) oder Gestaltung von Stimulusmaterial (z.B. Videos) überlegen
-
-* **Instruktion für Interventionsthema** (falls nicht in der zusätzlichen Forschungsfrage eine Variante untersucht werden soll): 
-
-*Ihre jetzige Aufgabe umfasst das Hören eines Liedes. Wir bitten Sie, auf den Inhalt des Liedes zu achten. Den Text des Liedes können Sie auf Ihrem Bildschirm verfolgen.*
-
-*Bitte klicken Sie auf das Video, um es zu starten. Schauen Sie es sich bitte komplett an.*
-
----
-class: top, left
-
-### Operationalisierung
-
 #### Präregistrierung
 
 .center[
@@ -279,28 +296,6 @@ knitr::include_graphics("bilder/prereg_template_methoden1.png")
 ```
 ]
 
----
-class: top, left
-
-### Operationalisierung
-
-#### Präregistrierung
-
-.pull-left[
-```{r eval = TRUE, echo = F}
-knitr::include_graphics("bilder/prereg_template_methoden2.png")
-```
-]
-
-.pull-right[
-**M12:** z.B."ängstlicher Bindungsstil = UV = Subskala X des ECR-R Fragebogens" 
-
-oder "Studienbedingung = UV = entweder Video X oder Video Y"
-
-**M13:** z.B. "Quelle ECR-R: Sibley, C. G., Fischer, R., & Liu, J. H. (2005). Reliability and validity of the revised experiences in close relationships (ECR-R) self-report measure of adult romantic attachment. <i>Personality and Social Psychology Bulletin, 31</i>(11), 1524-1536. https://doi.org/10.1177/0146167205276865"
-
-oder "Video X: z.B. https://www.youtube.com/watch?v=JGwWNGJdvx8"
-]
 
 ---
 class: top, left
@@ -430,7 +425,7 @@ Beispiel Interventionsthema:
 
 a) Sie werden während der Studie einen Fragebogen ausfüllen (Dauer etwa 10 Minuten). Dies dient einerseits der Erfassung von demographischen Variablen (z.B. Geschlecht, sozioökonomischer Status) und psychologischen Variablen (z.B. Beziehungszufriedenheit), die für das oben genannte Forschungsvorhaben in Frage kommen. Andererseits dient es der Erfassung Ihrer Erfahrungen mit der Studie und den Studienmaterialien, um diese zukünftig zu verbessern.   
 
-b) Sie werden während der Studie aufgefordert sich ein Lied anzuhören. Sie können dieser Aufforderung nach Ihrem eigenem Ermessen nachgehen. Dies dient der Untersuchung der Kausalität: Welche Effekte hat z.B. ...
+b) Sie werden während der Studie zu kleinen Aufgaben aufgefordert. Sie können dieser Aufforderung nach Ihrem eigenem Ermessen nachgehen. Dies dient der Untersuchung der Kausalität: Welche Effekte hat z.B. ...
 ]
 ]
 
@@ -503,10 +498,10 @@ class: top, left
 Die in der Studie entstandenen Daten werden an der Charlotte-Fresenius-Hochschule München ausschließlich zu wissenschaftlichen Forschungszwecken erhoben und verarbeitet. Die auf Basis der Daten erzielten Ergebnisse werden in zusammengefasster Form als wissenschaftliche Publikation veröffentlicht.
 
 **Lagerung und Weitergabe von Daten:**
-Zunächst werden Ihre Daten auf zugangsbeschränkten Servern des Leibniz-Rechenzentrums (LRZ) gespeichert. Die Daten werden dann auf Rechnern der am Projekt beteiligten Personen (siehe Punkt 7) verarbeitet.
-Das Pseudonym wird zur Erstellung einer Rückmeldung zu den eigenen Antworten verwendet, und anschließend gelöscht.
+Unter Beachtung von Art. 25 Abs. 3 BayDSG wird eine zum aktuellem Zeitpunkt nur mit unverhältnismäßigen Aufwand zu deanonymisierende Variante der Daten als offener Datensatz im Internet in einem Repositorium Dritten zur Nachnutzung zugänglich gemacht. Zweck, Art und Umfang potentieller Nachnutzungen können zum jetzigen Zeitpunkt noch nicht abgesehen werden. Damit folgt diese Studie den Empfehlungen der Deutschen Forschungsgemeinschaft (DFG) zur Qualitätssicherung in Bezug auf Nachprüfbarkeit und Reproduzierbarkeit wissenschaftlicher Ergebnisse, sowie der optimalen Datennachnutzung.
 
-Unter Beachtung von Art. 25 Abs. 3 BayDSG wird eine zum aktuellem Zeitpunkt nur mit unverhältnismäßigen Aufwand zu deanonymisierende Variante der Daten (siehe Punkt 9, ohne Pseudonym)  in Form eines „scientific use file“ (https://de.wikipedia.org/wiki/Scientific-Use-File) der wissenschaftlichen Gemeinschaft zur Verfügung gestellt. Das bedeutet, dass ausschließlich Mitarbeiter wissenschaftlicher Einrichtungen die Daten zu wissenschaftlichen Zwecken nutzen können. Art und Umfang potentieller Nachnutzungen können zum jetzigen Zeitpunkt noch nicht abgesehen werden. Damit folgt diese Studie den Empfehlungen der Deutschen Forschungsgemeinschaft (DFG) zur Qualitätssicherung in Bezug auf Nachprüfbarkeit und Reproduzierbarkeit wissenschaftlicher Ergebnisse, sowie der optimalen Datennachnutzung.
+Für Lehrzwecke werden die hinreichend anonymisierten Daten (siehe Punkt 9) auch an Studierende der Charlotte-Fresenius-Hochschule München weitergegeben.
+
 
 ---
 class: top, left
@@ -589,7 +584,7 @@ class: top, left
 
 * Hiermit willige ich freiwillig in die Verarbeitung meiner Studiendaten durch die Umfragesoftware *formr* und die am Projekt beteiligten Personen zum Zweck der Durchführung des Studie "**[Name einfügen]**" ein. Sofern bzw. soweit die erhobenen Daten unter die besondere Kategorie personenbezogener Daten fallen, erstreckt sich meine Einwilligung auch ausdrücklich hierauf.  Über die Folgen eines Widerrufs der datenschutzrechtlichen Einwilligung (Widerruf mit Wirkung für die Zukunft) bin ich aufgeklärt worden. Die schriftliche Aufklärung, Datenschutzinformation und Einwilligungserklärung habe ich zur Kenntnis genommen und erhalten.
 
-* Ich willige ein, dass eine zum aktuellem Zeitpunkt nur mit unverhältnismäßigen Aufwand zu deanonymisierende Variante meiner Daten in Form eines „scientific use file“ der wissenschaftlichen Gemeinschaft zur Verfügung gestellt wird.
+* Ich willige ein, dass eine zum aktuellem Zeitpunkt nur mit unverhältnismäßigen Aufwand zu deanonymisierende Variante meiner Daten in Form offener Daten im Internet in einem Datenarchiv namens Open Science Framework (osf.io) Dritten zur Nachnutzung zugänglich gemacht wird.
 
 .small[
 Hinweis: Die Teilnahme ist nur möglich, wenn Sie in alle o.g. Punkte einwilligen.
@@ -717,12 +712,12 @@ name: praxis
 **Schritt 1: Operationalisierung festlegen**
 * Suchen Sie nach Fragebögen und Tests für Ihre zentralen Variablen (auf [zis.gesis.org](zis.gesis.org) oder Variable + "questionnaire", "scale" oder "test").
 
-* Überlegen Sie sich ggf. genaue Formulierungen/Instruktionen und konkretes Material (z.B. Videos).
+* Überlegen Sie sich ggf. genaue Formulierungen/Instruktionen oder konkretes Material.
 
 * Ergänzen Sie ggf. weitere Operationalisierungen für interessante Variablen im Rahmen möglicher explorativer Fragestellungen.
 
 **Schritt 2: Präregistrierung erweitern**
-* Erweitern Sie das [Präregistrierungstemplate auf studynet](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_27541_download.html) (AP3, AP4, M12, M13)
+* Erweitern Sie das [Präregistrierungstemplate auf studynet](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_33416_download.html) (AP3, AP4, M12, M13)
 
 ---
 class: top, left
@@ -730,15 +725,12 @@ class: top, left
 ### Praxis
 
 **Schritt 3a: Studie in formr implementieren**
-* Nutzen Sie das formr-Template auf studynet für [eigene Themen](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_28654_download.html) oder [das Interventionsthema](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_28655_download.html).
+* Nutzen Sie dafür den Login cfhwaf@gmail.com (ohne die 2, also nicht cfhwaf2!) mit dem PW: 7g6z5mRq!
+* Nutzen Sie das formr-Template auf studynet für [eigene Themen](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_33543_download.html) oder [das Interventionsthema](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_34582_download.html).
 
-* Bevor Sie anfangen im Template rumzuwerken: 
-  - Benennen Sie die Excel-Datei in einen eindeutigen(!) Namen für Ihre Studie um.
-  - Laden Sie Ihre umbenannte Excel-Datei als Survey hoch und testen das Survey mal, so dass Sie sehen, wie sich die Excel-Datei in eine Umfrage übersetzt.
+* Bevor Sie anfangen im Template rumzuwerken: Benennen Sie die Excel-Datei in einen eindeutigen(!) Namen für Ihre Studie um.
 
 * Testen Sie Ihr Survey/Ihren Run gründlich (auch auf Smartphones)!
-
-* Sobald Sie der Meinung sind, die Studie ist fertig implementiert, schicken Sie mir bitte einen Export des Runs zu (Run -> Export -> "include survey details" anklicken -> Export)
 
 ---
 class: top, left
@@ -752,6 +744,8 @@ Gruppen mit eigenem Thema:
 
 * Denken Sie daran im Sinne eines Anreizes für die Teilnehmer anzugeben, zu welcher Variable eine Rückmeldung erfolgen kann. Falls sich keine Variable direkt anbietet, überlegen Sie sich ein spannendes Konstrukt (z.B. eine Persönlichkeitseigenschaft), das Sie in einer Kurzform miterheben.
 
+* **Sobald Sie der Meinung sind, die Studie ist fertig implementiert, schicken Sie mir bitte Ihre Excel-Datei(en) und einen Export des Runs zu (Run -> Export -> "include survey details" anklicken -> Export)**
+
 ---
 class: top, left
 
@@ -760,13 +754,17 @@ class: top, left
 **Schritt 3b: Studie in formr implementieren**
 
 Gruppen mit Interventionsthema:
-* Bitte alle Anpassungen im Template (d.h. zusätzlich eingefügten Items/Videos etc.) farbig markieren.
+* Bitte alle Anpassungen im Template (d.h. i.d.R. zusätzlich eingefügte Items) farbig markieren.
 
-* Zu Test-Zwecken können Sie auch bestimmte Seiten/Items aus dem Template erstmal rauslöschen (am Ende werden Sie aber Teil der finalen Studie sein).
+* Zu Test-Zwecken können Sie auch bestimmte Seiten/Items aus dem Template erstmal rauslöschen, falls Sie möchten (am Ende werden Sie aber Teil der finalen Studie sein).
 
-* Falls Sie einen zusätzlichen Song untersuchen wollen: Es wäre am besten, wenn es den Song auf YouTube gibt (wenn nicht, wenden Sie sich bitte an mich). Wenn Sie das Lied auf YouTube öffnen und auf "Teilen" klicken, können Sie hier "Einbetten" auswählen. Sie müssen dann den Link der hinter src= steht kopieren und anstelle des Videos im Template einfügen. Ich bin noch dabei herauszufinden, wie man das Video ausblendet. Bitte teilen Sie mir mit, falls es für Ihre Forschungsfrage wichtig ist, dass das Video mit abgespielt wird. Aktuell sind nur Lyrics + Musik geplant.
+* Aktuell ist im Template nur die "Anheben"-Bedingung drin. Wer gerne auch schon die Instruktionen für die anderen Bedingungen sehen möchte, wendet sich bitte per Email an mich.
 
-* Variable für die Rückmeldung wird erst an einem späteren Punkt entschieden, das müssen Sie erstmal nicht beachten.
+* Um den Run und damit auch die randomisierte Zuteilung zu den verschiedenen Bedingungen kümmere ich mich, und schicke allen Interventionsgruppen dann die finale Version der Studie zum Testen in formr zu.
+
+* Die Variable für die Rückmeldung wird erst an einem späteren Punkt entschieden, das müssen Sie erstmal nicht beachten.
+
+* **Sobald Sie der Meinung sind, Sie haben alle zusätzlichen Variablen eingebaut die Sie brauchen, schicken Sie mir bitte die überarbeitete Excel-Datei zu (in der die hinzugefügten Zeilen farblich markiert sind!).**
 
 ---
 class: top, left
@@ -779,11 +777,11 @@ class: top, left
 
 * Email: cfhwaf@gmail.com
 
-* PW: eX9Sh6nt!
+* PW: 7g6z5mRq!
 
 **Alle Kleingruppen arbeiten parallel in der gleichen Umfrageumgebung! Achten Sie bitte auf Übersichtlichkeit (geben Sie Ihren Runs und Surveys (Name der Exceldatei) sprechende Namen die Ihrem Studienthema zuordenbar sind) und nehmen Sie ausschließlich in Ihren eigenen Studien Änderungen vor!**
 
-$\rightarrow$ Sobald alles in formr fertig getestet ist und Sie mir den Run exportiert haben, werde ich die Studie auf einer anderen formr-Instanz hochladen (zur Wahrung des Datenschutzes und damit niemand versehentlich Daten löscht). Nach Abschluss der Datenerhebung stelle ich jeder Kleingruppe ihren Datensatz bereit.
+$\rightarrow$ Sobald alles in formr fertig getestet ist und Sie mir den Run exportiert/Ihr Survey zugeschickt haben, werde ich die Studie auf einer anderen formr-Instanz hochladen (zur Wahrung des Datenschutzes und damit niemand versehentlich Daten löscht). Nach Abschluss der Datenerhebung stelle ich jeder Kleingruppe ihren Datensatz bereit.
 
 ---
 class: top, left
@@ -791,42 +789,38 @@ name: material
 
 ### Material
 
-* **Bewertungsschema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=27027
+* **Bewertungsschema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=32988
 
 *	**Checkliste Ethik**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26580
 
-* **Template Präregistrierung**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_27541_download.html
+* **Template Präregistrierung**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_33416_download.html
 
-* **Template formr eigenes Thema**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_28654_download.html
+* **Template formr eigenes Thema**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_33543_download.html
 
-* **Template formr Interventionsthema**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_28655_download.html
+* **Template formr Interventionsthema**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_34582_download.html
 
 * **Link zu formr**: https://workshops.formr.org/
 
 * **Folie mit formr-Ressourcen**: [Folie 32](#ressourcen)
 
-*	**Fragenforum**: https://cfh-waf.forumieren.de/
-
-* **Zuordnung Gruppe zu Ansprechpartner und Feedbacktermin**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_28341_download.html
+* **Zuordnung Gruppe zu Ansprechpartner und Feedbacktermin**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=34159
 
 ---
 class: top, left
 
 ### Feedback-Zeit
 
-**Folgende Gruppen mit Interventionsthema gehen nun in Raum P3 107 mit Nensy Le**
-- Beziehungsdauer und Musik (Isabelle Wörl, Michael Djatlow, Jana Bookmeyer, Tizian Neumaier, Katharina Knüfer)
-- Cohens Crew (Natalie Berger, Amelie Debusmann, Jorina van Loo, Julia Ziegler, Jakob Höfling)
-- Sexforscher (Amelie Fritz, Annalena Marek, Max Zausinger)
+**Folgende Gruppen mit Interventionsthema gehen nun in Raum P5 103 mit Nensy Le**
+- Intervention 2MPAW (Anna-Karima Parvanta, Marlies Holzapfel, Paul Walper, Wiebke Pfeiffer, Michaela Friedrich)
+- Die wilden Hühner (Amelie Hess, Anna Binding, Amelie Vivien Wieler, Valerie Böttcher, Hannah Kaufmann)
+- The Lovealytics (Lukas von Schirach, Katharina Jost, Julia Gremminger, Lioba Widmoser, Hannah Roth)
 
-**Folgende Gruppen mit eigenem Thema gehen nun in Raum P3 110 mit Caroline Zygar-Hoffmann**
-- Die menstruierenden Forscherinnen :) (Melanie Antelmann, Elisa Schönacher, Lena Jegielka, Nina Schönecker, Lilith Tinkhauser)
-- Die Grashüpfer (Emma Pfister, Marie Luckinger, Isabella Riedl, Ayse Bilir, Karoline Grünwaldt)
-- Falscher Optimismus (Marlene Babl, Jil Wagner, Franziska Stöhr, Simon Panetta, Sara Baddakhel)
-- Extraversion (Emily Badstübner, Klaudia Kamrau, Rosalie Gehlen, Lucy Ramm, Lilli Herrmann)
-- Die Bindungsforscher*innen (Alix Vischer, Lukas Ohlig, Corinna Sichart, Mascha Konzen, Rebecca Wekesser)
+**Folgende Gruppen gehen nun in Raum P5 104 mit Caroline Zygar-Hoffmann**
+- Empowerment Squad (Florentine Endisch, Leonie Wittmann, Helen Köhler, Anna-Lena Pöppl, Sina Garske)
+- Aufschieberitis (Valentina Yousif, Veronika Zorzi, Yaroslava Kosyatova, Nola Bulajic, Denise Cumoric)
+- Die Bindungsforscher (Selma Seifert, Maria Harke, Elmir Gorcevic)
 
-**Alle anderen können im Audimax bleiben und sich mit den Praxisaufgaben beschäftigen (dringend empfohlen!)**
+**Alle anderen können hier bleiben und sich mit den Praxisaufgaben beschäftigen (dringend empfohlen!)**
 
 <!-- library(renderthis) -->
 <!-- to_pdf("WissArb_04_Operationalisierung.Rmd", complex_slides = TRUE) -->

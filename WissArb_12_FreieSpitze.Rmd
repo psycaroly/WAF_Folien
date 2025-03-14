@@ -1,9 +1,9 @@
 ---
 title: "Einheit 12"
 subtitle: "⚔<br/>with xaringan"
-author: "Dr. Caroline Zygar-Hoffmann"
+author: "Prof. Dr. Caroline Zygar-Hoffmann"
 institute: "RStudio, PBC"
-date: "2024/07/16 (updated: `r Sys.Date()`)"
+date: "2025/02/03 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -57,8 +57,8 @@ class: middle, left
 <br><br><br><br><br><br><br>
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
-### Einheit 13: Freie Spitze und Fragen
-##### 17.07.2024 | Dr. Caroline Zygar-Hoffmann
+### Einheit 12: Freie Spitze und Fragen
+##### 04.02.2025 | Prof. Dr. Caroline Zygar-Hoffmann
 
 ---
 class: top, left
@@ -82,13 +82,13 @@ name: eval
 
 .big[
 .center[
-**Die Studierenden finden die jeweils individuell freigeschalteten Evaluationen im studynet https://hsf.click/Eval-CFH**
+**Bitte nehmen Sie an der Lehrevaluation teil: https://hsf.click/Eval-CFH**
 ]
 ]
 
 .center[
 ```{r eval = TRUE, echo = F, out.width = "80%"}
-knitr::include_graphics("bilder/eval.png")
+knitr::include_graphics("bilder/eval.jpg")
 ```
 ]
 
@@ -99,9 +99,9 @@ name: reminder
 
 ### Bericht: Letzte Hinweise
 
-* **APA-Zitationsregeln** (Einheit 2, Zusatzmaterial) beachten - sind alle Behauptungen formgerecht belegt? **Literaturverzeichnis manuell durchgehen** und ggf. bibtex anpassen, wo Informationen fehlen!
+#### Basierend auf häufigen Fehlern, hier nochmal dedizierte Erinnerungen:
 
-* **Gruppen mit Interventionsthema**: Nicht vergessen herzuleiten, warum (z.B. durch welchen Mechanismus) anzunehmen ist, dass das gewählte Lied die AV verändert!
+* **APA-Zitationsregeln** (Einheit 2, Zusatzmaterial) beachten - sind alle Behauptungen formgerecht belegt? **Literaturverzeichnis manuell durchgehen** und ggf. bibtex anpassen, wo Informationen fehlen!
 
 * **Präregistrierung nochmal durchgehen** -- alles so gemacht wie beschrieben bzw. Abweichungen gekennzeichnet? Gerade bei übernommenen Textvorlagen von mir bzw. so Themen wie Umgang mit fehlenden Werten, Voraussetzungen, Skalenbildung, Alpha-Niveau;
 Aber: **Präregistrierung ist kein Gefängnis! Sie macht Änderungen nur transparent. Ihnen müssen also Änderungen bewusst sein, und Sie müssen diese als Fußnote kommentieren.**
@@ -112,7 +112,7 @@ Aber: **Präregistrierung ist kein Gefängnis! Sie macht Änderungen nur transpa
 
 * Gibt es im Diskussion **Empfehlungen für zukünftige Forschung**, die über die Beseitigung der Limitationen hinaus gehen? (z.B. weiterführende Forschungsideen)
 
-* **Kausale Sprache** im gesamten Bericht nur dann nutzen, wenn ein experimentelles Design vorliegt (vgl. Einheit 10, Folie 21)
+* **Kausale Sprache** im gesamten Bericht nur dann nutzen, wenn ein experimentelles Design vorliegt (vgl. Einheit 10, Folie 22)
 
 ---
 class: top, left
@@ -121,7 +121,7 @@ class: top, left
 
 * Zur Erinnerug: Sie müssen im Bericht zwei **Poweranalysen** berichten und gegenüberstellen:
 
-1) Die in der Präregistrierung berichtete Poweranalyse (bei eigenem Thema: Sensitvititäspoweranalyse mit theoretisch erreichbarer Stichprobengröße, Ergebnis: Power; bei Interventionsthema: Poweranalyse zur Stichprobenplanung mit vorgegebener Power, benötigte Ergebnis: Stichprobengröße)
+1) Die in der Präregistrierung berichtete Poweranalyse (i.d.R. bei eigenem Thema: Sensitvititäspoweranalyse mit theoretisch erreichbarer Stichprobengröße, Ergebnis: Power; bei Interventionsthema: Poweranalyse zur Stichprobenplanung mit vorgegebener Power, benötigte Ergebnis: Stichprobengröße)
 
 2) Eine Sensitivitätspoweranalyse für tatsächlich erreichte Stichprobengröße für die **in der Präregistrierung angenommene Effektstärke,** ***nicht*** **für die Effektstärke der eigenen Ergebnisse**
 
@@ -129,11 +129,11 @@ class: top, left
   - Ansprechpartner hinzugefügt?
   - Präregistrierung als PDF enthalten?
   - Anonymisierte Daten enthalten?
-  - Formr Excel-Datei enthalten?
+  - Formr Excel-Datei(en) enthalten?
   - Analyse-Skripte enthalten (ggf. pro Person ein Ordner mit eigenen Skripten, falls nicht gemeinsames Skript für alle)?
   - optional für Gruppen mit eigenem Thema: Projekt auf public stellen (Button oben rechts)
 
-* **Inhaltliche und technische Nachvollziehbarkeit der R-Skripte sicherstellen**: Verstehe ich was ich von vorne bis hinten machen muss, um die Ergebnisse zu reproduzieren und wirft R auf dem Weg dorthin keine Fehler?
+* **Inhaltliche und technische Nachvollziehbarkeit der R-Skripte sicherstellen**: Versteht jemand anderes was er von vorne bis hinten machen muss, um die Ergebnisse zu reproduzieren und wirft R auf dem Weg dorthin keine Fehler?
 
 ---
 class: top, left
@@ -146,6 +146,10 @@ class: top, left
 
 * **Rückmeldungen** nicht vergessen! (Einheit 9)
 
+* **Für Ihre Zukunft empfehlenswert:**
+  - Auch wenn Sie eine sehr gute Note kommen: Ruhen Sie sich darauf nicht aus, es wird schwerer im weiteren Verlauf des Studiums (i.S.v. anspruchsvoller)
+  - Klären Sie für zukünftige wissenschaftliche Arbeiten im Rahmen Ihres Studiums immer die Anforderungen! 
+
 ---
 class: top, left
 
@@ -153,15 +157,18 @@ class: top, left
 
 **Abgabe auf studynet (Inhalt -> Mission/Challenges)**
 
-* Abgabetermin ist der **16.08.2024** (23:55)
+* Abgabetermin ist der **10.03.2025** (23:55)
+
+* Jeder aus der Gruppe muss abgeben! 
 
 * Abgabe von:
-- Bericht als Word-Dokument mit Link zum OSF-Projekt für anonymisierte Daten und formr-Codebook, Präregistrierung, R-Skripte,
-- Rohdaten (nicht-anonymisiert)
+  - Bericht als Word-Dokument, welches den Link zum OSF-Projekt enthält (wo anonymisierte Daten, formr-Codebook, Präregistrierung und R-Skripte liegen) 
+  - Rohdaten (nicht-anonymisiert), d.h. die Dateien, die Sie von mir zugeschickt bekommen haben.
 
 * Auf der letzten Seite Ihrer Arbeit:
   - Kennzeichnung, welches Gruppennmitglied welchen Teil der Gruppenarbeit (d.h. von Einleitung und/oder Methode) hauptsächlich übernommen hat.
   - Bestätigung (mit Unterschrift), dass alle Gruppenmitglieder mit dem finalen Ergebnis der Gruppenarbeit einverstanden sind.
+  - Falls Ergebnis- und Diskussionsteil zusammen verfasst wurden (d.h. genauso wie der Gruppenarbeitsarteil identisch mit einem oder mehreren Gruppenmitgliedern ist), dann: Hinweis darauf welche anderen Gruppenmitglieder den gleichen Ergebnis-/Diskussionsteil haben 
 
 ---
 class: top, left

@@ -4,7 +4,7 @@ data <- data[data$ended != "",]
 library(dplyr)
 # let's try age and gender (1 = male, 2 = female)
 unique_combos <- data %>%
-  group_by(alter, geschlecht) %>%
+  group_by(alter, geschlecht, wohnort) %>%
   summarise(n = n()) %>%
   arrange((n))
 
