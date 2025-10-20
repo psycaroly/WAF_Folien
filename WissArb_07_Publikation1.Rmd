@@ -1,9 +1,9 @@
 ---
 title: "Einheit 7"
 subtitle: "⚔<br/>with xaringan"
-author: "Dr. Caroline Zygar-Hoffmann"
+author: "Prof. Dr. Caroline Zygar-Hoffmann"
 institute: "RStudio, PBC"
-date: "2024/11/25 (updated: `r Sys.Date()`)"
+date: "2025/05/19 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -58,7 +58,7 @@ class: middle, left
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
 ### Einheit 7: Publikation von Studien mit Fokus auf Einleitung und Methode
-##### 26.11.2024 | Dr. Caroline Zygar-Hoffmann
+##### 20.05.2025 | Prof. Dr. Caroline Zygar-Hoffmann
 
 ---
 class: top, left
@@ -82,13 +82,16 @@ name: hinweise
 
 ###  Allgemeine Hinweise
 
+* Zur Abgabe der Prüfungsleistung: Upload auf studynet, kein Ausdruck erforderlich; konkrete Hinweise folgen zum Semesterende
+
 * Wenn Sie mit mir etwas individuell abgesprochen haben, ich aber nicht Ihr Ansprechpartner außerhalb der Vorlesung bin, dann würde ich empfehlen dies in Ihren GoogleDocs-Open-Lab-Books explizit zu notieren/erwähnen
 
 * Das gilt ins Besondere für Absprachen die die Bewertung betreffen $\rightarrow$ Ihr Ansprechpartner wird Ihre Arbeit bewerten!
 
-* **Wie viele Personen von der Interventionsgruppen rekrutiert werden sollen**: Da ich noch nicht alle Präregistrierungen dazu gesehen habe, verschiebe ich das Thema nochmal (und melde mich dazu per Email). Aber seien Sie versichert: Ich werde von Ihnen nicht verlangen Stichprobengrößen im Rahmen von hunderten pro Gruppe zu rekrutieren, selbst wenn das in der Poweranalyse rauskam!
+* **Wie viele Personen von der Interventionsgruppen rekrutiert werden sollen**: Die Poweranalysen der Interventionsthemen ergaben eine nötige Gesamtstichprobe von 171-956. Bei insgesamt 30 Personen im Interventionsthema ergibt sich, dass jeder aus einer Interventionsgruppe zwischen 6 (171/30) und 32 (956/30) Personen rekrutieren müsste. Das ist also unser „formales“ Ziel. 
+<br><br>
+Es passiert nichts, wenn wir dieses Ziel nicht erreichen – aber Sie können ja mal mit diesen Zahlen im Kopf schauen wie weit Sie mit dem Rekrutieren kommen. Bitte nennen Sie Ihren rekrutierten Personen Ihren Gruppennamen, damit wir zuordnen können wie viele Personen von jeder Gruppe bereits rekrutiert wurden (das sollen die Versuchspersonen im Fragebogen angeben).
 
-* Zur Abgabe der Prüfungsleistung: Upload auf studynet, kein Ausdruck erforderlich; konkrete Hinweise folgen zum Semesterende
 
 ---
 class: top, left
@@ -103,9 +106,9 @@ Zur Teilnahme an den Studien:
 
 * Im Sinne der Umsetzbarkeit des Vorlesungskonzepts bitte und ermuntere ich Sie dazu an den Studien Ihrer Kommiliton:innen teilzunehmen, damit für jede Studie genügend Daten zum Analysieren zusammenkommen
 
-* Gut wäre, wenn jeder an mindestens(!) 5 Studien teilnimmt (jede Studie sollte in wenigen Minuten erledigt sein)
+* Es sind insgesamt 11+2(Nachholer) = 13 Studien. Schön wäre, wenn jeder an mindestens(!) 6 Studien teilnimmt (jede Studie sollte in wenigen Minuten erledigt sein)
 
-* Falls Sie sich aus zeitlichen Gründen für eine Studie aus mehreren entscheiden müssen: Vorrang haben die Studien mit eigenem Thema, da für diese nur innerhalb der Kohorte rekrutiert wird
+* Falls Sie sich aus zeitlichen Gründen für eine Studie aus mehreren entscheiden müssen: Vorrang haben die Studien mit eigenem Thema, da für diese nur innerhalb der Kohorte rekrutiert wird.
 
 ---
 class: top, left
@@ -174,10 +177,12 @@ knitr::include_graphics("bilder/Ueberschriften.png")
 ]
 
 $\rightarrow$ **Das übernimmt die RMarkdown-Vorlage für Sie!**
-
-Wie soll es am Ende aussehen? Siehe hier: https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/apa_sample_paper.html
-
 $\rightarrow$ **Keine separate nummerierte Gliederung!**
+
+Wie soll es am Ende aussehen? Siehe hier:
+* https://apastyle.apa.org/style-grammar-guidelines/paper-format/professional-annotated.pdf
+* https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/apa_sample_paper.html
+
 
 ---
 class: top, left
@@ -501,7 +506,7 @@ class: top, left
 
 #### Inhalte
 
-* Darstellung **relevanter Forschungsergebnisse** aus wissenschaftlich hochwertiger, möglichst aktueller Literatur zu den zentralen Variablen, Theorien, Konzepten (vereinzelt ist auch ältere Literatur in Ordnung, gerade auch bei Theorien) 
+* Darstellung **relevanter Forschungsergebnisse** aus wissenschaftlich hochwertiger, möglichst aktueller Literatur zu konkreten Studienergebnissen zu den zentralen Variablen, Theorien, Konzepten (vereinzelt ist auch ältere Literatur in Ordnung, gerade auch bei Theorien) 
   
   - Besonders hilfreich: Reviews, Meta-Analysen
   
@@ -581,7 +586,7 @@ class: top, left
 
 * **Messinstrumente**
   - Beschreibung der für die Fragestellung und Analysen (!) relevanten verwendeten Fragebögen (Länge des Fragebogens, was er misst, ob er Subskalen hat, ob Anpassungen vorgenommen wurden, etc.)
-  - Angabe der Antwortskala (inkl. numerischer/verbaler Anker - verbale Anker werden kursiv formatiert - hier macht APA konkrete Vorgaben!)
+  - Angabe der Antwortskala (inkl. numerischer/verbaler Anker - *verbale Anker werden kursiv formatiert* - hier macht APA konkrete Vorgaben!)
   - Angabe der Reliabilität für die Skalen (z.B. McDonald's Omega, Cronbach's Alpha); aber: falls Sie eine Variable mit nur einem 1 Item gemessen haben (d.h. 1 Frage), dann können und müssen Sie keine Reliabilität angeben
   - ggf. Angabe eines Beispielitems, insbesondere bei Anpassungen/Eigenentwicklungen, aber auch sonst hilfreich
 
@@ -603,7 +608,7 @@ class: top, left
   
   - Angabe der verwendeten Analysesoftware, inkl. Versionsangabe (+ ggf. packages)
   
-  - Relevante Vorverarbeitung, wie Transformationen der Daten (Rekodierung, Aggregation, Zentrierung (z.B. Standardisierung),...), Umgang mit fehlenden Werten
+  - Relevante Vorverarbeitung, wie Transformationen der Daten (Rekodierung, Aggregation, Zentrierung (z.B. Standardisierung),...), Umgang mit fehlenden Werten, Ausschluss von Daten
     
   - Analyse: Verwendetes Signifikanzniveau, Einordnung: einseitie vs. zweiseitige Tests, Nennung und Beschreibung der Hypothesentests (in Spezialfällen auch des Auswahlrationals), ggf. angewandte Korrektur für multiples Testen
   
@@ -662,9 +667,10 @@ name: praxis
 
 ### Praxisaufgabe
 
-**Schritt 0: Datenerhebung vorantreiben**
+**Schritt 0: Datenerhebung vorantreiben/beginnen**
 * Konkret werden die Interventionsgruppen von mir einen Link zum Testen zugeschickt bekommen - pro Gruppe möchte ich eine Rückmeldung, ob beim Testen alles geklappt hat!
-* Danach schicke ich den finalen Link für die Erhebung rum inkl. finale Excel-Dateien zum Nachvollziehen
+* Sobald alle Präregistrierungen eingefroren sind und die Studie getestet wurde schicke ich den finalen Link für die Erhebung rum inkl. finale Excel-Dateien zum Nachvollziehen - dann kann das Rekrutieren losgehen!
+* Gruppen mit eigenem Thema kriegen ihren Link sobald die Präregistrierung eingefroren ist und ich ihre formr-Dateien geprüft habe
 
 **Schritt 1: Einleitung und Methodenteil untereinander aufteilen**
 * Wer kümmert sich primär um welchen Teil?

@@ -1,9 +1,9 @@
 ---
 title: "Einheit 3"
 subtitle: "⚔<br/>with xaringan"
-author: "Dr. Caroline Zygar-Hoffmann"
+author: "Prof. Dr. Caroline Zygar-Hoffmann"
 institute: "RStudio, PBC"
-date: "2024/10/28 (updated: `r Sys.Date()`)"
+date: "2025/04/16 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -58,7 +58,7 @@ class: middle, left
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
 ### Einheit 3: Theoriearbeit und Studiendesign
-##### 29.10.2024 | Dr. Caroline Zygar-Hoffmann
+##### 22.04.2025 | Prof. Dr. Caroline Zygar-Hoffmann
 
 ---
 class: top, left
@@ -66,9 +66,13 @@ name: content
 
 ### Heutige Themen
 
-#### [Theoriearbeit und Hypothesenformulierung](#hypothesen)
+#### Theoriearbeit
+* [Quellen & Referenzen](#zit-start)
+* [Hypothesenformulierung](#hypothesen)
 
 #### [Studiendesign](#studiendesign)
+
+#### [formr als Umfragetool](#formr)
 
 #### [Material und Praxisaufgaben](#praxis)
 
@@ -78,18 +82,18 @@ name: content
 class: top, left
 name: hypothesen
 
-### Theoriearbeit und Hypothesenformulierung
+### Theoriearbeit und Studiendesign
 
-#### Hypothesen im Forschungsprozess
+#### Hypothesen und Studiendesign im Forschungsprozess
 
 .pull-left[
 **Was gehört zur Studienplanung?**
 
-1. Theoriearbeit und Literaturrecherche $\rightarrow$ letzte und heutige Sitzung, I1 & I2 in Präregistrierung
+1. Theoriearbeit und Forschungsfrage $\rightarrow$ letzte und heutige Sitzung, I1 & I2 in Präregistrierung
 
 2. Hypothesen $\rightarrow$ heutige Sitzung, I3 & I4
 
-3. Design Plan (Studiendesign) $\rightarrow$ heutige Sitzung, M6, M10, M11, M14 & M15 
+3. Studiendesign $\rightarrow$ heutige Sitzung, M6, M10, M11, M14 & M15 
 
 4. Operationalisierung (Auswahl Messinstrumente)  $\rightarrow$ nächste Sitzung, M12, M13, AP3 & AP4
 
@@ -106,43 +110,228 @@ knitr::include_graphics("bilder/Forschungsprozess_Prereg.png")
 
 ---
 class: top, left
+name: zit-start
 
-### Theoriearbeit und Hypothesenformulierung
+### Theoriearbeit: Quellen & Referenzen
+
+#### Zitieren
+
+**Was ist Zitieren?**
+
+* Sinngemäße oder wörtliche Wiedergabe von sachlicher Information oder Meinung eines anderen.
+
+**Ziele und Funktionen vom Zitieren**
+* Beweisfunktion (wissenschaftliche Belegung Ihrer Behauptungen)
+* Abgrenzung von eigenen Gedankengängen, Überlegungen und Annahmen
+* Gibt Ihren Aussagen mehr Gewicht
+* Sicherung geistigen Eigentums
+
+**Ziele und Funktionen von Quellenangaben**
+* Eindeutige Identifikation der zitierten Werke gewährt Auffindbarkeit
+* Lückenlose Auflistung aller verwendeten Quellen
+* 1:1 Verhältnis zwischen zitierten Quellen und Literaturverzeichnis!
+
+---
+class: top, left
+
+### Theoriearbeit: Quellen & Referenzen
+
+#### Plagiat
+
+**Was ist ein Plagiat?**
+* die bewusste Aneignung fremden Geistesgutes ohne dies kenntlich zu machen
+
+**Arten von Plagiaten**
+
+* Übernehmen von Informationen ohne Nennung der Quelle
+* Ein direktes Zitat wird (leicht verändert) als indirektes ausgegeben
+* Verschleierungstaktiken (z.B. Paraphrasieren ohne Quellenangabe)
+* Übersetzung fremdsprachlicher Arbeiten, die als eigene ausgegeben werden
+
+Wichtig!
+Zitate (direkte und indirekte), die in einer Arbeit nicht oder falsch gekennzeichnet werden, gelten als Plagiat! Die Arbeit wird als „nicht bestanden“ (5,0) gewertet!
+
+---
+class: top, left
+
+### Theoriearbeit: Quellen & Referenzen
+
+#### Verwendung von KI / ChatGPT
+
+.pull-left[
+**... im Bericht:**
+
+siehe Handreichung der CFH:
+
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/chatgpt1.PNG")
+```
+
+]
+
+.pull-right[
+**... für die Analysen:**
+
+Zur **Hilfe** bei der Erstellung von R-Code können Sie ChatGPT gerne einsetzen (und das im R-Code entsprechend kennzeichnen). Wichtig ist, dass der Code auch wirklich tut was er soll, und dafür müssen Sie den Code verstehen. Auch den grundsätzlichen Umgang mit R kann Ihnen ChatGPT nicht abnehmen, d.h. verlassen Sie sich nicht drauf, dass es "notfalls ChatGPT macht". Es ist NUR eine Hilfestellung! 
+
+Sie werden im Studium immer wieder mit R arbeiten, d.h. es ist wirklich wichtig, dass Sie sich R als Kompetenz aneignen. Und es ist vermutlich einfacher sich den Umgang von einem Menschen (Stephan Goerigk oder mir) erklären zu lassen als von ChatGPT, also nutzen Sie es, dass Sie es bei/mit uns lernen können.
+]
+
+---
+class: top, left
+
+### Theoriearbeit: Quellen & Referenzen
+
+#### Verwendung von KI / ChatGPT
+
+.center[
+
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/chatgpt2.PNG")
+```
+]
+
+---
+class: top, left
+
+### Theoriearbeit: Quellen & Referenzen
+
+#### Verwendung von KI / ChatGPT
+
+.center[
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/chatgpt3.PNG")
+knitr::include_graphics("bilder/chatgpt4.PNG")
+```
+]
+
+---
+class: top, left
+
+### Theoriearbeit: Quellen & Referenzen
+
+#### Zitationssysteme
+
+In Ihrem Studium ist die in der Psychologie übliche Zitierweise der Deutschen Gesellschaft für Psychologie (DGPs) und der American Psychological Association (APA) verpflichtend:
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "15%"}
+knitr::include_graphics("bilder/apa7.jpg")
+```
+]
+
+.small[
+Zum vollständigen APA-Style guide: https://apastyle.apa.org
+
+Zum kostenfreien Nachlesen vom APA-Style guide der Purdue University: https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/in_text_citations_author_authors.html
+
+$\rightarrow$ siehe [Zusatzmaterial Z3 auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=41902) für Zitationsregeln!
+]
+
+---
+class: top, left
+### Theoriearbeit: Quellen & Referenzen
+
+#### Beispiel für indirekte Zitate
+
+**Textausschnitt:**
+
+Im Alltag müssen wir oft überprüfen, ob beispielsweise ein bestimmtes Objekt einer bestimmten Gruppe zugeordnet werden kann **(Daschmann, 2001)**. Um dieses Urteil fällen zu können, vergleichen wir das Objekt mit dem Prototyp einer Kategorie, mit welchem es die meiste Ähnlichkeit aufweist. Andere validere Informationen werden dabei vernachlässigt **(Werth & Mayer, 2008)**. Dadurch kann es zu Fehlurteilen kommen. Hierzu gehören, dass die summarische Realitätsbeschreibung ignoriert wird, Stichprobengrößen nicht zur Kenntnis genommen und Zufallsverteilungen falsch eingeschätzt werden **(Daschmann, 2001)**. **Kahneman und Tversky (1973)** konnten diese Phänomene nachweisen, während die Studie von **Müller et al. (1980)** gegenteilige Ergebnisse zeigte.
+
+<br>
+
+Beachten Sie, wie sich die Zitationsweise je nach Kontext im Detail unterscheidet! 
+
+Um zu verstehen wieso $\rightarrow$  [Zusatzmaterial Z3 auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=41902)  anschauen.
+
+---
+class: top, left
+### Theoriearbeit: Quellen & Referenzen
+
+#### Beispiel für Eintrag im Literaturverzeichnis
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "800px"}
+knitr::include_graphics("bilder/lit4.png")
+```
+]
+
+---
+class: top, left
+### Theoriearbeit: Quellen & Referenzen
+
+#### Bewertungsschema
+
+.center[
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/bewertung_zitate.png")
+```
+]
+
+$\rightarrow$ wird 2x bewertet: bei Gruppenarbeit und bei Einzelleistung!
+
+$\rightarrow$ hier keine volle Punktzahl zu erhalten ist sehr schade, denn das sind klassische "Fleißpunkte", wo man nur nachschauen muss, wie es geht
+
+$\rightarrow$ daher unbedingt das [Zusatzmaterial Z3 auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=41902) anschauen!!
+
+---
+class: top, left
+
+### Theoriearbeit: Hypothesenformulierung
 
 #### Hypothesen in der Präregistrierung
 
 * Das klare Benennen der konfirmatorischen Hypothesen ist eine der zentralsten Aufgaben der Präregistrierung
 
-* Hypothese meint die verbale Erklärung der erwarteten Beziehung zwischen den Variablen
+* *Konfirmatorisch* heißt, dass man eine Vorhersage überprüfen möchte, die man vor Kenntnis der Daten vorgenommen hat $\rightarrow$ Unterschied zu explorativen Analysen, die datengeleitet sind
+
+* *Hypothese* meint die verbale Erklärung der erwarteten Beziehung zwischen den Variablen
 
 * Angabe der Alternativhypothese (also der Erwartung), die Nullhypothese schreibt man i.d.R. nicht extra auf
 
-
 * Bei Interaktionseffekten macht es Sinn, die erwartete Form der Interaktion zu spezifizieren (z.B. graphisch veranschaulicht, oder konkrete Vorhersagen für Haupt- und Interaktionseffekte)
   
-* Auch wenn man nur explorative Analysen vor hat: "Wir haben keine spezifischen a-priori-Hypothesen" $\rightarrow$  verhindert HARKing
+* Auch wenn man nur explorative Analysen vor hat kann man in der Präregistrierung schreiben: "Wir haben keine spezifischen a-priori-Hypothesen" $\rightarrow$  verhindert HARKing
 
 ---
 class: top, left
-### Theoriearbeit und Hypothesenformulierung
+### Theoriearbeit: Hypothesenformulierung
 
 #### Hypothesenformulierung
 
 * Führen Sie **spezifische, prägnante und überprüfbare** Hypothesen auf
-
-* Benutzen Sie möglichst **eindeutige Begriffe** (aus der Literatur) für in der Hypothese vorkommende/relevante Variablen
+  * Falls Sie einen Gruppenvergleich machen, dann nennen Sie beide Gruppen, z.B. "Personen, die Aufgabe X machen, haben höhere Werte auf der Variable Y als Personen, die Aufgabe Y machen." 
+  * Benutzen Sie möglichst **eindeutige Begriffe** (aus der Literatur) für in der Hypothese vorkommende/relevante Variablen.
+  * Pro abhängige Variable eine eigene Hypothese formulieren.
 
 * Überlegen Sie, ob es sich um **gerichtete oder ungerichtete** Hypothesen handelt und formulieren Sie Ihre Hypothesen entsprechend 
 
 * Hypothesen können in **Primär- und Sekundärhypothesen** unterteilt werden (z.B. Primärhypothese: "Je mehr Bestätigung ein Kind von seinen Eltern erfährt, desto höher ist der spätere Selbstwert.", Sekundärhypothese: "Dieser Zusammenhang ist besonders stark für Einzelkinder im Vergleich zu Kindern mit einem oder mehr Geschwistern.")
 
-* Konfirmatorische Hypothesen sind von explorativen Fragestellungen zu trennen (d.h. davon, was man sich sonst noch so anschauen möchte, ohne konkrete Annahme oder Spezifikation der konkreten Analyse)
+* Konfirmatorische Hypothesen sind von explorativen Fragestellungen zu trennen (d.h. davon, was man sich sonst noch so anschauen möchte, ohne konkrete Herleitung, Annahme oder Spezifikation der konkreten Analyse)
 
 * Achten Sie bereits in Ihren Hypothesen darauf kausale Sprache zu vermeiden ("X beeinflusst Y"), wenn Sie kein Studiendesign planen, welches kausale Schlüsse zulässt (stattdessen z.B. "X hängt zusammen mit Y" oder "Je mehr X, desto mehr Y")
 
 ---
 class: top, left
-### Theoriearbeit und Hypothesenformulierung
+
+### Theoriearbeit: Hypothesenformulierung
+
+#### Angemessen komplexe Analysen im Rahmen dieser Vorlesung
+
+* t-test für unabhängige Stichproben für einen Mittelwertsvergleich zwischen zwei Gruppen
+
+* Korrelationsanalyse für den Zusammenhang zwischen zwei Variablen
+
+* Lineare Regression ausschließlich mit Haupteffekten oder maximal einem Interaktionseffekt für die Vorhersage einer metrischen abhängigen Variable (z.B. Skala aus Likert-Items)
+
+* t-test für abhängige Stichproben für Mittelwertsunterschiede auf einer Variable in einem Pre-Post-Design
+
+* 2-faktorielle ANOVA (generell bei UV: nicht zuviele Stufen!) für die Vorhersage einer metrischen abhängigen Variable
+
+---
+class: top, left
+### Theoriearbeit: Hypothesenformulierung
 
 #### Bewertungsschema und Präregistrierung
 
@@ -158,7 +347,7 @@ knitr::include_graphics("bilder/bewertung_trennunghypothesen.png")
 
 ---
 class: top, left
-### Theoriearbeit und Hypothesenformulierung
+### Theoriearbeit: Hypothesenformulierung
 
 #### Bewertungsschema und Präregistrierung
 
@@ -174,6 +363,21 @@ name: studiendesign
 
 ### Studiendesign
 
+#### "The Replication Recipe"
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "500px"}
+knitr::include_graphics("bilder/Brandt2014.png")
+```
+]
+
+$\rightarrow$ Für diejenigen spannende Literatur, die eine direkte Replikation planen
+
+---
+class: top, left
+
+### Studiendesign
+
 #### Forschungsstrategien: Wie untersucht man eine Hypothese?
 
 * Qualitative vs. quantitative Herangehensweise
@@ -182,7 +386,7 @@ name: studiendesign
 
 * Quasi-experimenteller Ansatz
 
-* Laborstudie vs. Feldstudie (Unterscheidung oft nur bei (quasi-)experimentellen Ansätzen)
+* Laborstudie vs. Feldstudie (wobei diese Unterscheidung oft nur bei (quasi-)experimentellen Ansätzen getroffen wird)
 
 * Längsschnittlicher vs. Querschnittlicher Ansatz
 
@@ -227,30 +431,41 @@ Es werden Daten von Versuchspersonen gesammelt, die nicht zufällig einer Behand
 * Gefahr von Scheinzusammenhängen
 ]
 
+
 ---
 class: top, left
+
 ### Studiendesign
 
-#### Täuschung / Masking
-
-* Bei allen Studiendesigns kann man sich die Frage stellen, wie sehr die Versuchspersonen über die Studie informiert werden (vgl. Reaktivität aus Vorlesung letztes Semester). 
-
-* Reine Täuschung kommt bei uns nicht in Frage, aber man muss auch nicht im Detail über die Hypothesen aufklären, sofern genügend Information da ist, um Zweck & Ablauf der Studie zu verstehen. 
-
-* Wir werden nächste Woche die Einverständniserklärung dazu besprechen, aber Sie können diese Woche im Rahmen des Studiendesigns schon überlegen, inwiefern "masking" bei Ihrer Studie relevant ist.
-
-* Wenn man im Labor erhebt macht es auch Sinn (sofern möglich) die Testleiter in Unkenntnis darüber zu lassen, welcher Bedingung eine Versuchsperson zugewiesen wurde (für Ihre Studie nicht relevant, da wir nicht im Labor erheben).
----
-class: top, left
-### Studiendesign
-
-#### Präregistrierung
+#### Übersicht über verschiedene Möglichkeiten
 
 .center[
-```{r eval = TRUE, echo = F, out.width = "60%"}
-knitr::include_graphics("bilder/prereg_template_design1.png")
+```{r eval = TRUE, echo = F, out.width = "780px"}
+knitr::include_graphics("bilder/Behandlungsplaene_ext.png")
 ```
 ]
+
+**In der Übersicht fehlen Designs für reine Korrelations- und Regressionsanalysen ohne Gruppenzuteilung, welche auch in Ordnung sind!**
+
+---
+class: top, left
+### Studiendesign
+
+#### Übersicht über verschiedene Möglichkeiten
+
+Verbalisierte Beispiele: Koffeinkonsum und Wachheit
+
+**One-Shot: **Wie wach sind die Kaffetrinker in der Stichprobe?
+
+**Einfacher Gruppenvergleich: **Wie wach sind die weiblichen vs. männlichen Kaffetrinker in der Stichprobe?
+
+**Prä-Post Vergleich: **Wie hoch ist der Unterschied in der Wachheit vor und nach dem Konsum von Kaffee?
+
+**Nicht-äquivalenter Kontrollgruppenplan (Quasi-Experiment):** Wie hoch ist der Unterschied in der Prä-Post Messung von Leuten die morgens Kaffee trinken (wenn man sie Kaffee trinken lässt) im Vergleich zu denen, die morgens entkaffenierten Kaffee trinken (wenn man sie entkaffenierten Kaffe trinken lässt).
+
+**Kontrollgruppenplan ohne Vortest: **Wie hoch ist der Unterschied in der Wachheit zwischen denen die zufällig einer Kaffee Bedingung zugeteilt wurden vs. denen die zufällig einer entkaffenierten Kaffee Bedingung zugeteilt wurden.
+
+**Kontrollgruppenplan mit Vortest: **Wie hoch ist der Prä-Post Unterschied in der Wachheit zwischen denen die zufällig einer Kaffee Bedingung zugeteilt wurden vs. denen die zufällig einer entkaffenierten Kaffee Bedingung zugeteilt wurden.
 
 ---
 class: top, left
@@ -268,6 +483,32 @@ knitr::include_graphics("bilder/prereg_template_design2.png")
 class: top, left
 ### Studiendesign
 
+#### Täuschung / Masking
+
+* Bei allen Studiendesigns kann man sich die Frage stellen, wie sehr die Versuchspersonen über die Studie informiert werden (vgl. Reaktivität aus Vorlesung letztes Semester). 
+
+* Täuschung im engeren Sinne kommt bei uns nicht in Frage, aber man muss auch nicht im Detail über die Hypothesen aufklären, sofern genügend Information da ist, um Zweck & Ablauf der Studie zu verstehen. 
+
+* Wir werden nächste Woche die Einverständniserklärung dazu besprechen, aber Sie können diese Woche im Rahmen des Studiendesigns schon überlegen, inwiefern "masking" bei Ihrer Studie relevant ist.
+
+* Wenn man im Labor erhebt macht es auch Sinn (sofern möglich) im Sinne einer doppelten Verblindung die Testleiter in Unkenntnis darüber zu lassen, welcher Bedingung eine Versuchsperson zugewiesen wurde (für Ihre Studie nicht relevant, da wir nicht im Labor erheben).
+
+---
+class: top, left
+### Studiendesign
+
+#### Präregistrierung
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "60%"}
+knitr::include_graphics("bilder/prereg_template_design1.png")
+```
+]
+
+---
+class: top, left
+### Studiendesign
+
 #### Bewertungsschema
 
 .center[
@@ -275,72 +516,6 @@ class: top, left
 knitr::include_graphics("bilder/bewertung_prozedur.png")
 ```
 ]
-
----
-class: top, left
-<div class="footer"><span>Icons designed by Freepik: https://de.freepik.com/icon/haekchen_5290058 and https://de.freepik.com/icon/stornieren_5290141</span></div>
-
-### Studiendesign
-
-#### Übersicht über verschiedene Möglichkeiten
-
-.center[
-```{r eval = TRUE, echo = F, out.width = "780px"}
-knitr::include_graphics("bilder/Behandlungsplaene_ext.png")
-```
-]
-
-**In der Übersicht fehlen reine Korrelations- und Regressionsanalysen ohne Gruppenzuteilung, welche auch in Ordnung für das eigene Thema sind!**
-
----
-class: top, left
-### Studiendesign
-
-#### Übersicht über verschiedene Möglichkeiten
-
-Verbalisierte Beispiele: Koffeinkonsum und Wachheit
-
-**One-Shot: **Wie wach sind die Kaffetrinker in der Stichprobe?
-
-**Einfacher Gruppenvergleich: **Wie wach sind die weiblichen vs. männlichen Kaffetrinker in der Stichprobe?
-
-**Prä-Post Vergleich: **Wie hoch ist der Unterschied in der Wachheit bevor und nach dem Konsum von Kaffee?
-
-**Nicht-äquivalenter Kontrollgruppenplan (Quasi-Experiment):** Wie hoch ist der Unterschied in der Prä-Post Messung von Leuten die morgens Kaffee trinken (wenn man sie Kaffee trinken lässt) im Vergleich zu denen, die morgens entkaffenierten Kaffee trinken (wenn man sie entkaffenierten Kaffe trinken lässt).
-
-**Kontrollgruppenplan ohne Vortest: **Wie hoch ist der Unterschied in der Wachheit zwischen denen die zufällig einer Kaffee Bedingung zugeteilt wurden vs. denen die zufällig einer entkaffenierten Kaffee Bedingung zugeteilt wurden.
-
-**Kontrollgruppenplan mit Vortest: **Wie hoch ist der Prä-Post Unterschied in der Wachheit zwischen denen die zufällig einer Kaffee Bedingung zugeteilt wurden vs. denen die zufällig einer entkaffenierten Kaffee Bedingung zugeteilt wurden.
-
----
-class: top, left
-### Studiendesign
-
-#### "The Replication Recipe"
-
-.center[
-```{r eval = TRUE, echo = F, out.width = "500px"}
-knitr::include_graphics("bilder/Brandt2014.png")
-```
-]
-
-$\rightarrow$ Für diejenigen spannende Literatur, die eine direkte Replikation planen
----
-class: top, left
-
-### Praxis: Idee & Studiendesign entwickeln
-
-#### Angemessen komplexe Analysen im Rahmen dieser Vorlesung
-
-* t-test für unabhängige Stichproben für einen Mittelwertsvergleich zwischen zwei Gruppen
-
-* Korrelationsanalyse für den Zusammenhang zwischen zwei Variablen
-
-* Lineare Regression ausschließlich mit Haupteffekten oder maximal einem Interaktionseffekt für die Vorhersage einer metrischen abhängigen Variable (z.B. Skala aus Likert-Items)
-
-* t-test für abhängige Stichproben für Mittelwertsunterschiede auf einer Variable in einem Pre-Post-Design
-
-* 2-faktorielle ANOVA für ein Pre-Post-Design mit Experimental- und Kontrollgruppe (generell bei UV: nicht zuviele Stufen!) für eine metrischen abhängige Variable
 
 ---
 class: top, left
@@ -383,7 +558,7 @@ class: top, left
 
 * Spalte *optional*: Legt fest, ob Frage beantwortet werden muss (mit einem "!") oder nicht (mit einem "*")
 
-* Spalte *name*: eindeutige Variablennamen vergeben (so heißen Ihre Variablen später im Datensatz!) $\rightarrow$ **wichtig!**
+* **Spalte *name*: eindeutige Variablennamen vergeben (so heißen Ihre Variablen später im Datensatz!)**
 
 * Spalte *showif*: nur relevant falls etwas nur dann angezeigt werden soll, wenn bei einer vorherigen Frage etwas bestimmtes angegeben wurde
 
@@ -443,36 +618,35 @@ Wie aktualisiere ich ein Survey?                                                
 class: top, left
 name: praxis
 
-### Praxis: Idee & Studiendesign entwickeln
+### Praxis: Hypothesen & Studiendesign entwickeln
 
-**Schritt 0 (falls noch nicht geschehen): Einigen Sie sich auf ein Thema und geben Sie Ihrer Gruppe einen Namen**
-  * Bewerten Sie dafür Ihre Ideen hinsichtlich der gefundenen Literatur und nach den Anforderungen aus Einheit 1 und einigen Sie sich auf ein Thema.
-  * Idealerweise hat Ihr Gruppenname etwas mit Ihrem Thema zu tun
-  * Teilen Sie mir Ihren Gruppennamen und Ihr Thema **bis spätestens (!) 31.10.** über die [Umfrage im studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=32593) mit (eine Umfrage pro Gruppenmitglied).
+**Schritt 0: Melden Sie Ihre Gruppe in der Umfrage im studynet an, falls noch nicht geschehen.**
 
-**Schritt 1: Erweiterte Literaturrecherche, Hypothesenformulierung und Schärfung der Forschungsfrage**
+**Schritt 1: Erweiterte Literaturrecherche, Hypothesenformulierung,  Studiendesign und Schärfung der Forschungsfrage**
 * Was sind Ihre Hypothesen? (**maximal 2 Primärhypothesen mit maximal einer Sekundärhypothese!** Explorieren können Sie immer.)
   * Sagen Sie eine metrische Variable vorher (keine dichotome ja/nein-Variable und keine kategoriale Variable)?
   * Können Sie diese Hypothese mit den vorgegebenen statistischen Analysen untersuchen?
+
 * Wie sieht ein Studiendesign aus, das sich gut eignet um Ihre Hypothesen zu prüfen?
   * Hinweis: Bleiben Sie im Rahmen Ihres Projekts bei einfachen Designs
+
 * Konkretisieren Sie Ihre Forschungsfrage, falls nötig
 
 ---
 class: top, left
 
-### Praxis: Idee & Studiendesign entwickeln
+### Praxis: Hypothesen & Studiendesign entwickeln
 
-**Schritt 2: Dokumentation und ggf. Feedback zu Ihren Entscheidungen**
+**Schritt 2: Dokumentation, Erweiterung der Präregistrierung, Vorbereitung offener Fragen**
 * Dokumentieren Sie Entscheidungen in Ihrem Open Notebook (GoogleDoc)
-* Erweitern Sie das [Präregistrierungstemplate auf studynet](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_27541_download.html) mit Ihrer neuen Literatur/geschärften Forschungsfrage/den Hypothesen (Abschnitte I1 bis I4) und dem Studiendesign (Abschnitte M6, M10, M11, M14)
+* Erweitern Sie das Präregistrierungstemplate mit Ihrer neuen Literatur/geschärften Forschungsfrage/den Hypothesen (Abschnitte I1 bis I4) und dem Studiendesign (Abschnitte M6, M10, M11, M14)
 * Bereiten Sie ggf. offene Fragen für die nächste bzw. übernächste Sitzung vor ([siehe PDF auf studynet zur Zuordnung welche Gruppe an welchem Termin Feedback bekommt](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=34159))
 
 **Schritt 3: Sich weiter mit formr vertraut machen**
 * Ändern Sie in der Datei von der Übung letzter Woche (die Sie nach Ihrem Namen benannt haben) den Namen von der Frage "item1_BeispielSkala" zu "StatistikZufriedenheit"
 * Ändern Sie die Anzahl der Antwortoptionen von dieser Frage von 5 zu 4
 * Fügen Sie einen Seitenwechsel zwischen Frage `item1_AutonomieSkala` und `item2_AutonomieSkala` ein
-* Aktualisieren Sie Ihr Survey auf der formr Testumgebung, schauen Sie ob kein Fehler gemeldet wird (Warnungen sind ok), und prüfen Sie ob alle Änderungen so wie erwartet passiert sind
+* Aktualisieren Sie Ihr Survey auf der formr Testumgebung, schauen Sie ob kein Fehler gemeldet wird (Warnungen sind ok), und prüfen Sie durch "test survey" ob alle Änderungen so wie erwartet passiert sind
 
 ---
 class: top, left
@@ -480,20 +654,25 @@ name: material
 
 ### Material
 
-* **Bewertungsschema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=32988
+.small[
+* **Bewertungsschema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=40709
 
-*	**Strategien Themensuche**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26582
+*	**Strategien Themensuche**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=40717
 
-*	**Checkliste Ethik**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26580
+*	**Checkliste Ethik**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=40715
 
-* **Umfrage zur Einreichung Gruppenname und Thema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=26551
+* **Umfrage zur Einreichung Gruppenname und Thema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=40711
 
-* **Zusatzmaterial Z2 Literaturrecherche, Bewertung von Forschungsfragen & Referenzen**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=33551
+* **Bewertung von Forschungsfragen & Literaturrecherche**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=41560
 
-* **Template Präregistrierung**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_33416_download.html
+* **Einführung Bib**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_41555_download.html
 
-* **Zuordnung Gruppe zu Ansprechpartner und Feedbacktermin**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=34159
+* **Anleitung LibKey**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_41552_download.html
 
+* **Zitieren**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=41902
+
+* **Zuordnung Gruppe zu Ansprechpartner und Feedbacktermin**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=42312
+]
 
 ---
 class: top, left

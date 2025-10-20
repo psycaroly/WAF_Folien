@@ -1,9 +1,9 @@
 ---
 title: "Einheit 1"
 subtitle: "⚔<br/>with xaringan"
-author: "Dr. Caroline Zygar-Hoffmann"
+author: "Prof. Dr. Caroline Zygar-Hoffmann"
 institute: "Charlotte Fresenius Hochschule München"
-date: "2024/10/12 (updated: `r Sys.Date()`)"
+date: "2025/04/07 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -53,7 +53,7 @@ class: middle, left
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
 ### Einheit 1: Forschungsthemen & Präregistrierung im Forschungsprozess
-##### 15.10.2024 | Dr. Caroline Zygar-Hoffmann
+##### 08.04.2025 | Prof. Dr. Caroline Zygar-Hoffmann
 
 ---
 class: top, left
@@ -62,13 +62,15 @@ name: Contact Slide
 ### Kontakt
 
 .pull-left[
-Dr. Caroline Zygar-Hoffmann
+Prof. Dr. Caroline Zygar-Hoffmann
 
 Psychologische Methodenlehre
 
 Infanteriestraße 11a · 80797 München ·
 
 [caroline.zygar-hoffmann@charlotte-fresenius-uni.de](mailto:caroline.zygar-hoffmann@charlotte-fresenius-uni.de)
+
+**Bitte schreiben Sie mir eine E-Mail um mich zu kontaktieren (bitte nutzen Sie also *nicht* die Nachrichtenfunktion von studynet)**
 
 <br>
 
@@ -100,7 +102,6 @@ name: content
 #### [Praxisaufgaben](#praxis)
 
 #### Präregistierung im empirischen Forschungsprozess
-* [Begriffsklärung und Überblick](#forschungsprozess)
 * [Präregistrierung: Hintergrund](#prereg-hg)
 * [Präregistrierung: Wirkung](#prereg-wirkung)
 * [Präregistrierung: Vorgehen](#prereg-vorgehen)
@@ -113,18 +114,18 @@ class: top, left
 name: orga
 ### Übersicht Lehrveranstaltung 
 
-**Termine**: 14 Termine, dienstags 14:45 - 16:15 (Raum: P5 105)
+**Termine**: 14 Termine, dienstags 11:35 - 13:05 (Raum: P5 U05)
 
-**Begleitendes Seminar**: Übung zur Computergestützten Datenanalyse mittwochs bei Stephan Goerigk ([stephan.goerigk@charlotte-fresenius-uni.de](mailto:stephan.goerigk@charlotte-fresenius-uni.de)) 
+**Begleitendes Seminar**: Übung zur Computergestützten Datenanalyse donnerstags bei Stephan Goerigk ([stephan.goerigk@charlotte-fresenius-uni.de](mailto:stephan.goerigk@charlotte-fresenius-uni.de)) 
 
-**Materialien**: werden auf [studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmdNode=zx:pa&cmdClass=ilObjGroupGUI&cmd=view&ref_id=31913) bereitgestellt
+**Materialien**: werden auf [studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmdNode=zx:pa&cmdClass=ilObjGroupGUI&cmd=view&ref_id=39962) bereitgestellt
 * Übersicht der Materialsammlung am Ende jeder Einheit $\rightarrow$ **wichtig dieses Material auf dem Schirm zu haben, anzuschauen, und zu nutzen! Auch die Vorlesungsfolien!**
 * Vielen Dank an Prof. Dr. Stephan Goerigk, Prof. Dr. Mario Gollwitzer, Prof. Dr. Felix Schönbrodt, M.Sc. Nina-Alisa Maria Kollakowski et al. und das LMU Open Science Center für Bereitstellung der Grundlage für die Materialien
 
 **Prüfungsleistung**:
 * Projektbericht (Präregistrierung + empirischer Forschungsbericht) in Englisch oder Deutsch als Gruppenarbeit (5 Studierende)
 * Umfang: ab 7 Seiten pro Person (nähere Informationen dazu auf kommenden Folien)
-* **Anmeldezeitraum: 28.10.24 - 18.11.24 (!); Abgabe: 10.03.25**
+* **Anmeldezeitraum: 21.04.25 - 12.05.25 (!); Abgabe: 25.08.25**
 
 ---
 class: top, left
@@ -163,7 +164,7 @@ knitr::include_graphics("bilder/errors.png")
 ```
 ]
 
-Ihre Note hängt am Ende nicht davon ab, wie komplex Ihre Ideen und/oder Analysen waren, oder wie viele Fehler Sie *auf dem Weg* gemacht haben, sondern von der transparenten und nachvollziehbaren Beschreibung Ihres Forschungsprozesses in der Präregistrierung und im empirischen Bericht, sowie der wissenschaftlichen Argumentation darin $\rightarrow$ [siehe Bewertungsschema auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=32988)
+Ihre Note hängt am Ende nicht davon ab, wie komplex Ihre Ideen und/oder Analysen waren, oder wie viele Fehler Sie *auf dem Weg* gemacht haben, sondern von der transparenten und nachvollziehbaren Beschreibung Ihres Forschungsprozesses in der Präregistrierung und im empirischen Bericht, sowie der wissenschaftlichen Argumentation darin (+ ggf. Ausbesserung von Fehlern) $\rightarrow$ [siehe Bewertungsschema auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=40709)
 
 ---
 class: top, left
@@ -184,10 +185,10 @@ class: top, left
 .pull-right[
 * **Empirischer Forschungsbericht**
   - **Gruppenanteil**: Formulierung von Einleitung und Methodenteil ( $\rightarrow$ Vorarbeit in der Präregistrierung) + Open Data und Codebook $\rightarrow$ jedes Gruppenmitglied Beitrag von ca. 2 Seiten 
-  - **Einzelanteil**: Formulierung von Ergebnisteil, Diskussion, und Abstract + R-Skripte $\rightarrow$ jedes Gruppenmitglied ab 5 Seiten (wobei mehr für die Diskussion nötig sein wird)
+  - **Einzelanteil**: Formulierung von Ergebnisteil, Diskussion, und Abstract + R-Skripte $\rightarrow$ jedes Gruppenmitglied ab 5 Seiten (wobei i.d.R. für eine sehr gute Leistung mehr nötig ist)
 ]
 
-* Note setzt sich zusammen aus der Bewertung des Gruppenanteils (einfach gewichtet) und Bewertung des Einzelanteils (Inhalt doppelt gewichtet) $\rightarrow$ [siehe Bewertungsschema auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=32988)
+* Note setzt sich zusammen aus der Bewertung des Gruppenanteils (einfach gewichtet) und Bewertung des Einzelanteils (Inhalt doppelt gewichtet) $\rightarrow$ [siehe Bewertungsschema auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=40709)
 
 
 ---
@@ -201,8 +202,8 @@ df %>%
     kable_styling(font_size = 16) %>%
   kable_classic(full_width = T, position = "left") %>%
    column_spec(column = 3, width = "12cm") %>% 
-    row_spec(c(8,11), background = "lightgrey") %>% 
-  row_spec(4, background = "yellow") 
+    row_spec(8, background = "lightgrey") %>% 
+  row_spec(6, background = "yellow") 
 ```
 
 ---
@@ -216,11 +217,11 @@ class: top, left
 
 #### Wichtige Zwischentermine
 
-* **Spätestens (!) bis zum 31.10.**: Abgabe Gruppenname & Thema auf [studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=32593)!
+* **Spätestens (!) bis zum 20.04.**: Abgabe Gruppenname & Thema auf [studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=40711)!
 
-* 06.11., 12.11. oder (spätestens) 19.11.: Möglichkeit für kurzes persönliches Feedback von mir/meiner Doktorandin während der Sitzung
+* 29.04., 06.05. oder (spätestens) 13.05.: Möglichkeit für kurzes persönliches Feedback von mir/meinen Doktorandinnen während der Sitzung
 
-* **Bis zum 25.11.**: Finalisierung Präregistrierung
+* **Bis zum 19.05.**: Finalisierung Präregistrierung
 
 ---
 class: top, left
@@ -245,7 +246,7 @@ name: thema1
 * weniger Aufwand bei Studienimplementierung in Umfragesoftware durch spezifischeres Template
 * Synergien mit anderen Interventions-Gruppen (z.B. in der Studientestung/Datenerhebung)
 * ggf. etwas komplexere Analysen (?)
-* Datenerhebung auch außerhalb der Kohorte gefordert (Rekrutierung von 5 Versuchspersonen pro Gruppenmitglied), höhere statistische Power möglich
+* Datenerhebung auch außerhalb der Kohorte gefordert (Rekrutierung von min. 5 Versuchspersonen pro Gruppenmitglied), höhere statistische Power möglich
 * sogenannte "Pilotstudie" (= Versuchsdurchlauf) für ein tatsächliches Forschungsprojekt
 ]
 
@@ -311,7 +312,7 @@ class: top, left
 
 $\rightarrow$ **Es darf kein Ethikantrag nötig sein!**
 
-$\rightarrow$ **siehe Zusatzmaterial ["Ethik Checkliste" auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=32594).**
+$\rightarrow$ **siehe Zusatzmaterial ["Ethik Checkliste" auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=40715).**
 
 ---
 class: top, left
@@ -331,7 +332,7 @@ name: weiteres
 
 * t-test für abhängige Stichproben für Mittelwertsunterschiede auf einer Variable in einem Pre-Post-Design
 
-* 2-faktorielle ANOVA für ein Pre-Post-Design mit Experimental- und Kontrollgruppe (generell bei UV: nicht zuviele Stufen!) für eine stetige/numerische abhängige Variable
+* 2-faktorielle ANOVA (generell bei UV: nicht zuviele Stufen!) für die Vorhersage einer metrischen abhängigen Variable
 
 $\rightarrow$ auch für Gruppen relevant, die sich für das Interventionsthema entscheiden, da die selbst gewählte angeknüpfte Forschungsfrage mit einer bestimmten Analyse einhergeht (aber es gibt eine eingeschränktere Auswahl basierend auf dem vorgegebenen Studiendesign)
 
@@ -351,12 +352,15 @@ class: top, left
 ]
 
 **Dokumentation an einem zentralen Ort** (z.B. ein gemeinsames GoogleDoc), **welche Ideen verworfen wurden und warum, und welche Entscheidungen aus welchem Grund getroffen wurden** (müssen Sie nicht mit der Prüfungsleistung angeben, können Sie aber in Ihrer Präregistrierung verlinken, *wenn Sie möchten*; primär soll es Ihnen dienen!)
+
 ]
 
 .pull-right[
-```{r eval = TRUE, echo = F}
+```{r eval = TRUE, echo = F, out.width = "80%"}
 knitr::include_graphics("bilder/opennotebook.jpg")
 ```
+
+**Dies ist auch der Ort an der die Präregistrierung iterativ gefüllt werden soll:** Gewährleistet die Möglichkeit für uns Dozierende den Fortschritt und die getroffenen Entscheidungen Ihrer Gruppe einzusehen
 ]
 
 
@@ -367,15 +371,15 @@ class: top, left
 
 #### Betreuung der Optionen
 
-* **Beiden Optionen wird in der Vorlesung Zeit eingeräumt**, aber in den Sitzungen am 06.11. und 12.11. gibt es folgende Aufteilung:
+* **Beiden Optionen wird in der Vorlesung Zeit eingeräumt**, aber in den Sitzungen am 29.04. und 06.05. gibt es folgende Aufteilung:
   - Gruppen mit eigenem Thema kriegen kurzes Feedback von mir
-  - Gruppen mit Interventionsthema kriegen kurzes Feedback von meiner Doktorandin
+  - Gruppen mit Interventionsthema kriegen kurzes Feedback von einer meiner Doktorandinnen
   
 * **Außerhalb der Vorlesung** (d.h. für spezifischere/aufwändigere Fragen, Finalisierung der Präregistrierung, großer Blick auf alles, Formulierung/Passung Hypothesen und Analysen) gilt:
   - Gruppen mit eigenem Thema kriegen eine Ansprechperson (Stephan oder mich) in einer der kommenden Sitzungen zugewiesen
   - Interventionsgruppen haben primär ihre Ansprechperson in mir
 
-$\rightarrow$ Ihre Ansprechperson bewertet Ihre Arbeit am Ende! Daher sollten Sie möglichst alle wichtigen Entscheidungen mit Ihrer Ansprechperson abklären!
+$\rightarrow$ **Ihre Ansprechperson bewertet Ihre Arbeit am Ende! Daher sollten Sie möglichst alle wichtigen Entscheidungen mit Ihrer Ansprechperson abklären!**
 
 * **Pro Kleingruppe ein GoogleDoc als "Open Notebook"** dient zur Dokumentation von Besprechungen/Entscheidungen (auch über Dozierende hinweg) $\rightarrow$ für die Pflege ist jede Kleingruppe selbst zuständig!
 
@@ -398,6 +402,35 @@ $\rightarrow$ Auswahl simpler Fragestellung, simpler Hypothesen, simples Design 
 
 $\rightarrow$ Für komplexere Fragestellungen, Designs und Analysen haben Sie im Forschungspraktikum und Ihrer Abschlussarbeit Gelegenheit
 
+  
+---
+class: top, left
+<div class="footer"><span>Kapitel 1.1.1 in Döring, N. & Bortz, J. (2016). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften. Pearson. <br> Walach, H. (2009). Psychologie: Wissenschaftstheorie, philosophische Grundlagen
+und Geschichte Ein Lehrbuch (2. Auflage). Kohlhammer</span></div>
+
+### Der empirische Forschungsprozess
+
+#### Was bedeutet „empirisch“?
+
+* empirisch (griech.) = auf Erfahrung beruhend
+
+* **Empirische Daten** sind gezielt im Hinblick auf das Forschungsproblem ausgewählte und dokumentierte Informationen über die Erfahrungswirklichkeit (Döring & Bortz, 2016) $\rightarrow$ gewonnen aus z.B. Experiment, Beobachtung oder Befragung 
+
+* **Empirische Forschung** sucht nach Erkenntnissen durch **systematische Sammlung, Aufbereitung und Analyse von empirischen Daten** (Döring & Bortz, 2016)
+
+* Fokus einer empirischen Wissenschaft ist, menschliche Erfahrung zu systematisieren und **methodisch vor Irrtum zu sichern** (Walach, 2009)
+
+* Erkenntnisgewinn entsteht durch **Hypothesenprüfung**
+
+---
+class: top, left
+### Der empirische Forschungsprozess
+
+#### Schritte im empirischen Forschungsprozess
+
+```{r eval = TRUE, echo = F, out.width="53%", fig.align='center'}
+knitr::include_graphics("bilder/Forschungsprozess.png")
+```
 ---
 class: top, left
 name: praxis
@@ -409,8 +442,8 @@ name: praxis
 **Schritt 1: Themenwahl**
   * Überlegen Sie sich welche Option (Interventionsthema/eigenes Thema) Sie anspricht.
   * Falls eigenes Thema:
-    - Lesen Sie sich das [Zusatzmaterial "Themensuche" auf dem studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=32595) durch.
-    - Gehen Sie die Variablen auf Folie 13 durch, und folgen Sie den Links für weitere mögliche untersuchbare Variablen.
+    - Lesen Sie sich das [Zusatzmaterial "Themensuche" auf dem studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=40717) durch.
+    - Gehen Sie die Variablen auf Folie 23 durch, und folgen Sie den Links für weitere mögliche untersuchbare Variablen.
     - Sammeln Sie Ideen und Themenvorschläge mit dem Bezug zur Psychologie, die Sie interessieren.
 
 **Schritt 2: Finden Sie Gruppenmitglieder** (zunächst innerhalb Ihrer Semestergruppen (A/B))
@@ -430,65 +463,27 @@ class: top, left
   * Geben Sie es für alle Gruppenmitglieder als Bearbeiter frei
   * Stellen Sie ein, dass diejenigen die über den Link verfügen das Dokument betrachten können
   
-**Schritt 4: Einigen Sie sich nach der nächsten Vorlesung auf ein Thema und geben Sie Ihrer Gruppe einen Namen**
+**Schritt 4 (nach der nächsten Vorlesung): Einigen Sie sich innerhalb Ihrer Gruppe auf ein Thema und geben Sie Ihrer Gruppe einen Namen**
   * Idealerweise hat Ihr Gruppenname etwas mit Ihrem Thema zu tun
-  * Teilen Sie mir Ihren Gruppennamen und Ihr Thema **bis spätestens (!) 31.10.** über die [Umfrage im studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=32593) mit (es reicht wenn ein Gruppenmitglied die Umfrage ausfüllt).
-  
----
-class: top, left
-name: forschungsprozess
-<div class="footer"><span>Kapitel 1.1.1 in Döring, N. & Bortz, J. (2016). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften. Pearson. <br> Walach, H. (2009). Psychologie: Wissenschaftstheorie, philosophische Grundlagen
-und Geschichte Ein Lehrbuch (2. Auflage). Kohlhammer</span></div>
-
-### Präregistierung im empirischen Forschungsprozess
-
-#### Was bedeutet „empirisch“?
-
-* empirisch (griech.) = auf Erfahrung beruhend
-
-* **Empirische Daten** sind gezielt im Hinblick auf das Forschungsproblem ausgewählte und dokumentierte Informationen über die Erfahrungswirklichkeit (Döring & Bortz, 2016) $\rightarrow$ gewonnen aus z.B. Experiment, Beobachtung oder Befragung 
-
-* **Empirische Forschung** sucht nach Erkenntnissen durch **systematische Sammlung, Aufbereitung und Analyse von empirischen Daten** (Döring & Bortz, 2016)
-
-* Fokus einer empirischen Wissenschaft ist, menschliche Erfahrung zu systematisieren und **methodisch vor Irrtum zu sichern** (Walach, 2009)
-
-* Erkenntnisgewinn entsteht durch **Hypothesenprüfung**
-
----
-class: top, left
-### Präregistierung im empirischen Forschungsprozess
-
-#### Schritte im empirischen Forschungsprozess
-
-```{r eval = TRUE, echo = F, out.width="53%", fig.align='center'}
-knitr::include_graphics("bilder/Forschungsprozess.png")
-```
+  * Teilen Sie mir Ihren Gruppennamen und Ihr Thema **bis spätestens (!) 20.04.** über die [Umfrage im studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=40711) mit (es reicht wenn ein Gruppenmitglied die Umfrage ausfüllt).
 
 ---
 class: top, left
 name: forschungsprozess-prereg
-
-### Präregistierung im empirischen Forschungsprozess
-
-#### Präregistrierung im Forschungsprozess
-
-```{r eval = TRUE, echo = F, out.width="70%", fig.align='center'}
-knitr::include_graphics("bilder/Forschungsprozess_Prereg.png")
-```
-
----
-class: top, left
 <div class="footer"><span>https://dorsch.hogrefe.com/stichwort/praeregistrierung <br>https://osf.io/tvyxz/</span></div>
 
 ### Präregistierung im empirischen Forschungsprozess
 
-#### Präregistrierung: Definition
+#### Was war nochmal eine Präregistrierung?
+
+--
 
 <br>
 
 .center[
 
-"*Präregistrierung bezeichnet die* ***Darstellung des forschungsmethodischen Vorgehens*** *(Hypothesen, Forschungsdesign, Stichprobe, Ein- und Ausschlusskriterien, Untersuchungsdurchführung, Auswertungsplan, statistische Datenauswertung) bei der Durchführung und Auswertung einer* ***zukünftig erfolgenden*** *wissenschaftlichen Studie.*"
+"*Präregistrierung bezeichnet die* ***Darstellung des forschungsmethodischen Vorgehens*** *(Hypothesen, Forschungsdesign, Stichprobe, Ein- und Ausschlusskriterien, Untersuchungsdurchführung, Auswertungsplan, statistische Datenauswertung) bei der Durchführung und Auswertung einer* ***zukünftig erfolgenden*** *w
+issenschaftlichen Studie.*"
 
 <br>
 
@@ -499,12 +494,21 @@ knitr::include_graphics("bilder/preregistered_large_color.png")
 
 ---
 class: top, left
+
+### Präregistierung im empirischen Forschungsprozess
+
+```{r eval = TRUE, echo = F, out.width="70%", fig.align='center'}
+knitr::include_graphics("bilder/Forschungsprozess_Prereg.png")
+```
+
+---
+class: top, left
 <div class="footer"><span>Brett Jordan, https://www.flickr.com/photos/x1brett/51277187884/in/photostream/</div>
 
 ### Präregistierung im empirischen Forschungsprozess
 
 .center[
-**Wer von Ihnen hat schon etwas von der Replikationskrise der Psychologie gehört?**
+**Was war nochmal die Replikationskrise der Psychologie?**
 ]
 
 ```{r, echo=FALSE,out.width="40%",fig.show='hold',fig.align='center'}
@@ -521,10 +525,7 @@ name: prereg-hg
 
 #### Präregistrierung: Hintergrund
 
-**Glaubwürdigkeitsprobleme der psychologischen Forschung aufgrund von...**
-* ...Betrugsfällen in der Psychologie
-* ...Nichtreplizierbarkeit des sogenannten "Psi-Phänomens" (Bem, 2011)
-* ...niederschmetternden Ergebnissen von systematischen Replikationsstudien
+**Glaubwürdigkeitsprobleme der psychologischen Forschung**
 
 <br>
 
@@ -538,7 +539,11 @@ Pashler & Wagenmakers (2012)
 *"According to many psychologists, their field has a credibility problem at the moment, and it affects thousands of studies.*" 
 
 Carpenter (2012)
+
+**Warum ist das so?**
 ]
+
+
 
 ---
 class: top, left
@@ -729,13 +734,10 @@ class: top, left
 #### Präregistrierung: Hintergrund
 
 **Ursachen von diesen Problemen im Generellen**
-* Das System an sich
-* Die Wissenschaftler
-* Journals
 
-$\rightarrow$ Anreize für "False-Positives"
-
-$\rightarrow$ keine Anreize für Replikationen
+Das System, Journals und WissenschaftlerInnen haben:
+* Anreize für "False-Positives"
+* keine Anreize für Replikationen
 
 <br>
 
@@ -755,7 +757,7 @@ class: top, left
 
 ##### Ursache "Das System an sich"
 
-* Enorme Konkurrenz zwischen Wissenschaftlern: Um in der Wissenschaft erfolgreich zu sein, muss viel publiziert werden ("**publish or perish**")
+* Enorme Konkurrenz zwischen Wissenschaftlern: Um in der Wissenschaft erfolgreich zu sein, muss viel publiziert werden ("**publish or perish**"), d.h. es ist relevant womit man eine gute Chance auf eine Publikation bekommt
 
 .pull-left[
 * Keine Anreize für Replikationen, denn Replikationsstudien...
@@ -775,6 +777,23 @@ knitr::include_graphics("bilder/replication_prevalence.jpg")
 *"The current system does not reward replication - it often even penalizes people who want to rigorously replicate previous work, and it pushes investigators to claim that their work is highly novel and significant."*
 Ionnidis (2014)
 ]
+
+---
+class: top, left
+
+### Präregistierung im empirischen Forschungsprozess
+
+#### Präregistrierung: Hintergrund
+
+##### Ursache "Journals"
+
+Viele Journals...
+* ...publizieren nur positive (d.h. signifikante/erwartungskonforme) Ergebnisse
+* ...publizieren nur neue und interessante Effekte
+* ...akzeptierten (bisher) Replikationsstudien nicht
+
+**File-Drawer Problem** führt zu **Publication Bias**: Nur positive Ergebnisse werden publiziert, während alle negativen Ergebnisse in der Schublade des Wissenschaftlers bleiben
+
 
 ---
 class: top, left
@@ -810,22 +829,33 @@ class: top, left
 
 #### Präregistrierung: Hintergrund
 
-##### Ursache "Journals"
-
-Viele Journals...
-* ...akzeptierten (bisher) Replikationsstudien nicht
-* ...publizieren nur neue und interessante Effekte
-* ...publizieren nur positive Ergebnisse
-
-**File-Drawer Problem** führt zu **Publication Bias**: Nur positive Ergebnisse werden publiziert, während alle negativen Ergebnisse in der Schublade des Wissenschaftlers bleiben
-
 ##### Fazit
 
 * Es herrscht ein enormer Druck für Publikationen
 * Wissenschaftler müssen viel und schnell publizieren, um überhaupt "überleben" zu können 
 
-$\rightarrow$ das führt meistens zu falsch-positiven Ergebnissen<br>
-$\rightarrow$ Meta-Analysen (Zusammenfassungen von Studien) "to the rescue"? Nein: "*Garbage in -> Garbage out*"
+$\rightarrow$ das führt meistens zu falsch-positiven Ergebnissen
+
+**Meta-Analysen (Zusammenfassungen von Studien) "to the rescue"?**
+* Nein: "Garbage in -> Garbage out"
+* Aber: Eine gute Meta-Analyse schätzt den publication bias, und kontrolliert die Schätzung des untersuchten Effekts -> eine gute Meta-Analyse ist daher i.d.R. immernoch besser als eine einzelne Studie!
+
+---
+class: top, left
+
+### Beispiel: Metapsy
+
+.center[
+https://www.metapsy.org/
+
+```{r eval = TRUE, echo = F, out.width="40%"}
+knitr::include_graphics("bilder/metapsy.png")
+```
+]
+
+$\rightarrow$ Website, welche Evaluationsforschung von psychotherapeutischen Interventionen zugänglich macht
+
+$\rightarrow$ https://twitter.com/EikoFried/status/1746873387727659138: "In the video I'll show researchers (part I) and clients (part II) how to run a systematic meta-analysis looking into the effect of CBT on depression in older adults within 1 minute."
 
 ---
 class: top, left
@@ -925,8 +955,8 @@ class: top, left
 .pull-left[
 Zu QRPs gehört auch HARKing:
 * Kerr (1988): HARKing = "Hypothesizing After the Results are Known": Eine post-hoc Hypothese so darstellen, als wäre es eine a-priori Hypothese gewesen
-* Dieses Vorgehen ist mit dem deduktiv-nomologischem Modell (aka "Hempel Oppenheim Schema") unvereinbar
-* Es bringt viele Probleme mit sich, insbesondere werden "falsch-positive" Forschungsergebnisse als substanzielle Befunde missverstanden
+* Das ist mit einem deduktiven Ansatz (Ableitung von Hypothesen aus Theorien) nicht vereinbar
+* Das bringt viele Probleme mit sich, insbesondere werden "falsch-positive" Forschungsergebnisse als substanzielle Befunde missverstanden
 ]
 
 .pull-right[
@@ -956,14 +986,15 @@ class: top, left
 #### Präregistrierung: Wirkung
 
 **Im Idealfall sorgt eine Präregistrierung dafür, dass eine Studie so durchgeführt und analyisert wird wie geplant, und dann unabhängig von den Ergebnissen publiziert wird**:
-* Anreiz für Replikationsversuche
-* Lösung des "File Drawer" Problems
+* Freiheitsgrade der WissenschaftlerInnen wird eingeschränkt
+* Lösung des "File Drawer" Problems (zumindest weiß man, dass eine Studie geplant war und vmtl. durchgeführt wurde, selbst wenn sie nicht publiziert wurde)
 
 .pull-left[
 **Präregistrierung ist nur eine von vielen Lösungen:**
 * Höhere statistische Power
 * Offene Daten
 * Offene Materialien
+* Mehr Replikationsstudien
 * Registered Reports
 * Multiverse Analysen
 * Evaluierungskriterien und Anreize verändern
@@ -1041,23 +1072,6 @@ knitr::include_graphics("bilder/sz.png")
 .center[
 Herrmann (2018)
 ]
-
----
-class: top, left
-
-### Metapsy
-
-.center[
-https://www.metapsy.org/
-
-```{r eval = TRUE, echo = F, out.width="40%"}
-knitr::include_graphics("bilder/metapsy.png")
-```
-]
-
-$\rightarrow$ Website, welche Evaluationsforschung von psychotherapeutischen Interventionen zugänglich macht
-
-$\rightarrow$ https://twitter.com/EikoFried/status/1746873387727659138: "In the video I'll show researchers (part I) and clients (part II) how to run a systematic meta-analysis looking into the effect of CBT on depression in older adults within 1 minute."
 
 ---
 class: top, left
@@ -1202,11 +1216,11 @@ name: take-away
 
 * **empirische Daten** bezeichnen Informationen über die Erfahrungswirklichkeit (z.B. aus Beobachtung) 
 
-* In einer **Präregistrierung** werden essentielle Informationen über die geplante Durchführung und Auswertung einer zukünftigen Studie festgehalten
-
 * Die **Replikationskrise** hinterlässt Zweifel an der Glaubhaftigkeit/Robustheit publizierter Ergebnisse 
 
-* Zu den sogenannten **Questionable Research Practices** gehören selective reporting, p-hacking, outcome switching, optional stopping und HARKing
+* Zu den sogenannten **Questionable Research Practices** (QRPs) gehören selective reporting, p-hacking, outcome switching, optional stopping und HARKing
+
+* In einer **Präregistrierung** werden essentielle Informationen über die geplante Durchführung und Auswertung einer zukünftigen Studie festgehalten, so sollen QRPs verhindert werden
 ]
 ]
 
@@ -1243,15 +1257,15 @@ name: material
 
 ### Material
 
-* **Bewertungsschema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=32988
+* **Bewertungsschema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=40709
 
-*	**Strategien Themensuche**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26582
+*	**Strategien Themensuche**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=40717
 
-*	**Checkliste Ethik**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26580
+*	**Checkliste Ethik**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=40715
 
 *	**Google Doc Gruppenfindung**: https://docs.google.com/document/d/1XFIOSoInrrcjd92raPK3sA4vSVKepVvznOqkWKRKG9k/edit
 
-* **Umfrage zur Einreichung Gruppenname und Thema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=32593
+* **Umfrage zur Einreichung Gruppenname und Thema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=40711
 
 ---
 class: top, left
@@ -1263,7 +1277,7 @@ class: top, left
 **Schritt 1: Themenwahl**
   * Überlegen Sie sich welche Option (Interventionsthema/eigenes Thema) Sie anspricht.
   * Falls eigenes Thema:
-    - Lesen Sie sich das [Zusatzmaterial "Themensuche" auf dem studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26582) durch.
+    - Lesen Sie sich das [Zusatzmaterial "Themensuche" auf dem studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=40717) durch.
     - Gehen Sie die Variablen auf Folie 13 durch, und folgen Sie den Links für weitere mögliche untersuchbare Variablen.
     - Sammeln Sie Ideen und Themenvorschläge mit dem Bezug zur Psychologie, die Sie interessieren.
 
@@ -1286,43 +1300,29 @@ class: top, left
   
 **Schritt 4: Einigen Sie sich nach der nächsten Vorlesung auf ein Thema und geben Sie Ihrer Gruppe einen Namen**
   * Idealerweise hat Ihr Gruppenname etwas mit Ihrem Thema zu tun
-  * Teilen Sie mir Ihren Gruppennamen und Ihr Thema **bis spätestens (!) 31.10.** über die [Umfrage im studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=32593) mit (eine Umfrage pro Gruppenmitglied).
+  * Teilen Sie mir Ihren Gruppennamen und Ihr Thema **bis spätestens (!) 20.04.** über die [Umfrage im studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=40711) mit (es reicht wenn eine Person aus der Gruppe die Anmeldung für alle ausfüllt).
   
 
 ---
 class: top, left
 
-### Einladung zur Podiumsdiskussion: „Entwicklung und Lernen von Kindern und Jugendlichen im digitalen Wandel“, 05.11.24, 16:30 – 18:00 Uhr
+### Einladung zu den Lunch Lectures Positive Psychology im Sommersemester 2025
 
-Wie verändert der digitale Wandel das Aufwachsen und das Lernen unserer Kinder? Welche Chancen und Herausforderungen bringt die zunehmende Digitalisierung mit sich?
-Expert*innen aus dem Raum Zürich, werden die Auswirkungen der digitalen Medien auf die kognitive und soziale Entwicklung von Kindern und Jugendlichen beleuchten und darüber diskutieren, wie Bildungseinrichtungen und Eltern diesen Veränderungen begegnen können. 
+.pull-left[
+Die DGPs-Interessengruppe Positive Psychologie lädt in Kooperation mit der Deutschen Gesellschaft für Positiv-Psychologische Forschung (DGPPF e.V.) zu Lunch Lectures ein. Ziel der Vorlesungsreihe ist, über die Positive Psychologie zu informieren und ausgewählte Themen aus dem Themenspektrum vorzustellen. 
 
-*Podiumsteilnehmende* (alphabetisch): 
-* [Prof. Dr. Ingo Bosse](https://www.hfh.ch/person/ingo-bosse) (Institut für Lernen unter erschwerten Bedingungen, HfH)
-* [Prof. Dr. Silvia Brem](https://www.med.uzh.ch/de/UeberdieFakultaet/fakultaetsmitglieder/bremsilvia.html) (UFSP Plastische Hirnnetzwerke für Entwicklung und Lernen und Klinik für Kinder- und Jugendpsychiatrie und Psychotherapie, UZH)
-* [Prof. Dr. Fabio Sticca](https://www.hfh.ch/person/fabio-sticca) (Institut für Verhalten, sozio-emotionale und psychomotorische Entwicklungsförderung, HfH)
-* [Prof. Dr. Daniel Süss](https://www.zhaw.ch/de/ueber-uns/person/suss/) (Psychologisches Institut, ZHAW)
+Die Einladung richtet sich an Wissenschaftler:innen, Praktiker:innen und Studierende der Psychologie und der Nachbardisziplinen sowie alle anderen Interessierten. 
 
-*Moderation*: [Prof. Dr. Alexandra Freund](https://www.psychologie.uzh.ch/de/bereiche/dev/lifespan/team/freund.html) (Psychologisches Institut, UZH), *Kontakt*: Letizia Ventre (info@dsn.uzh.ch)
+Die Lunch Lectures finden donnerstags (10.04., 08.05., 12.06., 26.06. und 10.07.) von 13:00-14:00 Uhr online hier 
+https://uni-luebeck.webex.com/uni-luebeck/j.php?MTID=m3583316f0cd34e3f4768e6358b5dbf35 statt.
+]
 
-*Link zur kostenlosen Anmeldung*: https://uzh.zoom.us/webinar/register/WN_4SW_5ZiCToaufIraKxz_dw#/registration 
+.pull-right[
+```{r eval = TRUE, echo = F, fig.align='center'}
+knitr::include_graphics("bilder/vortragsreihe_pp.PNG")
+```
+]
 
-*Mehr Information*: https://www.developmentalscience.uzh.ch/de/aktivit%C3%A4ten/Podiumsdiskussion.html
-
-
----
-class: top, left
-
-### Einladung zur Lesung und Diskussionsrunde: „Rätsel des Unbewussten", 08.11.24, 14-15.30 Uhr
-
-Wir laden Sie herzlich zur Lesung und Diskussionsrunde „Rätsel des Unbewussten“ einladen, die am Freitag, den 8. November 2024, von 14:00 bis 15:30 Uhr im Hörsaal 2U01, Leopoldstr. 13, 80802 München stattfinden wird.
-
-Dr. Cécile Loetz und Dr. Jakob Müller, die Köpfe hinter dem Podcast „Rätsel des Unbewussten – Podcast zur Psychoanalyse und Psychotherapie“, werden aus ihrem aktuellen Buch „Mein größtes Rätsel bin ich selbst – Die Geheimnisse der Psyche verstehen“ lesen. Das Buch erzählt aus Perspektive der Therapeut:innen Fallgeschichten aus der Welt der psychodynamischen Verfahren und macht sichtbar, wie psychische Veränderungsprozesse in Therapien möglich werden. Begleitet von Dr. Larissa Vierl (Klinische Psychologie und Psychotherapie, LMU) und Dr. Christian Woll-Weber (Klinische Psychologie des Kindes- und Jugendalters & Beratungspsychologie, LMU) als Moderator:innen möchten wir gemeinsam mit Ihnen – Studierende der Psychologie, Teilnehmer:innen der Aus- und Weiterbildung sowie alle Interessierte – ausgewählte Passagen diskutieren. So bekommen Sie einen spannenden und lebendigen Einblick in die
-Prozesse der tiefenpsychologisch fundierten und analytischen Psychotherapie.
-
-Die Veranstaltung findet in Kooperation zwischen den beiden genannten Lehreinheiten der LMU und dem Psychoanalytischen Forum München (PFM), einem Verbund der Münchener Aus- und Weiterbildungsinstitute mit tiefenpsychologisch fundierter und analytischer
-Psychotherapieausrichtung, statt. Ziel ist es, einen offenen Raum für den Austausch über die vielfältigen Rätsel der Psyche, der Psychoanalyse und der Aus- und Weiterbildung zu schaffen. Die Teilnahme ist kostenlos und erfordert keine Anmeldung.
-  
 ---
 class: top, left
 
@@ -1333,12 +1333,12 @@ Zielgruppe: Die Onlineveranstaltung richtet sich an Studierende im Bachelor sowi
 Programm mit mehr Informationen: https://cd.wiso.uni-koeln.de/de/team/juniorprofessur-fuer-organizational-behavior/j-prof-dr-annabelle-hofer/onlineveranstaltung-karriereperspektiven
 
 Zeit: Jeweils von 14:15-15:45 Uhr
-28.10.2024; 30.10.2024; 04.11.2024; 06.11.2024; 11.11.2024; 13.11.2024; 14.11.2024
+28.04.2025, 30.04.2025, 05.05.2025, 07.05.2025, 12.05.2025, 14.05.2025, 15.05.2025
 
-Zoom: https://fernuni-hagen.zoom-x.de/j/65955566890?pwd=bTZLSChMrGPd5MWAQwDK1b18UAXH4t.1
+Zoom: https://fernuni-hagen.zoom-x.de/j/67800478651?pwd=dUCsaJbhBSizka7rYkDt2b3LLbyFJU.1
 
-Meeting‐ID: 659 5556 6890
-Kenncode: 64094237
+Meeting-ID: 678 0047 8651
+Kenncode: 23020259
 
 Moderation: Dr. Verena Eichel (FernUniversität in Hagen)
 

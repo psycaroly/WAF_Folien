@@ -3,7 +3,7 @@ title: "Einheit 11"
 subtitle: "⚔<br/>with xaringan"
 author: "Prof. Dr. Caroline Zygar-Hoffmann"
 institute: "RStudio, PBC"
-date: "2025/01/17 (updated: `r Sys.Date()`)"
+date: "2025/06/30 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -57,8 +57,26 @@ class: middle, left
 <br><br><br><br><br><br><br>
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
-### Einheit 11: Publikation wissenschaftlicher Daten
-##### 21.01.2025 | Dr. Caroline Zygar-Hoffmann
+### Einheit 11: Feedback & Publikation wissenschaftlicher Daten und Skripte
+##### 01.07.2025 | Prof. Dr. Caroline Zygar-Hoffmann
+
+
+---
+class: top, left
+
+### Hinweis: Folgende Studien sind noch offen
+
+https://surveys.osc.lmu.de/dieLetzten
+
+https://surveys.osc.lmu.de/crimetime
+
+https://surveys.osc.lmu.de/OCEANs5
+
+https://surveys.osc.lmu.de/DeadlineDodger
+
+https://surveys.osc.lmu.de/DeLuLu
+
+https://surveys.osc.lmu.de/reflection-ss25
 
 ---
 class: top, left
@@ -66,9 +84,9 @@ name: content
 
 ### Heutige Themen
 
-#### [Hinweise](#hinweise)
-
 #### [Gute wissenschaftliche Praxis](#wissprax)
+
+#### [Praxis Teil 1: Feedback](#praxis1)
 
 #### [Open Data und Open Code](#opendata)
 
@@ -76,41 +94,8 @@ name: content
 
 #### [Anonymisierungs-Möglichkeiten](#anonymisierung)
 
-#### [Praxis](#praxis)
+#### [Praxis Teil 2: Open Data & Open Code](#praxis2)
 
----
-class: top, left
-
-### Hinweise
-
-#### Bitte noch an Studien teilnehmen
-
-* Folgende Studien brauche noch dringend Teilnehmer:
-
-https://surveys.osc.lmu.de/siblings
-
-https://surveys.osc.lmu.de/bindungsforscher
-
-* Folgende Studien sind noch offen:
-
-https://surveys.osc.lmu.de/empowerment
-
-https://surveys.osc.lmu.de/jagoda
-
-https://surveys.osc.lmu.de/forever
-
-https://surveys.osc.lmu.de/song
-
----
-class: top, left
-
-### Hinweise
-
-#### Lehrevaluation ist gestartet!
-
-Ich freue mich über Ihr Feedback, besonders in den offenen Antworten:
-
-hsf.click/Eval-CFH
 
 
 ---
@@ -144,41 +129,6 @@ name: wissprax
 
 ---
 class: top, left
-<div class="footer"><span>Kapitel 4.2.4 in Döring, N. & Bortz, J. (2016). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften. Pearson. </span></div>
-
-### Gute wissenschaftliche Praxis
-
-**Wissenschaftliche Autorenschaft**
-
-* alle an der jeweiligen Studie sowie dem veröffentlichen Paper **maßgeblich** beteiligten Personen sollten ein Recht auf Autorenschaft haben $\rightarrow$ frühzeitige Absprachen treffen
-
-* "Mitglieder des Forschungsteams, die nur kleine Teilarbeiten im Rahmen der Studie geleistet, aber nicht an der Publikation direkt mitgewirkt haben (z.B. studentische Hilfskräfte, die unter Anleitung die Datenerhebung, die Datenaufbereitung, und/oder die Datenauswertung), sind gemäß APA-Richtlinien keine Mitautoren (APA, 2009)" (Döring & Bortz, S. 136f) $\rightarrow$ **Acknowledgments**
-
-* Abschlussarbeiten **können** bei entsprechender Qualität veröffentlicht werden $\rightarrow$ "Je nach Umfang der Betreuungsleistung einerseits und eigenständigen Arbeit der Studierenden andererseits sowie je nach Arbeitsanteil beim Schreiben des Manuskriptes kann das Spektrum reichen von studentischer Erstautorschaft, Mitautorschaft bis zu keiner Autorschaft (Fine & Kurdek, 1993)." (Döring & Bortz, S. 137)
-
-* Besondere Rolle von Erstautor:in und Letztautor:in
-  - Erstautor:innen sind i.d.R. für die Verfassung des Manuskript-Erstentwurfs verantwortlich
-  - Erstautor:innen fungieren als Kontaktperson ("corresponding author") gegenüber der Zeitschrift und stellen die Einhaltung der Regeln guter wissenschaflticher Praxis sicher
-  - Letztautor:innen sind in der Psychologie i.d.R. in einer betreuenden bzw. supervidierenden Rolle
-  
----
-class: top, left
-<div class="footer"><span>https://credit.niso.org/ </span></div>
-
-### Gute wissenschaftliche Praxis
-
-**Wissenschaftliche Autorenschaft**
-
-CRediT: Taxonomie mit 14 Rollen, die ein:e Autor:in im wissenschaftlichen Publikationsprozess einnehmen kann
-
-.center[
-```{r eval = TRUE, echo = F, out.width = "55%"}
-knitr::include_graphics("bilder/credit.png")
-```
-]
-
----
-class: top, left
 <div class="footer"><span>Lakens, D. (2014). Performing high-powered studies efficiently with sequential analyses. European Journal of Social Psychology, 44, 701–710. doi:10.1002/ejsp.2023</span></div>
 
 ### Gute wissenschaftliche Praxis
@@ -199,11 +149,101 @@ knitr::include_graphics("bilder/sequentielle_designs.png")
 
 ---
 class: top, left
+<div class="footer"><span>Kapitel 4.2.4 in Döring, N. & Bortz, J. (2016). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften. Pearson. </span></div>
+
+### Gute wissenschaftliche Praxis
+
+**Wissenschaftliche Autorenschaft**
+
+* alle an der jeweiligen Studie sowie dem veröffentlichen Paper **maßgeblich** beteiligten Personen sollten ein Recht auf Autorenschaft haben $\rightarrow$ frühzeitige Absprachen treffen
+
+* "Mitglieder des Forschungsteams, die nur kleine Teilarbeiten im Rahmen der Studie geleistet, aber nicht an der Publikation direkt mitgewirkt haben (z.B. studentische Hilfskräfte, die unter Anleitung die Datenerhebung, die Datenaufbereitung, und/oder die Datenauswertung), sind gemäß APA-Richtlinien keine Mitautoren (APA, 2009)" (Döring & Bortz, S. 136f) $\rightarrow$ **Acknowledgments**
+
+* Abschlussarbeiten **können** bei entsprechender Qualität veröffentlicht werden: "Je nach Umfang der Betreuungsleistung einerseits und eigenständigen Arbeit der Studierenden andererseits sowie je nach Arbeitsanteil beim Schreiben des Manuskriptes kann das Spektrum reichen von studentischer Erstautorschaft, Mitautorschaft bis zu keiner Autorschaft (Fine & Kurdek, 1993)." (Döring & Bortz, S. 137)
+
+* Besondere Rolle von Erstautor:in und Letztautor:in
+  - Erstautor:innen sind i.d.R. für die Verfassung des Manuskript-Erstentwurfs verantwortlich
+  - Erstautor:innen fungieren als Kontaktperson ("corresponding author") gegenüber der Zeitschrift und stellen die Einhaltung der Regeln guter wissenschaflticher Praxis sicher
+  - Letztautor:innen sind in der Psychologie i.d.R. in einer betreuenden bzw. supervidierenden Rolle
+  
+---
+class: top, left
+<div class="footer"><span>https://credit.niso.org/ </span></div>
+
+### Gute wissenschaftliche Praxis
+
+**Wissenschaftliche Autorenschaft**
+
+CRediT: Taxonomie mit 14 Rollen, die ein:e Autor:in im wissenschaftlichen Publikationsprozess einnehmen kann
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "45%"}
+knitr::include_graphics("bilder/credit.png")
+```
+]
+
+Wer sich für **den Weg einer Studie bis zu einem publizierten Artikel** sowie einen Überblick über **Karrierepfade in der Wissenschaft** interessiert, der kann sich das [Zusatzmaterial Z6 auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=46854) anschauen.
+
+---
+class: top, left
+<div class="footer"><span>https://x.com/ithinkwellHugh/status/1927341662558167125</span></div>
+
+### Gute wissenschaftliche Praxis
+
+**Ein wichtiges Element im wissenschaftlichen Arbeiten ist also Feedback** (sowohl durch Externe i.S.v. peer-review, als auch durch Interne i.S.v. Mitautor:innen)
+
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "45%"}
+knitr::include_graphics("bilder/feedback.png")
+```
+]
+
+
+---
+class: top, left
+name: praxis1
+
+### Praxis Teil 1
+
+Sie sollen sich innerhalb Ihrer Kleingruppe gegenseitig Feedback zu Ihren Texten geben (zumindest zu der Gruppenarbeit).
+
+**Formal**: Korrekte Rechtschreibung, Grammatik, Zeichensetzung? Korrekt zitiert? Statistische Darstellung korrekt? Literaturverzeichnis korrekt?
+
+**Sprachlich-stilistisch**: Ist der Satzbau verständlich? Ist die Formulierung präzise? Ist die Zeitform korrekt? Gibt es unnötige Füllwörter?
+
+**Inhaltlich - unspezifisch**: Ist der rote Faden zu erkennen? Gibt es Überflüssiges? Ist die Darstellung sachlich neutral? Werden Begriffe korrekt eingeführt und erläutert? Ist die Argumentation logisch und nachvollziehbar? Werden Behauptungen belegt? Kann auf Links zum OSF zugegriffen werden? Ist dort alles Geforderte vorhanden? **Verstehen Sie, was Ihr:e Kommilitone:in Ihnen sagen möchte?**
+
+**Inhaltlich - spezifisch**: Nehmen Sie sich den Bewertungsbogen vor: Sind die bewerteten Elemente entsprechend der Beschreibung im Bewertungsbogen vorhanden? 
+
+---
+class: top, left
+
+### Praxis Teil 1
+
+Wie geben Sie das Feedback:
+
+* Sie können das RMarkdown als Word-Dokument "knitten", und dann darin Feedback geben $\rightarrow$ **manueller Übertrag ins RMarkdown nötig** (eine alternative technische Lösung wäre das package *trackdown*: https://cran.r-project.org/web/packages/trackdown/vignettes/trackdown-workflow.html)
+
+* **Geben Sie Ihr Feedback konkret auf einen Absatz/Satz bezogen, mit einem konstruktiven (Alternativ-)Vorschlag**
+* **Erklären Sie** warum Sie denken, dass eine Alternative besser wäre / etwas fehlt (z.B. an welcher Stelle Sie als Leser verwirrt wurden, oder Fragen offen blieben, oder warum es missverständlich sein könnte, o.ä.)
+* **Bleiben Sie im Ton wertschätzend!** Selbst wenn Ihnen der Text nicht gefällt, steckt Arbeit dahinter. Helfen Sie dabei, wie es Ihr:e Kommilitone:in Ihrer Ansicht nach besser machen kann.
+
+* **Arbeiten Sie vorwiegend mit der Kommentar-Funktion**, und nutzen Sie die Überarbeiten-Funktion von Word direkt im Text z.B. nur für formale Fehler $\rightarrow$ Es ist nicht Ihr Text, sondern der Ihres:r Kommilitonen:in! 
+
+* Wenn Sie als Autor:in des Textes den Vorschlag eines:r Kommilitonen:in nicht annehmen möchten, sprechen Sie das an. **Finden Sie gemeinsam eine Lösung, mit der alle einverstanden sind.**
+
+* Wenn es zu einem Konflikt kommen sollte, melden Sie sich bei mir, und ich helfe.
+
+---
+class: top, left
 name: opendata
 
 ### Open Data
 
-#### Wieso offene Daten?
+**Ein anderes wichtiges Element im wissenschaftlichen Arbeiten sind offene Daten**
+
+#### Gründe
 
 * Kernkriterien für Wissenschaft: Transparenz & Reproduzierbarkeit (Lupia & Elman, 2014; Merton, 1942; Popper, 1959)
 
@@ -440,13 +480,13 @@ class: top, left
 
 #### Open Code = Reproduzierbarer Code
 
-* Zusammen mit den Daten ist es sinnvoll, den R-Code und/oder das RMarkdown-Dokument zu veröffentlichen: Je nachdem was nötig ist um nachzuvollziehen welche Datenvorbereitung und Datenanalyse auf Code-Ebene durchgeführt wurde
+* Zusammen mit den Daten ist es sinnvoll, den **R-Code und/oder das RMarkdown-Dokument** zu veröffentlichen: Je nachdem was nötig ist um nachzuvollziehen welche Datenvorbereitung und Datenanalyse auf Code-Ebene durchgeführt wurde
 
-* Jemand Anderes sollte den Code (von oben nach unten) auf den Daten durchführen können, ohne auf Errors zu stoßen $\rightarrow$ Reproduzierbarkeit!
+* **Jemand Anderes sollte den Code (von oben nach unten) auf den Daten durchführen können, ohne auf Errors zu stoßen** $\rightarrow$ Reproduzierbarkeit!
 
-* Auch hier ist wichtig für die Nachnutzbarkeit, dass der Code verständlich ist, was man vor allem durch Kommentare erreicht (z.B. # Skalenbildung, # Z-Standardisierung, # Voraussetzungsprüfung Analyse Hypothese 1, # Analyse Hypothese 1)
+* Auch hier ist wichtig für die Nachnutzbarkeit, dass der Code verständlich ist, was man vor allem durch **Kommentare** erreicht (z.B. # Skalenbildung, # Z-Standardisierung, # Voraussetzungsprüfung Analyse Hypothese 1, # Analyse Hypothese 1)
 
-* Für Ihren Bericht soll der Code zusammen mit den anonymisierten (!) Daten auf dem OSF hochgeladen werden (in dasselbe Projekt wo auch die Präregistrierung hochgeladen wurde) 
+* Für Ihren Bericht soll der Code zusammen mit den anonymisierten (**!**) Daten **auf dem OSF** hochgeladen werden (**in dasselbe Projekt wo auch die Präregistrierung hochgeladen wurde**) 
 
 * Falls Sie die Analysen individuell gemacht haben, dann am Besten pro Gruppenmitglied einen neuen Unterordner mit dem eigenen Namen im Projekt anlegen und dort die eigenen Code-Dateien ablegen
 
@@ -461,6 +501,12 @@ class: top, left
 .center[
 ```{r eval = TRUE, echo = F}
 knitr::include_graphics("bilder/bewertung_opendata.png")
+```
+]
+
+.center[
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/bewertung_opencode.png")
 ```
 ]
 
@@ -479,12 +525,12 @@ name: deanonymisierung
 knitr::include_graphics("bilder/anonymity_survey1.png")
 ```
 ]
-
 .pull-right[
 ```{r eval = TRUE, echo = F}
 knitr::include_graphics("bilder/anonymity_survey2.png")
 ```
 ]
+
 
 
 ---
@@ -557,11 +603,9 @@ write.csv(data, file = "raw_anonym/data_anonymized.csv", row.names = FALSE)
 
 ---
 class: top, left
-name: praxis
+name: praxis2
 
-### Praxis
-
-**Schritt 0: An Lehrevaluation teilnehmen: hsf.click/Eval-CFH**
+### Praxis Teil 2
 
 **Schritt 1: Überlegen und prüfen, ob es Variablen gibt, die einzigartige Kombinationen bilden könnten und damit die Anonymität Ihrer Teilnehmer gefährden**
 
@@ -573,10 +617,12 @@ name: praxis
 
 **Schritt 3: Daten mit Codebook veröffentlichen**
 - Anonymen Datensatz im OSF-Projekt hochladen (wo auch die Präregistrierung liegt)
-- formr Exceldateien im OSF-Projekt hochladen (wo auch die Präregistrierung liegt)
+- formr Exceldateien als Codebuch im OSF-Projekt hochladen (wo auch die Präregistrierung liegt)
 
 **Schritt 4: Code veröffentlichen**
 - Entweder als Gruppe, oder individuell (in nach Name benannten Unterordnern)
-  
+- Entweder nur RMarkdown oder zusätzlich extra R-Skripte, je nachdem wo Sie Ihre Vorverarbeitung und Analysen gemacht haben
+
 <!-- library(renderthis) -->
-<!-- to_pdf("WissArb_11_OpenData.Rmd", complex_slides = TRUE) -->
+<!-- to_pdf("WissArb_11_Feedback_OpenData_OpenCode.Rmd", complex_slides = TRUE) -->
+

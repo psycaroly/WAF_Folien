@@ -1,9 +1,9 @@
 ---
 title: "Einheit 2"
 subtitle: "⚔<br/>with xaringan"
-author: "Dr. Caroline Zygar-Hoffmann"
+author: "Prof. Dr. Caroline Zygar-Hoffmann"
 institute: "RStudio, PBC"
-date: "2024/10/16 (updated: `r Sys.Date()`)"
+date: "2025/04/15 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -57,8 +57,8 @@ class: middle, left
 <br><br><br><br><br><br><br>
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
-### Einheit 2: Forschungsfrage, Literatur und Studienorganisation
-##### 22.10.2024 | Dr. Caroline Zygar-Hoffmann
+### Einheit 2: Forschungsfrage, Literatur, formr Einstieg und Studienorganisation
+##### 15.04.2025 | Prof. Dr. Caroline Zygar-Hoffmann
 
 ---
 class: top, left
@@ -66,15 +66,13 @@ name: content
 
 ### Heutige Themen
 
-#### [Entwicklung einer Fragestellung](#fragestellung)
+#### [Entwicklung einer Forschungsfrage](#fragestellung)
 
 #### [Literaturrecherche](#lit-start)
 
-#### [Zitation](#zit-start)
+#### [formr als Umfragetool](#formr)
 
 #### [Studienorganisation](#orga)
-
-#### [formr als Umfragetool](#formr)
 
 #### [Take-Aways und Literaturempfehlung](#take-away)
 
@@ -85,7 +83,7 @@ class: top, left
 name: fragestellung
 <div class="footer"><span>Kapitel 5.1 in Döring, N. & Bortz, J. (2016). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften. Pearson. </span></div>
 
-### Entwicklung einer Fragestellung
+### Entwicklung einer Forschungsfrage
 
 #### Recap von letzter Sitzung
 
@@ -109,18 +107,18 @@ Ihre Praxisaufgabe war folgende Frage zu beantworten:
 class: top, left
 name: forschungsprozess-prereg
 
-### Entwicklung einer Fragestellung
+### Entwicklung einer Forschungsfrage
 
-#### Fragestellung im Forschungsprozess
+#### Forschungsfrage im Forschungsprozess
 
 .pull-left[
 **Was gehört zur Studienplanung?**
 
-1. Theoriearbeit und Literaturrecherche $\rightarrow$ heutige und nächste Sitzung, I1 & I2 in Präregistrierung
+1. Theoriearbeit und Forschungsfrage $\rightarrow$ heutige und nächste Sitzung, I1 & I2 in Präregistrierung
 
 2. Hypothesen $\rightarrow$ nächste Sitzung, I3 & I4
 
-3. Design Plan (Studiendesign) $\rightarrow$ nächste Sitzung, M6, M10, M11, M14 & M15 
+3. Studiendesign $\rightarrow$ nächste Sitzung, M6, M10, M11, M14 & M15 
 
 4. Operationalisierung (Auswahl Messinstrumente)  $\rightarrow$ Einheit 4, M12, M13, AP3 & AP4
 
@@ -134,14 +132,14 @@ name: forschungsprozess-prereg
 knitr::include_graphics("bilder/Forschungsprozess_Prereg.png")
 ```
 
-$\rightarrow$ Wir werfen jetzt mal einen kurzen Blick in die [Präregistrierungsvorlage](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_33416_download.html)
+$\rightarrow$ Wir werfen jetzt mal einen kurzen Blick in die [Präregistrierungsvorlage](https://docs.google.com/document/d/1iPSaC8tiMIYVvnC9EeM1gUMgA1AWOaQ0tHBuoPn8h3c)
 ]
 
 ---
 class: top, left
 <div class="footer"><span>Kapitel 5.1 in Döring, N. & Bortz, J. (2016). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften. Pearson. </span></div>
 
-### Entwicklung einer Fragestellung
+### Entwicklung einer Forschungsfrage
 
 #### Wichtige Aspekte
 
@@ -155,15 +153,15 @@ class: top, left
 
 **Vorsicht: Forschungsfrage nicht zu allgemein formulieren!**
 
-$\rightarrow$ siehe den Abschnitt "Bewertung von Forschungsfragen" im [Zusatzmaterial Z2 auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=33551) 
+$\rightarrow$ siehe den Abschnitt "Bewertung von Forschungsfragen" im [Zusatzmaterial Z2 auf studynet](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_40717_download.html) 
 
 ---
 class: top, left
 <div class="footer"><span>Kapitel 5.1 in Döring, N. & Bortz, J. (2016). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften. Pearson. </span></div>
 
-### Entwicklung einer Fragestellung
+### Entwicklung einer Forschungsfrage
 
-#### Beispiel (hier "Forschungsproblem" statt "Fragestellung"):
+#### Beispiel (hier "Forschungsproblem" statt "Forschungsfrage" genannt):
 
 ```{r eval = TRUE, echo = F, fig.align='center'}
 knitr::include_graphics("bilder/forschungsfrage.png")
@@ -172,17 +170,17 @@ knitr::include_graphics("bilder/forschungsfrage.png")
 ---
 class: top, left
 
-### Entwicklung einer Fragestellung
+### Entwicklung einer Forschungsfrage
 
 #### Beispiel Interventionsthema
 
-* **Inhaltliche Eingrenzung des Gegenstands**: Zielgruppe steht zwar fest (Personen in Partnerschaften), aber weitere Effekte (ggf. Zeiträume) für eigene Forschungsfrage noch zu klären
+* **Inhaltliche Eingrenzung des Gegenstands**: Zielgruppe steht zwar fest (Personen in Partnerschaften), aber weitere Effekte (ggf. Zeiträume) sind für eigene Forschungsfrage noch zu klären
 
-* **Bezug zum empirischen Forschungsstand**: Empirischer Forschungsstand zu Interventionen in Beziehungen und zur AV muss recherchiert werden (z.B. mit den Suchbegriffen "psychological effects of reflection", "disclosure effects", "communication effects couples", "relationship interventions", "couples ecological momentary intervention", "[AV] intervention", "[AV] psychological effects", ...) und Identifikation einer Forschungslücke oder Replikation
+* **Bezug zum empirischen Forschungsstand**: Empirischer Forschungsstand z.B. zu Interventionen in Beziehungen oder zu möglichen abhängigen Variablen muss recherchiert werden (z.B. mit den Suchbegriffen "psychological effects of reflection", "disclosure effects", "communication effects couples", "relationship interventions", "couples ecological momentary intervention", "[AV] intervention", "[AV] psychological effects", ...) $\rightarrow$ Identifikation einer Forschungslücke oder Replikation
 
-* **Wahl der Theorie(n)**: Von mir gab es im Informations-PDF für die Interventionsgruppen eine kurze Info zu einer Theorie. Darüber hinaus kann man recherchieren: Gibt es Theorien wie die AV in Beziehungen entsteht, oder wie die eingesetzten Interventionen grundsätzlich wirken? 
+* **Wahl der Theorie(n)**: Von mir gibt es nach Anmeldung des Themas ein Informations-PDF für die Interventionsgruppen mit einer kurzen Info zu einer Theorie. Darüber hinaus kann man recherchieren: Gibt es Theorien wie die Variable für die man sich interessiert in Partnerschaften entsteht, oder wie die eingesetzten Interventionen grundsätzlich wirken? 
 
-* **Wahl der Methode(n)**: Design weitestgehend festgelegt: Experiment mit Interventions- vs. Kontrollgruppe (between-person Vergleich), damit grenzt sich das Design von korrelativen Studien ab; Datenauswertung hängt von der eigenen Forschungsfrage + Hypothese ab 
+* **Wahl der Methode(n)**: Design weitestgehend festgelegt: Experiment mit Interventions- vs. Kontrollgruppe (between-person Vergleich), wenn sich die Forschungsfrage auf diesen Aspekt des Interventionsthemas bezieht, dann grenzt sich das Design von korrelativen Studien ab
 
 ---
 class: top, left
@@ -194,17 +192,17 @@ name: lit-start
 
 * Suche und Entwicklung eines geeigneten Themas und einer geeigneten Fragestellung
 
-* Erste Orientierung über aktuellen Forschungsstand
+* Erste Orientierung über aktuellen Forschungsstand (auch über relevante Theorien und Modelle)
 
-* Theoretische Einbettung der Fragestellung (also: Wie kommt diese Fragestellung zustande, z.B. welche Konstrukte hängen theoretisch wie zusammen? Warum ist sie relevant?)
+* **Im Bericht: Kernaspekte eigener Forschungsfrage theoretisch unterfüttern** (also: Wie kommt diese Fragestellung zustande, z.B. welche Konstrukte hängen theoretisch wie zusammen? Warum liegt die Fragestellung nahe, warum ist sie relevant?)
 
 * **Im Bericht: Jede Behauptung muss mit einer entsprechenden Quelle belegt werden.**
   * Wichtig: Verschiedene Quellen und damit verschiedene Ansichten einbeziehen. 
   * Grober Richtwerk: Pro Absatz mindestens eine Quelle (je nachdem was Sie schreiben, kann das aber auch zu wenig sein)
 
-* Formulierung konkreter Hypothesen anhand der Recherche (siehe Einheit 3)
+* Formulierung konkreter Hypothesen anhand der Recherche (siehe nächste Einheit)
 
-* **Im Bericht**: Diskussion der Befunde (Stimmen meine Befunde mit der Theorie/ vorherige Befunde überein? Gab es Ergebnisse, mit denen ich nicht gerechnet habe? Warum könnte das so sein?)
+* **Im Bericht**: Diskussion der Befunde (Stimmen meine Befunde mit der Theorie/ vorherigen Befunde überein? Gab es Ergebnisse, mit denen ich nicht gerechnet habe? Warum könnte das so sein?)
 
 ---
 class: top, left
@@ -215,27 +213,6 @@ class: top, left
  
 https://matt.might.net/articles/phd-school-in-pictures/#print
 
----
-class: top, left
-
-### Literaturrecherche
-
-#### Warum Literaturrecherche?
-
-* Überblick verschaffen über derzeitigen Wissensstand im Feld
-
-* Informationen über gesellschaftliche Relevanz der Fragestellung
-
-* Relevante Theorien und Modelle recherchieren
-
-* Kernaspekte eigener Fragestellung theoretisch unterfüttern (Warum liegt die Fragestellung nahe?)
-
-Digitale Literaturrecherche:
-  * Google Scholar
-  * Datenbankrecherche: https://dbis.ur.de/dbinfo/dbliste.php?bib_id=eff&colors=7&ocolors=40&lett=f&gebiete=22
-  * Lokale Bibliotheksrecherche: https://library.hs-fresenius.de/discovery/search?vid=49FHF_INST:49FHF
-  * ...
-  
 ---
 class: top, left
 <div class="footer"><span>Kapitel 1.2 und 16 in Döring, N. & Bortz, J. (2016). Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften. Pearson. </span></div>
@@ -253,6 +230,8 @@ class: top, left
 * **Review**: fasst den aktuellen Forschungsstand in einem Gebiet zusammen, indem die einschlägige Literatur recherchiert, strukturiert vorstellt und bewertet wird
 
 * **Meta-Analyse**: aggregiert Ergebnisse mehrerer früherer quantitativer Studien statistisch zu einem Gesamteffekt
+
+**Wichtig:** Es muss keine Literatur geben, die genau dieselbe Forschungsfrage untersucht hat wie die die Sie untersuchen wollen $\rightarrow$ es ist sogar gut, wenn es die nicht gibt, denn dann hat man eine echte Forschungslücke!
 
 ---
 class: top, left
@@ -284,11 +263,11 @@ class: top, left
 
 #### Literaturarten und Umgang mit ihnen 
 
-**Zitierwürdigkeit (aus wissenschaftlicher Sicht, d.h. zum Belegen von Aussagen; bitte beachten Sie unbedingt auch das Alter der Quellen!)**
+**Zitierwürdigkeit (aus wissenschaftlicher Sicht, d.h. zum Belegen von Aussagen)**
 
 .pull-left[
 **Zitierwürdig:**
-* **Primärliteratur**: begutachtete (*peer-reviewed*) Artikel in Fachzeitschriften (Journals; gedruckt oder digital)
+* **Primärliteratur**: begutachtete (*peer-reviewed*) Artikel in Fachzeitschriften (Journals; gedruckt oder digital; möglichst nicht zu alt)
 * **Wissenschaftliche Fachbücher** (aber nicht ausschließlich)
   - Monographien: Ein Autor
   - Herausgeberwerker: Mehrere Autoren
@@ -317,7 +296,6 @@ class: top, left
 
 #### Literaturarten und Umgang mit ihnen 
 
-.pull-left[
 **Woran erkenne ich einen wissenschaftlichen Artikel / eine Meta-Analyse / ein Review?**
 
 * In einer Fachzeitschrift ("Journal") publiziert (ob die Zeitschrift peer-reviewed ist muss eigentlich separat geprüft werden)
@@ -331,6 +309,20 @@ class: top, left
 * Meta-Analysen und Reviews kennzeichnen dies fast immer im Titel
 
 * Literaturverzeichnis
+
+
+
+---
+class: top, left
+
+### Literaturrecherche
+
+#### Literaturarten und Umgang mit ihnen 
+
+.pull-left[
+```{r eval = TRUE, echo = F, out.width="65%", fig.align='center'}
+knitr::include_graphics("bilder/psychosoph-paper.png")
+```
 ]
 
 .pull-right[
@@ -361,12 +353,28 @@ knitr::include_graphics("bilder/scholar.png")
 
 [**Anna's Archive**](https://annas-archive.org): https://annas-archive.org
 
-$\rightarrow$ siehe den Abschnitt "Literaturrecherche" im [Zusatzmaterial Z2 auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=33551)  für weitere Informationen, vor allem auch Recherche in wissenschaftlichen Datenbanken!!
+$\rightarrow$ siehe den Abschnitt "Literaturrecherche" im [Zusatzmaterial Z2 auf studynet](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_40717_download.html)  für weitere Informationen, vor allem auch Recherche in wissenschaftlichen Datenbanken!!
 
 **Sie müssen für die Literaturrecherche kein Geld ausgeben!**
 
 ]
 
+---
+class: top, left
+### Literaturrecherche
+
+#### Recherchesysteme
+
+Links zu weiteren Möglichkeiten:
+
+  * Lokale Bibliotheksrecherche: https://library.hs-fresenius.de/discovery/search?vid=49FHF_INST:49FHF
+  
+  * Datenbankrecherche: https://dbis.ur.de/dbinfo/dbliste.php?bib_id=eff&colors=7&ocolors=40&lett=f&gebiete=22
+
+  * LibKey Nomad: von der CFH bis Ende Mai zur Verfügung gestellte Browsererweiterung für Chrome, Microsoft Edge, Safari und Firefox, die Sie direkt mit den Volltexten von beliebten Verlags- und wissenschaftlichen Webseiten im offenen Web verbinden kann. Mit der Installation und Aktivierung dieses AddOn in Ihrem Browser wird Ihnen ein einfacher Download von lizenzierten eRessourcen ermöglicht. $\rightarrow$ siehe Zusatzmaterial ["Anleitung Libkey" auf studynet](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_41552_download.html)
+  
+Auf studynet finden Sie auch eine kurze Einführung in das Universum Bibliothek, siehe Zusatzmaterial ["Einführung Bibliothek" auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=41555).
+  
 ---
 class: top, left
 ### Literaturrecherche
@@ -392,246 +400,9 @@ knitr::include_graphics("bilder/prereg_template_forschungsfrage.png")
 ```
 ]
 
-$\rightarrow$ I1 weniger wichtig als I2: Literatur kann später nach der Präregistrierung noch ergänzt werden (Literaturrecherche beginnt jetzt und wird erst zum Ende der Vorlesung beendet werden, wenn die Präregistrierung schon längst fertig abgeschickt ist)
+$\rightarrow$ I1 weniger wichtig als I2: **Literatur kann später nach der Präregistrierung noch ergänzt werden** (Literaturrecherche beginnt jetzt und wird erst zum Ende der Vorlesung beendet werden, wenn die Präregistrierung schon längst fertig abgeschickt ist)
 
 $\rightarrow$ Ausblick für das Ende der heutigen Sitzung: Das ist eine Praxisaufgabe zur Bearbeitung bis nächste Woche!
----
-class: top, left
-name: zit-start
-
-### Quellen & Referenzen
-
-#### Zitieren
-
-**Was ist Zitieren?**
-
-* Sinngemäße oder wörtliche Wiedergabe von sachlicher Information oder Meinung eines anderen.
-
-**Ziele und Funktionen vom Zitieren**
-* Beweisfunktion (wissenschaftliche Belegung Ihrer Behauptungen)
-* Abgrenzung von eigenen Gedankengängen, Überlegungen und Annahmen
-* Gibt Ihren Aussagen mehr Gewicht
-* Sicherung geistigen Eigentums
-
-**Ziele und Funktionen von Quellenangaben**
-* Eindeutige Identifikation der zitierten Werke gewährt Auffindbarkeit
-* Lückenlose Auflistung aller verwendeten Quellen
-* 1:1 Verhältnis zwischen zitierten Quellen und Literaturverzeichnis!
-
----
-class: top, left
-
-### Quellen & Referenzen
-
-#### Plagiat
-
-**Was ist ein Plagiat?**
-* die bewusste Aneignung fremden Geistesgutes ohne dies kenntlich zu machen
-
-**Arten von Plagiaten**
-
-* Übernehmen von Informationen ohne Nennung der Quelle
-* Ein direktes Zitat wird (leicht verändert) als indirektes ausgegeben
-* Verschleierungstaktiken (z.B. Paraphrasieren ohne Quellenangabe)
-* Übersetzung fremdsprachlicher Arbeiten, die als eigene ausgegeben werden
-
-Wichtig!
-Zitate (direkte und indirekte), die in einer Arbeit nicht oder falsch gekennzeichnet werden, gelten als Plagiat! Die Arbeit wird als „nicht bestanden“ (5,0) gewertet!
-
----
-class: top, left
-
-### Quellen & Referenzen
-
-#### Verwendung von KI / ChatGPT
-
-.pull-left[
-**... im Bericht:**
-
-siehe Handreichung der CFH:
-
-```{r eval = TRUE, echo = F}
-knitr::include_graphics("bilder/chatgpt1.PNG")
-```
-
-]
-
-.pull-right[
-**... für die Analysen:**
-
-Zur **Hilfe** bei der Erstellung von R-Code können Sie ChatGPT gerne einsetzen (und das im R-Code entsprechend kennzeichnen). Wichtig ist, dass der Code auch wirklich tut was er soll, und dafür müssen Sie den Code verstehen. Auch den grundsätzlichen Umgang mit R kann Ihnen ChatGPT nicht abnehmen, d.h. verlassen Sie sich nicht drauf, dass es "notfalls ChatGPT macht". Es ist NUR eine Hilfestellung! 
-
-Sie werden im Studium immer wieder mit R arbeiten, d.h. es ist wirklich wichtig, dass Sie sich R als Kompetenz aneignen. Und es ist vermutlich einfacher sich den Umgang von einem Menschen (Stephan Goerigk oder mir) erklären zu lassen als von ChatGPT, also nutzen Sie es, dass Sie es bei/mit uns lernen können.
-]
-
----
-class: top, left
-
-### Quellen & Referenzen
-
-#### Verwendung von KI / ChatGPT
-
-.center[
-
-```{r eval = TRUE, echo = F}
-knitr::include_graphics("bilder/chatgpt2.PNG")
-```
-]
-
----
-class: top, left
-
-### Quellen & Referenzen
-
-#### Verwendung von KI / ChatGPT
-
-.center[
-```{r eval = TRUE, echo = F}
-knitr::include_graphics("bilder/chatgpt3.PNG")
-knitr::include_graphics("bilder/chatgpt4.PNG")
-```
-]
-
----
-class: top, left
-
-### Quellen & Referenzen
-
-#### Zitationssysteme
-
-In Ihrem Studium ist die in der Psychologie übliche Zitierweise der Deutschen Gesellschaft für Psychologie (DGPs) und der American Psychological Association (APA) verpflichtend:
-
-.center[
-```{r eval = TRUE, echo = F, out.width = "15%"}
-knitr::include_graphics("bilder/apa7.jpg")
-```
-]
-
-.small[
-Zum vollständigen APA-Style guide: https://apastyle.apa.org
-
-Zum kostenfreien Nachlesen vom APA-Style guide der Purdue University: https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/in_text_citations_author_authors.html
-
-$\rightarrow$ siehe den Abschnitt "Quellen & Referenzen" im [Zusatzmaterial Z2 auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=33551) für Zitationsregeln!]
-
----
-class: top, left
-### Quellen & Referenzen
-
-#### Beispiel für indirekte Zitate
-
-**Textausschnitt:**
-
-Im Alltag müssen wir oft überprüfen, ob beispielsweise ein bestimmtes Objekt einer bestimmten Gruppe zugeordnet werden kann **(Daschmann, 2001)**. Um dieses Urteil fällen zu können, vergleichen wir das Objekt mit dem Prototyp einer Kategorie, mit welchem es die meiste Ähnlichkeit aufweist. Andere validere Informationen werden dabei vernachlässigt **(Werth & Mayer, 2008)**. Dadurch kann es zu Fehlurteilen kommen. Hierzu gehören, dass die summarische Realitätsbeschreibung ignoriert wird, Stichprobengrößen nicht zur Kenntnis genommen und Zufallsverteilungen falsch eingeschätzt werden **(Daschmann, 2001)**. **Kahneman und Tversky (1973)** konnten diese Phänomene nachweisen, während die Studie von **Müller et al. (1980)** gegenteilige Ergebnisse zeigte.
-
-<br>
-
-Beachten Sie, wie sich die Zitationsweise je nach Kontext im Detail unterscheidet! 
-
-Um zu verstehen wieso $\rightarrow$  [Zusatzmaterial Z2 auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=27540) anschauen.
-
----
-class: top, left
-### Quellen & Referenzen
-
-#### Beispiel für Eintrag im Literaturverzeichnis
-
-.center[
-```{r eval = TRUE, echo = F, out.width = "800px"}
-knitr::include_graphics("bilder/lit4.png")
-```
-]
-
----
-class: top, left
-### Quellen & Referenzen
-
-#### Bewertungsschema
-
-.center[
-```{r eval = TRUE, echo = F}
-knitr::include_graphics("bilder/bewertung_zitate.png")
-```
-]
-
-$\rightarrow$ wird 2x bewertet: bei Gruppenarbeit und bei Einzelleistung!
-
-$\rightarrow$ vorletztes Jahr nur sehr wenige Gruppen mit voller Punktzahl -- das ist schade, denn das sind klassische "Fleißpunkte", wo man nur nachschauen muss, wie es geht
-
-$\rightarrow$ daher unbedingt den Abschnitt "Quellen & Referenzen" im [Zusatzmaterial Z2 auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=33551) anschauen!!
-
-
----
-class: top, left
-name: orga
-
-### Studienorganisation
-
-####  Ordnerstruktur
-
-.pull-left[
-**Ziel einer guten Ordnerstruktur**: Sie können den Ordner mit allen Unterordnern kopieren, jemandem zukommen lassen, und diese Person versteht was gemacht wurde und wie die Analysen wiederholt werden können
-
-**Englische Ordnernamen bevorzugt**, um breitere Verständlichkeit zu gewährleisten
-
-**Readme-Textdatei** auf dem obersten Level empfohlen, um alles Nicht-Selbsterklärendes zu erklären
-
-$\rightarrow$ Aktuell ist nur der Ordner "literature" relevant. Wir werden später wenn es um die Auswertung geht Sinn & Zweck der anderen Ordner besprechen
-
-]
-
-.pull-right[
-```{r eval = TRUE, echo = F, fig.cap = "Vorschlag für eine gute Ordnerstruktur"}
-knitr::include_graphics("bilder/ordnerstruktur.png")
-```
-]
-
----
-class: top, left
-
-### Studienorganisation
-
-####  Ordnerstruktur
-
-* Es wäre praktisch, wenn Sie sich in der Kleingruppe nicht ständig Ordner oder Dateien hin und her schicken müssen, daher macht es Sinn, die Ordnerstruktur in einer geteilten Umgebung ("Cloud") anzulegen, in der alle Personen der Kleingruppe Zugriff haben und immer die neueste Version der Dateien liegt (**aber Achtung: Rohdaten sollten nicht einfach irgendwo im Internet hochgeladen werden, sondern erst wenn Sie gemäß der Datenschutzrichtlinien bearbeitet worden sind (z.B. bei uns: Pseudonym gelöscht)**)
-
-* Idealerweise gibt es eine automatische Synchronisation zwischen der Cloud und lokalen Ordnern (dann muss man nichts manuell hochladen/runterladen) $\rightarrow$ ich habe im letzten Semester mitbekommen, dass Sie OneDrive als System nutzen können (?)
-
-
----
-class: top, left
-<div class="footer"><span>https://www.robertoferraro.net/illustrations</span></div>
-
-### Studienorganisation
-
-#### Zusammenarbeit in Gruppen
-
-.center[
-```{r eval = TRUE, echo = F, out.width = "40%"}
-knitr::include_graphics("bilder/group.png")
-```
-]
-
----
-class: top, left
-
-### Studienorganisation
-
-#### Zusammenarbeit in Gruppen
-
-Neben den Vorteilen, gibt es aber auch häufige Probleme:
-
-* **Kommunikationsprobleme und Missverständnisse** $\rightarrow$ klare Kommunikationskanäle und Erwartungen diesbezüglich festlegen
-
-* **Ungleichgewicht der Arbeitslast** $\rightarrow$ klare Rollenverteilung, gemeinsame Zielsetzung, verbindliche Deadlines
-
-* **Mangelnde/Ineffektive Zusammenarbeit und Koordination** $\rightarrow$ regelmäßige Treffen/Austausch, regelmäßige Fortschrittsabfrage (Praxisaufgaben sind so angelegt, dass sie bis zur nächsten Vorlesung bearbeitet werden!), gemeinsame Arbeitsplattform (z.B. gemeinsame Ordner)
-
-* **Qualitätsunterschiede bei der Beitragserstellung** $\rightarrow$ konstruktives Feedback, bei Unstimmigkeiten eine dritte Person konsultieren (z.B. weitere Gruppenmitglieder, einen Dozenten) 
-
-$\rightarrow$ Ich kann bei Gruppenproblemen konsultiert werden; nicht erst eine Woche vor Abgabe bemängeln, dass es nicht läuft
-
-**Starke Empfehlung:** Erstellen Sie einen gemeinsam aufgesetzten (nicht-juristischen) "Gruppenarbeits-Vertrag", unterschreiben Sie ihn alle, und optional können Sie diesen auch bei mir persönlich oder digital im studynet abgeben, um Verbindlichkeit zu schaffen
 
 ---
 class: top, left
@@ -647,7 +418,7 @@ name: formr
 
 * Beispiel für einen Run:
   * Survey 1: Einleitende Fragen
-  * Survey 2: Pro Bedingung ein anderes Video
+  * Survey 2: Pro Bedingung eine andere Aufgabe
   * Survey 3: Abschließende Fragebögen
 
 $\rightarrow$ **Es ist ok, wenn der Run auch nur aus einem Survey besteht! Je nach Komplexität Ihrer Studie völlig ausreichend. Es braucht aber immer einen Run.**
@@ -686,6 +457,90 @@ Aufgabe/Frage                                                                   
 Wie lade ich ein Survey auf formr hoch?                                                 | **Nach dem Einloggen**: *Surveys (oben) -> Create new survey -> links: Upload an item table -> Choose file (Excel-Datei) -> Upload*
 Wie schaue ich mir an, wie das Survey später im Browser aussieht? ("das Survey testen") | **Grundsätzlich**: *Surveys (oben) -> View all -> eigenes Survey aus der Liste raussuchen und anklicken (dafür muss man den Namen des eigenen Surveys kennen!) -> "Test survey" (links)*  <br> <br> **Fortgeschrittener Modus**: Wenn man im Test der Umfrage ist und unten auf "Monkey Mode" klickt, füllt formr die Antworten auf einer Seite testhalber für einen aus, und man gelangt automatisch zur nächsten Seite (spart einem das Anklicken aller Antworten um weiter zu kommen)
 
+
+---
+class: top, left
+name: orga
+
+### Studienorganisation
+
+####  Ordnerstruktur
+
+.pull-left[
+**Ziel einer guten Ordnerstruktur**: Sie können den Ordner mit allen Unterordnern kopieren, jemandem zukommen lassen, und diese Person versteht was gemacht wurde und wie die Analysen wiederholt werden können
+
+**Englische Ordnernamen bevorzugt**, um breitere Verständlichkeit zu gewährleisten
+
+**Readme-Textdatei** auf dem obersten Level empfohlen, um alles Nicht-Selbsterklärendes zu erklären
+
+$\rightarrow$ Aktuell ist nur der Ordner "literature" relevant. Wir werden später wenn es um die Auswertung geht Sinn & Zweck der anderen Ordner besprechen
+
+]
+
+.pull-right[
+```{r eval = TRUE, echo = F, fig.cap = "Vorschlag für eine gute Ordnerstruktur"}
+knitr::include_graphics("bilder/ordnerstruktur.png")
+```
+]
+
+---
+class: top, left
+
+### Studienorganisation
+
+####  Ordnerstruktur
+
+* Es wäre praktisch, wenn Sie sich in der Kleingruppe nicht ständig Ordner oder Dateien hin und her schicken müssen, daher macht es Sinn, die Ordnerstruktur in einer geteilten Umgebung ("Cloud") anzulegen, in der alle Personen der Kleingruppe Zugriff haben und immer die neueste Version der Dateien liegt 
+
+* **aber Achtung: Rohdaten sollten nicht einfach irgendwo im Internet hochgeladen werden, sondern erst wenn Sie gemäß der Datenschutzrichtlinien bearbeitet worden sind (z.B. bei uns: Pseudonym gelöscht)**
+
+* Idealerweise gibt es eine automatische Synchronisation zwischen der Cloud und lokalen Ordnern (dann muss man nichts manuell hochladen/runterladen), z.B. mit OneDrive
+
+
+---
+class: top, left
+<div class="footer"><span>https://www.robertoferraro.net/illustrations</span></div>
+
+### Studienorganisation
+
+#### Zusammenarbeit in Gruppen
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "40%"}
+knitr::include_graphics("bilder/group.png")
+```
+]
+
+---
+class: top, left
+
+### Studienorganisation
+
+#### Zusammenarbeit in Gruppen
+
+Neben den Vorteilen, gibt es aber auch häufige Probleme:
+
+| Problem                                         | Generelle Lösung                                                                                                                              | Beispiel für spezifische Lösung                                                                                                                                                                                                                                                                                            |
+|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Kommunikationsprobleme und Missverständnisse** | Klare Kommunikationskanäle und Erwartungen festlegen                                                                                          | Gruppe in einem Messenger anlegen, den alle nutzen <br>  Gemeinsame E-Mailadresse, die immer in cc ist? Wird in der Gruppenanmeldung als optional erfragt.                                                                                                                                                                                                                            |
+| **Ungleichgewicht der Arbeitslast**             | Klare Rollenverteilung, gemeinsame Zielsetzung, verbindliche Deadlines                                                                        | Option: Erstellen Sie einen gemeinsam aufgesetzten (nicht-juristischen) "Gruppenarbeits-Vertrag", unterschreiben Sie ihn alle, und nach Wunsch können Sie diesen auch bei mir persönlich oder [digital im studynet abgeben](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmdNode=zx:tb&cmdClass=ilObjTestGUI&cmd=infoScreen&ref_id=40710&ref_id=40710). |
+
+---
+class: top, left
+
+### Studienorganisation
+
+#### Zusammenarbeit in Gruppen
+
+Neben den Vorteilen, gibt es aber auch häufige Probleme:
+
+| Problem                                                    | Generelle Lösung                                                                                      | Beispiel für spezifische Lösung                                                                                                                                                           |
+|------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Mangelnde/Ineffektive Zusammenarbeit und Koordination**  | Regelmäßige Treffen/Austausch, regelmäßige Fortschrittsabfrage, gemeinsame Arbeitsplattform            | Praxisaufgaben sind so angelegt, dass sie bis zur nächsten Vorlesung bearbeitet werden: Wer hat in welcher Woche den Hut auf für die Koordination der Praxisaufgabe? <br> Nutzung von OneDrive zur Synchronisation von Dateien. |
+| **Qualitätsunterschiede bei der Beitragserstellung**       | Konstruktives Feedback, bei Unstimmigkeiten eine dritte Person konsultieren                             | Andere Gruppenmitglieder oder einen Dozent zur Vermittlung hinzuziehen                                                                                          
+
+$\rightarrow$ Ich kann bei Gruppenproblemen konsultiert werden; aber bitte nicht erst eine Woche vor Abgabe bemängeln, dass es nicht läuft
+
 ---
 class: top, left
 name: take-away
@@ -695,13 +550,14 @@ name: take-away
 .full-width[.content-box-gray[
 * Die Entwicklung einer Forschungs**frage** ist der wichtige erste Schritt im Forschungsprozess, und unterscheidet sich von konkreten spezifischen Hypothesen. Sie dreht sich um eine **Forschungslücke** oder eine **Replikation**. 
 
-* wissenschaftlich relevante Literatur ist in der Regel **peer-reviewed**
+* Wissenschaftlich relevante Literatur ist in der Regel **peer-reviewed**
 
-* Im Bericht müssen alle Behauptungen konsequent **durch Quellen belegt** werden und alle im Haupttext genannten Quellen müssen im **Literaturverzeichnis** vorkommen - bei beiden Aspekten ist bestimmten **Formatierungsregeln** zu folgen
+* Im Bericht müssen alle Behauptungen konsequent **durch Quellen belegt** werden
+
+* **formr** ist ein Umfragetool bei dem es zwingend immer einen sognannten **Run** gibt, und bei dem die Umfragen-Details über eine **Excel-Datei** bestimmt werden (= ein Survey). Man kann mehrere Surveys zu einem Run zusammenstellen, ein Run kann aber auch nur aus einem Survey bestehen.
 
 * Absprachen und Schaffen von gemeinsam akzeptierten Verbindlichkeiten ist wichtig für eine **effektive und zufriedenstellende Gruppenarbeit**
-
-* **formr** ist ein Umfragetool bei dem es zwingend immer einen sognannten **Run** gibt, und bei dem die Umfragen-Details über eine **Excel-Datei** bestimmt werden (= ein Survey). Man kann mehrere Surveys zu einem Run zusammenstellen, ein Run kann aber auch nur aus einem Survey bestehen.]
+]
 ]
 **[zurück zur heutigen Übersicht der Vorlesung $\rightarrow$](#content)** 
 
@@ -721,26 +577,33 @@ name: material
 
 ### Material
 
-* **Bewertungsschema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=32988
+.small[
 
-*	**Strategien Themensuche**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26582
+* **Bewertungsschema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=40709
 
-*	**Checkliste Ethik**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26580
+*	**Strategien Themensuche**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=40717
+
+*	**Checkliste Ethik**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=40715
 
 *	**Google Doc Gruppenfindung**: https://docs.google.com/document/d/1XFIOSoInrrcjd92raPK3sA4vSVKepVvznOqkWKRKG9k/edit
 
-* **Umfrage zur Einreichung Gruppenname und Thema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=26551
+* **Umfrage zur Einreichung Gruppenname und Thema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=40711
 
-* **Zusatzmaterial Z2 Literaturrecherche, Bewertung von Forschungsfragen & Referenzen**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=33551
+* **Bewertung von Forschungsfragen & Literaturrecherche**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=41560
 
-* **Template Präregistrierung**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_33416_download.html
+* **Einführung Bib**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_41555_download.html
 
-* **Template formr eigenes Thema**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_33543_download.html
+* **Anleitung LibKey**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_41552_download.html
+
+* **Template Präregistrierung**: https://docs.google.com/document/d/1iPSaC8tiMIYVvnC9EeM1gUMgA1AWOaQ0tHBuoPn8h3c/
+
+* **Template formr eigenes Thema**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_41556_download.html
+]
 
 ---
 class: top, left
 
-### Praxis: Idee entwickeln & Literaturrecherche & Gruppenorganisation & formr Einstieg
+### Praxis: Idee entwickeln & Literaturrecherche & formr Einstieg & Gruppenorganisation 
 
 **Schritt 1: Führen Sie eine kurze Literaturrecherche durch.** 
 * Gibt es Reviews oder Meta-Analysen zu Ihren Untersuchungsideen? Gibt es aktuelle empirische Studien (d.h. von 2020 oder neuer), die dazu passen?
@@ -756,32 +619,50 @@ class: top, left
 ---
 class: top, left
 
-### Praxis: Idee entwickeln & Literaturrecherche & Gruppenorganisation & formr Einstieg
+### Praxis: Idee entwickeln & Literaturrecherche & formr Einstieg & Gruppenorganisation 
 
-**Schritt 2: Einigen Sie sich auf ein Thema und geben Sie Ihrer Gruppe einen Namen**
-  * Bewerten Sie dafür Ihre Ideen hinsichtlich der gefundenen Literatur und nach den Anforderungen aus Einheit 1 und einigen Sie sich auf ein Thema.
-  * Idealerweise hat Ihr Gruppenname etwas mit Ihrem Thema zu tun
-  * Teilen Sie mir Ihren Gruppennamen und Ihr Thema **bis spätestens (!) 31.10.** über die [Umfrage im studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=32593) mit (eine Umfrage pro Gruppenmitglied).
-  
-**Schritt 3 (kann auch parallel mit Schritt 2 passieren): Strukturieren Sie Ihre Themenidee zu einer Forschungsfrage (kann auch eine Replikation sein).** 
-  * Bewerten Sie  Ihre Forschungsfrage nach wissenschaftlichen und ethischen Kriterien (siehe "Bewertung von Forschungsfragen" im [Zusatzmaterial Z2 auf studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=33551)).
-  * Beginnen Sie damit, das [Präregistrierungstemplate auf studynet](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_27541_download.html) (Abschnitt I1 und I2) mit den Inhalten zu füllen, die zu der Auswahl ihrer Forschungsfrage geführt haben.
-  * Mittelfristig: Intensivieren Sie die Literaturrecherche, um die Forschungsfrage zu schärfen (vgl. auch nächste Sitzung)
+.pull-left[
+**Schritt 2a: Einigen Sie sich auf Thema + Gruppennamen und legen Sie das GoogleDoc mit der Präregistrierung an**
+  * Bewerten Sie dafür Ihre Ideen hinsichtlich der gefundenen Literatur und nach den Anforderungen aus Einheit 1.
+  * Idealerweise hat Ihr Gruppenname etwas mit Ihrem Thema zu tun.
+  * Eine/r macht eine Kopie der [Präregistrierungsvorlage](https://docs.google.com/document/d/1iPSaC8tiMIYVvnC9EeM1gUMgA1AWOaQ0tHBuoPn8h3c/edit?tab=t.0#heading=h.3vcu1lp9loam) über Datei -> Kopie erstellen (nicht strg+c und strg+v, da sonst die Kommentare verloren gehen!), gibt diese für alle Gruppenmitglieder als Bearbeiter frei und stellt ein, dass diejenigen die über den Link verfügen das Dokument betrachten können $\rightarrow$ das ist Ihr Open Lab Book
+]
+
+.pull-right[
+```{r eval = TRUE, echo = F, fig.align='center'}
+knitr::include_graphics("bilder/copy-prereg-template.png")
+```
+]
 
 ---
 class: top, left
 
-### Praxis: Idee entwickeln & Literaturrecherche & Gruppenorganisation & formr Einstieg
+### Praxis: Idee entwickeln & Literaturrecherche & formr Einstieg & Gruppenorganisation 
 
-**Schritt 4: Besprechen Sie zentrale Rahmenbedingungen (vgl. Folie 27) zur Gruppenarbeit**
-  * Empfehlung: Erstellen Sie einen gemeinsam aufgesetzten (nicht-juristischen) "Gruppenarbeits-Vertrag", unterschreiben Sie ihn alle, und optional können Sie diesen auch bei mir persönlich oder digital im studynet abgeben, um Verbindlichkeit zu schaffen
-  * Legen Sie sich eine gemeinsame Ordnerstruktur an (z.B. wie auf Folie 24), die innerhalb der Gruppe synchronisiert ist (z.B. über OneDrive), und legen Sie dort relevante Literatur für Ihr gesammeltes Thema ab
+**Schritt 2b: Melden Sie Ihre Gruppe an**
+  * Teilen Sie mir Ihren Gruppennamen, Ihr Thema und Ihr GoogleDoc **bis spätestens (!) 20.04.** über die [Umfrage im studynet](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilobjsurveygui&cmd=infoScreen&ref_id=40711) mit (es reicht wenn eine Person aus der Gruppe die Anmeldung für alle ausfüllt).
+  
+**Schritt 3 (kann auch parallel mit Schritt 2 passieren): Strukturieren Sie Ihre Themenidee zu einer Forschungsfrage (kann auch eine Replikation sein).** 
+  * Bewerten Sie  Ihre Forschungsfrage nach wissenschaftlichen und ethischen Kriterien (siehe "Bewertung von Forschungsfragen" im [Zusatzmaterial Z2 auf studynet](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_40717_download.html)).
+  * Beginnen Sie damit, Abschnitt I1 und I2 der Präregistrierung mit den Inhalten zu füllen, die zu der Auswahl ihrer Forschungsfrage geführt haben.
+  * Mittelfristig: Intensivieren Sie die Literaturrecherche, um die Forschungsfrage zu schärfen (vgl. auch nächste Sitzung)
 
-**Schritt 5: formr Einstieg (jeder, d.h. jedes Gruppenmitglied!)**
-  * Laden Sie sich die [formr Vorlage für eigene Themen](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_33543_download.html) von studynet herunter (auch wenn Sie das Interventionsthema gewählt haben, es geht erstmal nur ums Testen)
+  
+---
+class: top, left
+
+### Praxis: Idee entwickeln & Literaturrecherche & formr Einstieg & Gruppenorganisation 
+
+**Schritt 4: formr Einstieg (jeder, d.h. jedes Gruppenmitglied!)**
+  * Laden Sie sich die [formr Vorlage für eigene Themen](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_41556_download.html) von studynet herunter (auch wenn Sie das Interventionsthema gewählt haben, es geht erstmal nur ums Testen)
   * Benennen Sie die Datei um, so dass der Dateiname nicht mehr "formr_template_eigenesThema" ist, sondern aus Ihrem Vornamen und dem ersten Buchstaben von Ihrem Nachnamen besteht, z.B. "CarolineZ"
-  * Laden Sie das nach Ihnen benannte Survey in workshops.formr.org hoch
+  * Laden Sie das nach Ihnen benannte Survey in https://workshops.formr.org hoch
   * Testen Sie das Survey, d.h. schauen Sie es sich im Browser an
+  
+**Schritt 5: Besprechen Sie zentrale Rahmenbedingungen (vgl. Folie 25f) zur Gruppenarbeit**
+  * Empfehlung: Erstellen Sie einen gemeinsam aufgesetzten (nicht-juristischen) "Gruppenarbeits-Vertrag", unterschreiben Sie ihn alle, und optional können Sie diesen auch bei mir persönlich oder digital im studynet abgeben, um Verbindlichkeit zu schaffen
+  * Legen Sie sich eine gemeinsame Ordnerstruktur an (z.B. wie auf Folie 22), die innerhalb der Gruppe synchronisiert ist (z.B. über OneDrive), und legen Sie dort relevante Literatur für Ihr gesammeltes Thema ab
+
   
   
 <!-- * Kristallisieren Sie einen konkreten Untersuchungsvorschlag heraus  -->

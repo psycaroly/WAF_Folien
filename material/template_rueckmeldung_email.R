@@ -4,27 +4,26 @@ load(file = "report.RData")
 
 for (i in 1:nrow(report)){
   if (is.na(report$report_mail[i]) == TRUE) {
-    report.file <- paste0("report.", report$pID[i], ".html")
+    report.file <- paste0("report.", report$pseudonym[i], ".html")
   report.recipients <- report$email[i]
-send.mail(from = "caroline.zygar@psy.lmu.de",
+send.mail(from = "INSERT EMAILADDRESS, e.g. email@gmail.com",
           to = report.recipients,
-          bcc = "caro_zyg@gmx.de",
-          subject = "Paarstudie: Rückmeldung",
+          subject = "XXX Studie: Rückmeldung",
           attach.files = report.file,
           body = paste0("<html><p style='font-family:Segoe UI;font-size:10.5pt'>
                         Lieber Studienteilnehmer,
                         <br><br>
-                        im Anhang erhalten Sie eine Rückmeldedatei für Ihre Teilnahme an der Paarstudie. Wir haben mit dieser Studie Bedürfnisse im Alltag von Partnerschaften untersucht. Das wäre ohne Ihren Beitrag nicht möglich gewesen, daher an dieser Stelle nochmal ein großes Dankeschön!
+                        im Anhang erhalten Sie eine Rückmeldedatei für Ihre Teilnahme an der xxx sTUDIE: Wir haben mit dieser Studie XXX untersucht. Das wäre ohne Ihren Beitrag nicht möglich gewesen, daher an dieser Stelle nochmal ein großes Dankeschön!
                         <br><br>
                         Sollten Sie Fragen haben, melden Sie sich gerne.
                         <br><br>
                         Beste Grüße,
                         <br>
-                        Caroline Zygar
+                        Die Studienleitung
                         </p></html>"),
           html = TRUE,
-          smtp = list(host.name = "mailout.lrz.de", port = 587,
-                      user.name = "caroline.zygar@psy.lmu.de",
+          smtp = list(host.name = "INSERT HOST, e.g. smtp.gmail.com", port = 587,
+                      user.name = "INSERT EMAILADDRESS, e.g. email@gmail.com",
                       passwd = "INSERT PASSWORD", ssl = TRUE),
           authenticate = TRUE,
           encoding = "utf-8",

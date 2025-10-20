@@ -1,0 +1,194 @@
+---
+title: "Einheit 12"
+subtitle: "⚔<br/>with xaringan"
+author: "Prof. Dr. Caroline Zygar-Hoffmann"
+institute: "RStudio, PBC"
+date: "2025/01/17 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    css: [xaringan-themer.css, style.css, "hygge"]
+    lib_dir: libs
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+    seal: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+library(tidyverse)
+library(kableExtra)
+library(ggplot2)
+library(plotly)
+library(htmlwidgets)
+library(MASS)
+library(ggpubr)
+library(xaringanthemer)
+library(xaringanExtra)
+
+style_duo_accent(
+  primary_color = "#621C37",
+    link_color = "#7da5f5",
+  secondary_color = "#EE0071",
+  background_image = "blank.png"
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view"))
+
+# use_scribble(
+#   pen_color = "#EE0071",
+#   pen_size = 4
+#   )
+
+knitr::opts_chunk$set(
+  fig.retina = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+name: Title slide
+class: middle, left
+<br><br><br><br><br><br><br>
+# Wissenschaftliches Arbeiten und Forschungsmethoden
+
+### Zusatzmaterial: Das Wissenschaftssystem
+##### Prof. Dr. Caroline Zygar-Hoffmann
+
+---
+class: top, left
+
+### Das Wissenschaftssystem
+
+**Der Weg zur Publikation** 
+
+.pull-left[
+1) **Auswahl eines Journals** nach thematischer Passung, Länge des Artikels, Qualität des Journals (auch: Unterstützung von Open Science), Augen offen halten für "Call for Papers" zu spezifischem Themen ( $\rightarrow$ "Special Issues" der Journals zu bestimmtem Thema)
+
+2) **Sichtung und Umsetzung der "Author Guidelines"**: Hinweise zu Artikelformaten, geforderten Elementen, Formatierung, Länge, ggf. Verblindung gegenüber Reviewern (d.h. dass im Manuskript nicht kenntlich ist, wer der/die Autor:innen des Artikels sind)
+
+3) **Aufsetzen des "Cover Letters"**: Anschreiben an den Editor mit kurzer Vorstellung des Manuskripts und ggf. ergänzenden Hinweisen
+]
+
+.pull-right[
+4) **Einreichung im Journal Submission Portal**: Eingabe von Informationen zu Autor:innen, Bestätigung guter wissenschaftlicher Praxis, Hochladen von Dateien, ggf. Vorschlag von Reviewern
+
+5) **Auf die Entscheidung warten (kann sehr unterschiedlich lange dauern)**: 
+  * "desk-reject" (direkte Ablehnung durch den Editor, meist innerhalb weniger Tage) oder 
+  * "under (peer-)review" (Anzahl an Reviewern unterschiedlich, häufig 2, + meist separates Review durch den Editor, meist innerhalb von mehreren Wochen bis Monaten) 
+  * Nach Einreichung / während man auf eine Entscheidung wartet, darf das Manuskript bei keinem anderen Journal zur Begutachtung vorliegen
+]
+
+---
+class: top, left
+
+### Das Wissenschaftssystem
+
+**Peer-Review**
+
+* Beim peer-review begutachten Wissenschaftler mit Expertise zu der Forschungsarbeit (inhaltlich oder methodisch) das Manuskript
+
+* Entscheidungen nach dem Peer-Review: 
+  - Rejection
+  - Revise and resubmit: Major revision
+  - Revise and resubmit: Minor revision
+  - Acceptance pending minor revisions
+  - Acceptance
+
+---
+class: top, left
+
+### Das Wissenschaftssystem
+
+**Peer-Review**
+
+* Wenn es keine Rejection ist: 
+  - Innerhalb einer bestimmten Frist Überarbeitung des Manuskripts $\rightarrow$ Verlängerung der Frist kann beim Editor beantragt werden
+  - Darlegung wie auf die Reviews eingegangen wurde im "response letter" (Reviewer-Kommentare Punkt-für-Punkt aufführen und beantworten, d.h. Änderungen darlegen und nachvollziehbar im Manuskript kennzeichnen) 
+  - Nach resubmission wird es ggf. nochmal an (meist dieselben) Reviewer geschickt, manchmal entscheidet auch der Editor direkt (eher nur bei minor revisions)
+
+* Bei Annahme des Artikels, ist der Artikel "in press" (d.h. wird für die Veröffentlichung vorbereitet) $\rightarrow$ Korrespondenz mit den "copy editors" des Journals (welche das Manuskript layouten und ggf. sprachlich checken) zur Abstimmung der "Druck"freigabe
+
+
+---
+class: top, left
+<div class="footer"><span>Brembs, B., Button, K., & Munafò, M. (2013). Deep impact: unintended consequences of journal rank. Frontiers in human Neuroscience, 291. <br>Fraley, R. C., & Vazire, S. (2014). The N-pact factor: Evaluating the quality of empirical journals with respect to sample size and statistical power. PloS one, 9(10), e109019. <br>Lariviere, V., Kiermer, V., MacCallum, C. J., McNutt, M., Patterson, M., Pulverer, B., Swaminathan, S., u.a. (2016). A simple proposal for the publication of journal citation distributions. bioRxiv, 062109. doi:10.1101/062109 <br>Szucs, D., & Ioannidis, J. P. (2017). Empirical assessment of published effect sizes and power in the recent cognitive neuroscience and psychology literature. PLoS biology, 15(3), e2000797.
+</span></div>
+
+### Das Wissenschaftssystem
+
+**Impact Factor und seine Probleme**
+
+.pull-left[
+* Impact Factor = jährliche mittlere Anzahl der Zitationen von Artikeln, die in den letzten 2 Jahren in einem Journal publiziert wurden
+
+* Sollte eigentlich für "Wichtigkeit" und damit indirekt für die Qualität der Artikel einer Zeitschrift stehen, aber...
+
+  * Fraley & Vazire (2014); Szucs & Ioannidis (2017): Höherer JIF hängt mit geringerer statistischer Power/Stichprobengröße der dort publizierten Studien zusammen
+  * Brembs, Button, & Munafò (2013): Höherer JIF hängt mit einer höheren Rate an Retractions (Zurückziehen eines Artikels) zusammen
+]
+
+.pull-right[
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/JIF.png")
+```
+]
+
+
+---
+class: top, left
+
+### Das Wissenschaftssystem
+
+**Konferenzen in der Psychologie**
+
+* Vernetzung unter Kolleg:innen und Austausch zu wissenschaftlichen Ergebnissen
+
+* Häufig mehrere parallele "Sessions", d.h. mehrere parallele Vorträge in unterschiedlichen Räumen
+
+* Häufige Beitragsformen:
+  - **Einzel-Vorträge** (meist ca. 10-20 Minuten), d.h. ein alleinstehender Vortrag zu einem Forschungsthema
+  - **Beitrag in einem Symposium** (meist ca. 10-20 Minuten), d.h. ein Vortrag der inhaltlich zu anderen Vorträgen passt mit ggf. abschließendem Diskussion der Vorträge durch einen Diskutanten
+  - **Keynote-Vortrag** (meist ca. 60 Minuten), d.h. ein zentraler Vortrag während der Konferenz während dem keine anderen Vorträge stattfinden; hierfür wird man angefragt/eingeladen
+  - **Poster-Präsentation** (meist ca. 30-60 Minuten), d.h. Ausdruck eines Posters auf DinA0 oder DinA1 auf dem Forschungsergebnisse visualisiert und beschrieben sind, während einem extra Zeitslot während der Konferenz unterhält man sich darüber mit einzelnen Konferenzteilnehmer:innen (die das Poster aufgesucht haben)
+  
+* Beitragseinreichung in Form eines Abstracts (in anderen Disziplinen sind tlws. ganze Manuskripte üblich)
+
+* Zu inhaltlichen Hinweisen zur Vorbereitung auf eine Konferenz vgl. Kapitel 13.2 in Döring & Bortz (2016)
+
+---
+class: top, left
+name: wisssys
+<div class="footer"><span>https://www.uni-due.de/gcplus/de/doc_karrierewege.php</span></div>
+
+### Das Wissenschaftssystem
+
+**Karrierepfade**
+
+.center[
+```{r eval = TRUE, echo = F, out.width="80%"}
+knitr::include_graphics("bilder/karrierewege.jpg")
+```
+]
+
+---
+class: top, left
+<div class="footer"><span>https://www.bmbf.de/bmbf/de/forschung/wissenschaftlicher-nachwuchs/das-tenure-track-programm/das-tenure-track-programm.html</span></div>
+
+### Das Wissenschaftssystem
+
+**Karrierepfade**
+
+.center[
+```{r eval = TRUE, echo = F, out.width="75%"}
+knitr::include_graphics("bilder/tenure-track.jpg")
+```
+]
+
+<!-- library(renderthis) -->
+<!-- to_pdf("WissArb_Z6_Wissenschaftssystem.Rmd", complex_slides = TRUE) -->

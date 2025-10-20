@@ -1,9 +1,9 @@
 ---
 title: "Einheit 5"
 subtitle: "⚔<br/>with xaringan"
-author: "Dr. Caroline Zygar-Hoffmann"
+author: "Prof. Dr. Caroline Zygar-Hoffmann"
 institute: "RStudio, PBC"
-date: "2024/11/11 (updated: `r Sys.Date()`)"
+date: "2025/05/01 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -58,7 +58,7 @@ class: middle, left
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
 ### Einheit 5: Analyseplan
-##### 12.11.2024 | Dr. Caroline Zygar-Hoffmann
+##### 06.05.2025 | Prof. Dr. Caroline Zygar-Hoffmann
 
 
 ---
@@ -116,7 +116,7 @@ Folgende Aspekte sollten **zumindest angefangen** sein, damit Sie gut in der Zei
 
 <br>
 
-**9) formr Voralge bearbeitet**, d.h. Platzhalter in der Einverständniserklärung ersetzt, eigene Items/Material eingefügt, getestet
+**9) formr Vorlage bearbeitet**, d.h. Platzhalter in der Einverständniserklärung ersetzt, eigene Items/Material eingefügt, getestet
 
 ---
 class: top, left
@@ -129,11 +129,11 @@ name: analyse
 .pull-left[
 **Was gehört zur Studienplanung?**
 
-1. Theoriearbeit und Literaturrecherche $\rightarrow$ Einheit 1 und 2, I1 & I2 in Präregistrierung
+1. Theoriearbeit und Forschungsfrage $\rightarrow$ Einheit 1 und 2, I1 & I2 in Präregistrierung
 
 2. Hypothesen $\rightarrow$ Einheit 2, I3 & I4
 
-3. Design Plan (Studiendesign) $\rightarrow$ Einheit 2, M6, M10, M11, M14 & M15 
+3. Studiendesign $\rightarrow$ Einheit 2, M6, M10, M11, M14 & M15 
 
 4. Operationalisierung (Auswahl Messinstrumente)  $\rightarrow$ letzte Sitzung, M12, M13, AP3 & AP4
 
@@ -157,45 +157,16 @@ class: top, left
 
 #### Wichtige Elemente
 
-* **Weitere Datenvorverarbeitung** (z.B. *z*-Standardisierung, ggf. nötige Bildung von Differenzen zwischen Messungen, bei Manipulationen Umgang mit Manipulationschecks, Umgang mit Ausreißern oder fehlenden Daten): In welcher Weise sollen die Daten verarbeitet und bereinigt werden, bevor sie in die Analyse eingehen?
+* **Weitere Datenvorverarbeitung**: In welcher Weise sollen die Daten verarbeitet und bereinigt werden, bevor sie in die Analyse eingehen?
 
-* Für jede Hypothese (konfirmatorisch):
-  - **Geplantes statistisches Verfahren** (z.B. t-Test für unabhängige/abhängige Stichproben, Regressionsanalyse, Varianzanalyse)
-  - **Rolle der Variablen** für dieses konkrete Verfahren (Unabhängige Variable, Abhängige Variable, Drittvariable (Kovariate), Moderator/Mediator? $\rightarrow$ siehe [Zusatzmaterial Z3](https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=34985) zur Erklärung der unterschiedlichen Variablenrollen)
-  - falls zutreffend: **Rationale jeder Kovariate**
-  - **Inferenzkriterien** (z.B. Alpha-Niveau und Vorzeichen eines bestimmten Koeffizienten)
-  - Festlegung von zu berechnenden **Effektstärken**
+  * **bei Manipulationen Umgang mit Manipulationschecks**: z.B. wenn beim Interventionsthema Versuchspersonen im Textfeld nichts geschrieben haben, gehen Sie dann trotzdem in die Analyse ein?
 
-* **Korrekturmethoden bei multiplen Tests** (um alpha-Fehler Kumulierung zu vermeiden), z.B. Bonferroni-Korrektur des Alpha-Niveaus wenn selbe Hypothese für verschiedene AVs getestet wird
-
----
-class: top, left
-
-### Analyseplan
-
-#### Optionale Elemente
-
-* ggf. Pläne für alternative Analysen, z.B. wenn Modellannahmen abgelehnt werden
-
-* ggf. Statistiksoftware
-  - Welche Software ist für die geplanten Analysen geeignet und zugänglich (R ist für viele Analysen ausreichend, aber für tlws. komplexe Analysen (siehe Master) weitere Software nötig, z.B. MPlus)
+  * **Umgang mit Ausreißern**: unüberlegter Ausschluss von Ausreißern wird in der Literatur kritisch diskutiert, da auch Extremwerte Teil einer Normalverteilung sind; zumindest Einfluss auf die Ergebnisse sollte diskutiert werden
   
-  - Mit welchen Programmbefehlen/-paketen können die gewünschten Analysen ausgeführt werden, welche Zusatzoptionen sind wichtig (nur grob darstellen)?
+  * **Maßnahmen zur Qualitätssicherung**: z.B. Ausschluss von Personen, die Aufmerksamkeitschecks nicht richtig beantworten (z.B. "Kreuzen Sie hier bitte die 4 an.")
+  
+  * **Umgang mit fehlenden Werten**: siehe nächste Folie
 
----
-class: top, left
-
-### Analyseplan
-
-#### Weitere Datenvorverarbeitung
-
-* **z-Standardisierung**: Transformation des Mittelwerts auf 0 und Standardabweichung auf 1 $\rightarrow$ macht oft bei Regressionen Sinn, wenn Originaleinheit der Variablen nicht eingängig (z.B. oft bei Summenwerten)
-
-* **ggf. nötige Bildung von Differenzen zwischen Messungen**: z.B. für Interventionsthema Differenzbildung zwischen Post- und Prä-Messung, um Veränderung abzubilden
-
-* **bei Manipulationen Umgang mit Manipulationschecks**: z.B. wenn beim Interventionsthema Versuchspersonen im Textfeld nichts geschrieben haben, gehen Sie dann trotzdem in die Analyse ein?
-
-* **Umgang mit Ausreißern**: unüberlegter Ausschluss von Ausreißern wird in der Literatur kritisch diskutiert, da auch Extremwerte Teil einer Normalverteilung sind; zumindest Einfluss auf die Ergebnisse sollte diskutiert werden
 
 ---
 class: top, left
@@ -212,7 +183,7 @@ class: top, left
 2. Complete-Case Analyse
   * Nur auf Basis vollständiger Datensätze rechnen
   * Hier kann man unterscheiden: Komplette Studie vollständig (d.h. alle Fragen der Studie beantwortet), oder Datensätze die man zur Analyse braucht vollständig (d.h. es können auch Fragen fehlen, solange sie nicht für die Analyse für eine Hypothese benötigt werden) $\rightarrow$ **für eine Variante müssen Sie sich für die Präregistrierung entscheiden**
-  * Komplette Studie vollständig als Voraussetzung ist zwar ok, wenn man ausreichend große Stichprobe hat, aber Vorsicht: wenn UV zu Dropout führt, dann können Verzerrungen resultieren
+  * Komplette Studie vollständig als Voraussetzung ist zwar ok wenn man eine ausreichend große Stichprobe hat, aber Vorsicht: wenn eine UV systematisch zu Dropout führt, dann können Verzerrungen in den Ergebnissen resultieren
 
 3. Imputation
   * Schätzung und Ersetzen der fehlenden Werte anhand eines statistischen Modells
@@ -222,7 +193,6 @@ class: top, left
 Einen ausführlichen Überblick von Missing-Data-Techniken findet man bei Schafer und Graham (2002) bzw. West (2001)
 
 </small>
-
 
 ---
 class: top, left
@@ -236,6 +206,21 @@ knitr::include_graphics("bilder/prereg_template_analyse1b.png")
 ```
 ]
 
+---
+class: top, left
+
+<div class="footer"><span>Van't Veer, A. E., & Giner-Sorolla, R. (2016). Pre-registration in social psychology—A discussion and suggested template. Journal of experimental social psychology, 67, 2-12.</span></div>
+
+### Analyseplan
+
+#### Wichtige Elemente
+
+* **Weitere Datenvorverarbeitung**: In welcher Weise sollen die Daten verarbeitet und bereinigt werden, bevor sie in die Analyse eingehen?
+
+  * **z-Standardisierung**: Transformation des Mittelwerts auf 0 und Standardabweichung auf 1 $\rightarrow$ macht oft bei Regressionen Sinn, wenn Originaleinheit der Variablen nicht eingängig (z.B. oft bei Summenwerten)
+
+  * **ggf. nötige Bildung von Differenzen zwischen Messungen**: z.B. für Interventionsthema Differenzbildung zwischen Post- und Prä-Messung, um Veränderung von vor zu nach der Intervention abzubilden
+
 
 ---
 class: top, left
@@ -245,10 +230,82 @@ class: top, left
 
 .center[
 ```{r eval = TRUE, echo = F, out.width = "60%"}
-knitr::include_graphics("bilder/prereg_template_analyse2.png")
+knitr::include_graphics("bilder/prereg_template_ap3.png")
 ```
 ]
 
+---
+class: top, left
+
+<div class="footer"><span>Van't Veer, A. E., & Giner-Sorolla, R. (2016). Pre-registration in social psychology—A discussion and suggested template. Journal of experimental social psychology, 67, 2-12.</span></div>
+
+### Analyseplan
+
+#### Wichtige Elemente
+
+* Für jede (konfirmatorische) Hypothese:
+  - **Geplantes statistisches Verfahren** (z.B. t-Test für unabhängige/abhängige Stichproben, Regressionsanalyse, Varianzanalyse)
+  - **Rolle der Variablen** für dieses konkrete Verfahren (Unabhängige Variable, Abhängige Variable, Drittvariable (Kovariate), Moderator, Mediator? $\rightarrow$ siehe [Zusatzmaterial Z4](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_43093_download.html) zur Erklärung der unterschiedlichen Variablenrollen)
+  - falls Kovariaten aufgenommen werden: **Begründung der Aufnahme als Kovariate**
+  - **Inferenzkriterien** (z.B. Alpha-Niveau und Vorzeichen eines bestimmten Koeffizienten)
+  - **Geplante Effektstärken**: Welche Effektstärke soll für die Analyse berechnet werden (z.B. Cohen's d, standardisiertes beta, R², ...)
+
+* **Korrekturmethoden bei multiplen Tests** (um alpha-Fehler Kumulierung zu vermeiden), z.B. Bonferroni-Korrektur des Alpha-Niveaus wenn selbe Hypothese für verschiedene AVs getestet wird
+
+---
+class: top, left
+
+### Analyseplan
+
+#### Optionale Elemente
+
+* ggf. Pläne für alternative Analysen, z.B. wenn Modellannahmen abgelehnt werden, z.B.
+  - für t-test Varianzhomogenität nicht gegeben: Welch-Test
+  - für Regression normalverteilte Residuen und/oder Homoskedaszität nicht gegeben: Robuste Regression (z.B. mit Hilfe von $rlm()$ aus dem $MASS$-package)
+
+* ggf. Statistiksoftware
+  - Welche Software ist für die geplanten Analysen geeignet und zugänglich (R ist für viele Analysen ausreichend, aber für tlws. komplexe Analysen (siehe Master) weitere Software nötig, z.B. MPlus)
+  
+  - Mit welchen Programmbefehlen/-paketen können die gewünschten Analysen ausgeführt werden, welche Zusatzoptionen sind wichtig (nur grob darstellen)? 
+  
+  - **Hinweis:** Ganz oft vergessen Studierende bei den Analysen später, dass der $t.test()$-Befehl in R standardmäßig einen Welch-Test rechnet, und man als Argument $var.equal = TRUE$ angeben muss, damit ein echter t-test gerechnet wird. Wenn man sich den Hinweis darauf in der Präregistrierung schon zurechtlegt, vergisst man es später hoffentlich nicht.
+
+
+---
+class: top, left
+### Analyseplan
+
+#### Präregistrierung
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "60%"}
+knitr::include_graphics("bilder/prereg_template_analyse3a.png")
+```
+]
+
+---
+class: top, left
+### Analyseplan
+
+#### Präregistrierung
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "60%"}
+knitr::include_graphics("bilder/prereg_template_analyse3b.png")
+```
+]
+
+---
+class: top, left
+### Analyseplan
+
+#### Präregistrierung
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "60%"}
+knitr::include_graphics("bilder/prereg_template_analyse3c.png")
+```
+]
 ---
 class: top, left
 name: beispiel
@@ -317,7 +374,7 @@ $\rightarrow$ AP6: **statistische Analyse:** Lineare Regression mit AV = Post-Pr
 
 $\rightarrow$ AP7: **Inferenzkriterium:** Koeffizient des Interaktionseffekts positiv, $p_{einseitig}$ < $\alpha$ = 0.05 (wenn man eine gerichtete Hypothese hat)
 
-Hinweis: einen einseitigen p-Wert bekommen Sie für eine Regression, wenn Sie in dem Output der Regressionsanalyse beim p-Wert vom relevanten Koeffizienten $p/2$ rechnen falls der Effekt in die erwartete Richtung geht und $1-(p/2)$ falls der Effekt in die falsche Richtung geht
+**Hinweis bei gerichteten Hypothesen, die mit einer Regressionsanalyse beantwortet werden**: einen einseitigen p-Wert bekommen Sie für eine Regression, wenn Sie in dem Output der Regressionsanalyse beim p-Wert vom relevanten Koeffizienten $p/2$ rechnen falls der Effekt in die erwartete Richtung geht und $1-(p/2)$ falls der Effekt in die falsche Richtung geht
 
 
 ---
@@ -335,40 +392,18 @@ $\rightarrow$ AP6: **Voraussetzungen der linearen Regression werden geprüft, ab
 
 ---
 class: top, left
+
 ### Analyseplan
 
-#### Präregistrierung
+#### Beispielhafte Überlegungen für das Interventionsthema
 
-.center[
-```{r eval = TRUE, echo = F, out.width = "60%"}
-knitr::include_graphics("bilder/prereg_template_analyse3a.png")
-```
-]
+**Wichtiger Hinweis zu dem hier auf Folie 16-19 beschriebenen Vorgehen:** 
+* Wenn Sie das Design des Interventionsthemas und Ihre Hypothesen z.B. jemandem präsentieren würden, der sich mit Statistik auskennt oder in ChatGPT eingeben würden, um nach der besten Analyse zu fragen, werden Sie vermutlich den Hinweis auf ein Multilevel-Regressionsmodell oder eine Mixed ANOVA erhalten (da wir die Bedingungen zwischen Personen variieren (between-subject) aber auch pro Person mehrmals messen (within-subject)). 
+* **Diese Analysen werden Sie erst im Master lernen, daher sehen Sie hier auf Folie 16-19, wie man diese Art der komplexen Analyse durch die Bildung der prä-post-Differenz umgeht, so dass die Messwiederholung nicht mehr relevant ist.**
+* Wechseln Sie nicht auf komplexe Analysemethoden, ohne das vorher mit Ihrem Ansprechpartner abzusprechen.
 
----
-class: top, left
-### Analyseplan
+**Wichtiger Hinweis 2:** Wenn Sie einen dichotomen Moderator haben wäre eine ANOVA zwar auch eine Alternative zu dem hier beschriebenen Vorgehen; allerdings funktioniert es mit der Regression ebensogut, daher würde ich Ihnen empfehlen bei dem hier beschriebenen Vorgehen zu bleiben. Wenn Sie aber eine ANOVA üben möchten, können Sie auch eine ANOVA rechnen.
 
-#### Präregistrierung
-
-.center[
-```{r eval = TRUE, echo = F, out.width = "60%"}
-knitr::include_graphics("bilder/prereg_template_analyse3b.png")
-```
-]
-
-
----
-class: top, left
-### Analyseplan
-
-#### Präregistrierung
-
-.center[
-```{r eval = TRUE, echo = F, out.width = "60%"}
-knitr::include_graphics("bilder/prereg_template_analyse3c.png")
-```
-]
 ---
 class: top, left
 ### Analyseplan
@@ -377,7 +412,7 @@ class: top, left
 
 .center[
 ```{r eval = TRUE, echo = F}
-knitr::include_graphics("bilder/bewertung_analyseprozedur.png")
+knitr::include_graphics("bilder/bewertung_analyseplan.png")
 
 knitr::include_graphics("bilder/bewertung_methoden.png")
 ```
@@ -398,7 +433,7 @@ name: praxis
 ### Praxis: Analyseplan entwickeln
 
 **Schritt 1:** Überlegen Sie: Wie sieht Ihr Analyseplan für Ihre Hypothese(n) aus?
-  * **Welche weitere Datenvorverarbeitung ist nötig**, ist z.B. eine z-Standardisierung geplant oder ein Manipulationscheck geplant und wenn ja, wie wird er ausgewertet?
+  * **Welche weitere Datenvorverarbeitung ist nötig**, ist z.B. eine z-Standardisierung geplant oder ein Manipulationscheck geplant und wenn ja, wie wird er ausgewertet? Wie gehen Sie mit fehlenden Werten um?
   * **Welches Testverfahren nutzen Sie?** Welche Rolle spielt die Überprüfung von Annahmen für dieses Testverfahren (*hier z.B. aufnehmen, was Sie in Quantitative Methoden 1/2 für dieses Verfahren gelernt haben*)?
   * Was ist/sind Ihr/e **UV(s)/Prädiktor(en)**? 
     * Auf welche dieser Variablen bezieht sich die Hypothese? 
@@ -416,13 +451,16 @@ class: top, left
 
 ### Praxis: Analyseplan entwickeln
 
-**Schritt 2:** Erweitern Sie das [Präregistrierungstemplate auf studynet](https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_33416_download.html) 
+**Schritt 2:** Erweitern Sie das Präregistrierungstemplate:
 
 * siehe Vorlage für M7-M8, AP1-AP2 $\rightarrow$ ggf. Übersetzen und ggf. Option wählen
 
 * ergänzen Sie bei AP3, wenn Sie z.B. eine z-Standardisierung für eine bestimmte Variable, eine Differenzbildung oder einen Manipulationscheck planen
 
-* AP5-AP9, v.a. AP6 und AP7 (denn optional sind AP5 (falls Sie sich jetzt schonmal Gedanken über deskiriptive Statistik machen wollen), AP8 (nur wenn Sie was exploratives unter I4 angegeben haben) und AP9 (sonstiges))
+* AP5-AP9, v.a. AP6 und AP7, denn optional sind:
+  - AP5 (falls Sie sich jetzt schonmal Gedanken über deskriptive Statistik machen wollen)
+  - AP8 (nur wenn Sie was exploratives unter I4 angegeben haben)
+  - AP9 (sonstiges)
 
 **Schritte 3a und 3b zu formr von letzter Einheit weitermachen** (d.h. weiter an der Implementierung der Studie in formr arbeiten)
 
@@ -432,37 +470,40 @@ name: material
 
 ### Material
 
-* **Bewertungsschema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=32988
+* **Bewertungsschema**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=40709
 
-*	**Checkliste Ethik**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=26580
+*	**Checkliste Ethik**: https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=40715
 
-* **Template Präregistrierung**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_33416_download.html
+* **Template formr eigenes Thema**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_41556_download.html
 
-* **Template formr eigenes Thema**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_33543_download.html
-
-* **Template formr Interventionsthema**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_34582_download.html
+* **Template formr Interventionsthema**: https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_42775_download.html
 
 * **Link zu formr**: https://workshops.formr.org/
 
 * **Folie mit formr-Ressourcen**: Folie 32 in Einheit 4
 
-* **Zusatzmaterial Z3 Variablen:** https://studynet.hs-fresenius.de/ilias.php?baseClass=ilrepositorygui&cmd=sendfile&ref_id=34985
+* **Zusatzmaterial Z4 Variablen:** https://studynet.hs-fresenius.de/goto_STUDYNETHSF_file_43093_download.html
 
 ---
 class: top, left
 
 ### Feedback-Zeit
 
-**Folgende Gruppen mit Interventionsthema gehen nun in Raum P5 003 mit Nensy Le**
-- CALIMADILE (Dilara Streil, Leah Rauch, Lilly Knorr, Maresa Pallauf, Catharina Dahmen)
-- Pfefferkörner (Manuel Krainz, Leonie Braasch, Lilly Jügler, Dilara Uslu, Julia Thies)
-- Bond Boost (Lara Traeger, Fiona Mayer, Leonie Stocker, Sevgi Babür, Alina Steudemann)
+**Folgende Gruppen mit Interventionsthema gehen nun in Raum P4 201 mit Nensy Le**
+- Forschungsmäuse (Verena Baumer, Lou (Emelie) Graschi, Marika Huberbauer, Julia Kammermayr, Anna Buziol)
+- Die Hypothesenjäger (Alev Yildirim, Michelle Riesz, Chiara Sauer, Katharina Weigel, Anna Mayer)
 
-**Folgende Gruppen mit eigenem Thema gehen nun in Raum P5 104 mit Caroline Zygar-Hoffmann**
-- Siblings United	(Lavinia Longoni, Abbey Kesszler, Rosa Olenius, Sandrin Pelger, Clara Hausser)
-- Jagoda (Felix Daubenmerkl, Marius Eiden, Fabian Patij, Maximilian Heide, Alina Bußjäger)
-- Forever C. G. Jung (Pauline Kröger, Sanjna Bhatt, Xaver Egert, Linda Herzog, Janis Vaidya)
-- Die Bindungsforscher (Selma Seifert, Maria Harke, Elmir Gorcevic)
+**Folgende Gruppen mit eigenem Thema gehen nun in Raum P4 201 mit Claudia Dörrler**
+- The Big 5 (Sophie Mayer, Sophia Ludwig, Louisa Hron, Anna Maier, Laura Hasselbacher)
+- Die Bindungseisstile (Lea Goletz, Laura Cukreev, Lisa Kistenpfennig, Esma Özbek, Annalena Wiesent)
+
+**Folgende Gruppen mit eigenem Thema gehen nun in Raum P4 203 mit Caroline Zygar-Hoffmann**
+- Team True Minds	(Amelie Romig, Angelina Figur, Angelica Grillo, Azra Tunctürk, Tugce Kaynar)
+- Crime Time (Irini Papadopoulou, Maya Mehne, Helena Benito Eibl, Eleni Galani, Anna Knipping)
+- Delulu Lemons (Clara Henckmann, Justin Untch, 
+Theresa Herrmann, Jana Kaus, Ivona Dukic)
+- Die Letzten (Michael Hoang, Raffael Ulbrich, Luca Samland, Eleni Traublinger, Nicole Muggenthaler)
+- Fragezeichen? (Marie Harke, Julia Thies, Elmir Gorcevic, Tabea Schwarz, Lavinia Lux)
 
 **Alle anderen können im Raum bleiben und sich mit den Praxisaufgaben beschäftigen (dringend empfohlen!)**
 

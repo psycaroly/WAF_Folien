@@ -1,0 +1,189 @@
+---
+title: "Zusatzmaterial: Rekrutierungsplan"
+subtitle: "⚔<br/>with xaringan"
+author: "Prof. Dr. Caroline Zygar-Hoffmann"
+institute: "RStudio, PBC"
+date: "2025/05/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    css: [xaringan-themer.css, style.css, "hygge"]
+    lib_dir: libs
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+    seal: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+library(tidyverse)
+library(kableExtra)
+library(ggplot2)
+library(plotly)
+library(htmlwidgets)
+library(MASS)
+library(ggpubr)
+library(xaringanthemer)
+library(xaringanExtra)
+
+style_duo_accent(
+  primary_color = "#621C37",
+  secondary_color = "#EE0071",
+  link_color = "#7da5f5",
+  background_image = "blank.png"
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view"))
+
+# use_scribble(
+#   pen_color = "#EE0071",
+#   pen_size = 4
+#   )
+
+knitr::opts_chunk$set(
+  fig.retina = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+name: Title slide
+class: middle, left
+<br><br><br><br><br><br><br>
+# Wissenschaftliches Arbeiten und Forschungsmethoden
+
+### Zusatzmaterial: Rekrutierungsplan
+##### Prof. Dr. Caroline Zygar-Hoffmann
+
+---
+class: top, left
+
+### Rekrutierungsplan
+
+#### Auswahl der Untersuchungsobjekte 
+
+* Frage: an welchen bzw. an wie vielen Untersuchungsobjekten werden die Variablen erhoben? $\rightarrow$ Untersuchungsteilnehmer, deren Beobachtung oder Beschreibung interessante Hypothesen versprechen
+
+**Wichtigstes Kriterium: Repräsentativität der Stichprobe**
+
+* Repräsentativität = Stichprobe muss in ihrer Zusammensetzung der Population möglichst stark ähneln
+
+* Stichprobe ist (merkmals)spezifisch repräsentativ, wenn ihre Zusammensetzung hinsichtlich relevanter Merkmale der Populationszusammensetzung entspricht
+
+* Stichprobe  ist global repräsentativ, wenn ihre Zusammensetzung in nahezu allen Merkmalen der Populationszusammensetzung entspricht
+
+* große Stichprobe garantiert nicht Repräsentativität (gilt nur bei unverzerrter Auswahl)
+
+* beste Gewähr für größtmögliche globale Repräsentativität bietet die Zufallsstichprobe
+
+---
+class: top, left
+### Rekrutierungsplan
+
+#### Auswahl der Untersuchungsobjekte 
+
+**Einschlusskriterien:**
+
+* globale Population aller Menschen ist nicht für jede Fragestellung geeignet
+
+* Selektion zur Erhöhung der Auftretenswahrscheinlichkeit relevanter Merkmale (z.B. bestimmte Diagnose, bestimmte Altersklasse...)
+
+**Ausschlusskriterien:**
+
+* Manche Charakteristika machen Untersuchung einzelner Personen inhaltlich/ethisch unmöglich
+
+* Ausschlusskriterien müssen gut überlegt und genau dokumentiert werden
+
+$\rightarrow$ **Für Gruppen mit eigenem Thema gibt es ein Einschlusskriterium, welches nicht inhaltlich begründet ist: Studierender dieser Vorlesung sein. Fehlende Repräsentativität ist dann Teil der Diskussion.**
+
+$\rightarrow$ **Für Gruppen mit Interventionsthema gibt es als Einschlusskriterium, dass die Versuchspersonen in einer festen, monogamen Partnerschaft sein sollen.**
+
+---
+class: top, left
+### Rekrutierungsplan
+
+#### Anwerbung von Untersuchungsteilnehmern
+
+* Wo soll rekrutiert werden?
+  * z.B. an der Uni, im eigenen Umfeld, auf Instagram, ...
+
+* Mit welchen Mitteln?
+  * z.B. Mündliche Ansprache, Fyler, Social Media, Werbung, ...
+
+* Wird es einen Anreiz geben (z.B. Vergütung)?
+  * Bei uns: Rückmeldung über eigene Antworten
+
+* Ist die Teilnahme Teil eines erweiterten (Forschungs-/Behandlungs-)Programms?
+  * Bei uns: Nein.
+
+---
+class: top, left
+### Rekrutierungsplan
+
+#### Determinanten der freiwilligen Untersuchungsteilnahme (Bortz und Döring, 2006, S.73)
+
+Freiwillige Untersuchungsteilnehmer ...
+* ...verfügen über eine bessere schulische Ausbildung als Verweigerer (bessere Notendurchschnitte). 
+* ...schätzen ihren eigenen sozialen Status höher ein als Verweigerer.
+* ...benötigen mehr soziale Anerkennung als Verweigerer.
+* ...sind geselliger als Verweigerer.
+* ...sind weniger autoritär als Verweigerer.
+* ...haben eine geringere Tendenz zu konformem Verhalten als Verweigerer.
+* ...geben sich in Untersuchungen über geschlechtsspezifisches Verhalten unkonventioneller.
+* ...verfügen auf Basis der meisten Untersuchungsergebnisse über eine höhere Intelligenz.
+
+Im Allgemeinen sind weibliche Personen eher zur freiwilligen Untersuchungsteilnahme bereit als männliche Personen. Siehe auch aktuellere Studie: https://www.pewresearch.org/methods/2023/09/07/assessing-the-accuracy-of-estimates-among-demographic-subgroups/ $\rightarrow$ u.a. gehen Personen die aus Eigenantrieb an einer Studie teilnehmen eher wählen und antworten eher "Ja" auf Fragen als Personen einer Zufallsstichprobe 
+
+$\rightarrow$ **Anreize und aktive Ansprache von Personen als generell wichtige Maßnahmen**, um die Gruppe der Freiwilligen zu vergrößern und somit Verzerrungen in der Stichprobe zu verringern
+
+---
+class: top, left
+### Rekrutierungsplan
+
+#### Präregistrierung
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "45%"}
+knitr::include_graphics("bilder/prereg_template_sampling.png")
+```
+]
+
+---
+class: top, left
+<div class="footer"><span>Van den Akker, O., Weston, S., Campbell, L., Chopik, B., Damian, R., Davis-Kean, P., ... & Bakker, M. (2021). Preregistration of secondary data analysis: A template and tutorial. Meta-psychology, 5, 2625.</span></div>
+
+### Rekrutierungsplan
+
+#### Zeitpunkt der Registrierung
+
+In einer Präregistrierung wird der Zeitpunkt der Registrierung konkret dokumentiert:
+
+* **Registrierung vor der Sammlung der Daten**: Daten noch nicht erhoben, erstellt oder realisiert worden
+* **Registrierung vor jeglicher menschlicher Beobachtung der Daten**: Daten vorhanden, wurden aber noch von niemandem quantifiziert, erstellt, beobachtet oder gemeldet
+* **Registrierung vor dem Zugriff auf die Daten**: Daten vorhanden, aber Sie oder Ihre Mitarbeiter haben noch keinen Zugriff darauf
+* **Registrierung vor der Analyse der Daten**: Daten vorhanden und Sie haben darauf zugegriffen, aber es wurde noch keine Analyse im Zusammenhang mit dem Forschungsplan durchgeführt 
+* **Registrierung nach der Analyse der Daten**: Sie haben auf einen Teil der für den Forschungsplan relevanten Daten zugegriffen und diese analysiert
+
+Wenn für eine Studie auf einem bereits bestehenden Datensatz Berechnungen durchgeführt werden (Analysen auf vorab-existierenden Daten), muss dies auch durchdacht und dokumentiert werden $\rightarrow$ 
+siehe "Preregistration of secondary data analysis: A template and tutorial": https://research.tilburguniversity.edu/en/publications/preregistration-of-secondary-data-analysis-a-template-and-tutoria
+
+---
+class: top, left
+
+### Rekrutierungsplan
+
+#### Präregistrierung
+
+.center[
+```{r eval = TRUE, echo = F, out.width = "50%"}
+knitr::include_graphics("bilder/prereg_template_m1-m2.png")
+```
+]
+
+<!-- library(renderthis) -->
+<!-- to_pdf("WissArb_Z5_Rekrutierungsplan.Rmd", complex_slides = TRUE) -->

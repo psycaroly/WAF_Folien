@@ -1,9 +1,9 @@
 ---
 title: "Zusatzmaterial: Themensuche"
 subtitle: "⚔<br/>with xaringan"
-author: "Dr. Caroline Zygar-Hoffmann"
+author: "Prof. Dr. Caroline Zygar-Hoffmann"
 institute: "Charlotte Fresenius Hochschule München"
-date: "2024/02/20 (updated: `r Sys.Date()`)"
+date: "2025/04/07 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -53,7 +53,6 @@ class: middle, left
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
 ### Zusatzmaterial: Themensuche
-##### 10.04.2024 | Dr. Caroline Zygar-Hoffmann
 
 ---
 class: top, left
@@ -507,14 +506,14 @@ class: top, left
 
 Auswahl von Thema, die mit folgenden Variablen/Variablenkategorien untersuchbar sind:
 
-* **Stimmung, Wohlbefinden, Lebenszufriedenheit, Beziehungszufriedenheit** (zis.gesis.org -> Individuum & Persönlichkeit -> Stimmung & Emotionen)
-* **Persönlichkeit**, z.B. Big 5, Neugier, Leistungsmotivation, Risikobereitschaft, Selbstwirksamkeit, Selbstbewusstsein (zis.gesis.org -> Individuum & Persönlichkeit -> Bedürfnisse, Motive & Interessen / Kontrollüberzeugungen / Persönlichkeitsinventare / Selbstwahrnehmen & -erleben)
-* **Werte** (zis.gesis.org -> Individuum & Persönlichkeit -> Werte & Ziele)
-* **Prokrastination** (zis.gesis.org -> Bildung -> Erleben & Verhalten)
-* **Ungerechtigkeitssensibilität** (zis.gesis.org -> Gesellschaft & Soziales -> Soziale Gerechtigkeit)
-* **Freizeitinteresse** (zis.gesis.org -> Gesellschaft & Soziales -> Wohnen & Leben)
-* **Umweltbewusstsein/verhalten** (zis.gesis.org -> Umwelt)
-* **Gesundes Essverhalten**
+* **Stimmung, Wohlbefinden, Lebenszufriedenheit, Beziehungszufriedenheit** ([zis.gesis.org](zis.gesis.org) -> Individuum & Persönlichkeit -> Stimmung & Emotionen)
+* **Persönlichkeit**, z.B. Big 5, Neugier, Leistungsmotivation, Risikobereitschaft, Selbstwirksamkeit, Selbstbewusstsein ([zis.gesis.org](zis.gesis.org) -> Individuum & Persönlichkeit -> Bedürfnisse, Motive & Interessen / Kontrollüberzeugungen / Persönlichkeitsinventare / Selbstwahrnehmen & -erleben)
+* **Werte** ([zis.gesis.org](zis.gesis.org) -> Individuum & Persönlichkeit -> Werte & Ziele)
+* **Prokrastination** ([zis.gesis.org](zis.gesis.org) -> Bildung -> Erleben & Verhalten)
+* **Ungerechtigkeitssensibilität** ([zis.gesis.org](zis.gesis.org) -> Gesellschaft & Soziales -> Soziale Gerechtigkeit)
+* **Freizeitinteresse** ([zis.gesis.org](zis.gesis.org) -> Gesellschaft & Soziales -> Wohnen & Leben)
+* **Umweltbewusstsein/verhalten** ([zis.gesis.org](zis.gesis.org) -> Umwelt)
+* **Gesundes Essverhalten (keine Psychopathologie!)**, z.B. Skala zum Ernährungsverhalten
 * **Bindungsstile**
 * **Social Media Nutzung**
 
@@ -523,9 +522,22 @@ class: top, left
 
 ### Themensuche
 
+#### Vorgaben
+
+**Angemessen komplexe Analysen**:
+* t-test für unabhängige Stichproben für einen Mittelwertsvergleich zwischen zwei Gruppen
+* Korrelationsanalyse für den Zusammenhang zwischen zwei Variablen
+* Lineare Regression ausschließlich mit Haupteffekten oder maximal einem Interaktionseffekt für die Vorhersage einer numerischen Variable
+* t-test für abhängige Stichproben für Mittelwertsunterschiede auf einer Variable in einem Pre-Post-Design
+* 2-faktorielle ANOVA für ein Pre-Post-Design mit Experimental- und Kontrollgruppe (generell bei UV: nicht zuviele Stufen!) für eine numerische abhängige Variable
+
+---
+class: top, left
+
+### Themensuche
+
 #### Beispiele für das Projekt im Rahmen dieser Vorlesung
 
-.pull-left[
 **Gut untersuchbare Themen**: 
 * Unterschiede zwischen Münchnern und Nicht-Münchnern hinsichtlich Musikpräferenzen
 * Zusammenhang zwischen Interessen für Themen und Persönlichkeitseigenschaften
@@ -534,16 +546,10 @@ class: top, left
 **Ungünstige Themen**:
 * Abfrage sensibler Inhalte nötig, z.B. zur Krankheitsgeschichte, Sexualität, Intelligenz, Untreue,...
 * Untersuchung seltener Merkmale, z.B. besondere Lebenserfahrungen oder -umstände
-]
 
-.pull-right[
-**Angemessen komplexe Analysen**:
-* t-test für unabhängige Stichproben für einen Mittelwertsvergleich zwischen zwei Gruppen
-* Korrelationsanalyse für den Zusammenhang zwischen zwei Variablen
-* Lineare Regression ausschließlich mit Haupteffekten oder maximal einem Interaktionseffekt für die Vorhersage einer numerischen Variable
-* t-test für abhängige Stichproben für Mittelwertsunterschiede auf einer Variable in einem Pre-Post-Design
-* 2-faktorielle ANOVA für ein Pre-Post-Design mit Experimental- und Kontrollgruppe (generell bei UV: nicht zuviele Stufen!) für eine numerische abhängige Variable
-]
+$\rightarrow$ **Es darf kein Ethikantrag nötig sein!**
+
+$\rightarrow$ **siehe Zusatzmaterial "Ethik Checkliste" auf studynet.**
 
 ---
 class: top, left

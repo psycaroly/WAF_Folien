@@ -1,9 +1,9 @@
 ---
-title: "Einheit 12"
+title: "Einheit 13"
 subtitle: "⚔<br/>with xaringan"
 author: "Prof. Dr. Caroline Zygar-Hoffmann"
 institute: "RStudio, PBC"
-date: "2025/02/03 (updated: `r Sys.Date()`)"
+date: "2025/07/14 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -57,8 +57,8 @@ class: middle, left
 <br><br><br><br><br><br><br>
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
-### Einheit 12: Freie Spitze und Fragen
-##### 04.02.2025 | Prof. Dr. Caroline Zygar-Hoffmann
+### Einheit 13: Freie Spitze und Fragen
+##### 15.07.2025 | Prof. Dr. Caroline Zygar-Hoffmann
 
 ---
 class: top, left
@@ -112,7 +112,7 @@ Aber: **Präregistrierung ist kein Gefängnis! Sie macht Änderungen nur transpa
 
 * Gibt es im Diskussion **Empfehlungen für zukünftige Forschung**, die über die Beseitigung der Limitationen hinaus gehen? (z.B. weiterführende Forschungsideen)
 
-* **Kausale Sprache** im gesamten Bericht nur dann nutzen, wenn ein experimentelles Design vorliegt (vgl. Einheit 10, Folie 22)
+* **Kausale Sprache** im gesamten Bericht nur dann nutzen, wenn ein experimentelles Design vorliegt (vgl. Einheit 10, Folie 24)
 
 ---
 class: top, left
@@ -125,12 +125,17 @@ class: top, left
 
 2) Eine Sensitivitätspoweranalyse für tatsächlich erreichte Stichprobengröße für die **in der Präregistrierung angenommene Effektstärke,** ***nicht*** **für die Effektstärke der eigenen Ergebnisse**
 
-* **OSF Projekt** checken:
+---
+class: top, left
+
+### Bericht: Letzte Hinweise
+
+* **OSF-Projekt** checken:
   - Ansprechpartner hinzugefügt?
   - Präregistrierung als PDF enthalten?
   - Anonymisierte Daten enthalten?
   - Formr Excel-Datei(en) enthalten?
-  - Analyse-Skripte enthalten (ggf. pro Person ein Ordner mit eigenen Skripten, falls nicht gemeinsames Skript für alle)?
+  - Analyse-Skripte enthalten (ggf. pro Person ein Ordner mit eigenen Skripten, falls nicht gemeinsames Skript für alle)? Wenn Sie die komplette Datenvorverarbeitung und Analyse im RMarkdown-Dokument eingefügt haben, reicht das RMarkdown - wenn Sie zusätzlich R-Skripte benutzt haben, sollten diese auch hochgeladen werden
   - optional für Gruppen mit eigenem Thema: Projekt auf public stellen (Button oben rechts)
 
 * **Inhaltliche und technische Nachvollziehbarkeit der R-Skripte sicherstellen**: Versteht jemand anderes was er von vorne bis hinten machen muss, um die Ergebnisse zu reproduzieren und wirft R auf dem Weg dorthin keine Fehler?
@@ -157,12 +162,12 @@ class: top, left
 
 **Abgabe auf studynet (Inhalt -> Mission/Challenges)**
 
-* Abgabetermin ist der **10.03.2025** (23:55)
+* Abgabetermin ist der **25.08.2025** (23:55)
 
 * Jeder aus der Gruppe muss abgeben! 
 
 * Abgabe von:
-  - Bericht als Word-Dokument, welches den Link zum OSF-Projekt enthält (wo anonymisierte Daten, formr-Codebook, Präregistrierung und R-Skripte liegen) 
+  - Bericht als Word-Dokument, welches den Link zum OSF-Projekt enthält (wo anonymisierte Daten, formr-Codebook, Präregistrierung und R-Skripte/RMarkdown-Datei liegen) 
   - Rohdaten (nicht-anonymisiert), d.h. die Dateien, die Sie von mir zugeschickt bekommen haben.
 
 * Auf der letzten Seite Ihrer Arbeit:
@@ -213,4 +218,4 @@ name: fragen
 Wie kann ich noch helfen? :)
 
 <!-- library(renderthis) -->
-<!-- to_pdf("WissArb_12_FreieSpitze.Rmd", complex_slides = TRUE) -->
+<!-- to_pdf("WissArb_13_FreieSpitze.Rmd", complex_slides = TRUE) -->

@@ -1,9 +1,9 @@
 ---
 title: "Zusatzmaterial: Variablen"
 subtitle: "⚔<br/>with xaringan"
-author: "Dr. Caroline Zygar-Hoffmann"
+author: "Prof. Dr. Caroline Zygar-Hoffmann"
 institute: "RStudio, PBC"
-date: "2024/11/11 (updated: `r Sys.Date()`)"
+date: "2025/05/01 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -58,7 +58,7 @@ class: middle, left
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
 ### Zusatzmaterial: Variablen
-##### Dr. Caroline Zygar-Hoffmann
+##### Prof. Dr. Caroline Zygar-Hoffmann
 
 ---
 class: top, left
@@ -95,6 +95,27 @@ knitr::include_graphics("bilder/UVAV.png")
 class: top, left
 ### Variablen
 
+#### Kriterium/Outcome & Prädiktor
+
+* Analog zu AV (Kriterium/Outcome) und UV (Prädiktor), nur dass die Begriffe im Rahmen von korrelativen Designs üblicher sind
+
+* Kriterien/Outcomes stehen links in der Regressionsgleichung, Prädiktoren rechts, z.B. 
+
+* als Gleichung: $y = x_1 + x_2$
+
+* in R: 
+```{r include = TRUE, eval = FALSE}
+lm(Outcome ~ Prädiktor1 + Prädiktor2)
+```
+
+**Beispiel:**
+
+Vorhersage von Schlafdauer (Kriterium oder Outcome) durch andere (nicht manipulierte, sondern nur gemessene) Variable(n) (Prädiktor(en)), wie Schlafmittel, Stress und/oder Anzahl an Kindern im Haushalt.
+
+---
+class: top, left
+### Variablen
+
 #### Störvariable
 
 * alle Einflussgrößen auf die AV, die in einer Untersuchung nicht erfasst werden 
@@ -116,7 +137,7 @@ class: top, left
 
 * Störvariable deren Ausprägungen erhoben (gemessen) wurde 
 
-* Einfluss kann kontrolliert wird (z.B. mittels statistischer Methoden) 
+* Einfluss kann kontrolliert wird (z.B. mittels statistischer Methoden, z.B. Aufnahme in Regression) 
 
 * Inhaltliche Begründung (Literatur!) zur Aufnahme einer Kovariate
 
@@ -154,22 +175,31 @@ class: top, left
 
 #### Mediatorvariable
 
-* **Mediator** vermittelt (**mediiert**) den Einfluss der **UV** auf die **AV**
-* **Indirekter Effekt:**  **UV ** beeinflusst  **Mediator**, dies führt zur einem Effekt des  **Mediators ** auf **AV **
-* **Direkter Effekt:** Effekt von **UV** auf **AV** (in Anwesenheit des Mediators)
-* **Keine Mediation:** indirekter Effekt nicht signifikant
-* **Partielle Mediation:** indirekter Effekt signifikant und direkter Effekt auch signifikant
-* **Totale Mediation:** indirekter Effekt signifikant und direkter Effekt nicht mehr signifikant.
+.pull-left[
+Ein **Mediator** vermittelt (**mediiert**) den Einfluss der **UV** auf die **AV**
 
-**Beispiel:**
+**Beispiel:** Schulnote (**UV**) beeinflusst Selbstwertgefühl (**Mediator**); Selbstwertgefühl (**Mediator**) beeinflusst Lebenszufriedenheit (**AV**)
+]
 
-Schulnote (**UV**) beeinflusst Selbstwertgefühl (**Mediator**); Selbstwertgefühl (**Mediator**) beeinflusst Lebenszufriedenheit **AV**
-
-.center[
+.pull-right[
 ```{r eval = TRUE, echo = F, out.width = "500px"}
 knitr::include_graphics("bilder/Mediation.png")
 ```
 ]
 
+* Wenn Sie in dem Projekt zu dieser Vorlesung nicht explizit eine statistische Mediation überprüfen wollen (was Sie mit Ihrem Ansprechpartner absprechen sollten), dann sind Mediatorvariablen für Sie vmtl. nicht relevant
+
+* Ausblick: Wichtige Begriffe im Rahmen einer statistischen Mediation
+  * **Indirekter Effekt:**  **UV ** beeinflusst  **Mediator**, dies führt zur einem Effekt des  **Mediators ** auf **AV **
+  * **Direkter Effekt:** Effekt von **UV** auf **AV** (in Anwesenheit des Mediators)
+  * **Keine Mediation:** indirekter Effekt nicht signifikant
+  * **Partielle Mediation:** indirekter Effekt signifikant und direkter Effekt auch signifikant
+  * **Totale Mediation:** indirekter Effekt signifikant und direkter Effekt nicht mehr signifikant
+
+
+
+
+
+
 <!-- library(renderthis) -->
-<!-- to_pdf("WissArb_Z3_Variablen.Rmd", complex_slides = TRUE) -->
+<!-- to_pdf("WissArb_Z4_Variablen.Rmd", complex_slides = TRUE) -->

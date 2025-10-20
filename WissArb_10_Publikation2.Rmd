@@ -3,7 +3,7 @@ title: "Einheit 10"
 subtitle: "⚔<br/>with xaringan"
 author: "Prof. Dr. Caroline Zygar-Hoffmann"
 institute: "RStudio, PBC"
-date: "2024/01/08 (updated: `r Sys.Date()`)"
+date: "2025/06/24 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -58,7 +58,56 @@ class: middle, left
 # Wissenschaftliches Arbeiten und Forschungsmethoden
 
 ### Einheit 10: Publikation von Studien mit Fokus auf Ergebnisteil und Diskussion
-##### 14.01.2025 | Prof. Dr. Caroline Zygar-Hoffmann
+##### 24.06.2025 | Prof. Dr. Caroline Zygar-Hoffmann
+
+---
+class: top, left
+
+### 3 Schmankerl aus dem Interventionsthema
+
+.center[
+Hier scheint versehentlich der Rekrutierungstext in den Link eingefügt:
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/schmankerl1.png")
+```
+]
+
+--
+
+.center[
+Beziehungsstatus "anderes":
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/schmankerl2.png")
+```
+]
+
+--
+
+.center[
+Der Hassle eines Teilnehmers: 
+
+```{r eval = TRUE, echo = F, out.width = "50%"}
+knitr::include_graphics("bilder/schmankerl3.png")
+```
+]
+
+---
+class: top, left
+
+### Nacherhebung Pseudonym für das Interventionsthema
+
+* Wie letzte Woche während der Vorlesung erklärt habe ich versäumt in die Studie die Frage einzubauen, ob man Teil dieser Vorlesung ist. 
+
+* Eigentlich sollte wer Teilnehmer dieser Vorlesung ist danach gefragt werden, ob er/sie eine Rückmeldung erhalten möchte und ein Pseudonym angeben können. 
+
+* In der Konsequenz konnte bisher niemand aus dieser Vorlesung sein Pseudonym angeben. 
+
+* **Ich habe daher diese kurze 1-seitige Befragung angelegt, in der Sie ein Pseudonym nachtragen können, indem Sie nochmal Ihre demographischen Angaben machen.** Ich versuche dann anhand der demographischen Angaben das Pseudonym in den Datensatz der Interventionsstudie einzupflegen:
+
+.center[
+https://surveys.osc.lmu.de/pseudonym
+]
+
 
 ---
 class: top, left
@@ -84,6 +133,7 @@ name: abstract
 
 ####  Allgemeine Infos
 
+.pull-left[
 * Kommt direkt nach der Titelseite auf einer eigenen Seite
 
 * Kompakte Zusammenfassung der kompletten Studie (macht Sinn zuletzt zu schreiben) $\rightarrow$ soll den Appetit des Lesers auf mehr wecken
@@ -91,11 +141,20 @@ name: abstract
 * idR keine Zitationen notwendig (Ausnahme: direkte Replikationsstudien, dann kann das Paper das repliziert wird zitiert werden)
 
 * idR keine statistischen Ergebnisse in Form von Zahlen
+]
+
+.pull-right[
+```{r eval = TRUE, echo = F}
+knitr::include_graphics("bilder/abstract.png")
+```
+]
 
 Optional unter Abstract: Keywords (kursiv, eingerückt): Erlauben Forschern Ihren Artikel in Datenbanken schneller und einfacher zu finden
 
 ---
 class: top, left
+<div class="footer"><span>https://tinyurl.com/ybremelq <br> https://x.com/JohnHolbein1/status/1930618108714308049</span></div>
+
 ###  Abstract
 
 #### Aufbau
@@ -107,7 +166,6 @@ class: top, left
 * Zwei oder drei Sätze, in denen erklärt wird, was das **Hauptergebnis** im direkten Vergleich zu dem, was vorher angenommen wurde, offenbart oder wie das Hauptergebnis das bisherige Wissen ergänzt. 
 * Ein oder zwei Sätze zur Einordnung der Ergebnisse in einen **allgemeinen Kontext**. 
 * Zwei oder drei Sätze, um eine **breiter gefasste Perspektive** zu geben, die für einen Wissenschaftler jeder Disziplin leicht verständlich ist.
-
 
 ---
 class: top, left
@@ -135,7 +193,7 @@ name: ergebnis
 
 * **Konsistenz**: Strukturierung aus dem Theorieteil übernehmen und die einzelnen Fragestellungen in derselben Reihenfolge abarbeiten. 
 
-* Deskriptivstatistische Ergebnisse für Fragestellungen und inferenzstatistische Ergebnisse für Hypothesen werden teils in den **Fließtext** integriert, teils durch **Tabellen und Grafiken** veranschaulicht. 
+* Ergebnisse werden teils in den **Fließtext** integriert, teils durch **Tabellen und Grafiken** veranschaulicht.
 
 * Dieselbe Information sollte allerdings nicht sowohl in Fließtext als auch Tabelle wiederholt werden (entweder Fließtext oder Tabelle!)
 
@@ -158,9 +216,11 @@ class: top, left
 
 * Ergebnisse nur beschreiben, noch nicht interpretieren
 
-* Erst sagen, dann belegen: Ergebnis zuerst ankündigen, dann mit Statistiken begründen ("As predicted, the results show that the groups differ significantly, with group X having higher values on variable A ( $M = 1.2$, $SD = 0.2$) than group Y ( $M = 0.2$, $SD = 0.2$), $t(48) = 2.3$, $p = .026$.
+* Erst sagen, dann belegen: Ergebnis zuerst ankündigen, dann mit Statistiken begründen
 
-* Die Annahme/Ablehnung der Hypothese unmittelbar berichten (Bottom line / Fazit! Klar und deutlich – Ergebnisse im Einklang mit der Hypothese oder nicht)
+"As predicted, the results show that the groups differ significantly, with group $X$ having higher values on variable $A$ $(M = 1.2$, $SD = 0.2)$ than group $Y$ $(M = 0.2$, $SD = 0.2),$ $t(48) = 2.3$, $p = .026$."
+
+* Die Annahme/Ablehnung der Hypothese unmittelbar berichten = Bottom line / Fazit! Klar und deutlich – Ergebnisse im Einklang mit der Hypothese oder nicht?
 
 **Wichtig:** Ergebnisse von konfirmatorischen und explorativen Analysen klar trennen
 
@@ -197,21 +257,21 @@ class: top, left
 
 #### Elemente des Ergebnisberichts
 
-* Angabe der relevanten Kennzahlen: z.B. Mittelwerte bei Gruppenvergleichen, Korrelation bei Zusammenhangshypothesen, etc.
+* Angabe der relevanten Kennzahlen: z.B. Mittelwerte bei Gruppenvergleichen, Korrelation bei Zusammenhangshypothesen (siehe nächste Folie)
 
-* Angabe der statistischen Kennwerte mit Freiheitsgraden in Klammern (z.B. t-Werte: t(df)=...; $\chi^2$(df)=...; etc. 
+* Angabe der statistischen Kennwerte mit Freiheitsgraden (= degrees of freedom, df) in Klammern, z.B. $t(df)= ...$; $\chi^2(df)=...$
   
-* Angabe der statistischen Signifikanz: z.B. $p = .021$
-  * genauen p-Wert angeben (d.h. auf 3 Nachkommastellen)
-  * wenn p-Wert den Wert .001 unterschreitet, dann $p < .001$ (die Wahrscheinlichkeit kann nicht 0 betragen!) 
+* Angabe des $p$-Wertsauf 3 Nachkommastellen genau: z.B. $p = .021$
+  * einzige Ausnahme: wenn p-Wert den Wert .001 unterschreitet, dann $p < .001$ (die Wahrscheinlichkeit kann nicht 0 betragen!) 
 
-* Angabe von Effektstärken (z.B. Cohens d)
+* Angabe von Effektstärken (z.B. Cohen's d)
   
-* Formalia zur Angabe von Ergebnissen (Zahlen) und Variablen:
-  * lateinische Variablenbezeichnungen werden kursiv gesetzt, griechische jedoch nicht
-  * Zahlen nicht kursiv
-  * Komma ist ein Punkt, kein Beistrich
-  * Bei Zahlen, die nicht größer als 1 werden können, wird die führende Null weggelassen (z.B. $p = .032$; $r = .73$; aber: $t(84) = 0.23$)
+**Formalia zur Angabe von Ergebnissen (Zahlen) und Variablen:**
+
+* lateinische Variablenbezeichnungen (z.b. $b$, $t$, $p$) werden kursiv gesetzt, griechische jedoch nicht (z.B. $\alpha$)
+* Zahlen nicht kursiv
+* Komma ist ein Punkt, kein Beistrich
+* Bei Zahlen, die nicht größer als 1 werden können, wird die führende Null weggelassen (z.B. $p = .032$; $r = .73$; aber: $t(84) = 0.23$)
 
 
 ---
@@ -224,24 +284,35 @@ class: top, left
 
 Es gibt für die gängingen statistischen Tests APA Richtlinien, welche Kennwerte in Fließtext oder Tabellen enthalten sein sollten: 
 
-* Korrelation: $r = .13$, $95\%$ CI $[-0.13, 0.38]$, $p = .312$, $R^2 = .02$
+.pull-left[
+* $t$-Test
 
-* t-Test
+  * entweder: 
+  the groups differed, $\Delta_{M} = -51.46,$ $95\%$ $CI$ $[-104.87, 1.95]$, $t(49.09) = -1.94,$ $p = .059;$ $Cohen's$ $d = -0.55$, $95\%$ $CI$ $[-1.12, 0.02]$
+ 
+  * oder: 
+  group $X$ $(M = 1.2,$ $SD = 0.2)$ differed from group $Y$ $(M = 0.2$, $SD = 0.2)$, $t(48) = 2.3$, $p = .026;$ $Cohen's$ $d = -0.55$, $95\%$ $CI$ $[-1.12, 0.02]$ ...
 
-  * entweder $\Delta_{M} = -51.46$, $95\%$ CI $[-104.87, 1.95]$, $t(49.09) = -1.94$, $p = .059$; Cohen's $d = -0.55$, $95\%$ CI $[-1.12, 0.02]$
-  * oder group X ( $M = 1.2$, $SD = 0.2$) compared to group Y ( $M = 0.2$, $SD = 0.2$), $t(48) = 2.3$, $p = .026$; Cohen's $d = -0.55$, $95\%$ CI $[-1.12, 0.02]$
+* Korrelation: 
+
+$r = .13$, $95\%$ $CI$ $[-0.13, 0.38]$, $p = .312$, $R^2 = .02$
+]
+
+.pull-right[
 
 * Regressionsparameter
 
-  * standardisiert: $\beta = 0.64$, $95\%$ CI $[-0.62, 1.89]$, $t(57) = 1.02$, $p = .312$
-  * unstandardisiert: $b = 0.64$, $95\%$ CI $[-0.62, 1.89]$, $t(57) = 1.02$, $p = .312$
+  * standardisiert: $\beta = 0.64$, $95\%$ $CI$ $[-0.62, 1.89]$, $t(57) = 1.02$, $p = .312$
+  * unstandardisiert: $b = 0.64$, $95\%$ $CI$ $[-0.62, 1.89]$, $t(57) = 1.02$, $p = .312$
 
-* F-Tests (z.B. ANOVAs)
+* $F$-Tests
 
   * Regressionsmodell: $R^2 = .02$, $F(1, 57) = 1.04$, $p = .312$
-  * ANOVA: $F(3, 54) = 683.77$, $p < .001$, $\eta^2=0.97$, $95\%$ CI $[0.96, 1.00]$
-
+  * ANOVA: $F(3, 54) = 683.77$, $p < .001$, $\eta^2=0.97$, $95\%$ $CI$ $[0.96, 1.00]$
+  
 * $\chi^2$-Test: $r_{G1}=41\%$, $r_{G2}=70\%$, $\chi^2_{79}<.001$
+]
+
 </small>
 
 
@@ -253,13 +324,13 @@ class: top, left
 
 * zentrale Deskriptivstatistiken (z.B. Mittelwerte beim Mittelwertsvergleich)
 
-* Größe des in der Untersuchung ermittelten Effekts (auch als standardisierte Effektstärken (r, Cohens d, $R^2$, $\eta^2$)
+* Größe des in der Untersuchung ermittelten Effekts, auch als standardisierte Effektstärken, z.B. $r$, $Cohen's$ $d$, $R^2$, $\eta^2$, ...
 
 * Konfidenzintervall für diesen Effekt
 
 * Teststatistiken (ggf. mit Freiheitsgraden)
 
-* p-Werte
+* $p$-Werte
 
 ---
 class: top, left
@@ -271,7 +342,7 @@ class: top, left
 
 * dem APA Style guide folgen: https://apastyle.apa.org/instructional-aids/numbers-statistics-guide.pdf
   - z.B. Prozentzahlen ganzzahlig runden (auch wenn dann in der Summe manchmal 99% oder 101% resultiert)
-  - statistische Kennwerte (z. B. Mittelwerte, Standardabweichungen, Korrelationskoeffizienten etc.) mit zwei Nachkommastellen angegeben
+  - statistische Kennwerte (z. B. Mittelwerte, Standardabweichungen, Korrelationskoeffizienten etc.) mit zwei Nachkommastellen angegeben (Ausnahme: p-Werte)
 
 * Jede Tabelle und jede Grafik im Fließtext muss fortlaufend nummeriert sein und zudem ohne Kenntnis des Fließtextes verständlich sein. 
 
@@ -286,16 +357,16 @@ class: top, left
 
 * Exakte Darstellung größerer Datenmengen
 
-* Allgemein zu beachten: Keine Abbildung/Tabelle ist besser als eine überflüssige Abbildung/Tabelle
+* Keine Abbildung/Tabelle ist besser als eine überflüssige Abbildung/Tabelle
 
-* Jede Tabelle/Abbildung muss sequentiell nummeriert werden
+* **Jede Tabelle/Abbildung muss sequentiell nummeriert werden**
   - Tabelle 1, Tabelle 2, …
   - Abbildung 1, Abbildung 2, …
   
-* Integration in den Text unter Nennung der Abbildungs-/Tabellen-Nr.: „Wie aus Abbildung 5
-ersichtlich wird...“; „Die Daten zur Fernsehnutzung in Tabelle 3 verdeutlichen...“
+* **Integration in den Text unter Nennung der Abbildungs-/Tabellen-Nr.**: 
+.center[„Wie aus Abbildung 5 ersichtlich wird...“; „Die Daten zur Fernsehnutzung in Tabelle 3 verdeutlichen...“]
 
-* Quellenangaben bei Abbildungen und Tabellen im Textteil: Wenn man nicht seine eigene Daten in einer Tabelle oder einer Abbildung veranschaulicht, muss auch hier gekennzeichnet werden, von wem die Daten/ Informationen stammen -> Quellenangabe!
+* **Quellenangaben bei Abbildungen und Tabellen**: Wenn man nicht seine eigene Daten in einer Tabelle oder einer Abbildung veranschaulicht, muss auch hier gekennzeichnet werden, von wem die Daten/ Informationen stammen -> Quellenangabe!
 
 ---
 class: top, left
@@ -309,7 +380,7 @@ class: top, left
   - Auf jede Tabelle/Abbildung im Text verweisen
   - Der Lesende soll wissen, worauf sich die Abbildung bezieht
 
-* Abkürzungen und Fachbegriffe müssen für alle Tabellen/Abbildungen konsistent sein. Abkürzungen müssen erklärt werden, auch wenn sie im Text schon einmal erklärt wurden (siehe Regel 1)
+* Abkürzungen und Fachbegriffe müssen für alle Tabellen/Abbildungen konsistent sein. Abkürzungen müssen erklärt werden, auch wenn sie im Text schon einmal erklärt wurden (siehe Alleinverständlichkeits-Kriterium)
 
 
 ---
@@ -318,13 +389,14 @@ class: top, left
 
 #### Formatierung von Tabellen
 
-* Jede Tabelle hat einen Titel
-  - Der Titel muss kurz aber deutlich sein. $\rightarrow$  Muss muss den Inhalt der Tabelle aus dem Titel erschließen können
+* Der Titel einer Tabelle muss kurz aber deutlich sein. $\rightarrow$  Muss muss den Inhalt der Tabelle aus dem Titel erschließen können
   - Beispiel für zu generell: "Zusammenhang zwischen Studenten und Leistung. (unklar, welche Daten präsentiert werden)
+  
   - Beispiel für zu spezifisch: "Mittlere Leistungswerte von Test A, Test B und Test C für Studenten der Psychologie, Physik, Englisch und Maschinenbau
+  
   - Gutes Beispiel: "Mittlere Leistungswerte von Studenten verschiedener Fachrichtungen."
 
-* Formatierung durch APA festgelegt, z.b. gibt es keine vertikalen Linien: https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables
+* Formatierung durch APA festgelegt, z.B. gibt es keine vertikalen Linien: https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables
 
 * Nur wesentliche Informationen sind enthalten (nicht nur Inhalte aus dem Fließtext wiederholen)
 
@@ -367,7 +439,7 @@ class: top, left
 * Ist diese Tabelle notwendig? Trägt Sie zum übersichtlicheren Verständnis bei?
 * Muss diese Tabelle in den Paper-Körper oder reicht der Anhang? 
 * Sind alle Tabellen im Paper stilistisch konsistent? 
-* Ist der Tabellen-Titel kurz und prägnant? 
+* Ist der Tabellen-Titel kurz, prägnant, aufschlussreich und selbsterklärend? 
 * Hat jede Spalte eine Überschrift? 
 * Sind alle Abkürzungen und Sonder-Formatierungen (kursiv, fett, Symbole) erklärt? 
 * Sind alle vertikalen Linien gelöscht? 
@@ -385,7 +457,7 @@ class: top, left
 #### Bewertungsschema
 
 .center[
-```{r eval = TRUE, echo = F, out.width = "90%"}
+```{r eval = TRUE, echo = F, out.width = "85%"}
 knitr::include_graphics("bilder/bewertung_ergebnisse.png")
 knitr::include_graphics("bilder/bewertung_ergebnisse2.png")
 ```
@@ -403,7 +475,7 @@ name: diskussion
 
 * Erster Absatz: **Kurze Zusammenfassung** (kürzer als der Abstract!)
   - Wiederholung der Forschungsfrage und was für eine Studie durchgeführt wurde
-  - Zusammenfassung/Knapper Bericht zu den Hauptergebnissen (nur in Worten, üblicherweise werden hier keine Zahlen mehr genannt)
+  - Zusammenfassung/Knapper Bericht zu den Hauptergebnissen (nur in Worten, hier werden **keine Zahlen** mehr genannt)
   - keine detaillierte Wiederholung des Ergebnisteils!
 
 ---
@@ -412,11 +484,13 @@ class: top, left
 
 ### Was gehört in den Diskussionsteil?
 
-* Dann **Interpretation der Ergebnisse** (dieser Teil soll zusammen mit der Diskussion der Ergebnisse soll größeren Raum in der Diskussion einnehmen): 
+* Dann **Interpretation der Ergebnisse** (dieser Teil soll zusammen mit der Diskussion der Ergebnisse größeren Raum in der Diskussion einnehmen): 
 
   + **Nicht-signifikante Ergebnisse können nicht als Evidenz für die Nullhypothese interpretiert werden**, nur als **keine Evidenz für die Alternativhypothese**
 
-  + Egal ob signifikant oder nicht, die gefundene Effektstärke sollte eingeordnet werden: Richtung des Effekts konsistent mit der Hypothese? Geschätzter Effekt größer/kleiner als erwartet? ggf. Übersetzung in "common language effect sizes" (siehe https://pubmed.ncbi.nlm.nih.gov/34881941/ und R package `compute.es`: https://cran.r-project.org/web/packages/compute.es/compute.es.pdf)
+  + Egal ob signifikant oder nicht, die gefundene Effektstärke sollte eingeordnet werden: **Richtung des Effekts konsistent mit der Hypothese?** Geschätzter Effekt größer/kleiner als erwartet? 
+  
+  + ggf. Übersetzung in "common language effect sizes" (siehe https://pubmed.ncbi.nlm.nih.gov/34881941/ und R package `compute.es`: https://cran.r-project.org/web/packages/compute.es/compute.es.pdf)
   
   + Achtung: Kausale Sprache nur bei experimentellen Designs angemessen und auch dort ist eine kritische Diskussion über Einschränkungen der Kausalität notwendig!
   
@@ -428,7 +502,7 @@ class: top, left
 
 ### Was gehört in den Diskussionsteil?
 
-* **Diskussion der Ergebnisse** (dieser Teil soll zusammen mit der Interpretation der Ergebnisse soll größeren Raum in der Diskussion einnehmen): 
+* **Diskussion der Ergebnisse** (dieser Teil soll zusammen mit der Interpretation der Ergebnisse größeren Raum in der Diskussion einnehmen): 
   - Einbettung der Ergebnisse in relevante Literatur und bekannte Forschungsergebnisse (die meist schon in der Einleitung angesprochen wurden, aber hier kann durchaus auch neue Literatur auftauchen, z.B. um ein ggf. überraschendes Ergebnis einzuordnen).
   - Kritischer Vergleich mit Ergebnissen aus der Literatur - Übereinstimmung? Diskrepanz? Wenn ja, warum möglicherweise?
   
@@ -437,7 +511,7 @@ class: top, left
   - Methodische Anmerkungen, z.B. experimentelle Verbesserungspotenziale
   - Was könnte man besser oder anders machen?
 
-* **Zukünftige Forschung**: Weiterführende Überlegungen, neue Fragestellungen und Hypothesen
+* **Zukünftige Forschung**: Weiterführende Überlegungen, erste Ideen für neue Fragestellungen und Hypothesen
 
 * **Implikationen**: Schlussfolgerungen aus den Ergebnissen für Forschung (z.B. psychologische Theorienbildung) und Praxis (was könnten Ihre Ergebnisse für Praktiker bedeuten)
 
@@ -454,6 +528,14 @@ class: top, left
 knitr::include_graphics("bilder/bewertung_diskussion.png")
 ```
 ]
+
+---
+class: top, left
+### APA: Quantitative Design Reporting Standards (JARS-Quant)
+
+Weiterführende Hilfe für das Schreiben des Papers (für alle Bereiche, nicht nur Ergebnisse und Diskussion): 
+
+https://apastyle.apa.org/jars/quant-table-1.pdf
 
 ---
 class: top, left
@@ -544,19 +626,35 @@ name: praxis
 Auswahl aus:
 
 **1) An Studien teilnehmen:**
-Folgende Studien brauchen noch dringend TeilnehmerInnen:
+
+.pull-left[
+https://surveys.osc.lmu.de/dieLetzten
+
+https://surveys.osc.lmu.de/Bindungseisstiele
+
+https://surveys.osc.lmu.de/OCEANs5
+
+https://surveys.osc.lmu.de/crimetime
+
+https://surveys.osc.lmu.de/DeLuLu
+
+https://surveys.osc.lmu.de/DeadlineDodger
+]
+
+.pull-right[
+
+https://surveys.osc.lmu.de/Bi-Per
+
+https://surveys.osc.lmu.de/Big5
+
+https://surveys.osc.lmu.de/TrueMinds
+
+https://surveys.osc.lmu.de/prokrastination-ss25
 
 https://surveys.osc.lmu.de/siblings
 
-https://surveys.osc.lmu.de/bindungsforscher
-
-https://surveys.osc.lmu.de/empowerment
-
-https://surveys.osc.lmu.de/jagoda
-
-https://surveys.osc.lmu.de/forever
-
-https://surveys.osc.lmu.de/song
+https://surveys.osc.lmu.de/reflection-ss25
+]
 
 **2) Feedback geben**
 Haben Sie sich bei irgendeiner Teilnahme gedacht: Moment, diesen Aspekt am Studiendesign/der Frage fand ich seltsam? Ich glaube das führt in die Irre? Das wurde nicht berücksichtigt? Das könnte eine relevante Störvariable sein? Schreiben Sie der entsprechenden Gruppe (persönlich, z.B. per Email) Ihr Feedback (für das Interventionsthema gerne an mich, ich sammle die Nachrichten und leite sie an alle weiter).

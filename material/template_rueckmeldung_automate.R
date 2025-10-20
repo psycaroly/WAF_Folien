@@ -1,5 +1,6 @@
 library(rmarkdown)
-load("processed_data/final_data.RData")
+library(stringr)
+load("processed_data/data.RData")
 
 # check which subjects wanted a report
 report <- final_data[!is.na(final_data$mc_rueckmeldung) & final_data$mc_rueckmeldung == 1 & !is.na(final_data$pseudonym),]
